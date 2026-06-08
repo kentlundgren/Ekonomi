@@ -86,6 +86,89 @@ Hierarki – tre nivåer (utöka vid behov):
 
 ---
 
+## Del 0b – Vad är brödsmulor (breadcrumbs)?
+
+### Begreppet
+
+Brödsmulor är en navigeringsteknik som visar **var du befinner dig i webbplatsens hierarki**
+– som en stig av klickbara steg från roten till den sida du är på just nu.
+
+Namnet kommer från sagan om Hansel och Gretel, som lade brödsmulor längs vägen
+för att hitta tillbaka hem.
+
+### Hur det ser ut i praktiken
+
+På sidan `redovisning/BAS/analys.html` ser du längst upp:
+
+```
+{ E } Ekonomi  /  Redovisning  /  BAS
+```
+
+- `{ E } Ekonomi` – klickbar – tar dig till roten
+- `Redovisning` – klickbar – tar dig upp en nivå
+- `BAS` – klickbar – tar dig till BAS-innehållsförteckningen
+- Du är just nu på `analys.html`, som inte syns i brödsmulan
+  (den aktiva sidan visas ibland i vit/fet text som sista segment)
+
+På sidan `segling/scampi/index.html` skulle det se ut:
+
+```
+{ F } Fritid  /  Segling  /  Scampi
+```
+
+### Varför brödsmulor?
+
+| Problem utan brödsmulor | Lösning med brödsmulor |
+|-------------------------|------------------------|
+| Besökaren vet inte var hen är | Hela sökvägen syns alltid |
+| Svårt att backa upp en nivå | Varje steg är klickbart |
+| Djupa hierarkier blir förvirrande | Hierarkin visualiseras direkt |
+| Bakåtknappen i webbläsaren räcker inte | Man kan hoppa flera nivåer |
+
+### Sambandet med filstrukturen
+
+Brödsmule-stegen speglar **exakt** mappstrukturen på disk:
+
+```
+Mapp:      Ekonomi / redovisning / BAS / analys.html
+Brödsmsla: Ekonomi  /  Redovisning  /  BAS
+```
+
+Det är därför konsekvent namngivning av mappar är viktig –
+brödsmulans text hämtas från mappens visningsnamn, länken från mappens sökväg.
+
+### Tekniken i HTML
+
+Brödsmulorna byggs av tre enkla element:
+
+```html
+<a class="nav-brand" href="../../index.html">{ E } Ekonomi</a>  ← länk till rot
+<span class="nav-sep">/</span>                                   ← separator
+<a class="nav-crumb" href="../index.html">Redovisning</a>        ← länk uppåt
+<span class="nav-sep">/</span>
+<span class="nav-crumb active">BAS</span>                        ← aktiv sida (ej länk)
+```
+
+Antalet `../` i href bestämmer hur många nivåer uppåt länken går:
+- `../index.html` = en nivå upp (föräldramappen)
+- `../../index.html` = två nivåer upp (rot)
+
+### Jämförelse: brödsmula vs. dropdown
+
+Båda används i detta projekt, men i olika situationer:
+
+| | Brödsmula | Dropdown |
+|-|-----------|----------|
+| **Var** | Undersidor och innehållssidor | Enbart rotsidan |
+| **Visar** | Var du *är* | Vad som *finns* |
+| **Riktning** | Bakåt/uppåt i hierarkin | Framåt/nedåt i hierarkin |
+| **Aktiveras** | Alltid synlig | Vid hover |
+
+Rotsidan behöver inte brödsmulor (det finns inget "ovanför" roten),
+så där används istället en dropdown för att visa vad som finns nedanför.
+
+---
+
 ## Del 1 – Mapp- och filstruktur
 
 ```
