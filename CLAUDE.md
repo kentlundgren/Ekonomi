@@ -123,6 +123,36 @@ Kortversion av de viktigaste:
 - Jag-form är rätt i detta projekt – använd den
 - Kör "rytmpasset", "specificeringspasset" och "åsiktspasset" på färdig text
 
+### GitHub-corner-länk på alla HTML-sidor
+
+Varje HTML-fil ska ha en diskret `{ } GitHub`-länk fixerad i nedre vänstra hörnet.
+Den pekar alltid mot `https://github.com/kentlundgren/Ekonomi`.
+
+CSS att lägga i `<style>`:
+```css
+.github-corner {
+  position: fixed; bottom: 14px; left: 14px;
+  font-family: "Courier New", monospace; font-size: 0.78em;
+  color: #aaa; text-decoration: none; opacity: 0.55;
+  transition: opacity 0.2s, color 0.2s; z-index: 999;
+}
+.github-corner:hover { opacity: 1; color: #1a3a5c; }
+```
+HTML precis före `</body>`:
+```html
+<a class="github-corner" href="https://github.com/kentlundgren/Ekonomi" target="_blank">{ } GitHub</a>
+```
+
+### Gemensam navigationsrad – site-nav
+
+Alla HTML-filer ska ha en gemensam navigationsrad längst upp (före sidans
+`<header>`). Den visar projektnamnet och länkar till alla sidor i projektet.
+Aktuell sida markeras med `class="active"`.
+
+Lägg till CSS i `<style>` och HTML direkt efter `<body>`. Se befintliga
+filer som mall. När en ny HTML-fil skapas: lägg till nav-länken i
+**alla** befintliga filer också.
+
 ### Källhänvisningar i löpande text – klickbarhetsprincip
 
 När en källa anges i löpande text (in-text citation) ska den vara **klickbar
