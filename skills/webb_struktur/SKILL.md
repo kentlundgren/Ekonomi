@@ -423,7 +423,208 @@ Platshållare för kommande sidor:
 
 ---
 
-## Del 7 – Checklista innan commit
+## Del 7 – Källhänvisningar (Harvardformat)
+
+### Vad är Harvardformat?
+
+Harvard är en **parentescitationsstil**: källan anges som `(Efternamn, År)`
+direkt i löptexten, inte som fotnot. En fullständig källförteckning samlas
+sist på sidan eller dokumentet.
+
+Det är en av de vanligaste akademiska och journalistiska referensstilarna
+i Sverige och internationellt.
+
+---
+
+### Regler för citat i löpande text
+
+#### Regel 1 – Parentesformat
+
+Citat skrivs alltid inom parentes med efternamn och år:
+
+```
+(Berg, 2026)
+```
+
+Aldrig enbart efternamnet utan parentes, aldrig enbart årtalet.
+
+#### Regel 2 – Första omnämnandet är en länk
+
+**Första gången** en källa nämns i löptexten ska hela parentesen vara
+en klickbar länk till källan:
+
+```html
+(<a href="https://käll-url.se" target="_blank">Berg, 2026</a>)
+```
+
+**Alla efterföljande** omnämnanden av samma källa skrivs som vanlig text:
+
+```html
+(Berg, 2026)
+```
+
+#### Regel 3 – Länka parentesen, inte författarnamnet
+
+Länken ska ligga på **parentesen** `(Berg, 2026)`, inte på författarnamnet
+i den löpande texten.
+
+```html
+<!-- ✅ Rätt -->
+Peter Berg publicerade en artikel om ämnet (<a href="URL">Berg, 2026</a>).
+
+<!-- ❌ Fel – länken på namnet -->
+<a href="URL">Peter Berg</a> publicerade en artikel (Berg, 2026).
+
+<!-- ❌ Fel – namnet fetstilat -->
+<strong>Peter Berg</strong> publicerade en artikel (Berg, 2026).
+```
+
+#### Regel 4 – Flera källor av samma upphovsman samma år
+
+Lägg till bokstavsuffix `a`, `b`, `c` … i kronologisk ordning:
+
+```html
+(Berg, 2026a)   ← artikel publicerad 7 juni
+(Berg, 2026b)   ← LinkedIn-inlägg publicerat 7 juni
+```
+
+Samma suffix används konsekvent i källförteckningen.
+
+#### Regel 5 – Flera källor i samma parentes
+
+Separera med semikolon:
+
+```html
+(Berg, 2026a; SKR, 2026)
+```
+
+---
+
+### Källförteckning – format
+
+Källförteckningen placeras **längst ned** på sidan, synligt separerad.
+Poster sorteras alfabetiskt på efternamn.
+
+**Tryckt bok:**
+```
+Efternamn, F. (År) Titel i kursiv. Ort: Förlag.
+```
+
+**Artikel / bloggpost:**
+```
+Efternamn, F. (År) 'Artikelns titel'. Publikation, datum.
+Tillgänglig: URL [Hämtad: ÅÅÅÅ-MM-DD].
+```
+
+**LinkedIn-inlägg:**
+```
+Efternamn, F. (År) [LinkedIn-inlägg om ämne]. LinkedIn, datum.
+Tillgänglig: linkedin.com/... [Hämtad: ÅÅÅÅ-MM-DD].
+```
+
+**Myndighet / organisation (utan namngiven författare):**
+```
+Organisationsnamn (År) Dokumenttitel. Tillgänglig: URL [Hämtad: ÅÅÅÅ-MM-DD].
+```
+
+### HTML-mall för källförteckning
+
+```html
+<div class="sources">
+  <h2>Källor (Harvardstil)</h2>
+  <ol>
+    <li>
+      Efternamn, F. (År) <em>Titel</em>. Utgivare, datum.
+      Tillgänglig: <a href="URL" target="_blank">URL</a> [Hämtad: ÅÅÅÅ-MM-DD].
+    </li>
+    <!-- Upprepa <li> per källa, sorterat A–Ö på efternamn -->
+  </ol>
+</div>
+```
+
+CSS för källförteckningen:
+```css
+.sources {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid var(--card-border);
+  padding: 24px 32px;
+  margin-top: 40px;
+  font-size: 0.92em;
+}
+.sources h2 {
+  font-size: 1.0em;
+  color: #444;
+  margin: 0 0 12px;
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 8px;
+}
+.sources ol { margin: 0; padding-left: 22px; }
+.sources li { margin-bottom: 8px; color: #555; }
+.sources a { color: var(--accent); }
+```
+
+---
+
+## Del 8 – Textstil och mänsklig ton
+
+### Humanizer – ett obligatoriskt komplement
+
+Källstruktur och navigering är det tekniska skelettet.
+Texten är det som läsaren faktiskt möter.
+
+**Varje projekt som använder detta skill bör ha ett eget
+`humanizer_ton`-skill** som definierar projektets skrivstil.
+Utan det riskerar texten att låta generisk och AI-genererad.
+
+### Vad är humanizer_ton?
+
+Ett `humanizer_ton`-skill är en procedur för att kontrollera att
+löpande text låter mänsklig, specifik och ärlig – inte polerad och
+innehållslös. Det täcker typiska AI-mönster att undvika och hur
+man skriver i rätt röst för just det projektet.
+
+### Skapa projektets humanizer_ton
+
+Om projektet saknar ett sådant skill – skapa `skills/humanizer_ton/SKILL.md`
+med följande avsnitt:
+
+```
+1. Projektets röst – vem skriver, för vem, i vilken ton?
+   Exempel: "Första person, analytisk, inga säljfraser"
+
+2. Mönster att undvika (minst 5–8 exempel)
+   Exempel: förstärkningsord, vaga formuleringar, AI-vokabulär
+
+3. Procedur – steg att köra på ny text
+   Exempel: identifiera berömsord → bryt trippelregeln → rytmpass
+
+4. Snabbreferens – byt-ut-tabell
+   Undvik | Skriv istället
+```
+
+### Ekonomi-projektets humanizer
+
+Se `skills/humanizer_ton/SKILL.md` för ett färdigt exempel.
+Reglerna där är specifika för Kent Lundgrens skrivstil och
+det ekonomi/revisionsrelaterade innehållet.
+
+### Kortversion – universella regler
+
+Oavsett projekt gäller alltid:
+
+| Undvik | Skriv istället |
+|--------|---------------|
+| "Det är viktigt att notera att…" | Börja med saken direkt |
+| "Spännande tider väntar!" | (Stryk – tom avslutning) |
+| Tre adjektiv i rad | Välj ett, stryk de andra |
+| "nyligen", "snart", "många" | Ange datum, antal, namn |
+| Förstärkningsord om andras arbete | Beskriv vad de faktiskt gjorde |
+| Meningar med likadan längd i rad | Variera – kort, lång, kort |
+
+---
+
+## Del 9 – Checklista innan commit
 
 - [ ] Alla `[PLATSHÅLLARE]` är ersatta med verkliga värden
 - [ ] `href`-nivåerna i breadcrumb stämmer (`../` vs `../../`)
@@ -431,14 +632,19 @@ Platshållare för kommande sidor:
 - [ ] Ny sida är länkad från sin föräldra-TOC
 - [ ] Nav i rot-`index.html` är uppdaterad om ny sektion lagts till
 - [ ] Inmatningsfält (om sådana finns) har gul bakgrund (`background: #ffffc0`)
+- [ ] Harvard: första omnämnandet av varje källa är en länk
+- [ ] Harvard: parentesen är länkad, inte författarnamnet
+- [ ] Harvard: flera verk av samma upphovsman samma år har a/b-suffix
+- [ ] Källförteckning finns om sidan refererar till externa källor
+- [ ] Textstilen är granskad mot projektets `humanizer_ton`-skill
 
 ---
 
 ## Relation till projekt_struktur/SKILL.md
 
 `projekt_struktur/SKILL.md` är det **ifyllda exemplet** för just Ekonomi-projektet.
-Det innehåller dessutom Harvard-regler och textstil-konventioner som är
-specifika för det projektet.
+Det innehåller Ekonomi-specifika konventioner utöver det som finns här.
 
 Det här skillet (`webb_struktur/SKILL.md`) är den **generella mallen** –
-anpassa den till ditt projekt genom Del 0 ovan.
+fyll i Del 0 för ditt projekt, komplettera med ett eget `humanizer_ton`-skill,
+och strukturen är redo att användas.
