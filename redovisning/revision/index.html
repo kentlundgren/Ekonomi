@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revision – Ekonomi</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.05em;
+      line-height: 1.75;
+      color: #222;
+      background: #fafaf8;
+      margin: 0;
+      padding: 0;
+    }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      background: #1a3a5c;
+      color: #fff;
+      padding: 0 20px;
+      height: 44px;
+      font-size: 0.83em;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+    .site-nav .nav-brand {
+      font-family: "Courier New", monospace;
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #7eb8f7;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+    .site-nav .nav-brand:hover { color: #fff; }
+    .nav-sep { color: #7a9bbf; margin: 0 5px; font-family: "Courier New", monospace; }
+    .nav-crumb { color: #9ab4cc; text-decoration: none; font-family: "Courier New", monospace; white-space: nowrap; }
+    .nav-crumb:hover { color: #fff; }
+    .nav-crumb.active { color: #fff; font-weight: 600; }
+    .nav-author { color: #566e88; font-size: 0.9em; white-space: nowrap; margin-left: auto; }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h1 { font-size: 1.5em; color: #1a3a5c; margin-bottom: 4px; }
+    h2 { font-size: 1.15em; color: #1a3a5c; margin-top: 40px; margin-bottom: 8px; }
+    .meta { color: #888; font-size: 0.88em; margin-bottom: 32px; }
+    p { margin: 0 0 16px; }
+
+    /* Länkkort */
+    .section-card {
+      display: block;
+      border: 1px solid #d0dce8;
+      border-left: 4px solid #1a6eb5;
+      border-radius: 6px;
+      padding: 18px 22px;
+      margin: 16px 0;
+      text-decoration: none;
+      color: inherit;
+      background: #fff;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .section-card:hover { background: #f0f6ff; border-color: #1a6eb5; }
+    .section-card h3 { font-size: 1.05em; color: #1a3a5c; margin: 0 0 4px; }
+    .section-card p { margin: 0; font-size: 0.93em; color: #555; }
+    .section-card .url-hint {
+      font-family: "Courier New", monospace;
+      font-size: 0.78em;
+      color: #999;
+      display: block;
+      margin-top: 6px;
+    }
+
+    /* Diskret kontaktruta */
+    .contact-box {
+      border: 1px solid #e0e8f0;
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin-top: 40px;
+      background: #f7f9fb;
+      font-size: 0.93em;
+      color: #555;
+    }
+    .contact-box h2 {
+      font-size: 1.05em;
+      color: #444;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    .contact-box a { color: #1a6eb5; }
+
+    .github-corner {
+      position: fixed;
+      bottom: 14px;
+      left: 14px;
+      font-family: "Courier New", monospace;
+      font-size: 0.78em;
+      color: #aaa;
+      text-decoration: none;
+      opacity: 0.55;
+      transition: opacity 0.2s;
+    }
+    .github-corner:hover { opacity: 1; color: #1a3a5c; }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="nav-brand" href="../../index.html">{ E } Ekonomi</a>
+  <span class="nav-sep">/</span>
+  <a class="nav-crumb" href="../index.html">Redovisning</a>
+  <span class="nav-sep">/</span>
+  <span class="nav-crumb active">Revision</span>
+  <span class="nav-author">Kent Lundgren</span>
+</nav>
+
+<div class="container">
+
+  <h1>Revision</h1>
+  <p class="meta">Lekmannarevision i ideella föreningar</p>
+
+  <p>
+    Revision i ideella föreningar handlar om att granska om räkenskaperna
+    ger en rättvisande bild och om styrelsen har agerat i enlighet med
+    stadgarna. Uppdraget kräver inte en auktoriserad revisor – en
+    lekmannarevisor vald av stämman är i de flesta fall tillräckligt.
+  </p>
+
+  <p>
+    Jag har lång erfarenhet av revision i ideella föreningar, bland annat
+    som lekmannarevisor i Kalmar Nation. Nedan finns en guide jag skrivit
+    om hur lekmannarevision går till i praktiken.
+  </p>
+
+  <h2>Lästips</h2>
+
+  <a class="section-card"
+     href="https://kentlundgren.github.io/foreningar/KalmarNation/revision/generellt.html"
+     target="_blank">
+    <h3>Hur fungerar revision? – En guide för alla</h3>
+    <p>
+      En lättläst genomgång av de tio stegen i en lekmannarevision:
+      bankavstämning, stickprov, förvaltningsgranskning och
+      revisionsberättelse. Skriven för den som vill förstå vad en revisor
+      faktiskt gör – utan att vara ekonom.
+    </p>
+    <span class="url-hint">kentlundgren.github.io/foreningar/KalmarNation/revision/generellt.html</span>
+  </a>
+
+  <!-- ── Diskret kontaktavsnitt ── -->
+  <div class="contact-box">
+    <h2>Söker din förening en lekmannarevisor?</h2>
+    <p>
+      Jag tar ibland uppdrag som lekmannarevisor i ideella föreningar och
+      studentorganisationer. Jag arbetar på arvodesbasis och anpassar
+      insatsen efter föreningens storlek och behov.
+    </p>
+    <p>
+      Hör gärna av dig om du vill diskutera om det kan vara något:
+      <a href="https://www.linkedin.com/in/kentlundgren/" target="_blank">linkedin.com/in/kentlundgren</a>.
+    </p>
+  </div>
+
+</div>
+
+<a class="github-corner" href="https://github.com/kentlundgren/Ekonomi" target="_blank">{ } GitHub</a>
+</body>
+</html>
