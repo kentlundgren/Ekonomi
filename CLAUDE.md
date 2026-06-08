@@ -80,6 +80,36 @@ GitHub-repo och sköter sig helt självständigt.
 
 ---
 
+## Kents bakgrund och roller
+
+Dessa utgångspunkter ska Claude känna till och ha som underlag när text skrivs
+eller granskas inom projektet.
+
+**Yrkesroll (daglig tjänst):**
+Kent Lundgren arbetar som ekonom/controller vid **Kultur och Fritidsförvaltningen,
+Simrishamns kommun**.
+- Simrishamns kommun är en *kommunal myndighet* och tillämpar **Kommun-BAS** och
+  lagen om kommunal bokföring och redovisning (LKR)
+- **Privat BAS gäller inte** för Kents dagliga arbete i kommunen
+- BAS 2026:s 272 ändringar (K2/K3-drivna) berör inte hans yrkesroll direkt
+
+**Ideell revision (fritidsuppdrag):**
+Kent är **lekmannarevisor** i ideella föreningar, bl.a. Kalmar Nation.
+- Ideella föreningar som Kalmar Nation använder ofta **privat BAS** i sin bokföring
+  (t.ex. via Fortnox)
+- Privat BAS-ändringar, t.ex. borttagandet av konto 6410, är därför relevanta
+  för hans revisionsuppdrag
+
+**LinkedIn:** https://www.linkedin.com/in/kentlundgren/
+
+**Praktisk konsekvens för Claude:**
+När Kent skriver om BAS i jag-form är det *i rollen som lekmannarevisor* –
+inte som kommunanställd ekonom. Text som säger "jag som controller i ett
+kommunalt bolag" är faktafel – Kent arbetar i kommunen som myndighet, inte
+i ett kommunalt bolag.
+
+---
+
 ## Projektöversikt
 
 | Fil | Beskrivning |
