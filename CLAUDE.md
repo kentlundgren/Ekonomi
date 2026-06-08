@@ -148,9 +148,10 @@ För att aktivera Pages: [github.com/kentlundgren/Ekonomi/settings/pages](https:
 - Vid uppdatering av befintlig fil: fråga om ny version ska skapas (`_verX`)
   eller om befintlig fil ska uppdateras
 
-### Skriv mänskligt – följ humanizer.md
+### Skriv mänskligt – följ humanizer.md och humanizer_skill.md
 
 All löpande text ska följa reglerna i [`humanizer.md`](humanizer.md).
+När text skrivs eller granskas: följ proceduren i [`humanizer_skill.md`](humanizer_skill.md).
 Kortversion av de viktigaste:
 
 - Inga tankestrecket (–) som satsavgränsare – använd punkt eller komma
