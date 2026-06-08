@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BAS 2026 – Analys</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #222;
+      background: #f5f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 48px 56px;
+    }
+
+    h1 {
+      font-size: 1.9em;
+      color: #1a3a5c;
+      border-bottom: 3px solid #1a6eb5;
+      padding-bottom: 10px;
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-size: 1.25em;
+      color: #1a3a5c;
+      margin-top: 44px;
+      margin-bottom: 10px;
+      border-left: 4px solid #1a6eb5;
+      padding-left: 12px;
+    }
+
+    h3 {
+      font-size: 1.05em;
+      color: #2c5282;
+      margin-top: 26px;
+      margin-bottom: 6px;
+    }
+
+    p { margin: 0 0 14px 0; }
+
+    /* Tabell */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0 26px 0;
+      font-size: 0.95em;
+    }
+    th {
+      background: #1a3a5c;
+      color: #fff;
+      padding: 10px 14px;
+      text-align: left;
+    }
+    td {
+      padding: 9px 14px;
+      border-bottom: 1px solid #dde4ec;
+      vertical-align: top;
+    }
+    tr:nth-child(even) td { background: #f0f4f9; }
+
+    /* Callout-rutor */
+    .callout {
+      background: #e8f0fb;
+      border-left: 5px solid #1a6eb5;
+      border-radius: 4px;
+      padding: 16px 20px;
+      margin: 22px 0;
+    }
+    .callout.gul {
+      background: #fff8e1;
+      border-left-color: #f59e0b;
+    }
+    .callout.gron {
+      background: #e6f4ea;
+      border-left-color: #2e7d32;
+    }
+    .callout p:last-child { margin-bottom: 0; }
+
+    /* Citatruta */
+    blockquote {
+      background: #f9f9f9;
+      border-left: 4px solid #aaa;
+      margin: 16px 0;
+      padding: 10px 18px;
+      font-style: italic;
+      color: #444;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.85em;
+      font-style: normal;
+      color: #666;
+    }
+
+    /* Tidslinje för uppdateringscykeln */
+    .timeline {
+      display: flex;
+      gap: 0;
+      margin: 22px 0 28px 0;
+      font-size: 0.88em;
+    }
+    .tl-step {
+      flex: 1;
+      background: #f0f4f9;
+      border: 1px solid #c5d5e8;
+      padding: 12px 14px;
+      position: relative;
+      text-align: center;
+    }
+    .tl-step:not(:last-child)::after {
+      content: "▶";
+      position: absolute;
+      right: -14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #1a6eb5;
+      font-size: 1.1em;
+      z-index: 1;
+    }
+    .tl-step .tl-label {
+      font-weight: bold;
+      color: #1a3a5c;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* Kontoplanjämförelse – sidorienterad */
+    .kp-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0 28px 0;
+    }
+    .kp-box {
+      border: 2px solid #c5d5e8;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .kp-box-header {
+      background: #1a3a5c;
+      color: #fff;
+      padding: 10px 14px;
+      font-weight: bold;
+      font-size: 0.95em;
+    }
+    .kp-box-header.kommunal { background: #2e7d32; }
+    .kp-row {
+      display: flex;
+      border-bottom: 1px solid #dde4ec;
+      font-size: 0.88em;
+    }
+    .kp-row:last-child { border-bottom: none; }
+    .kp-nr {
+      width: 42px;
+      flex-shrink: 0;
+      background: #f0f4f9;
+      padding: 7px 10px;
+      font-weight: bold;
+      color: #1a3a5c;
+      text-align: center;
+      border-right: 1px solid #dde4ec;
+    }
+    .kp-nr.highlight { background: #fde8b0; color: #7a4500; }
+    .kp-nr.highlight2 { background: #d4edda; color: #1a4a20; }
+    .kp-desc { padding: 7px 10px; }
+    .kp-desc.highlight { background: #fff8e8; }
+    .kp-desc.highlight2 { background: #f0faf0; }
+
+    /* Källförteckning */
+    .sources {
+      background: #f5f6f8;
+      border-radius: 6px;
+      padding: 18px 24px;
+      margin-top: 44px;
+      font-size: 0.9em;
+    }
+    .sources h2 {
+      border: none;
+      padding: 0;
+      margin-top: 0;
+      font-size: 1em;
+      color: #444;
+    }
+    .sources ol { margin: 8px 0 0 18px; padding: 0; }
+    .sources li { margin-bottom: 6px; }
+    .sources a { color: #1a6eb5; }
+
+    .meta { font-size: 0.85em; color: #666; margin-bottom: 30px; }
+
+    hr { border: none; border-top: 1px solid #dde4ec; margin: 40px 0; }
+
+    /* Badge */
+    .badge {
+      display: inline-block;
+      font-size: 0.75em;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 20px;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+    .badge-privat { background: #dce8fb; color: #1a3a5c; }
+    .badge-kommunal { background: #d4edda; color: #1a4a20; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ═══════════════════ RUBRIK ═══════════════════ -->
+  <h1>BAS-kontoplanen 2026 – Analys och reflektion</h1>
+  <p class="meta">
+    Upprättad: 2026-06-08 &nbsp;|&nbsp;
+    Underlag: Peter Berg, <em>BAS – Nyheter 2026</em>,
+    <a href="https://consultjourney.com/2026/06/07/bas-nyheter-2026/" target="_blank">consultjourney.com</a>
+    &nbsp;|&nbsp;
+    SKR, <a href="https://skr.se/ekonomiochbudgetplanering/redovisning.8278.html" target="_blank">Redovisning, skr.se</a>
+  </p>
+
+  <p>
+    Den 7 juni 2026 publicerade redovisningskonsulten och utbildaren Peter Berg en genomgång av
+    årets förändringar i BAS-kontoplanen. Analysen nedan besvarar fyra frågor:
+    (1) Vad täcker Bergs artikel egentligen – gäller det även Kommun-BAS?
+    (2) Hur fungerar uppdateringscykeln för Kommun-BAS, och vad hände 2026?
+    (3) Varför ändras kontoplanen överhuvudtaget?
+    (4) Varför sitter löner i helt olika kontogrupper i privat BAS och Kommun-BAS?
+  </p>
+
+  <!-- ═══════════════════════════════════════════════
+       DEL 1 – VAD TÄCKER BERGS ARTIKEL?
+  ════════════════════════════════════════════════ -->
+  <h2>1. Vad täcker Peter Bergs artikel – och vad täcker den inte?</h2>
+
+  <div class="callout gul">
+    <p>
+      <strong>Viktigt förtydligande:</strong> Peter Bergs artikel om BAS Nyheter 2026,
+      och de fem BAS-produkterna han beskriver, gäller <em>uteslutande</em>
+      <strong>privat BAS</strong> – den kontoplan som används av företag (aktiebolag,
+      handelsbolag, enskilda firmor m.fl.). Artikeln behandlar <em>inte</em> Kommun-BAS
+      eller Region-BAS.
+    </p>
+  </div>
+
+  <p>
+    Berg nämner dock att BAS-kontoplanen "är relevant för kommunala och regionala bolag".
+    Med det menar han kommunalt <em>ägda aktiebolag</em> – t.ex. ett kommunalt energibolag
+    eller bostadsbolag – som är juridiskt självständiga företag och måste följa
+    årsredovisningslagen (ÅRL) och BFN:s K-regelverk precis som vilket privat bolag som helst.
+    Det är <em>inte</em> detsamma som kommunen eller regionen som självstyrande organ.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Typ av organisation</th>
+        <th>Kontoplan som används</th>
+        <th>Lagstiftning</th>
+        <th>Täcks av Bergs artikel?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Privat aktiebolag, handelsbolag m.fl.</td>
+        <td><strong>BAS</strong> (privat)</td>
+        <td>BFL + ÅRL + BFN:s K-regelverk</td>
+        <td>✅ Ja, fullt ut</td>
+      </tr>
+      <tr>
+        <td>Kommunalt/regionalt ägt aktiebolag</td>
+        <td><strong>BAS</strong> (privat)</td>
+        <td>BFL + ÅRL + BFN:s K-regelverk</td>
+        <td>✅ Ja (det är vad Berg syftar på)</td>
+      </tr>
+      <tr>
+        <td>Kommunen som myndighet</td>
+        <td><strong>Kommun-BAS</strong></td>
+        <td>LKR + RKR:s rekommendationer</td>
+        <td>❌ Nej, täcks inte</td>
+      </tr>
+      <tr>
+        <td>Region som myndighet</td>
+        <td><strong>Region-BAS</strong></td>
+        <td>LKR + RKR:s rekommendationer</td>
+        <td>❌ Nej, täcks inte</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>De fem BAS-produkterna – enbart för företag</h3>
+  <p>
+    Bergs artikel presenterar fem produkter från BAS-intressenternas Förening:
+    Kontotabeller, Bokföringsboken, Bokslutsboken, Nyckeltalen och Bulletinen.
+    Alla fem är framtagna för <em>företag</em> som tillämpar ÅRL och K2/K3.
+    För kommuner och regioner är det i stället SKR (Sveriges Kommuner och Regioner)
+    som ger ut Kommun-BAS och Region-BAS – helt separata dokument med eget
+    underhåll och egna uppdateringscykler.
+  </p>
+
+  <!-- ═══════════════════════════════════════════════
+       NYT KAPITEL A – CONTROLLER I OFFENTLIGA BOLAG
+  ════════════════════════════════════════════════ -->
+  <h2>2. BAS 2026 – vad ska du som controller i ett kommunalt bolag tänka på?</h2>
+
+  <p>
+    Som controller i ett kommunalt eller regionalt bolag (aktiebolag) tillämpar du
+    <em>privat BAS</em> och ÅRL – inte Kommun-BAS. Det innebär att årets 272
+    förändringar i BAS 2026 fullt ut gäller dig. Nedan redovisas de förändringar
+    som har störst praktisk betydelse, rangordnade efter vad som kräver åtgärd.
+  </p>
+
+  <h3>Prioritet 1 – Anläggningstillgångar (klass 10–13) måste ses över</h3>
+  <p>
+    BFN har reviderat hur maskiner och inventarier ska delas upp i årsredovisningen.
+    Den kritiska gränsen är nu <strong>användningsområde</strong>:
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Tillgång</th>
+        <th>Används i produktionen?</th>
+        <th>Rätt balanspost (K2/K3)</th>
+        <th>BAS-konton att använda</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Maskiner, tekniska anläggningar</td>
+        <td>Ja – direkt i produktionen</td>
+        <td><em>Maskiner och andra tekniska anläggningar</em></td>
+        <td>1210-serien</td>
+      </tr>
+      <tr>
+        <td>Inventarier, verktyg, installationer</td>
+        <td>Nej – hjälpavdelning, admin, försäljning</td>
+        <td><em>Inventarier, verktyg och installationer</em></td>
+        <td>1220-serien</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    Många bolag har historiskt blandat dessa i ett konto (t.ex. "Maskiner och inventarier")
+    – det är numera en <strong>otillåten blandning</strong> av två separata
+    årsredovisningsposter. Som controller bör du gå igenom er kontoplan och säkerställa
+    att ni separerar maskiner (1210) från inventarier (1220). Avskrivningskontona
+    (klass 78) har också förtydligats i sin underkontosstruktur.
+  </p>
+
+  <div class="callout gul">
+    <p>
+      <strong>Särskilt att tänka på i kommunala bolag:</strong> Kommunala bolag driver
+      ofta teknisk infrastruktur (energi, vatten, avfall, IT) där gränsen
+      maskiner/inventarier kan vara otydlig. Säkerställ att er anläggningsredovisning
+      är uppdelad på rätt poster inför årsredovisning 2026.
+    </p>
+  </div>
+
+  <h3>Prioritet 2 – Finansiella anläggningstillgångar (klass 13)</h3>
+  <p>
+    Om bolaget äger andelar i eller har fordringar på intresseföretag eller
+    närstående bolag (t.ex. moderbolag = kommunen eller systerbolag i kommunkoncernen)
+    har BAS förtydligat att dessa <em>aldrig</em> ska ligga på ett gemensamt
+    huvudkonto – de ska separeras på underkonton för att årsredovisningens
+    rubricering ska bli rätt.
+  </p>
+  <p>
+    Huvud­kontona 1330 och 1340 har fått utökade namn som signalerar att de täcker
+    <em>två separata</em> årsredovisningsposter. Om ni bokfört allt på 1330 utan
+    underkonton bör ni se över strukturen.
+  </p>
+
+  <h3>Prioritet 3 – Övriga externa kostnader (klass 50–69) och SCB-statistik</h3>
+  <p>
+    Klass 5–6 har genomgått en bred uppdatering, delvis för att stödja BFN:s utvidgade
+    definition av <em>råvaror och förnödenheter</em> (inkl. andra rörliga
+    produktionskostnader), delvis för att möta SCB:s krav. De kontogrupper med
+    flest ändringar är:
+  </p>
+  <table>
+    <thead><tr><th>Kontogrupp</th><th>Vad ändrades</th><th>Relevant för kommunala bolag som...</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>52 Hyra av anläggningstillgångar</td>
+        <td>Nya huvudkonton, borttagna underkonton</td>
+        <td>... hyr lokaler, fordon, maskiner</td>
+      </tr>
+      <tr>
+        <td>53 Energikostnader för drift</td>
+        <td>Många ändringar för statistikändamål</td>
+        <td>... rapporterar energianvändning till SCB (vanligt i energi- och fastighetsbolag)</td>
+      </tr>
+      <tr>
+        <td>56 Kostnader för transportmedel</td>
+        <td>Stort antal ändringar för statistik</td>
+        <td>... driver fordonsflotta (VA, renhållning, kollektivtrafik)</td>
+      </tr>
+      <tr>
+        <td>62 Tele, data och post</td>
+        <td>Moderniserad benämning och struktur</td>
+        <td>... har IT-kostnader (alla)</td>
+      </tr>
+      <tr>
+        <td>64 Förvaltningskostnader</td>
+        <td><strong>6410 Styrelsearvoden borttaget</strong></td>
+        <td>... betalar ut styrelsearvoden (alla aktiebolag)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <p>
+      <strong>6410 Styrelsearvoden är borttaget – gäller dig direkt.</strong>
+      Konto 6410 existerar inte längre i BAS 2026. Skälet är rättspraxis: styrelsearvoden
+      ska beskattas som inkomst av tjänst, och kostnaden ska redovisas som
+      <em>personalkostnad</em> i klass 7 (med tillhörande sociala avgifter).
+      Se till att ert ekonomisystem inte längre pekar på 6410, och att ni istället
+      använder korrekt konto i klass 7 (t.ex. 7240 Styrelsearvoden).
+    </p>
+  </div>
+
+  <h3>Prioritet 4 – Periodiseringsfonder (mekanisk uppdatering)</h3>
+  <p>
+    Konto 2127 (Periodiseringsfond 2027) är nytt; konto 2128 (Periodiseringsfond 2018)
+    är borttaget. Det är en automatisk rullning och kräver ingen åtgärd annat än att
+    kontrollera att ert ekonomisystem är uppdaterat.
+  </p>
+
+  <h3>Vad kan komma att påverka Kommun-BAS 2027?</h3>
+  <p>
+    Nedan görs en bedömning av vilka BAS 2026-förändringar som sannolikt
+    <em>kan föras in i Kommun-BAS 27</em> (publiceras av SKR i juni 2026).
+    Bedömningen baseras på att Kommun-BAS ska harmonisera med BAS på gemensamma
+    områden, men är fri från K2/K3-specifika postkrav.
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>BAS 2026-förändring</th>
+        <th>Trolig påverkan på Kommun-BAS 27</th>
+        <th>Motivering</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Anläggningstillgångar klass 10–13 – förtydligade kontonamn</td>
+        <td>🟡 Trolig delvis anpassning</td>
+        <td>Terminologi för maskiner, inventarier och finansiella placeringar är gemensam – förtydligade namn kan komma att speglas i Kommun-BAS.</td>
+      </tr>
+      <tr>
+        <td>Checkräkningskredit → Kontokredit</td>
+        <td>🟢 Mycket trolig</td>
+        <td>Rent terminologisk uppdatering som gäller alla typer av organisationer.</td>
+      </tr>
+      <tr>
+        <td>6410 Styrelsearvoden borttaget</td>
+        <td>🟢 Trolig</td>
+        <td>Rättspraxis gäller även kommunala bolag och föreningar. SKR kan välja att ta bort eller kommentera kontot.</td>
+      </tr>
+      <tr>
+        <td>Klass 40–49 ny struktur för råvaror/förnödenheter</td>
+        <td>🔴 Osannolik</td>
+        <td>Driven av K2/K3-definitionen av råvaror, som saknar motsvarighet i kommunal verksamhet.</td>
+      </tr>
+      <tr>
+        <td>Klass 50–69 SCB-statistik-konton</td>
+        <td>🟡 Delvis möjlig</td>
+        <td>Kommuner och regioner rapporterar också till SCB, men via sitt eget rapporterings­system. Specificering kan följa, men med annan logik.</td>
+      </tr>
+      <tr>
+        <td>Periodiseringsfonder (klass 21)</td>
+        <td>🔴 Inte relevant</td>
+        <td>Kommuner och regioner betalar inte inkomstskatt och använder inte periodiseringsfonder.</td>
+      </tr>
+      <tr>
+        <td>K2/K3 – ny post "Övriga immateriella anläggningstillgångar"</td>
+        <td>🔴 Osannolik</td>
+        <td>Kommunal redovisning följer LKR/RKR, inte K2/K3.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout gron">
+    <p>
+      <strong>Praktisk rekommendation som controller:</strong> Uppdatera er kontoplan
+      till BAS 2026 nu – framförallt avseende klass 10–13 och borttagandet av konto 6410.
+      Bevakning av Kommun-BAS 27 (publiceras av SKR i juni 2026) är relevant om du
+      i din controllerfunktion även hanterar den kommunala moderorganisationens bokföring,
+      t.ex. vid upprättande av kommunkoncernens årsredovisning.
+    </p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       NYTT KAPITEL B – LEKMANNAREVISOR I IDEELLA FÖRENINGAR
+  ════════════════════════════════════════════════ -->
+  <h2>3. BAS 2026 och revisionen av ideella föreningar – vad ska du tänka på?</h2>
+
+  <p>
+    Du reviderar Kalmar Nation som lekmannarevisor – med den granskningsstruktur du
+    dokumenterat på
+    <a href="https://kentlundgren.github.io/foreningar/KalmarNation/revision/generellt.html" target="_blank">generellt.html</a>
+    och
+    <a href="https://kentlundgren.github.io/foreningar/KalmarNation/revision/index.html" target="_blank">index.html</a>.
+    Inför revisionen av <strong>räkenskapsåret 2026</strong> uppstår frågan: påverkar
+    BAS 2026-förändringarna din granskning? Svaret är: <em>delvis, och på ett
+    specifikt sätt</em>.
+  </p>
+
+  <h3>Vilket regelverk gäller för Kalmar Nation?</h3>
+  <p>
+    Det är viktigt att hålla isär vilket regelverk som styr <em>bokslutsprinciperna</em>
+    (hur föreningen redovisar) och vilket som styr <em>kontonumren</em>
+    (hur den löpande bokföringen är organiserad).
+  </p>
+  <table>
+    <thead><tr><th>Vad</th><th>Regelverk</th><th>Kommentar</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Bokslutsprinciper (hur bokslutet upprättas)</td>
+        <td><strong>BFNAR 2017:3</strong> – K2 Årsbokslut för ideella föreningar</td>
+        <td>
+          <em>Inte</em> K2 ÅR för aktiebolag (BFNAR 2016:10). Kalmar Nations bokslut
+          är ett <em>årsbokslut</em>, inte en årsredovisning.
+        </td>
+      </tr>
+      <tr>
+        <td>Kontonummer i den löpande bokföringen</td>
+        <td><strong>Privat BAS</strong> (frivillig standard)</td>
+        <td>
+          Kalmar Nation använder BAS-kontonummer i Fortnox – och påverkas därför
+          av ändringar i BAS 2026.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <p>
+      <strong>Nyckelinsikt:</strong> De flesta BAS 2026-ändringar drivs av ny K2 ÅR
+      (BFNAR 2016:10) och K3 (BFNAR 2012:1) – regelverk som Kalmar Nation
+      <em>inte</em> tillämpar. Ändringarna påverkar alltså inte vilka poster
+      som ska stå i bokslutet. Men de <em>påverkar vilka kontonummer</em>
+      som ska användas i den löpande bokföringen – och det märks i
+      verifikationslistan du granskar.
+    </p>
+  </div>
+
+  <h3>Det viktigaste att kontrollera inför revisionen 2026</h3>
+
+  <p><strong>① Konto 6410 Styrelsearvoden – kontot är borttaget</strong></p>
+  <p>
+    Det här är den förändring i BAS 2026 som är mest direkt relevant för Kalmar Nation.
+    Konto 6410 (Styrelsearvoden) <strong>existerar inte längre</strong> i BAS 2026.
+    BAS-kontogruppen motiverar borttaget med att rättspraxis sedan länge fastslår att
+    styrelsearvoden ska beskattas som lön – kostnaden hör hemma i klass 7
+    (personalkostnader), inte i klass 6 (övriga externa kostnader).
+  </p>
+  <p>
+    Kalmar Nation har en kuratel (styrelse) som kan ta emot arvoden.
+    Som revisor bör du vid granskning av räkenskapsåret 2026:
+  </p>
+  <table>
+    <thead><tr><th>Kontroll</th><th>Vad du letar efter</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Sök på konto 6410 i verifikationslistan</td>
+        <td>
+          Finns transaktioner på 6410 i 2026 års bokföring? I så fall är det
+          en bokföringsanmärkning – kontot finns inte i BAS 2026 och beloppet
+          borde ha bokförts på klass 7 med tillhörande sociala avgifter.
+        </td>
+      </tr>
+      <tr>
+        <td>Om inga styrelsearvoden betalas ut</td>
+        <td>
+          Inget att åtgärda – men notera för framtida referens att 6410 är borttaget.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>② Kontokredit (tidigare Checkräkningskredit)</strong></p>
+  <p>
+    Om Kalmar Nation har en kontokredit hos bank ska den nu heta
+    <em>Kontokredit</em> (konto 2330), inte <em>Checkräkningskredit</em>.
+    Det är enbart en namnändring och påverkar inte saldot – men om
+    ekonomisystemet inte uppdaterats till BAS 2026 kan den gamla benämningen synas
+    i rapporterna. Ingen revisionsanmärkning, men värd att notera.
+  </p>
+
+  <p><strong>③ Anläggningstillgångar – kontrollera klassificering</strong></p>
+  <p>
+    Kalmar Nation har inventarier (konto 1220, avskrivningar på 7832 per 2025
+    års revision). Klass 12-strukturen har förtydligats: kontrollera att Fortnox
+    använder korrekt BAS 2026-konton. Inga saldoförändringar förväntas – men
+    kontona kan ha fått nya benämningar i systemet.
+  </p>
+
+  <p><strong>④ Klass 5–6 externa kostnader – terminologiändringar</strong></p>
+  <p>
+    Kalmar Nation har hyreskostnader (konto 5010, som du granskade i 2025 års
+    revision), energikostnader och IT-kostnader. Klass 52, 53 och 62 har
+    fått ändrade kontonamn och viss strukturförändring. Kontrollera att
+    Fortnox-systemet är uppdaterat till BAS 2026 och att ekonomiansvarig
+    (PQe 2026) inte bokfört på borttagna underkonton.
+  </p>
+
+  <p><strong>⑤ Kontrollera att ekonomisystemet är uppdaterat till BAS 2026</strong></p>
+  <p>
+    Det viktigaste praktiska steget är att tidigt i revisionsprocessen fråga PQe 2026
+    om Fortnox är uppdaterat till BAS 2026-kontoplanen. De flesta
+    ekonomisystem uppdateras automatiskt, men det är inte garanterat.
+    En förening som bokfört på borttagna konton under 2026 kan ha
+    felaktiga rapportkopplingar i bokslutet.
+  </p>
+
+  <div class="callout gul">
+    <p>
+      <strong>Fråga att ställa till PQe 2026 tidigt:</strong><br>
+      "Är Fortnox uppdaterat till BAS 2026? Har du fått något meddelande från
+      Fortnox om kontoändringar under 2026? Har konto 6410 använts under 2026?"
+    </p>
+  </div>
+
+  <h3>Vad i din befintliga revisionsstruktur behöver ändras?</h3>
+  <p>
+    Din granskningsstruktur (10 steg i generellt.html) är i grunden oförändrad.
+    BAS 2026 kräver ingen ny granskningspunkt, men befintliga stickprovskontroller
+    (steg 5) bör inkludera en snabb sökning på konto 6410 och en fråga om
+    systemuppdatering. I övrigt gäller samma metodik som vid 2025 års revision –
+    verifikationslista, bankavstämning, kontinuitetskontroll, fordringsgranskning
+    och förvaltningsgranskning.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Ditt granskningssteg</th>
+        <th>Tillägg/justering inför 2026 års revision</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Steg 1 – Riskbedömning</td>
+        <td>Lägg till: Är ekonomisystemet uppdaterat till BAS 2026? Har kontoplanen ändrats under 2026?</td>
+      </tr>
+      <tr>
+        <td>Steg 5 – Stickprov på verifikationer</td>
+        <td>Sök explicit på konto 6410 i verifikationslistan. Om saldo ≠ 0: anmärkning om felkontering.</td>
+      </tr>
+      <tr>
+        <td>Steg 6 – Jämförelseanalys</td>
+        <td>Jämför kontostruktur 2025 vs. 2026: har nya konton tillkommit? Har gamla konton försvunnit?</td>
+      </tr>
+      <tr>
+        <td>Övriga steg</td>
+        <td>Inga ändringar krävs – BFNAR 2017:3 och din granskningsmodell är oförändrade.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout gron">
+    <p>
+      <strong>Sammanfattning för lekmannarevisorn:</strong> BAS 2026 är ingen
+      revolution för din revision av Kalmar Nation. Det viktigaste är att
+      verifiera att ekonomisystemet är uppdaterat, och att konto 6410 inte
+      använts. I övrigt gäller din befintliga granskningsstruktur fullt ut.
+    </p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       DEL 4 – UPPDATERINGSCYKELN FÖR KOMMUN-BAS
+  ════════════════════════════════════════════════ -->
+  <h2>4. Kommun-BAS 2026 – vad hände egentligen?</h2>
+
+  <p>
+    Privat BAS och Kommun-BAS uppdateras av <em>olika organisationer</em> med
+    <em>olika timing</em>. Det är viktigt att förstå detta för att inte blanda ihop
+    de 272 ändringarna i BAS 2026 med vad som gäller för kommunal redovisning.
+  </p>
+
+  <div class="timeline">
+    <div class="tl-step">
+      <span class="tl-label">Jan 2026</span>
+      BAS-kontogruppen publicerar <strong>privat BAS 2026</strong><br>
+      (272 ändringar, K2/K3-anpassningar)
+    </div>
+    <div class="tl-step">
+      <span class="tl-label">Juni 2025</span>
+      SKR publicerade <strong>Kommun-BAS 26</strong><br>
+      (för användning under 2026,<br>baserad på BAS <em>2025</em>)
+    </div>
+    <div class="tl-step">
+      <span class="tl-label">Juni 2026</span>
+      SKR publicerar <strong>Kommun-BAS 27</strong><br>
+      (baserad på BAS 2026 – det är <em>då</em> BAS 2026-ändringar kan komma in)
+    </div>
+  </div>
+
+  <div class="callout">
+    <p>
+      <strong>Nyckelinsikt om tidsfördröjningen:</strong>
+      SKR publicerar Kommun-BAS i <em>juni varje år</em>, men den gäller för
+      <em>nästa</em> kalenderår. Dessutom bygger den på föregående års BAS.
+      Det innebär att de 272 förändringarna i privat BAS 2026
+      (K2/K3-ändringar, ny struktur för anläggningstillgångar och externa kostnader)
+      <strong>inte</strong> automatiskt slår igenom i Kommun-BAS 26 –
+      det sker, i den mån det är relevant, i Kommun-BAS 27 (publiceras juni 2026).
+    </p>
+  </div>
+
+  <h3>Vad innehåller Kommun-BAS 26?</h3>
+  <p>
+    Kommunen-BAS 26 publicerades den 25 juni 2025. Enligt SKR innehåller årets
+    version "främst förtydliganden i beskrivningar av konton" – det är alltså
+    relativt begränsade ändringar, utan de stora strukturella ombyggnader som
+    präglar privat BAS 2026. Kommun-BAS 26 finns att ladda ned gratis från
+    SKR:s webbplats i formaten PDF, Word och Excel.
+  </p>
+
+  <h3>Påverkar privata BAS-ändringar Kommun-BAS överhuvudtaget?</h3>
+  <p>
+    Ja – men selektivt och med minst ett års eftersläpning.
+    SKR beskriver Kommun-BAS som en plan som "grundar sig till en del på BAS-kontoplanen
+    för företag" men som "anpassats efter den kommunala redovisningslagen och de
+    uppgifter som SCB efterfrågar". Ändringar i privat BAS som rör termer och
+    kontonummer <em>på gemensamma områden</em> (t.ex. tillgångskonton, skulder)
+    kan med tiden föra in i Kommun-BAS. Ändringar som enbart rör
+    K2/K3-specifika poster, inkomstskatt eller periodiseringsfonder
+    är däremot irrelevanta för kommunal redovisning och förs inte in.
+  </p>
+
+  <!-- ═══════════════════════════════════════════════
+       DEL 5 – VARFÖR ÄNDRAS BAS VARJE ÅR?
+  ════════════════════════════════════════════════ -->
+  <h2>5. Varför ändras BAS-kontoplanen varje år?</h2>
+
+  <p>
+    BAS är ingen lag – det är en frivillig rekommendation som syftar till att spegla
+    de <strong>tvingande regler</strong> som faktiskt styr redovisningen:
+    årsredovisningslagen (ÅRL), BFN:s K-regelverk (K2, K3), inkomstskattelagen och
+    SCB:s statistikkrav. När dessa regler ändras måste kontoplanen följa med –
+    annars tappar den sin huvudpoäng: att automatisera kopplingen mellan löpande
+    bokföring, bokslut, deklaration och statistik.
+  </p>
+
+  <div class="callout">
+    <p>
+      <strong>Enkelt uttryckt:</strong> En fryst kontoplan skapar mer manuellt arbete,
+      inte mindre – för då måste ekonomerna ändå göra kopplingarna för hand,
+      utan systemstöd.
+    </p>
+  </div>
+
+  <p>
+    År 2026 var ovanligt stort (272 ändringar) eftersom BFN genomfört
+    en samlad genomgång av K2 och K3 parallellt, vilket tvingade BAS att bygga om
+    kontoklasserna 10–13 (anläggningstillgångar) och 50–69 (övriga externa kostnader)
+    i grunden. Normalår är förändringarna betydligt färre – det är timingen av
+    BFN:s regelrevisioner som avgör, inte att BAS-kontogruppen vill ändra för sakens skull.
+  </p>
+
+  <!-- ═══════════════════════════════════════════════
+       DEL 6 – LÖNER I KONTOGRUPP 5 vs 7
+  ════════════════════════════════════════════════ -->
+  <h2>6. Varför sitter löner i kontogrupp 5 i Kommun-BAS men i klass 7 i privat BAS?</h2>
+
+  <p>
+    Det här är en konkret och praktisk förvirringskälla för den som rör sig
+    mellan kommunal och privat redovisning. Nedan visas strukturen sida vid sida.
+    De gula raderna markerar var personalkostnaderna (löner + sociala avgifter) hamnar.
+  </p>
+
+  <!-- Sidorienterad kontoplanjämförelse -->
+  <div class="kp-compare">
+
+    <div class="kp-box">
+      <div class="kp-box-header">Privat BAS – kontoplansstruktur</div>
+      <div class="kp-row">
+        <div class="kp-nr">1</div>
+        <div class="kp-desc">Tillgångar</div>
+      </div>
+      <div class="kp-row">
+        <div class="kp-nr">2</div>
+        <div class="kp-desc">Skulder och eget kapital</div>
+      </div>
+      <div class="kp-row">
+        <div class="kp-nr">3</div>
+        <div class="kp-desc">Rörelsens intäkter och lagerändringar</div>
+      </div>
+      <div class="kp-row">
+        <div class="kp-nr">4</div>
+        <div class="kp-desc">Varor, material och köpta tjänster</div>
+      </div>
+      <div class="kp-row">
+        <div class="kp-nr">5–6</div>
+        <div class="kp-desc">Övriga externa kostnader (hyra, el, porto, data m.m.)</div>
+      </div>
+      <div class="kp-row">
+        <div class="kp-nr highlight">7</div>
+        <div class="kp-desc highlight">
+          <strong>Personalkostnader + avskrivningar</strong><br>
+          <small>7010 Löner, 7510 Sociala avgifter, 7820 Avskrivningar</small>
+        </div>
+      </div>
+      <div class="kp-row">
+        <div class="kp-nr">8</div>
+        <div class="kp-desc">Finansiella och extraordinära poster + skatt</div>
+      </div>
+    </div>
+
+    <div class="kp-box">
+      <div class="kp-box-header kommunal">Kommun-BAS – kontoplansstruktur</div>
+      <div class="kp-row">
+        <div class="kp-nr">1</div>
+        <div class="kp-desc">Tillgångar</div>
+      </div>
+      <div class="kp-row">
+        <div class="kp-nr">2</div>
+        <div class="kp-desc">Skulder och eget kapital</div>
+      </div>
+      <div class="kp-row">
+        <div class="kp-nr">3</div>
+        <div class="kp-desc">Skatteintäkter och generella statsbidrag</div>
+      </div>
+      <div class="kp-row">
+        <div class="kp-nr">4</div>
+        <div class="kp-desc">Verksamhetens intäkter (taxor, avgifter, bidrag)</div>
+      </div>
+      <div class="kp-row">
+        <div class="kp-nr highlight2">5</div>
+        <div class="kp-desc highlight2">
+          <strong>Personalkostnader</strong><br>
+          <small>510x Löner, 530x Sociala avgifter, 550x Pensionskostnader</small>
+        </div>
+      </div>
+      <div class="kp-row">
+        <div class="kp-nr">6</div>
+        <div class="kp-desc">Köpta tjänster och material</div>
+      </div>
+      <div class="kp-row">
+        <div class="kp-nr">7</div>
+        <div class="kp-desc">Avskrivningar, finansiella kostnader m.m.</div>
+      </div>
+      <div class="kp-row">
+        <div class="kp-nr">8</div>
+        <div class="kp-desc">Extraordinära poster och resultatdisposition</div>
+      </div>
+    </div>
+
+  </div>
+
+  <h3>Varför skillnaden – och varför har man inte gjort likadant?</h3>
+
+  <p>
+    Skillnaden är inte ett misstag eller slarv – den återspeglar att de två
+    kontoplanerna är byggda kring helt olika <em>primära kostnadsdrivare</em> och
+    helt olika <em>juridiska presentationskrav</em>.
+  </p>
+
+  <p>
+    I ett <strong>privat företag</strong> – framförallt handels- och tillverkningsföretag
+    – ser kostnadsstrukturen ut ungefär så här: varukostnader (klass 4) är den
+    dominerande kostnaden, sedan kommer externa kostnader (klass 5–6), och sist
+    personalkostnaderna (klass 7). Årsredovisningslagen (ÅRL) och K2/K3 kräver
+    dessutom en viss ordning i resultaträkningen: nettoomsättning → varukostnader →
+    övriga externa kostnader → personalkostnader → avskrivningar. Kontoplanen
+    speglar den ordningen.
+  </p>
+
+  <p>
+    I en <strong>kommun eller region</strong> är det tvärtom: det finns inga varor
+    att sälja, och personalkostnaderna utgör typiskt sett <strong>50–70 % av alla
+    driftkostnader</strong>. Det är den enskilt viktigaste kostnadsposten att följa
+    upp, budgetera och styra. Det är därför rimligt och pedagogiskt att ge
+    personalkostnaderna den mest framträdande platsen i kontoplanen – klass 5
+    – direkt efter intäkterna.
+  </p>
+
+  <p>
+    Den kommunala redovisningslagen (LKR) ställer dessutom inte upp
+    resultaträkningens poster i samma ordning som ÅRL.
+    Kommunal redovisning presenteras i form av en <em>verksamhetsberättelse</em>
+    och <em>driftsredovisning</em> per nämnd/förvaltning, inte som en kommersiell
+    resultaträkning. Begreppet "varukostnad" (klass 4 i privat BAS) saknar
+    i stort sett motsvarighet i kommunal verksamhet.
+  </p>
+
+  <div class="callout gul">
+    <p>
+      <strong>Kunde man ha gjort dem lika?</strong> I teorin ja – men i praktiken nej,
+      av tre skäl. För det första var Kommun-BAS 95 (den första versionen) utformad
+      utifrån kommunal verksamhets faktiska behov, inte för att matcha privat BAS.
+      För det andra skulle ett enhetligt system antingen tvinga kommuner att ha
+      tomma "varukostnadskonton" de aldrig använder, eller tvinga privata företag
+      att flytta sina löner. Ingen av delarna är önskvärd. För det tredje styrs
+      de av <em>olika lagar</em> med <em>olika presentationskrav</em> – en
+      harmonisering av kontonummer hade inte löst den underliggande
+      regelskillnaden.
+    </p>
+  </div>
+
+  <h3>Praktisk hantering för den som arbetar i båda världarna</h3>
+  <p>
+    Det enklaste sättet att hålla isär systemen är att tänka på dem som
+    <em>två separata verktyg för två separata lagstiftningar</em>.
+    Det är ungefär som att växla mellan svenska och engelska – orden
+    är ibland lika men systemen är olika. En ekonom i ett kommunalt bolag
+    (aktiebolag) följer privat BAS och ÅRL. En ekonom i kommunen som myndighet
+    följer Kommun-BAS och LKR. Kontonummer som börjar på 5 betyder
+    <em>helt olika saker</em> beroende på vilket system man är i.
+  </p>
+
+  <!-- ═══════════════════════════════════════════════
+       DEL 7 – SAMMANFATTNING
+  ════════════════════════════════════════════════ -->
+  <h2>7. Sammanfattning</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Fråga</th>
+        <th>Svar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Täcker Bergs artikel Kommun-BAS?</td>
+        <td>Nej – enbart privat BAS. Kommunala/regionala <em>bolag</em> följer privat BAS, men kommunen/regionen som myndighet gör det inte.</td>
+      </tr>
+      <tr>
+        <td>Viktigaste BAS 2026-ändringar för controller i kommunalt bolag?</td>
+        <td>Klass 10–13 (anläggningstillgångar – maskiner vs. inventarier måste separeras), borttagandet av konto 6410 (styrelsearvoden → klass 7), klass 50–69 om ni rapporterar till SCB.</td>
+      </tr>
+      <tr>
+        <td>Kan BAS 2026 påverka Kommun-BAS 27?</td>
+        <td>Ja, delvis: terminologiändringar i klass 10–13 och kontokreditbytet är sannolika. K2/K3-drivna strukturändringar (klass 4, periodiseringsfonder) är irrelevanta för kommunal redovisning.</td>
+      </tr>
+      <tr>
+        <td>Påverkar BAS 2026 revisionen av Kalmar Nation?</td>
+        <td>Begränsat – Kalmar Nation följer BFNAR 2017:3 (inte K2 ÅR). Viktigast: kontrollera att konto 6410 inte använts 2026 (kontot är borttaget), och att Fortnox är uppdaterat till BAS 2026.</td>
+      </tr>
+      <tr>
+        <td>Vad hände med Kommun-BAS 2026?</td>
+        <td>Publicerades av SKR i juni 2025 och innehöll främst förtydliganden. De 272 ändringarna i privat BAS 2026 är <em>inte</em> inkluderade – de kan komma i Kommun-BAS 27 (juni 2026).</td>
+      </tr>
+      <tr>
+        <td>Varför ändras BAS varje år?</td>
+        <td>Kontoplanen speglar tvingande lagar (K2, K3, skattelag, SCB). Ändras reglerna måste verktyget följa med. 2026 var ovanligt stort pga. en samlad K2/K3-revision.</td>
+      </tr>
+      <tr>
+        <td>Varför löner i klass 5 (Kommun) vs. klass 7 (privat)?</td>
+        <td>Olika verksamhetslogik och lagstiftning. Kommuner domineras av personalkostnader (50–70 % av driftkostnaderna) och lyder under LKR, inte ÅRL.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr />
+
+  <!-- ═══════════════════════════════════════════════
+       KÄLLFÖRTECKNING
+  ════════════════════════════════════════════════ -->
+  <div class="sources">
+    <h2>Källor (Harvardstil)</h2>
+    <ol>
+      <li>
+        Berg, P. (2026) <em>BAS – Nyheter 2026</em>. The consultant's journey, 7 juni.
+        Tillgänglig:
+        <a href="https://consultjourney.com/2026/06/07/bas-nyheter-2026/" target="_blank">
+          https://consultjourney.com/2026/06/07/bas-nyheter-2026/
+        </a> [Hämtad: 2026-06-08].
+      </li>
+      <li>
+        Berg, P. (2025) <em>SKR – Kommun-Bas och Region-Bas 2026</em>. The consultant's journey, 26 juni.
+        Tillgänglig:
+        <a href="https://consultjourney.com/2025/06/26/skr-kommun-bas-och-region-bas-2026/" target="_blank">
+          https://consultjourney.com/2025/06/26/skr-kommun-bas-och-region-bas-2026/
+        </a> [Hämtad: 2026-06-08].
+      </li>
+      <li>
+        Sveriges Kommuner och Regioner (SKR) (2026) <em>Redovisning – Baskontoplan för kommuner och regioner</em>.
+        Tillgänglig:
+        <a href="https://skr.se/ekonomiochbudgetplanering/redovisning.8278.html" target="_blank">
+          https://skr.se/ekonomiochbudgetplanering/redovisning.8278.html
+        </a> [Hämtad: 2026-06-08].
+      </li>
+      <li>
+        Sveriges Kommuner och Regioner (SKR) (2025) <em>Kommun-Bas 26</em> [PDF].
+        Tillgänglig:
+        <a href="https://skr.se/download/18.4a15ed6119ae7c4d2fb4855/1764839020190/Kommun-BAS-26.pdf" target="_blank">
+          skr.se (PDF, 2 MB)
+        </a>.
+      </li>
+      <li>
+        BAS-intressenternas Förening (2026) <em>BAS-kontoplanen 2026 – Kontotabeller</em>.
+        Tillgänglig:
+        <a href="https://www.bas.se/kontoplaner/" target="_blank">
+          https://www.bas.se/kontoplaner/
+        </a> [Hämtad: 2026-06-08].
+      </li>
+      <li>
+        Bokföringsnämnden (2025) <em>Årsredovisning i mindre företag (BFNAR 2016:10), K2 ÅR</em>,
+        version 2025-06-16. Tillgänglig:
+        <a href="https://www.bfn.se" target="_blank">https://www.bfn.se</a>.
+      </li>
+      <li>
+        SFS 2018:597. <em>Lag om kommunal bokföring och redovisning</em>. Stockholm: Finansdepartementet.
+      </li>
+      <li>
+        Rådet för kommunal redovisning (RKR) (2024) <em>Rekommendationer för kommunal redovisning</em>.
+        Tillgänglig:
+        <a href="https://www.rkr.se" target="_blank">https://www.rkr.se</a>.
+      </li>
+    </ol>
+  </div>
+
+</div>
+</body>
+</html>
