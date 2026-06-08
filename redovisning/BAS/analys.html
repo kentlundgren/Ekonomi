@@ -278,6 +278,7 @@
   <div class="nav-links">
     <a href="../../index.html">Startsida</a>
     <a href="analys.html" class="active">BAS 2026 – Analys</a>
+    <a href="generell_revision.html">BAS och revision</a>
     <a href="../../rattgit.html">Git-guide</a>
   </div>
   <span class="nav-author">Kent Lundgren</span>
@@ -770,6 +771,138 @@
   </div>
 
   <!-- ═══════════════════════════════════════════════
+       DEL 3b – KALMAR NATIONS FAKTISKA KONTOPLAN 2025
+  ════════════════════════════════════════════════ -->
+  <h2 id="kontoplan2025">3b. Kalmar Nations kontoplan 2025 – vad träffas av BAS 2026?</h2>
+
+  <p>
+    Inför revisionen av räkenskapsåret 2026 har jag gått igenom Kalmar Nations
+    faktiska bokföring: resultatrapport och bokslut för 2025 (räkenskapsår
+    2025-01-01–2025-12-31, upprättat enligt BFNAR 2017:3). Analysen visar att
+    <strong>ett konto är direkt berört av BAS 2026, och ytterligare ett bör
+    bevakas.</strong>
+  </p>
+
+  <h3>Direkt åtgärdspunkt – konto 6410 användes faktiskt</h3>
+
+  <div class="callout gul">
+    <p>
+      <strong>Konto 6410 "Non-salary remuneration" — −4 068 kr (2025)</strong><br>
+      Kalmar Nation bokförde 4 068 kr på konto 6410 under 2025.
+      Konto 6410 (Styrelsearvoden) <em>existerar inte i BAS 2026</em>.
+    </p>
+    <p>
+      <strong>Viktigt förtydligande:</strong> BAS 2026 <em>inför inte</em> ett nytt
+      skattekrav. Skyldigheten att betala arbetsgivaravgifter på styrelsearvoden
+      och liknande funktionärsersättningar har funnits i svensk skatterätt under
+      lång tid – rättspraxis har fastslått att styrelsearvoden är inkomst av tjänst.
+      Vad BAS 2026 gör är att <em>rätta kontoplanen</em> så att den avspeglar den
+      skatterättsliga verkligheten: kostnaden hör hemma i klass 7
+      (personalkostnader, t.ex. 7240), inte i klass 6 (övriga externa kostnader).
+    </p>
+    <p>
+      <strong>Att utreda vid revisionen:</strong> Vad är de 4 068 kr egentligen –
+      arvode eller utläggsersättning? Om det är arvode: har arbetsgivaravgifter
+      betalts? (Kravet är inte nytt, men bokningstradition på 6410 kan ha dolt att
+      klass 7 + sociala avgifter är rätt behandling.) Fråga PQe 2026 vilket konto
+      som används för funktionärsersättningar 2026.
+    </p>
+  </div>
+
+  <h3>Övriga konton – statusöversikt</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Konto (2025)</th>
+        <th>Belopp 2025</th>
+        <th>BAS 2026-status</th>
+        <th>Revisionsåtgärd</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>6410</strong> Non-salary remuneration</td>
+        <td>−4 068 kr</td>
+        <td>🔴 Borttaget</td>
+        <td>Sök på 6410 – ska vara 0 kr 2026</td>
+      </tr>
+      <tr>
+        <td><strong>6230</strong> Data communication (DELETE)</td>
+        <td>0 kr (43 kr fg år)</td>
+        <td>🔴 Utgående</td>
+        <td>Bokföraren har redan märkt det "DELETE" – inga transaktioner 2025, inget att åtgärda</td>
+      </tr>
+      <tr>
+        <td><strong>1220</strong> Inventarier (16 100 kr UB)</td>
+        <td>Avskrivningar −12 763 kr</td>
+        <td>🟢 Oförändrat</td>
+        <td>Klass 10–13 förtydligades, men Kalmar Nation har bara inventarier (1220) – redan korrekt</td>
+      </tr>
+      <tr>
+        <td><strong>5221</strong> Korttidshyra av inventarier</td>
+        <td>−25 000 kr</td>
+        <td>🟡 Bevaka</td>
+        <td>Klass 52 fick ny struktur. Kontrollera att Fortnox pekar på rätt konto 2026</td>
+      </tr>
+      <tr>
+        <td><strong>5252</strong> Leasing of computers</td>
+        <td>−68 733 kr</td>
+        <td>🟡 Bevaka</td>
+        <td>Samma som ovan – operationell hyra, troligen oförändrat för BFNAR 2017:3</td>
+      </tr>
+      <tr>
+        <td><strong>4901–4909</strong> Förändring i lager</td>
+        <td>+188 561 kr netto</td>
+        <td>🟢 Ej berört</td>
+        <td>Klass 40–49-ändringar drivs av K2/K3 för aktiebolag – inte tillämpligt för Kalmar Nation</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Saknas klass 75 – arbetsgivaravgifter?</h3>
+
+  <div class="callout" style="border-left-color: #c0392b; background: #fdf3f2;">
+    <p>
+      <strong>Observation att följa upp:</strong>
+      Resultatrapporten för 2025 saknar helt konton i klass 75
+      (Sociala och andra avgifter). Med löner om 550 279 kr
+      borde konto 7510 Arbetsgivaravgifter visa ca
+      <strong>172 900 kr</strong> (31,42 % av bruttolön, 2025).
+      Att posten saknas kräver ett svar från ekonomiansvarig.
+    </p>
+  </div>
+
+  <p>
+    Skyldigheten att betala arbetsgivaravgifter gäller <em>alla</em>
+    arbetsgivare i Sverige – aktiebolag, kommuner och ideella föreningar
+    utan undantag. Grunden är <strong>socialavgiftslagen (SFS 2000:980,
+    2 kap. 1 §)</strong>: arbetsgivare ska betala avgifter på all
+    ersättning för arbete som betalas ut till arbetstagare.
+    Organisationsformen spelar ingen roll.
+  </p>
+  <p>
+    Skatteverket bekräftar explicit att ideella föreningar som betalar
+    lön eller arvode är arbetsgivare med samma skyldigheter som övriga
+    – inklusive att lämna AGI-deklaration (arbetsgivardeklaration på
+    individnivå) månadsvis och att betala in arbetsgivaravgiften
+    till skattekontot
+    (<a href="https://www.skatteverket.se/foretagochorganisationer/arbetsgivare/arbetsgivaravgifter.4.233f91f71260075abe8800020817.html"
+       target="_blank">Skatteverket, Arbetsgivaravgifter</a>).
+    Att Kalmar Nation redan använder konto 7210 (löner) bekräftar
+    att de är arbetsgivare – och att klass 75 ska finnas.
+  </p>
+
+
+  <p>
+    En fördjupad diskussion om hur BAS-förändringar generellt påverkar
+    revisionsprocessen för en ideell förening finns i
+    <a href="generell_revision.html">BAS-ändringar och revision – en praktisk guide</a>.
+    Den guiden bygger vidare på grundprinciperna i
+    <a href="https://kentlundgren.github.io/foreningar/KalmarNation/revision/generellt.html" target="_blank">Hur fungerar revision? (generellt.html)</a>.
+  </p>
+
+  <!-- ═══════════════════════════════════════════════
        DEL 4 – UPPDATERINGSCYKELN FÖR KOMMUN-BAS
   ════════════════════════════════════════════════ -->
   <h2>4. Kommun-BAS 2026 – vad hände egentligen?</h2>
@@ -1103,6 +1236,18 @@
         Bokföringsnämnden (2025) <em>Årsredovisning i mindre företag (BFNAR 2016:10), K2 ÅR</em>,
         version 2025-06-16. Tillgänglig:
         <a href="https://www.bfn.se" target="_blank">https://www.bfn.se</a>.
+      </li>
+      <li>
+        SFS 2000:980. <em>Socialavgiftslag</em>. Stockholm: Finansdepartementet.
+        2 kap. 1 § fastslår att arbetsgivare ska betala avgifter på ersättning för arbete
+        oavsett organisationsform. Tillgänglig:
+        <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/socialavgiftslag-2000980_sfs-2000-980/" target="_blank">riksdagen.se</a>.
+      </li>
+      <li>
+        Skatteverket (u.å.) <em>Arbetsgivaravgifter</em>.
+        Tillgänglig:
+        <a href="https://www.skatteverket.se/foretagochorganisationer/arbetsgivare/arbetsgivaravgifter.4.233f91f71260075abe8800020817.html" target="_blank">skatteverket.se</a>
+        [Hämtad: 2026-06-08].
       </li>
       <li>
         SFS 2018:597. <em>Lag om kommunal bokföring och redovisning</em>. Stockholm: Finansdepartementet.
