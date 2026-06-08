@@ -7,15 +7,16 @@
 
 ## 📌 Viktig regel – Commit och push gör Kent själv
 
-**Kent commitar och pushar alltid själv** – i terminalen i Cursor.
+**Kent commitar och pushar normalt själv** – via Cursors GUI eller terminalen.
 
-Det är ett medvetet val: Kent vill känna och förstå processen när filer uppdateras
-och förs över till GitHub. Det ger kunskap och kontroll.
+Det är ett medvetet val: Kent vill känna och förstå processen när filer
+uppdateras och förs över till GitHub. Det ger kunskap och kontroll.
 
 Claudes roll:
+- Göra ändringar i filer när Kent ber om det
 - Påminna när en commit bör göras (t.ex. efter att filer uppdaterats)
 - Föreslå ett färdigt commit-meddelande att kopiera rakt av
-- Aldrig committa eller pusha utan att Kent uttryckligen ber om det
+- Committa och pusha **endast om Kent uttryckligen ber om det**
 
 **Kent commitar via Cursors Source Control-panel (GUI) eller via terminalen.**
 
