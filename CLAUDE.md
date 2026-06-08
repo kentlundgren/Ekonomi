@@ -102,11 +102,19 @@ Kent är **lekmannarevisor** i ideella föreningar, bl.a. Kalmar Nation.
 
 **LinkedIn:** https://www.linkedin.com/in/kentlundgren/
 
+**Viktigt – tre begrepp att hålla isär:**
+
+| Begrepp | Vad det är | Kents koppling |
+|---------|-----------|----------------|
+| **Kommunal förvaltning** | Kommunen som myndighet, t.ex. en förvaltning | ✅ Här arbetar Kent (Kultur och Fritids­förvaltningen) |
+| **Kommunalt bolag** | Aktiebolag *ägt* av kommunen, t.ex. VA-bolag | ❌ Kent jobbar inte här |
+| **Ideell förening** | T.ex. Kalmar Nation | ✅ Här är Kent lekmannarevisor |
+
 **Praktisk konsekvens för Claude:**
-När Kent skriver om BAS i jag-form är det *i rollen som lekmannarevisor* –
-inte som kommunanställd ekonom. Text som säger "jag som controller i ett
-kommunalt bolag" är faktafel – Kent arbetar i kommunen som myndighet, inte
-i ett kommunalt bolag.
+- Kent arbetar i *kommunal förvaltning* – inte i kommunala bolag
+- "Jag som controller i ett kommunalt bolag" är alltid fel om det avser Kent
+- BAS-analys i jag-form gäller hans *revisionsroll*, inte hans dagliga tjänst
+- Skriver Claude om kommunal redovisning i Kents dagliga arbete → Kommun-BAS och LKR gäller
 
 ---
 
@@ -191,11 +199,24 @@ i referenslistan längst ner.
 
 **Om källan anges med Harvardformat `(Namn, år)`:**
 ```html
-<!-- Första gången – gör parentesen klickbar -->
-(<a href="https://källans-url" target="_blank">Berg, 2026</a>)
+<!-- Första gången – gör (Namn, år)-parentesen klickbar -->
+(<a href="https://källans-url" target="_blank">Berg, 2026a</a>)
 
-<!-- Efterföljande gånger – vanlig text -->
-(Berg, 2026)
+<!-- Efterföljande gånger – vanlig text, ingen länk -->
+(Berg, 2026a)
+```
+
+> ⚠️ **Länka ALDRIG författarnamnet i löptexten** – t.ex. `<a href="...">Peter Berg</a>`.
+> Det följer inte Harvardformatet. Länken ska alltid ligga på `(Berg, 2026a)`-citatet,
+> inte på personnamnet. Fetstil på författarnamn används inte heller.
+
+**Om samma författare har flera källor samma år – använd a/b-suffix:**
+```
+En och samma källförteckning kan aldrig ha två poster med identisk (Namn, år).
+Lägg till a, b, c ... i kronologisk ordning:
+  Berg, P. (2026a) – artikel
+  Berg, P. (2026b) – LinkedIn-inlägg
+Suffixen ska vara konsekventa i löptext, källparagraf och källförteckning.
 ```
 
 **Om källan anges med titeln i löptext:**
