@@ -5,6 +5,7 @@
 [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing),
 och [voicemoat.com](https://voicemoat.com/blog/avoid-ai-tells-writers-checklist-2026)
 **Gäller:** All löpande text i HTML-filerna i detta projekt
+**Teoretisk bakgrund:** Se [`skills/humanizer_ton/humanizer_bakgrund.md`](skills/humanizer_ton/humanizer_bakgrund.md) för en akademisk analys av varför AI-text låter som AI – om epistemisk kalibrering, RLHF-träning, perplexity och burstiness.
 
 ---
 
@@ -28,7 +29,7 @@ Texterna i detta projekt är Kents egna reflektioner. Det innebär:
 
 ---
 
-## 10 mönster att undvika
+## 14 mönster att undvika
 
 ### 1. Uppblåst betydelsemarkering
 
@@ -192,6 +193,68 @@ Kortare, äkta, och faktabaserat.
 
 ---
 
+### 12. Performativ tveksamhet (performed hesitancy)
+
+Det som forskningen kallar *performed hesitancy* (Kovač m.fl., 2026) är fraser
+som *ser ut* som äkta osäkerhet men inte tillför någon faktisk information.
+AI-modeller är tränade att verka försiktiga och icke-kommitterande – inte för
+att de är osäkra, utan för att det beteendet belönades under träningen.
+
+**Skilj på:**
+- **Äkta osäkerhet** – grundad i ett specifikt faktaunderlag: "Jag vet inte hur Fortnox hanterar detta, jag har inte testat det."
+- **Performativ tveksamhet** – tom försiktighet utan informationsinnehåll: "Det är värt att notera att synsätten kan variera."
+
+**Före:**
+> Det bör påpekas att BAS 2026 kan uppfattas på olika sätt beroende på
+> organisationens specifika förutsättningar.
+
+**Efter:**
+> BAS 2026 skiljer sig på en punkt som kan slå olika beroende på om
+> föreningen tillämpar K2 eller K3.
+
+*(Den andra versionen är fortfarande nyanserad – men nyansen är förankrad i
+ett konkret faktum, inte i luften.)*
+
+---
+
+### 13. Aforismformel – "X är Y:s Z"
+
+AI-modeller omvandlar gärna vanliga påståenden till minnesvärda aforismer som
+låter djupsinnade men egentligen är tomma. Mönstret identifieras av blader (2026)
+som ett av de mer subtila AI-tecknen.
+
+**Formeln:** *X är Y:s Z*, *X blir en fälla*, *X är inte ett verktyg, utan en spegel*
+
+**Före:**
+> Källkritik är revisionsarbetets valuta.
+> Transparens är inte en policy, det är en kultur.
+
+**Efter:**
+> Källkritik avgör om granskningen håller.
+> Transparens kräver att styrelsen faktiskt delar underlagen – inte bara lovar det.
+
+---
+
+### 14. Synonymrotation – AI:s rädsla för att upprepa ord
+
+AI-modeller har inbyggda mekanismer som undviker ordupprepning. Resultatet är
+att samma sak benämns med olika synonymer i varje mening, vilket skapar en
+märklig rörelse utan förflyttning.
+
+**Före:**
+> Kalmar Nation genomgick en revision. Studentföreningen granskades noggrant.
+> Organisationen hade hanterat sin ekonomi väl. Det ideella bolaget visade
+> ett positivt resultat.
+
+**Efter:**
+> Kalmar Nation genomgick revision 2025. Resultatet var positivt, och
+> ekonomin välskött.
+
+*(En mänsklig skribent upprepar "Kalmar Nation" utan problem. Det är
+tydligare, inte sämre.)*
+
+---
+
 ## Tre snabba pass att köra på färdig text
 
 **Pass 1 – Rytmpasset**
@@ -223,13 +286,21 @@ Dessa är *inte* AI-tecken i Kents personliga analystext:
 
 ---
 
-## Källor till detta skill
+## Källor till detta dokument
 
 - blader (2026) *humanizer v2.8.0*. GitHub.
   Tillgänglig: https://github.com/blader/humanizer/blob/main/SKILL.md
+- Kovač, G., m.fl. (2026). *Saying More Than They Know: A Framework for Quantifying
+  Epistemic-Rhetorical Miscalibration in Large Language Models*. arXiv:2604.19768.
+  Tillgänglig: https://arxiv.org/html/2604.19768
 - Wikipedia (2026) *Signs of AI writing*. WikiProject AI Cleanup.
   Tillgänglig: https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing
 - VoiceMoat (2026) *How to avoid the AI tells: a writer's checklist for 2026*.
   Tillgänglig: https://voicemoat.com/blog/avoid-ai-tells-writers-checklist-2026
 - SEO Francisco (2026) *AI Writing Tells*.
   Tillgänglig: https://seofrancisco.com/insights/ai-writing-tells-sound-human-again/
+
+## Relaterade filer i projektet
+
+- [`skills/humanizer_ton/SKILL.md`](skills/humanizer_ton/SKILL.md) – procedurstyrning för AI (sju steg att köra i ordning)
+- [`skills/humanizer_ton/humanizer_bakgrund.md`](skills/humanizer_ton/humanizer_bakgrund.md) – akademisk analys av varför problemet uppstår (RLHF, perplexity, burstiness, epistemisk kalibrering)

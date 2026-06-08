@@ -76,7 +76,20 @@ Den kanske mest systematiska praktiska sammanställningen av AI-skrivmönster fi
 
 ---
 
-## 6. Kopplingen till SKILL.md
+## 6. Kopplingen till de praktiska filerna
+
+### humanizer.md – den tillämpade katalogen
+
+De mönster som beskrivits ovan är samlade och anpassade till Kents projekt i
+[`humanizer.md`](../../humanizer.md) – en praktisk katalog med konkreta
+exempel på svenska, hämtade ur redovisnings- och ekonomikontext. Filen bygger
+på bladers SKILL.md men är utökad med insikter från forskningen ovan, bland
+annat distinktionen mellan *performed hesitancy* och *genuine epistemic markers*
+(Kovač m.fl., 2026). Katalogen innehåller även en beskrivning av hur synonymrotation
+och aforismformler fungerar som AI-signaler – mönster som bladers 32-punktslista
+inventerar systematiskt men som sällan syns i generella stilguider.
+
+### SKILL.md – procedurstyrningen
 
 Skillet [`humanizer_ton/SKILL.md`](SKILL.md) operationaliserar dessa insikter i sju konkreta steg. Kopplingen till ovanstående analys är direkt:
 
