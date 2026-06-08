@@ -110,6 +110,19 @@ För att aktivera Pages: [github.com/kentlundgren/Ekonomi/settings/pages](https:
 - Vid uppdatering av befintlig fil: fråga om ny version ska skapas (`_verX`)
   eller om befintlig fil ska uppdateras
 
+### Skriv mänskligt – följ humanizer.md
+
+All löpande text ska följa reglerna i [`humanizer.md`](humanizer.md).
+Kortversion av de viktigaste:
+
+- Inga tankestrecket (–) som satsavgränsare – använd punkt eller komma
+- Inga uppblåsta ord: *understryker*, *belyser*, *säkerställa*, *möjliggöra*
+- Inga generiska avslutningar ("framtiden ser ljus ut")
+- Variera meningslängd – blanda korta och långa
+- Var specifik: datum, kontonummer, namn – inte "nyligen" eller "en aktör"
+- Jag-form är rätt i detta projekt – använd den
+- Kör "rytmpasset", "specificeringspasset" och "åsiktspasset" på färdig text
+
 ### Källhänvisningar i löpande text – klickbarhetsprincip
 
 När en källa anges i löpande text (in-text citation) ska den vara **klickbar
