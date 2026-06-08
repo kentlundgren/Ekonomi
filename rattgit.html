@@ -376,9 +376,115 @@ git push</code></pre>
     </ul>
   </div>
 
-  <!-- ══════════════════ DEL 5 – SAMMANFATTNING ══════════════════ -->
+  <!-- ══════════════════ DEL 5 – LF/CRLF RADBRYTNINGAR ══════════════════ -->
   <div class="card">
-    <h2>5. Sammanfattning på en skärmbild</h2>
+    <h2>5. Bonusproblem: filerna visades som "ändrade" trots att de just committats</h2>
+
+    <p>
+      Direkt efter att nested repo-fixet pushades visade Source Control-panelen
+      i Cursor <strong>6 filer som modifierade</strong> – trots att vi precis
+      committat och pushat dem. Ingenting i innehållet hade förändrats.
+      Det berodde på ett klassiskt Windows-problem: <strong>LF vs CRLF</strong>.
+    </p>
+
+    <h3>Vad är LF och CRLF?</h3>
+    <p>
+      Alla textfiler – HTML, Markdown, JSON, kod – innehåller osynliga tecken
+      som markerar radslut. Det finns två varianter:
+    </p>
+
+    <table>
+      <thead><tr><th>Symbol</th><th>Namn</th><th>Används av</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><code>LF</code></td>
+          <td>Line Feed (<code>\n</code>)</td>
+          <td>Linux, macOS, GitHub – det som git lagrar i repot</td>
+        </tr>
+        <tr>
+          <td><code>CRLF</code></td>
+          <td>Carriage Return + Line Feed (<code>\r\n</code>)</td>
+          <td>Windows – det som Notepad och många Windows-program förväntar sig</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Vad hände konkret?</h3>
+    <p>
+      Git på Windows har en inställning (<code>core.autocrlf</code>) som
+      automatiskt konverterar radbrytningar: <em>LF → CRLF</em> när filer
+      hämtas från repot till din dator, och <em>CRLF → LF</em> när de skickas
+      tillbaka. Filerna i repot (på GitHub) har LF. Din lokala kopia på Windows
+      fick CRLF. Git jämförde dem och såg skillnad – trots att innehållet
+      i praktiken var identiskt.
+    </p>
+
+    <div class="callout gul">
+      <p>
+        <strong>Varför visades <code>git diff</code> som tomt</strong> trots att
+        <code>git status</code> visade "modified"?<br>
+        Därför att <code>git diff</code> normaliserar radbrytningar när det jämför –
+        och hittade inga faktiska textskillnader. Men <code>git status</code> tittar
+        på råa bytes i filen, och CRLF ≠ LF på byte-nivå.
+      </p>
+    </div>
+
+    <h3>Hur fixades det – <code>.gitattributes</code> <span class="badge badge-fix">Löst 2026-06-08</span></h3>
+    <p>
+      En ny fil skapades: <code>Ekonomi\.gitattributes</code>
+    </p>
+    <pre><code># Normalisera alla textfiler till LF i repot
+* text=auto eol=lf
+
+# Binärfiler – inga radbrytningskonverteringar
+*.png binary
+*.jpg binary
+*.pdf binary</code></pre>
+
+    <p>
+      Sedan kördes kommandot:
+    </p>
+    <pre><code>git add --renormalize .</code></pre>
+
+    <p>
+      Det kommandot tvingar git att skriva om alla filer i indexet med rätt
+      radbrytningar enligt <code>.gitattributes</code>-regeln.
+      Resultatet: de falska "modified"-markeringarna försvann direkt.
+    </p>
+
+    <div class="callout grön">
+      <p>
+        <strong>Effekt:</strong> Source Control-panelen visar nu
+        <strong>0 ändringar</strong> – repot är rent.
+        Framöver konverteras inga radbrytningar automatiskt, och problemet
+        uppstår inte igen för nya filer i detta repo.
+      </p>
+    </div>
+
+    <h3>Tänk på detta i framtiden</h3>
+    <ul class="future-list">
+      <li data-icon="📄">
+        <strong>Inkludera alltid <code>.gitattributes</code> i nya projekt</strong>
+        redan från start. Det är bästa praxis för alla projekt som ska fungera
+        på både Windows och GitHub/Linux.
+      </li>
+      <li data-icon="⚠️">
+        <strong>Om Source Control visar filer som "modified" utan synliga ändringar</strong>
+        är det troligen ett radbrytningsproblem. Kör <code>git diff</code> – är
+        det tomt är det CRLF/LF. Lösning: skapa <code>.gitattributes</code> och
+        kör <code>git add --renormalize .</code>
+      </li>
+      <li data-icon="🔍">
+        <strong>Kontrollera alltid <code>git status</code> via terminalen</strong>
+        om Cursor visar ändringar som känns konstiga. Terminalen ger den
+        faktiska sanningen om repots tillstånd.
+      </li>
+    </ul>
+  </div>
+
+  <!-- ══════════════════ DEL 6 – SAMMANFATTNING ══════════════════ -->
+  <div class="card">
+    <h2>6. Sammanfattning – alla problem och lösningar</h2>
 
     <table>
       <thead><tr><th>Fråga</th><th>Svar</th></tr></thead>
@@ -411,15 +517,20 @@ git push</code></pre>
           <td>Hur vet jag att jag är i rätt repo?</td>
           <td>Statusfältet visar rätt branch-namn UTAN "Claude". Kör <code>git remote -v</code> om osäker.</td>
         </tr>
+        <tr>
+          <td>Varför visas filer som "modified" utan ändringar?</td>
+          <td>LF/CRLF-konvertering på Windows. Fix: <code>.gitattributes</code> med <code>eol=lf</code> + <code>git add --renormalize .</code></td>
+        </tr>
       </tbody>
     </table>
 
     <div class="callout grön">
       <p>
-        <strong>Filer som skapades eller ändrades 2026-06-08 för att lösa detta:</strong><br>
-        ✅ <code>Ekonomi\.vscode\settings.json</code> – ny fil (workspace-inställning)<br>
+        <strong>Filer som skapades eller ändrades 2026-06-08 för att lösa alla problem:</strong><br>
+        ✅ <code>Ekonomi\.vscode\settings.json</code> – nested repo-fix (workspace-inställning)<br>
         ✅ <code>AI\Claude\.gitignore</code> – tillägg av <code>Ekonomi/</code><br>
-        ✅ <code>Ekonomi\CLAUDE.md</code> – dokumentation av regeln<br>
+        ✅ <code>Ekonomi\.gitattributes</code> – fix för LF/CRLF radbrytningar<br>
+        ✅ <code>Ekonomi\CLAUDE.md</code> – dokumentation av regler och kontext<br>
         ✅ <code>Ekonomi\rattgit.html</code> – denna guide
       </p>
     </div>
