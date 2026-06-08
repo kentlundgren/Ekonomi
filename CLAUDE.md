@@ -85,13 +85,23 @@ GitHub-repo och sköter sig helt självständigt.
 Dessa utgångspunkter ska Claude känna till och ha som underlag när text skrivs
 eller granskas inom projektet.
 
-**Yrkesroll (daglig tjänst):**
-Kent Lundgren arbetar som ekonom/controller vid **Kultur och Fritidsförvaltningen,
-Simrishamns kommun**.
+**Yrkesroll (betald tjänst, 50 %):**
+Kent Lundgren arbetar som ekonom/controller på konsultbasis (via **Poolia**) vid
+**Kultur och Fritidsförvaltningen, Simrishamns kommun** – på 50 % av heltid.
 - Simrishamns kommun är en *kommunal myndighet* och tillämpar **Kommun-BAS** och
   lagen om kommunal bokföring och redovisning (LKR)
 - **Privat BAS gäller inte** för Kents dagliga arbete i kommunen
 - BAS 2026:s 272 ändringar (K2/K3-drivna) berör inte hans yrkesroll direkt
+- Det är Poolia som är formell arbetsgivare; Kent är uthyrd konsult till kommunen
+
+**Generativ AI (övriga 50 % av vardagarna):**
+Den tid som inte går till konsultuppdraget ägnar Kent åt att testa, lära och
+bygga med generativ AI – bl.a. detta Ekonomi-projekt.
+- AI-arbetet är *inte* kopplat till konsultuppdraget och sker på eget initiativ
+- Lärandet är gradvist: vad Kent bygger på fritiden ger insikter som smittar
+  av sig på jobbet – han ser alltmer poäng med AI även i kommunal verksamhet
+- Projekten här (Ekonomi, detta webb-arbete) är alltså *fritidsprojekt*, inte
+  uppdrag från Simrishamns kommun eller Poolia
 
 **Ideell revision (fritidsuppdrag):**
 Kent är **lekmannarevisor** i ideella föreningar, bl.a. Kalmar Nation.
@@ -106,15 +116,17 @@ Kent är **lekmannarevisor** i ideella föreningar, bl.a. Kalmar Nation.
 
 | Begrepp | Vad det är | Kents koppling |
 |---------|-----------|----------------|
-| **Kommunal förvaltning** | Kommunen som myndighet, t.ex. en förvaltning | ✅ Här arbetar Kent (Kultur och Fritids­förvaltningen) |
+| **Kommunal förvaltning** | Kommunen som myndighet, t.ex. en förvaltning | ✅ Här arbetar Kent 50 % (Kultur och Fritids­förvaltningen) |
 | **Kommunalt bolag** | Aktiebolag *ägt* av kommunen, t.ex. VA-bolag | ❌ Kent jobbar inte här |
 | **Ideell förening** | T.ex. Kalmar Nation | ✅ Här är Kent lekmannarevisor |
+| **AI-fritidsprojekt** | Eget lärande och byggande med generativ AI | ✅ Kents övriga 50 % av vardagarna |
 
 **Praktisk konsekvens för Claude:**
 - Kent arbetar i *kommunal förvaltning* – inte i kommunala bolag
 - "Jag som controller i ett kommunalt bolag" är alltid fel om det avser Kent
 - BAS-analys i jag-form gäller hans *revisionsroll*, inte hans dagliga tjänst
 - Skriver Claude om kommunal redovisning i Kents dagliga arbete → Kommun-BAS och LKR gäller
+- AI-projekten (t.ex. detta) är *fritidsprojekt* – inte beställda av kommunen eller Poolia
 
 ---
 
