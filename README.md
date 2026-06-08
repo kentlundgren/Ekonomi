@@ -10,7 +10,8 @@ Kent Lundgrens ekonomiprojekt – redovisning, BAS-kontoanalys och ekonomiska ve
 Ekonomi/
 ├── redovisning/
 │   └── BAS/
-│       └── analys.html   # Interaktivt BAS-kontoanalysprogram
+│       └── analys.html   # BAS 2026 – Analys och reflektion
+├── index.html            # Startsida med tack till Peter Berg
 ├── .gitignore
 └── README.md
 ```
@@ -19,15 +20,55 @@ Ekonomi/
 
 ## Filer
 
+### `index.html`
+Projektets startsida. Presenterar bakgrunden till analysarbetet, tackar Peter Berg
+för hans artikel och LinkedIn-inlägg om BAS-nyheter 2026, och länkar till analysen.
+Citerar källorna i Harvardstil. Öppnas direkt i webbläsaren.
+
 ### `redovisning/BAS/analys.html`
-Ett fristående HTML-program (ingen build-steg krävs) för analys av BAS-kontoplanen.
-Öppnas direkt i webbläsaren.
+Analys och reflektion kring BAS-kontoplanen 2026 – utifrån Peter Bergs artikel.
+Besvarar fyra frågor: skillnaden privat BAS vs Kommun-BAS, påverkan för controller
+i kommunalt bolag, relevans för lekmannarevision av Kalmar Nation, och varför
+löner placeras i kontogrupp 5 (Kommun-BAS) respektive klass 7 (privat BAS).
+Skriven i jag-form. Öppnas direkt i webbläsaren.
 
 ---
 
 ## GitHub
 
 Repot finns på: [https://github.com/kentlundgren/Ekonomi](https://github.com/kentlundgren/Ekonomi)
+
+---
+
+## 🌐 Live-sidor (GitHub Pages)
+
+Repot är kopplat till **GitHub Pages** vilket gör att HTML-filerna är tillgängliga
+som publika webbsidor direkt via URL – utan att behöva öppna dem lokalt.
+
+### Aktivera GitHub Pages (första gången)
+
+1. Gå till [https://github.com/kentlundgren/Ekonomi/settings/pages](https://github.com/kentlundgren/Ekonomi/settings/pages)
+2. Under **Source** – välj **Deploy from a branch**
+3. Branch: **main** &nbsp;|&nbsp; Folder: **/ (root)**
+4. Klicka **Save**
+5. Vänta 1–2 minuter – GitHub bygger sidan
+
+### Live-adresser
+
+| Fil | Live-URL |
+|-----|----------|
+| `index.html` (startsidan) | https://kentlundgren.github.io/Ekonomi/ |
+| `redovisning/BAS/analys.html` | https://kentlundgren.github.io/Ekonomi/redovisning/BAS/analys.html |
+
+> **Obs:** Behövs det en `index.html` i BAS-mappen?  
+> Nej – `analys.html` nås direkt via sin URL ovan. En index.html i BAS-mappen
+> behövs bara om du vill ha en "innehållsförteckning" dit när man besöker
+> `/redovisning/BAS/` utan att ange filnamn. Det är valfritt.
+
+### Uppdatera live-sidorna
+
+Live-sidorna uppdateras **automatiskt** varje gång du pushar till `main`.
+Det tar normalt under en minut.
 
 ---
 

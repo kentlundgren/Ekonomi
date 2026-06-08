@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ekonomi – Kent Lundgrens redovisningsreflektioner</title>
+  <style>
+    /* ── Grundlayout ── */
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #222;
+      background: #f0f4f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #1a3a5c 0%, #1a6eb5 100%);
+      color: #fff;
+      padding: 48px 24px 36px 24px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2em;
+      margin: 0 0 10px 0;
+      letter-spacing: -0.5px;
+    }
+    header p {
+      margin: 0;
+      font-size: 1.05em;
+      opacity: 0.88;
+    }
+
+    /* ── Huvudcontainer ── */
+    .container {
+      max-width: 820px;
+      margin: 40px auto 60px auto;
+      padding: 0 20px;
+    }
+
+    /* ── Tackruta ── */
+    .thanks-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.09);
+      padding: 40px 44px;
+      margin-bottom: 32px;
+      border-top: 4px solid #1a6eb5;
+    }
+    .thanks-card h2 {
+      font-size: 1.3em;
+      color: #1a3a5c;
+      margin: 0 0 18px 0;
+    }
+    .thanks-card p { margin: 0 0 14px 0; }
+    .thanks-card p:last-child { margin-bottom: 0; }
+
+    /* ── Länkkort till analys ── */
+    .page-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.09);
+      padding: 28px 36px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.2s, transform 0.15s;
+      border-left: 5px solid #1a6eb5;
+    }
+    .page-card:hover {
+      box-shadow: 0 6px 24px rgba(26,110,181,0.18);
+      transform: translateY(-2px);
+    }
+    .page-card-icon {
+      font-size: 2.2em;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .page-card-content h3 {
+      font-size: 1.15em;
+      color: #1a3a5c;
+      margin: 0 0 6px 0;
+    }
+    .page-card-content p {
+      margin: 0;
+      font-size: 0.95em;
+      color: #555;
+    }
+    .page-card-content .url-hint {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.82em;
+      color: #1a6eb5;
+      font-family: monospace;
+    }
+
+    /* ── Källförteckning ── */
+    .sources {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+      padding: 28px 36px;
+      margin-top: 36px;
+      font-size: 0.92em;
+    }
+    .sources h2 {
+      font-size: 1.05em;
+      color: #444;
+      margin: 0 0 14px 0;
+      border-bottom: 1px solid #dde4ec;
+      padding-bottom: 8px;
+    }
+    .sources ol { margin: 0; padding-left: 22px; }
+    .sources li { margin-bottom: 8px; color: #444; }
+    .sources a { color: #1a6eb5; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.85em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════ HEADER ══════════════════ -->
+<header>
+  <h1>Ekonomi – Redovisningsreflektioner</h1>
+  <p>Kent Lundgren &nbsp;|&nbsp; <a href="https://github.com/kentlundgren/Ekonomi" style="color:#ffffffcc;">github.com/kentlundgren/Ekonomi</a></p>
+</header>
+
+<div class="container">
+
+  <!-- ══════════════════ TACK TILL PETER BERG ══════════════════ -->
+  <div class="thanks-card">
+    <h2>Tack, Peter Berg!</h2>
+
+    <p>
+      Den 7 juni 2026 publicerade redovisningskonsulten och utbildaren
+      <strong>Peter Berg</strong> ett LinkedIn-inlägg och en artikel på sin blogg
+      <em>The consultant's journey</em> om nyheterna i BAS-kontoplanen 2026.
+      Bergs genomgång är exemplariskt pedagogisk – han tar de 272 ändringarna
+      och reducerar dem till sju begripliga område med tydliga prioriteringsråd.
+    </p>
+
+    <p>
+      Jag läste artikeln med stort intresse. Jag arbetar med redovisning i flera
+      roller – som controller i bolag med kommunal koppling, som lekmannarevisor
+      i ideella föreningar (bl.a. Kalmar Nation), och i gränslandet mellan
+      privat BAS och Kommun-BAS. Bergs artikel gav mig ett utmärkt underlag
+      för att tänka igenom hur årets förändringar konkret påverkar mig.
+    </p>
+
+    <p>
+      Reflektionerna resulterade i analysen nedan.
+      Tack, Peter, för att du delar din sakkunskap så generöst och lättillgängligt!
+    </p>
+
+    <!-- ── Källhänvisningar i löptext (Harvardstil) ── -->
+    <p style="font-size:0.9em; color:#555; margin-top:20px;">
+      <strong>Källor till Bergs arbete:</strong><br>
+      Berg (2026) publicerade artikeln
+      <em>BAS – Nyheter 2026</em> på
+      <a href="https://consultjourney.com/2026/06/07/bas-nyheter-2026/" target="_blank">consultjourney.com</a>
+      den 7 juni 2026. Samma dag delade han artikeln i ett inlägg på
+      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7469603713486307328" target="_blank">LinkedIn</a>.
+      (Se fullständig källförteckning nedan.)
+    </p>
+  </div>
+
+  <!-- ══════════════════ LÄNK TILL ANALYS ══════════════════ -->
+  <p style="font-size:1.0em; color:#555; margin-bottom:14px;">
+    <strong>Mina sidor i detta projekt:</strong>
+  </p>
+
+  <a class="page-card" href="redovisning/BAS/analys.html">
+    <div class="page-card-icon">📊</div>
+    <div class="page-card-content">
+      <h3>BAS-kontoplanen 2026 – Analys och reflektion</h3>
+      <p>
+        Analysen besvarar fyra frågor utifrån Bergs artikel:
+        Vad täcker privat BAS – och vad täcker det inte för Kommun-BAS?
+        Hur påverkas jag som controller i ett kommunalt bolag?
+        Vad är relevant för min revision av Kalmar Nation som lekmannarevisor?
+        Varför sitter löner i kontogrupp 5 i Kommun-BAS men i klass 7 i privat BAS?
+      </p>
+      <span class="url-hint">redovisning/BAS/analys.html</span>
+    </div>
+  </a>
+
+  <!-- ══════════════════ KÄLLFÖRTECKNING ══════════════════ -->
+  <div class="sources">
+    <h2>Källor (Harvardstil)</h2>
+    <ol>
+      <li>
+        Berg, P. (2026) <em>BAS – Nyheter 2026</em>. The consultant's journey, 7 juni.
+        Tillgänglig:
+        <a href="https://consultjourney.com/2026/06/07/bas-nyheter-2026/" target="_blank">
+          https://consultjourney.com/2026/06/07/bas-nyheter-2026/
+        </a> [Hämtad: 2026-06-08].
+      </li>
+      <li>
+        Berg, P. (2026) [LinkedIn-inlägg om BAS – Nyheter 2026]. LinkedIn, 7 juni.
+        Tillgänglig:
+        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7469603713486307328" target="_blank">
+          linkedin.com/feed/update/urn:li:activity:7469603713486307328
+        </a> [Hämtad: 2026-06-08].
+      </li>
+      <li>
+        BAS-intressenternas Förening (2026) <em>BAS-kontoplanen 2026 – Kontotabeller</em>.
+        Tillgänglig:
+        <a href="https://www.bas.se/kontoplaner/" target="_blank">https://www.bas.se/kontoplaner/</a>
+        [Hämtad: 2026-06-08].
+      </li>
+      <li>
+        Sveriges Kommuner och Regioner (SKR) (2026)
+        <em>Redovisning – Baskontoplan för kommuner och regioner</em>.
+        Tillgänglig:
+        <a href="https://skr.se/ekonomiochbudgetplanering/redovisning.8278.html" target="_blank">
+          https://skr.se/ekonomiochbudgetplanering/redovisning.8278.html
+        </a> [Hämtad: 2026-06-08].
+      </li>
+    </ol>
+  </div>
+
+</div><!-- /container -->
+
+<footer>
+  Kent Lundgren &nbsp;&bull;&nbsp;
+  <a href="https://github.com/kentlundgren/Ekonomi" style="color:#aaa;">GitHub</a>
+  &nbsp;&bull;&nbsp; 2026
+</footer>
+
+</body>
+</html>
