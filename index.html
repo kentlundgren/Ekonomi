@@ -29,19 +29,54 @@
       font-size: 1.05em;
       color: #fff;
       text-decoration: none;
-      margin-right: 12px;
+      margin-right: 16px;
+      white-space: nowrap;
     }
-    .nav-links { display: flex; gap: 6px; }
-    .nav-links a {
+    /* Navigeringsgrupp – håller ihop en sektion med dess undersidor */
+    .nav-group {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      border-left: 1px solid #2d5278;
+      padding-left: 10px;
+      margin-left: 4px;
+    }
+    .nav-group a {
       color: #c8d8e8;
       text-decoration: none;
       padding: 4px 10px;
       border-radius: 4px;
       font-family: "Courier New", monospace;
-      font-size: 0.9em;
+      font-size: 0.88em;
+      white-space: nowrap;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-group a:hover { background: #1e3a5f; color: #fff; }
+    /* Undersida – lite mindre och indragssignal med pil */
+    .nav-group a.nav-sub {
+      font-size: 0.8em;
+      color: #7a9bbf;
+      padding-left: 4px;
+    }
+    .nav-group a.nav-sub::before { content: "↳ "; }
+    .nav-group a.nav-sub:hover { color: #fff; background: transparent; }
+    /* Högergrupp */
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: auto;
+    }
+    .nav-right a {
+      color: #566e88;
+      text-decoration: none;
+      font-family: "Courier New", monospace;
+      font-size: 0.82em;
+      padding: 3px 8px;
+      border-radius: 4px;
       white-space: nowrap;
     }
-    .nav-links a:hover { background: #1e3a5f; color: #fff; }
+    .nav-right a:hover { color: #c8d8e8; }
     .container {
       max-width: 700px;
       margin: 0 auto;
@@ -100,11 +135,22 @@
 
 <nav class="site-nav">
   <a class="nav-brand" href="index.html">{ E } Ekonomi</a>
-  <div class="nav-links" style="margin-left:auto;">
+
+  <!-- Redovisning-gruppen med BAS som undersida -->
+  <div class="nav-group">
     <a href="redovisning/index.html">Redovisning</a>
-    <a href="rattgit.html">Git-guide</a>
+    <a href="redovisning/BAS/index.html" class="nav-sub">BAS 2026</a>
   </div>
-  <span style="color:#7a9bbf; font-size:0.9em; margin-left:16px;">Kent Lundgren</span>
+
+  <!-- Ekonomistyrning -->
+  <div class="nav-group">
+    <a href="ekonomistyrning/index.html">ekonomistyrning</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="rattgit.html">Git-guide</a>
+    <span style="color:#566e88; font-size:0.82em;">Kent Lundgren</span>
+  </div>
 </nav>
 
 <div class="container">
@@ -126,9 +172,14 @@
     <span class="url-hint">redovisning/BAS/</span>
   </a>
 
-  <div class="placeholder">
-    Fler avsnitt planeras …
-  </div>
+  <a class="section-card" href="ekonomistyrning/index.html">
+    <h2>Ekonomistyrning</h2>
+    <p>
+      Avsnitt under uppbyggnad – reflektioner och analyser kring
+      ekonomistyrning i kommunal förvaltning och ideella föreningar.
+    </p>
+    <span class="url-hint">ekonomistyrning/</span>
+  </a>
 
 </div>
 
