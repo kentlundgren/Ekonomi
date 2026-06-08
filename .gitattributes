@@ -1,0 +1,8 @@
+# Normalisera alla textfiler till LF i repot (standard för webfiler)
+# Förhindrar LF/CRLF-konflikter mellan Windows och GitHub
+* text=auto eol=lf
+
+# Binärfiler – inga radbrytningskonverteringar
+*.png binary
+*.jpg binary
+*.pdf binary
