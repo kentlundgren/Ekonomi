@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ekonomi – Kent Lundgrens redovisningsreflektioner</title>
+  <title>BAS 2026 – Utgångspunkter</title>
   <style>
     /* ── Navigationsrad ── */
     .site-nav {
@@ -28,35 +28,16 @@
       white-space: nowrap;
     }
     .site-nav .nav-brand:hover { color: #fff; }
-    .site-nav .nav-links {
-      display: flex;
-      gap: 4px;
-      flex: 1;
-    }
-    .site-nav .nav-links a {
-      color: #9ab4cc;
-      text-decoration: none;
-      padding: 4px 12px;
-      border-radius: 4px;
-      transition: background 0.15s, color 0.15s;
-      white-space: nowrap;
-    }
-    .site-nav .nav-links a:hover { background: #1e3a5f; color: #fff; }
-    .site-nav .nav-links a.active {
-      background: #1a6eb5;
-      color: #fff;
-      font-weight: 600;
-    }
-    .site-nav .nav-author {
+    .nav-sep { color: #7a9bbf; margin: 0 5px; font-family: "Courier New", monospace; font-size: 0.95em; }
+    .nav-crumb { color: #9ab4cc; text-decoration: none; font-family: "Courier New", monospace; font-size: 0.95em; white-space: nowrap; }
+    .nav-crumb:hover { color: #fff; }
+    .nav-author {
       color: #566e88;
       font-size: 0.9em;
       white-space: nowrap;
       margin-left: auto;
       padding-left: 16px;
     }
-    .nav-sep { color: #7a9bbf; margin: 0 5px; font-family: "Courier New", monospace; font-size: 0.95em; }
-    .nav-crumb { color: #9ab4cc; text-decoration: none; font-family: "Courier New", monospace; font-size: 0.95em; white-space: nowrap; }
-    .nav-crumb:hover { color: #fff; }
 
     /* ── Grundlayout ── */
     *, *::before, *::after { box-sizing: border-box; }
@@ -95,8 +76,8 @@
       padding: 0 20px;
     }
 
-    /* ── Tackruta ── */
-    .thanks-card {
+    /* ── Innehållskort ── */
+    .content-card {
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 2px 14px rgba(0,0,0,0.09);
@@ -104,13 +85,44 @@
       margin-bottom: 32px;
       border-top: 4px solid #1a6eb5;
     }
-    .thanks-card h2 {
+    .content-card h2 {
       font-size: 1.3em;
       color: #1a3a5c;
       margin: 0 0 18px 0;
     }
-    .thanks-card p { margin: 0 0 14px 0; }
-    .thanks-card p:last-child { margin-bottom: 0; }
+    .content-card h3 {
+      font-size: 1.05em;
+      color: #1a3a5c;
+      margin: 28px 0 8px 0;
+    }
+    .content-card p { margin: 0 0 14px 0; }
+    .content-card p:last-child { margin-bottom: 0; }
+    .content-card ul {
+      margin: 8px 0 14px 0;
+      padding-left: 22px;
+    }
+    .content-card li { margin-bottom: 6px; }
+
+    /* ── Regelverk-tabell ── */
+    .regelverk-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.93em;
+      margin: 16px 0 8px 0;
+    }
+    .regelverk-table th {
+      background: #1a3a5c;
+      color: #fff;
+      padding: 9px 14px;
+      text-align: left;
+      font-weight: 600;
+    }
+    .regelverk-table td {
+      padding: 9px 14px;
+      border-bottom: 1px solid #dde4ec;
+      vertical-align: top;
+    }
+    .regelverk-table tr:nth-child(even) td { background: #f4f8ff; }
 
     /* ── Länkkort till analys ── */
     .page-card {
@@ -182,7 +194,7 @@
       color: #888;
     }
 
-    /* ── Diskret GitHub-länk, nedre vänstra hörnet ── */
+    /* ── Diskret GitHub-länk ── */
     .github-corner {
       position: fixed;
       bottom: 14px;
@@ -212,53 +224,118 @@
 
 <!-- ══════════════════ HEADER ══════════════════ -->
 <header>
-  <h1>Ekonomi – Redovisningsreflektioner</h1>
+  <h1>BAS 2026 – Utgångspunkter</h1>
+  <p>Tre regelverk, ett år av förändringar</p>
 </header>
 
 <div class="container">
 
-  <!-- ══════════════════ TACK TILL PETER BERG ══════════════════ -->
-  <div class="thanks-card">
-    <h2>Tack, Peter Berg!</h2>
+  <!-- ══════════════════ UTGÅNGSPUNKT ══════════════════ -->
+  <div class="content-card">
+    <h2>Varför BAS 2026 är värt att följa</h2>
 
     <p>
-      Den 7 juni 2026 publicerade redovisningskonsulten och utbildaren
-      Peter Berg ett LinkedIn-inlägg
+      Den 7 juni 2026 publicerade redovisningskonsulten Peter Berg en artikel
+      på bloggen <em>The consultant's journey</em>
+      (<a href="https://consultjourney.com/2026/06/07/bas-nyheter-2026/" target="_blank">Berg, 2026a</a>)
+      och ett LinkedIn-inlägg
       (<a href="https://www.linkedin.com/feed/update/urn:li:activity:7469603713486307328" target="_blank">Berg, 2026b</a>)
-      och en artikel på sin blogg <em>The consultant's journey</em>
-      om nyheterna i BAS-kontoplanen 2026
-      (<a href="https://consultjourney.com/2026/06/07/bas-nyheter-2026/" target="_blank">Berg, 2026a</a>).
-      Berg tar de 272 ändringarna och grupperar dem i sju prioriterade områden
-      med konkreta råd om vad som kräver åtgärd.
+      om nyheterna i BAS-kontoplanen 2026. Berg sammanfattar 272 ändringar i sju
+      prioriterade områden och ger konkreta råd om vad som kräver åtgärd.
     </p>
 
     <p>
-      Jag läste artikeln med stort intresse. Jag arbetar som ekonom/controller
-      inom kommunal förvaltning – vid Kultur och Fritidsförvaltningen,
-      Simrishamns kommun – och som lekmannarevisor i ideella föreningar
-      (bl.a. Kalmar Nation). Kommunen tillämpar Kommun-BAS, inte privat BAS,
-      men Bergs artikel gav mig ändå ett utmärkt underlag för att tänka igenom
-      hur årets förändringar påverkar min revisionsroll.
-    </p>
-
-    <p>
-      Reflektionerna resulterade i analysen nedan.
-      Tack, Peter, för att du delar det här.
-    </p>
-
-    <!-- ── Källhänvisningar i löptext (Harvardstil) ── -->
-    <p style="font-size:0.9em; color:#555; margin-top:20px;">
-      <strong>Källor till Bergs arbete:</strong><br>
-      <!-- Berg, 2026a och Berg, 2026b länkades redan i löptexten ovan – här vanlig text -->
-      Berg (2026a) publicerade artikeln <em>BAS – Nyheter 2026</em> på consultjourney.com
-      den 7 juni 2026. Samma dag delade han artikeln via LinkedIn (Berg, 2026b).
-      (Se fullständig källförteckning nedan.)
+      Jag arbetar som ekonom och controller inom kommunal förvaltning och som
+      lekmannarevisor i ideella föreningar. Kommunen tillämpar Kommun-BAS, inte
+      privat BAS. Men Bergs artikel gav ändå ett bra underlag för att tänka igenom
+      hur BAS 2026 berör min revisionsroll och vilka av förändringarna som faktiskt
+      är relevanta för de organisationer jag granskar. Reflektionerna ledde till
+      analysen på nästa sida.
     </p>
   </div>
 
-  <!-- ══════════════════ LÄNK TILL ANALYS ══════════════════ -->
+  <!-- ══════════════════ TRE REGELVERK ══════════════════ -->
+  <div class="content-card">
+    <h2>Tre parallella regelverk</h2>
+
+    <p>
+      Redovisning i Sverige styrs inte av ett enda regelverk. Beroende på
+      organisationsform gäller olika kontoplaner och olika normer för hur
+      bokslutet ska se ut. För den som arbetar med ekonomi i offentlig sektor
+      och reviderar ideella föreningar är det tre regelverk som är centrala.
+    </p>
+
+    <h3>1. Privat BAS-kontoplanen (BAS 2026)</h3>
+    <p>
+      Den privata BAS-kontoplanen, utgiven av
+      <a href="https://www.bas.se/kontoplaner/" target="_blank">BAS-intressenternas Förening</a>,
+      används av flertalet svenska företag och av många ideella föreningar som
+      valt att följa den. Kontoplanen uppdateras varje år. 2026 rör de största
+      förändringarna klass 10–13 (anläggningstillgångar) till följd av BFN:s
+      revidering av K2 och K3, och klass 64 (styrelsearvoden) som tagits bort
+      eftersom dessa numera beskattas som lön.
+    </p>
+
+    <h3>2. Kommun-BAS</h3>
+    <p>
+      Kommuner och regioner följer inte privat BAS. De tillämpar
+      <a href="https://skr.se/ekonomiochbudgetplanering/redovisning.8278.html" target="_blank">Kommun-BAS</a>,
+      en baskontoplan framtagen av Sveriges Kommuner och Regioner (SKR).
+      Systematiken skiljer sig väsentligt från privat BAS. Verksamhetens intäkter
+      hamnar i klass 3, bidrag och transfereringar i klass 4, och skatteintäkter
+      i klass 8 – en ordning anpassad till kommunal verksamhetslogik snarare
+      än till handelns resultatbegrepp.
+    </p>
+
+    <h3>3. Ideella föreningars regelverk – BFNAR</h3>
+    <p>
+      Ideella föreningar styrs av Bokföringsnämndens allmänna råd (BFNAR).
+      Vilket BFNAR som gäller beror på föreningens storlek, mätt som nettoomsättning:
+    </p>
+
+    <table class="regelverk-table">
+      <tr>
+        <th>Nivå</th>
+        <th>Regelverk</th>
+        <th>Gäller när</th>
+      </tr>
+      <tr>
+        <td>Förenklat bokslut</td>
+        <td><a href="https://www.bfn.se/vagledningar/k1-ideella-foreningar/" target="_blank">BFNAR 2010:1</a></td>
+        <td>Nettoomsättning ≤ 3 mkr</td>
+      </tr>
+      <tr>
+        <td>Årsbokslut</td>
+        <td><a href="https://www.bfn.se/wp-content/uploads/vl17-3-ab-kons.pdf" target="_blank">BFNAR 2017:3</a></td>
+        <td>Nettoomsättning &gt; 3 mkr, ej "större förening"</td>
+      </tr>
+      <tr>
+        <td>Årsredovisning</td>
+        <td>ÅRL (1995:1554), K2/K3</td>
+        <td>"Större förening": 2 av 3 kriterier (50+ anst., 40+ mkr balans, 80+ mkr omsättning)</td>
+      </tr>
+    </table>
+
+    <p>
+      En ideell förening med nettoomsättning över tre miljoner kronor ska alltså
+      upprätta ett <em>K2-baserat årsbokslut</em> enligt BFNAR 2017:3 – inte ett
+      förenklat bokslut och inte en årsredovisning. Det är en distinktion som
+      många föreningar hanterar fel. Dokumentet kallas ibland "årsredovisning"
+      trots att det formellt är ett årsbokslut, ett vanligt misstag.
+    </p>
+
+    <p>
+      Privat BAS och Kommun-BAS är <em>kontoplaner</em> – de anger hur transaktioner
+      ska klassificeras. BFNAR anger <em>rapportformat</em> – hur bokslutet ska se ut
+      och vilka upplysningar som krävs. En förening kan använda privat BAS som
+      kontoplan och ändå följa BFNAR 2017:3 för hur bokslutet upprättas.
+      Det är inte ett eller/eller.
+    </p>
+  </div>
+
+  <!-- ══════════════════ VIDARE LÄSNING ══════════════════ -->
   <p style="font-size:1.0em; color:#555; margin-bottom:14px;">
-    <strong>Mina sidor i detta projekt:</strong>
+    <strong>Fördjupning i detta projekt:</strong>
   </p>
 
   <a class="page-card" href="analys.html">
@@ -266,15 +343,53 @@
     <div class="page-card-content">
       <h3>BAS-kontoplanen 2026 – Analys och reflektion</h3>
       <p>
-        Analysen besvarar fyra frågor utifrån Bergs artikel:
-        Vad täcker privat BAS – och vad täcker det inte för Kommun-BAS?
-        Vad innebär BAS 2026 för controllers i kommunala bolag (min analys av andras situation)?
-        Vad är relevant för min revision av Kalmar Nation som lekmannarevisor?
-        Varför sitter löner i kontogrupp 5 i Kommun-BAS men i klass 7 i privat BAS?
+        Vad skiljer privat BAS från Kommun-BAS? Vad innebär BAS 2026 för controllers
+        i kommunala bolag? Hur påverkas min revision av Kalmar Nation?
+        Varför sitter löner i klass 5 i Kommun-BAS men i klass 7 i privat BAS?
       </p>
       <span class="url-hint">analys.html</span>
     </div>
   </a>
+
+  <a class="page-card" href="generell_revision.html">
+    <div class="page-card-icon">🔍</div>
+    <div class="page-card-content">
+      <h3>Hur BAS 2026 påverkar generell revision</h3>
+      <p>
+        Konkreta granskningspunkter för lekmannarevisorer i ideella föreningar.
+        Checklista för vad som förändrats och vad som kräver extra uppmärksamhet
+        i revision av föreningar som tillämpar BAS 2026.
+      </p>
+      <span class="url-hint">generell_revision.html</span>
+    </div>
+  </a>
+
+  <!-- ══════════════════ REFLEKTION OM SKRIVKVALITET ══════════════════ -->
+  <div class="content-card">
+    <h2>En sidospår: om att skriva tydligt</h2>
+
+    <p>
+      Bergs artikel fick mig att fundera på något utöver BAS-förändringarna i sig.
+      Hans text är specifik: datum, kontonummer, regelreferenser. Ingenting fluffigt.
+      Det är precis det som gör den användbar.
+    </p>
+
+    <p>
+      Jag skriver en del av mina texter med hjälp av generativ AI. Det sparar tid
+      och ger en strukturerad utgångspunkt. Men en bra text – oavsett om den
+      skrivits för hand eller med AI-stöd – kräver samma saker: konkreta uppgifter,
+      en tydlig ståndpunkt och källhänvisningar som går att verifiera. AI kan hjälpa
+      till att forma strukturen, men det är den som skriver som ansvarar för att
+      fakta stämmer och att texten faktiskt säger något.
+    </p>
+
+    <p>
+      Min förhoppning är att de analyser som finns i det här projektet uppfyller
+      det kravet. Måttstocken är enkel: skulle en revisor eller controller kunna
+      använda texten som underlag – eller är det bara välformulerade ord utan
+      substans?
+    </p>
+  </div>
 
   <!-- ══════════════════ KÄLLFÖRTECKNING ══════════════════ -->
   <div class="sources">
@@ -301,11 +416,33 @@
         [Hämtad: 2026-06-08].
       </li>
       <li>
+        Bokföringsnämnden (2010) <em>BFNAR 2010:1 – Ideella föreningar och registrerade
+        trossamfund som upprättar förenklat bokslut</em>. Stockholm: Bokföringsnämnden.
+        Tillgänglig:
+        <a href="https://www.bfn.se/vagledningar/k1-ideella-foreningar/" target="_blank">
+          https://www.bfn.se/vagledningar/k1-ideella-foreningar/
+        </a> [Hämtad: 2026-06-08].
+      </li>
+      <li>
+        Bokföringsnämnden (2017) <em>BFNAR 2017:3 – Årsbokslut</em>. Stockholm: Bokföringsnämnden.
+        Tillgänglig:
+        <a href="https://www.bfn.se/wp-content/uploads/vl17-3-ab-kons.pdf" target="_blank">
+          https://www.bfn.se/wp-content/uploads/vl17-3-ab-kons.pdf
+        </a> [Hämtad: 2026-06-08].
+      </li>
+      <li>
         Sveriges Kommuner och Regioner (SKR) (2026)
         <em>Redovisning – Baskontoplan för kommuner och regioner</em>.
         Tillgänglig:
         <a href="https://skr.se/ekonomiochbudgetplanering/redovisning.8278.html" target="_blank">
           https://skr.se/ekonomiochbudgetplanering/redovisning.8278.html
+        </a> [Hämtad: 2026-06-08].
+      </li>
+      <li>
+        Riksdagen (1995) <em>Årsredovisningslag (1995:1554)</em>. Stockholm: Riksdagen.
+        Tillgänglig:
+        <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/arsredovisningslag-19951554_sfs-1995-1554/" target="_blank">
+          riksdagen.se/…/arsredovisningslag-19951554
         </a> [Hämtad: 2026-06-08].
       </li>
     </ol>
