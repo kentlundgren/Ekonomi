@@ -149,6 +149,15 @@ För att aktivera Pages: [github.com/kentlundgren/Ekonomi/settings/pages](https:
 - Vid uppdatering av befintlig fil: fråga om ny version ska skapas (`_verX`)
   eller om befintlig fil ska uppdateras
 
+### Skills – aktivera vid behov
+
+| Situation | Skill |
+|-----------|-------|
+| Skriva, granska eller redigera löpande text | [`skills/humanizer_ton/SKILL.md`](skills/humanizer_ton/SKILL.md) |
+| Skapa ny sida, sektion, nav eller CSS-tema | [`skills/projekt_struktur/SKILL.md`](skills/projekt_struktur/SKILL.md) |
+
+---
+
 ### Skriv mänskligt – följ humanizer.md och humanizer_skill.md
 
 All löpande text ska följa reglerna i [`humanizer.md`](humanizer.md).
