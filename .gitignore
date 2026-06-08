@@ -9,7 +9,10 @@ dist/
 *.min.css
 
 # Editor
-.vscode/
+# .vscode/settings.json är UNDANTAGEN – den innehåller den viktiga
+# git.ignoredRepositories-inställningen som fixar nested repo-problemet
+.vscode/*
+!.vscode/settings.json
 .idea/
 
 # OS

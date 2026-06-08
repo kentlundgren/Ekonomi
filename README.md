@@ -11,7 +11,11 @@ Ekonomi/
 ├── redovisning/
 │   └── BAS/
 │       └── analys.html   # BAS 2026 – Analys och reflektion
+├── .vscode/
+│   └── settings.json     # Cursor-inställning: visar rätt git-repo
 ├── index.html            # Startsida med tack till Peter Berg
+├── rattgit.html          # Guide: nested repo och hur Cursor-git fixades
+├── CLAUDE.md             # Regler och kontext för Claude
 ├── .gitignore
 └── README.md
 ```
@@ -24,6 +28,13 @@ Ekonomi/
 Projektets startsida. Presenterar bakgrunden till analysarbetet, tackar Peter Berg
 för hans artikel och LinkedIn-inlägg om BAS-nyheter 2026, och länkar till analysen.
 Citerar källorna i Harvardstil. Öppnas direkt i webbläsaren.
+
+### `rattgit.html`
+Guide som dokumenterar det nested repo-problem som uppstod 2026-06-08 och hur
+det löstes. Förklarar varför Cursor visade fel git-repo i Source Control, de
+två åtgärderna som gjordes, och vad man ska tänka på i framtiden för att
+undvika samma problem.
+→ Live: https://kentlundgren.github.io/Ekonomi/rattgit.html
 
 ### `redovisning/BAS/analys.html`
 Analys och reflektion kring BAS-kontoplanen 2026 – utifrån Peter Bergs artikel.

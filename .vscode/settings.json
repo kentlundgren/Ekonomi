@@ -1,0 +1,10 @@
+{
+  // Denna inställning gör att Cursor ENBART visar Ekonomi-repots git
+  // och ignorerar föräldramappens repo (C:\Users\kentl\OneDrive\AI\Claude)
+  // när du arbetar i Ekonomi-workspacet.
+  // Utan denna inställning hittar Cursor det överliggande .git och visar
+  // fel repo (Ovrigt) i Source Control-panelen.
+  "git.ignoredRepositories": [
+    "C:\\Users\\kentl\\OneDrive\\AI\\Claude"
+  ]
+}

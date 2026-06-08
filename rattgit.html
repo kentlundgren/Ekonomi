@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rätt Git-repo i Cursor – Guide för Ekonomi-projektet</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #222;
+      background: #f0f4f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a3a5c 0%, #2e7d32 100%);
+      color: #fff;
+      padding: 44px 24px 32px;
+      text-align: center;
+    }
+    header h1 { font-size: 1.9em; margin: 0 0 8px; }
+    header p { margin: 0; opacity: 0.88; font-size: 1em; }
+
+    .container {
+      max-width: 860px;
+      margin: 40px auto 60px;
+      padding: 0 20px;
+    }
+
+    /* Sektionskort */
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 36px 44px;
+      margin-bottom: 28px;
+    }
+    .card h2 {
+      font-size: 1.2em;
+      color: #1a3a5c;
+      border-left: 4px solid #1a6eb5;
+      padding-left: 12px;
+      margin: 0 0 18px;
+    }
+    .card h3 {
+      font-size: 1.05em;
+      color: #2c5282;
+      margin: 24px 0 8px;
+    }
+    .card p { margin: 0 0 14px; }
+    .card p:last-child { margin-bottom: 0; }
+
+    /* Callouts */
+    .callout {
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin: 18px 0;
+      border-left: 5px solid;
+    }
+    .callout.blå  { background: #e8f0fb; border-color: #1a6eb5; }
+    .callout.grön { background: #e6f4ea; border-color: #2e7d32; }
+    .callout.gul  { background: #fff8e1; border-color: #f59e0b; }
+    .callout.röd  { background: #fde8e8; border-color: #c0392b; }
+    .callout p:last-child { margin-bottom: 0; }
+
+    /* Steg-lista */
+    .steps { counter-reset: step; list-style: none; margin: 16px 0; padding: 0; }
+    .steps li {
+      counter-increment: step;
+      display: flex;
+      gap: 14px;
+      margin-bottom: 14px;
+      align-items: flex-start;
+    }
+    .steps li::before {
+      content: counter(step);
+      background: #1a3a5c;
+      color: #fff;
+      font-weight: bold;
+      font-size: 0.85em;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Mapplayout-illustration */
+    .tree {
+      font-family: "Courier New", monospace;
+      font-size: 0.9em;
+      background: #1e1e1e;
+      color: #d4d4d4;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 16px 0;
+      line-height: 1.8;
+    }
+    .tree .highlight { color: #4fc3f7; font-weight: bold; }
+    .tree .ok        { color: #81c784; }
+    .tree .bad       { color: #ef9a9a; }
+    .tree .comment   { color: #999; }
+
+    /* Kodruta */
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-size: 0.88em;
+      overflow-x: auto;
+      margin: 14px 0;
+    }
+    code { font-family: "Courier New", monospace; }
+
+    /* Åtgärdstabell */
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.93em; }
+    th { background: #1a3a5c; color: #fff; padding: 10px 14px; text-align: left; }
+    td { padding: 9px 14px; border-bottom: 1px solid #dde4ec; vertical-align: top; }
+    tr:nth-child(even) td { background: #f0f4f9; }
+
+    /* Framtidspunkter */
+    .future-list { list-style: none; margin: 0; padding: 0; }
+    .future-list li {
+      padding: 10px 14px 10px 44px;
+      position: relative;
+      border-bottom: 1px solid #eee;
+      font-size: 0.96em;
+    }
+    .future-list li:last-child { border-bottom: none; }
+    .future-list li::before {
+      content: attr(data-icon);
+      position: absolute;
+      left: 12px;
+      font-size: 1.2em;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.75em;
+      font-weight: bold;
+      padding: 2px 9px;
+      border-radius: 20px;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+    .badge-fix  { background: #d4edda; color: #1a4a20; }
+    .badge-risk { background: #fde8b0; color: #7a4500; }
+
+    footer { text-align: center; padding: 24px; font-size: 0.85em; color: #888; }
+    hr { border: none; border-top: 1px solid #dde4ec; margin: 32px 0; }
+    a { color: #1a6eb5; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Rätt Git-repo i Cursor</h1>
+  <p>Vad som hände, vad som gjordes, och vad du ska tänka på i framtiden</p>
+</header>
+
+<div class="container">
+
+  <!-- ══════════════════ DEL 1 – VAD SOM HÄNDE ══════════════════ -->
+  <div class="card">
+    <h2>1. Vad som hände – problemet förklarat</h2>
+
+    <p>
+      Den 8 juni 2026 skapades ett nytt git-repo inne i <code>Ekonomi</code>-mappen.
+      Det var rätt beslut – Ekonomi fick ett eget GitHub-repo. Men det uppstod
+      ett klassiskt problem: <strong>nested repo</strong> (inbäddat git-repo).
+    </p>
+
+    <h3>Mappstrukturen ser ut så här</h3>
+
+    <div class="tree">
+C:\Users\kentl\OneDrive\AI\Claude\<span class="bad">    ← HAR .git  (repo: Ovrigt)</span>
+    ├── ArbetenSokta\
+    ├── ClaudeCowork\
+    ├── <span class="highlight">Ekonomi\</span><span class="ok">              ← HAR EGET .git  (repo: Ekonomi)</span>
+    │   ├── .git\<span class="ok">             ← Ekonomis eget git-repo</span>
+    │   ├── index.html
+    │   └── redovisning\BAS\analys.html
+    └── Ovrigt\
+    </div>
+
+    <p>
+      Ekonomi-mappen har ett <em>eget</em> <code>.git</code>, men ligger inuti en
+      annan mapp (<code>AI\Claude</code>) som <em>också</em> har ett <code>.git</code>.
+      Det kallas <strong>nested repo</strong>.
+    </p>
+
+    <h3>Varför visade Cursor fel repo?</h3>
+
+    <p>
+      När Cursor öppnar en mapp letar den efter <code>.git</code> – inte bara i
+      den öppnade mappen, utan <em>också uppåt</em> i mappstrukturen. Cursor
+      hittade föräldramappens <code>.git</code> (vid <code>AI\Claude</code>) och
+      visade <em>det</em> repots git-status i Source Control-panelen.
+    </p>
+
+    <div class="callout röd">
+      <p>
+        <strong>Konsekvensen:</strong> Source Control-panelen visade ändringar
+        från <code>ArbetenSokta</code>, <code>ClaudeCowork</code>, <code>Ovrigt</code>
+        m.fl. – filer som inte alls tillhör Ekonomi-projektet. Om Kent hade
+        klickat "✓ Commit" i GUI:t hade det committat till <em>fel</em> repo
+        (Ovrigt på GitHub), inte till Ekonomi.
+      </p>
+    </div>
+  </div>
+
+  <!-- ══════════════════ DEL 2 – VAD SOM GJORDES ══════════════════ -->
+  <div class="card">
+    <h2>2. Vad som gjordes – de två åtgärderna <span class="badge badge-fix">Löst 2026-06-08</span></h2>
+
+    <table>
+      <thead><tr><th>Åtgärd</th><th>Fil</th><th>Effekt</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>1. Workspace-inställning</strong></td>
+          <td><code>Ekonomi\.vscode\settings.json</code></td>
+          <td>Cursor ignorerar föräldra-repot när Ekonomi är öppet</td>
+        </tr>
+        <tr>
+          <td><strong>2. Gitignore-tillägg</strong></td>
+          <td><code>AI\Claude\.gitignore</code></td>
+          <td>Föräldra-repot slutar spåra filer i Ekonomi-mappen</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Åtgärd 1 i detalj – <code>.vscode\settings.json</code></h3>
+    <p>
+      En ny fil skapades: <code>C:\Users\kentl\OneDrive\AI\Claude\Ekonomi\.vscode\settings.json</code>
+    </p>
+    <pre><code>{
+  // Talar om för Cursor: "ignorera föräldramappens git-repo
+  // när du arbetar i Ekonomi-workspacet."
+  "git.ignoredRepositories": [
+    "C:\\Users\\kentl\\OneDrive\\AI\\Claude"
+  ]
+}</code></pre>
+    <p>
+      Inställningen är <em>workspace-specifik</em> – den gäller bara när
+      Ekonomi-mappen är öppnad i Cursor. Andra mappar påverkas inte.
+    </p>
+
+    <div class="callout grön">
+      <p>
+        <strong>Effekt:</strong> Cursors Source Control-panel visar nu
+        <em>enbart</em> Ekonomi-repots ändringar. Commit-knappen i GUI:t
+        arbetar mot <code>github.com/kentlundgren/Ekonomi</code>.
+      </p>
+    </div>
+
+    <h3>Åtgärd 2 i detalj – föräldra-repots <code>.gitignore</code></h3>
+    <p>
+      Följande rad lades till i <code>C:\Users\kentl\OneDrive\AI\Claude\.gitignore</code>:
+    </p>
+    <pre><code># Ekonomi har eget git-repo och egen GitHub – ignoreras här
+Ekonomi/</code></pre>
+    <p>
+      Föräldra-repot (<code>Ovrigt</code> på GitHub) slutar nu se och spåra
+      filer inuti <code>Ekonomi</code>-mappen. Det är rent och logiskt –
+      Ekonomi lever sitt eget liv.
+    </p>
+  </div>
+
+  <!-- ══════════════════ DEL 3 – SÅ COMMITAR OCH PUSHAR DU ══════════════════ -->
+  <div class="card">
+    <h2>3. Så commitar och pushar du i Cursor (efter omstart)</h2>
+
+    <p>
+      När Cursor startas om med Ekonomi-mappen öppnad gäller <code>.vscode/settings.json</code>
+      och Source Control visar rätt repo. Då kan du använda GUI:t direkt:
+    </p>
+
+    <ol class="steps">
+      <li>
+        Öppna Source Control-panelen: klicka på gren-ikonen i vänster sidofält,
+        eller tryck <strong>Ctrl+Shift+G</strong>.
+      </li>
+      <li>
+        Kontrollera att det i listan <em>bara</em> syns filer från Ekonomi-projektet
+        (index.html, analys.html, README.md osv.) – inga filer från ArbetenSokta
+        eller ClaudeCowork.
+      </li>
+      <li>
+        Skriv ditt commit-meddelande i textrutan överst i Source Control-panelen.
+      </li>
+      <li>
+        Klicka <strong>"✓ Commit"</strong> (eller Ctrl+Enter).
+      </li>
+      <li>
+        Klicka <strong>"Sync Changes"</strong> (eller "Push") för att föra över
+        till GitHub.
+      </li>
+    </ol>
+
+    <div class="callout blå">
+      <p>
+        <strong>Dubbelkolla alltid statusfältet längst ner i Cursor.</strong>
+        Det ska stå <strong>"main"</strong> (eller aktuell branch) och
+        <em>inte</em> "Claude" (föräldramappens namn). Om det står "Claude"
+        har Cursor inte laddat workspace-inställningen – starta om Cursor och
+        försök igen.
+      </p>
+    </div>
+
+    <h3>Terminalen som backup</h3>
+    <p>
+      Om GUI:t mot förmodan skulle bete sig konstigt, öppna terminalen
+      (Ctrl+Ö) och kör:
+    </p>
+    <pre><code>cd "C:\Users\kentl\OneDrive\AI\Claude\Ekonomi"
+git remote -v            # Ska visa: origin → Ekonomi.git
+git status               # Ska bara visa Ekonomi-filer
+git add .
+git commit -m "Ditt meddelande"
+git push</code></pre>
+  </div>
+
+  <!-- ══════════════════ DEL 4 – TÄNK PÅ DETTA I FRAMTIDEN ══════════════════ -->
+  <div class="card">
+    <h2>4. Tänk på detta i framtiden <span class="badge badge-risk">Viktigt</span></h2>
+
+    <ul class="future-list">
+      <li data-icon="🔍">
+        <strong>Kontrollera alltid statusfältet längst ner i Cursor</strong>
+        innan du commitar. Det ska visa rätt repo-namn och branch.
+        Om det visar fel namn – stäng och öppna rätt mapp, eller starta om Cursor.
+      </li>
+      <li data-icon="📁">
+        <strong>Öppna alltid rätt mappnivå i Cursor.</strong>
+        Om du öppnar <code>AI\Claude</code> (föräldermappen) istället för
+        <code>Ekonomi</code> ser du föräldra-repots Source Control igen.
+        Öppna alltid <code>Ekonomi</code>-mappen direkt: File → Open Folder →
+        välj <code>Ekonomi</code>.
+      </li>
+      <li data-icon="🆕">
+        <strong>Nytt projekt i framtiden?</strong>
+        Om du skapar ett nytt eget repo (t.ex. <code>AI\Claude\NyttProjekt</code>)
+        och det projektet också får en eget GitHub-repo, upprepa
+        <em>samma två åtgärder</em>:
+        <ol style="margin:8px 0 0 20px;">
+          <li>Skapa <code>NyttProjekt\.vscode\settings.json</code> med
+            <code>git.ignoredRepositories</code> pekande på föräldermappen.</li>
+          <li>Lägg till <code>NyttProjekt/</code> i föräldermappens
+            <code>.gitignore</code>.</li>
+        </ol>
+      </li>
+      <li data-icon="🔄">
+        <strong>Starta om Cursor efter att <code>settings.json</code> skapats.</strong>
+        Cursor laddar workspace-inställningar vid start. En ny
+        <code>.vscode/settings.json</code> får full effekt först efter omstart.
+      </li>
+      <li data-icon="🌿">
+        <strong>Undvik att committa från föräldramappens Source Control.</strong>
+        Om du öppnar <code>AI\Claude</code> och ser Ekonomi-filer där – committa
+        INTE via den panelen för Ekonomi-filer. Det hamnar i fel repo (Ovrigt).
+        Gå istället till terminalen och <code>cd</code> till rätt mapp.
+      </li>
+      <li data-icon="✅">
+        <strong>En snabb sanity check:</strong>
+        <code>git remote -v</code> i terminalen från rätt mapp visar alltid
+        exakt vilket GitHub-repo du är kopplad till. Kör det om du är osäker.
+      </li>
+    </ul>
+  </div>
+
+  <!-- ══════════════════ DEL 5 – SAMMANFATTNING ══════════════════ -->
+  <div class="card">
+    <h2>5. Sammanfattning på en skärmbild</h2>
+
+    <table>
+      <thead><tr><th>Fråga</th><th>Svar</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Vad är nested repo?</td>
+          <td>En mapp med <code>.git</code> inuti en annan mapp som också har <code>.git</code>.</td>
+        </tr>
+        <tr>
+          <td>Varför visade Cursor fel repo?</td>
+          <td>Cursor scannde uppåt i mappstrukturen och hittade föräldermappens <code>.git</code> först.</td>
+        </tr>
+        <tr>
+          <td>Hur fixades det?</td>
+          <td><code>.vscode/settings.json</code> med <code>git.ignoredRepositories</code> + <code>Ekonomi/</code> i förälderns <code>.gitignore</code>.</td>
+        </tr>
+        <tr>
+          <td>Var är inställningen sparad?</td>
+          <td><code>Ekonomi\.vscode\settings.json</code> – finns i repot och gäller automatiskt.</td>
+        </tr>
+        <tr>
+          <td>Påverkas andra projekt av fixet?</td>
+          <td>Nej – inställningen är workspace-specifik och gäller bara Ekonomi-mappen.</td>
+        </tr>
+        <tr>
+          <td>Har föräldra-repot fortfarande nytta?</td>
+          <td>Ja – det spårar ArbetenSokta, ClaudeCowork och Ovrigt. Ekonomi är nu korrekt uteslutet.</td>
+        </tr>
+        <tr>
+          <td>Hur vet jag att jag är i rätt repo?</td>
+          <td>Statusfältet visar rätt branch-namn UTAN "Claude". Kör <code>git remote -v</code> om osäker.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout grön">
+      <p>
+        <strong>Filer som skapades eller ändrades 2026-06-08 för att lösa detta:</strong><br>
+        ✅ <code>Ekonomi\.vscode\settings.json</code> – ny fil (workspace-inställning)<br>
+        ✅ <code>AI\Claude\.gitignore</code> – tillägg av <code>Ekonomi/</code><br>
+        ✅ <code>Ekonomi\CLAUDE.md</code> – dokumentation av regeln<br>
+        ✅ <code>Ekonomi\rattgit.html</code> – denna guide
+      </p>
+    </div>
+
+    <p style="margin-top:20px;">
+      Tillbaka till: <a href="index.html">Ekonomi – startsidan</a>
+    </p>
+  </div>
+
+</div><!-- /container -->
+
+<footer>
+  Kent Lundgren &nbsp;&bull;&nbsp;
+  <a href="https://github.com/kentlundgren/Ekonomi">GitHub</a>
+  &nbsp;&bull;&nbsp; 2026
+</footer>
+
+</body>
+</html>
