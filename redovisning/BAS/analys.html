@@ -240,6 +240,9 @@
     .site-nav .nav-links a:hover { background: #1e3a5f; color: #fff; }
     .site-nav .nav-links a.active { background: #1a6eb5; color: #fff; font-weight: 600; }
     .site-nav .nav-author { color: #566e88; font-size: 0.9em; white-space: nowrap; margin-left: auto; padding-left: 16px; }
+    .nav-sep { color: #7a9bbf; margin: 0 5px; font-family: "Courier New", monospace; font-size: 0.95em; }
+    .nav-crumb { color: #9ab4cc; text-decoration: none; font-family: "Courier New", monospace; font-size: 0.95em; white-space: nowrap; }
+    .nav-crumb:hover { color: #fff; }
 
     /* Diskret GitHub-länk, nedre vänstra hörnet */
     .github-corner {
@@ -274,7 +277,11 @@
 
 <!-- Navigationsrad -->
 <nav class="site-nav">
-  <a class="nav-brand" href="index.html">{ E } Ekonomi</a>
+  <a class="nav-brand" href="../../index.html">{ E } Ekonomi</a>
+  <span class="nav-sep">/</span>
+  <a class="nav-crumb" href="../index.html">Redovisning</a>
+  <span class="nav-sep">/</span>
+  <a class="nav-crumb" href="index.html">BAS</a>
   <div class="nav-links">
     <a href="index.html">Startsida</a>
     <a href="analys.html" class="active">BAS 2026 – Analys</a>

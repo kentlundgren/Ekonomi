@@ -54,6 +54,9 @@
       margin-left: auto;
       padding-left: 16px;
     }
+    .nav-sep { color: #7a9bbf; margin: 0 5px; font-family: "Courier New", monospace; font-size: 0.95em; }
+    .nav-crumb { color: #9ab4cc; text-decoration: none; font-family: "Courier New", monospace; font-size: 0.95em; white-space: nowrap; }
+    .nav-crumb:hover { color: #fff; }
 
     /* ── Grundlayout ── */
     *, *::before, *::after { box-sizing: border-box; }
@@ -199,7 +202,11 @@
 
 <!-- ══════════════════ NAVIGATIONSRAD ══════════════════ -->
 <nav class="site-nav">
-  <a class="nav-brand" href="index.html">{ E } Ekonomi</a>
+  <a class="nav-brand" href="../../index.html">{ E } Ekonomi</a>
+  <span class="nav-sep">/</span>
+  <a class="nav-crumb" href="../index.html">Redovisning</a>
+  <span class="nav-sep">/</span>
+  <span class="nav-crumb" style="color:#fff; font-weight:600;">BAS</span>
   <div class="nav-links">
     <a href="index.html" class="active">Startsida</a>
     <a href="analys.html">BAS 2026 – Analys</a>
