@@ -34,7 +34,8 @@ Ekonomi/
 │
 ├── skills/
 │   ├── humanizer_ton/
-│   │   └── SKILL.md                  # Procedur: skriv mänsklig text
+│   │   ├── SKILL.md                  # Procedur: sju steg för mänsklig text
+│   │   └── humanizer_bakgrund.md     # Teori: varför AI-text låter som AI
 │   ├── projekt_struktur/
 │   │   └── SKILL.md                  # Ekonomi-projektets nav- och CSS-konventioner
 │   └── webb_struktur/
@@ -112,11 +113,36 @@ Checklista och konkreta granskningspunkter för lekmannarevisorer.
 Om lekmannarevision i ideella föreningar. Länk till generell revisionsguide samt
 diskret information om att Kent tar revisionsuppdrag på arvodesbasis.
 
+### `humanizer.md`
+Praktisk katalog med 14 konkreta mönster att undvika för att text ska låta
+mänsklig, inte AI-genererad. Svenska exempel hämtade ur redovisningskontext.
+Innehåller även tre snabbpass att köra på färdig text. Se även
+`skills/humanizer_ton/humanizer_bakgrund.md` för den teoretiska bakgrunden.
+
 ### `skills/`
-Tre AI-skills (procedurdokument för Claude):
-- `humanizer_ton` – regler för mänsklig, analytisk skrivstil
-- `projekt_struktur` – detta projekts nav, CSS och konventioner
-- `webb_struktur` – generellt återanvändbart skill för hierarkiska webbplatser
+Fyra AI-skills (procedurdokument för Claude):
+- `humanizer_ton/SKILL.md` – sju procedursteg för mänsklig, analytisk skrivstil
+- `humanizer_ton/humanizer_bakgrund.md` – akademisk analys (se nedan)
+- `projekt_struktur/SKILL.md` – detta projekts nav, CSS och konventioner
+- `webb_struktur/SKILL.md` – generellt återanvändbart skill för hierarkiska webbplatser
+
+---
+
+## Humanizer – att skriva med mänsklig röst
+
+Ett löpande tema i projektet är att texter ska låta som Kent – inte som en
+AI-assistent. Det arbetet är dokumenterat i tre lager:
+
+| Fil | Roll | Innehåll |
+|-----|------|----------|
+| [`skills/humanizer_ton/humanizer_bakgrund.md`](skills/humanizer_ton/humanizer_bakgrund.md) | Teori | Akademisk analys: varför AI-text låter som AI (RLHF, epistemisk kalibrering, perplexity, burstiness). Refererar forskning från ACL 2024 och arxiv 2026. |
+| [`skills/humanizer_ton/SKILL.md`](skills/humanizer_ton/SKILL.md) | Procedur | Sju steg att köra i ordning: från att identifiera berömsord till ett röstpass mot Kents egna bloggar. |
+| [`humanizer.md`](humanizer.md) | Katalog | 14 konkreta mönster med svenska före/efter-exempel. Baserat på [blader/humanizer](https://github.com/blader/humanizer) och [aihxp/humanizer](https://github.com/aihxp/humanizer) på GitHub. |
+
+Grundinsikten, hämtad ur forskningen: AI-text avslöjas inte primärt av
+enskilda ord utan av *uniformitet* – jämna meningslängder, förutsägbara
+ordval, hedging på fel ställen. Motmedlet är specifika egennamn, varierad
+rytm och äkta ståndpunkter – det som SKILL.md kallar "stance mode".
 
 ---
 
