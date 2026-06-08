@@ -110,6 +110,33 @@ För att aktivera Pages: [github.com/kentlundgren/Ekonomi/settings/pages](https:
 - Vid uppdatering av befintlig fil: fråga om ny version ska skapas (`_verX`)
   eller om befintlig fil ska uppdateras
 
+### Källhänvisningar i löpande text – klickbarhetsprincip
+
+När en källa anges i löpande text (in-text citation) ska den vara **klickbar
+första gången** den förekommer i texten. Därefter räcker det att källan finns
+i referenslistan längst ner.
+
+**Om källan anges med Harvardformat `(Namn, år)`:**
+```html
+<!-- Första gången – gör parentesen klickbar -->
+(<a href="https://källans-url" target="_blank">Berg, 2026</a>)
+
+<!-- Efterföljande gånger – vanlig text -->
+(Berg, 2026)
+```
+
+**Om källan anges med titeln i löptext:**
+```html
+<!-- Första gången – gör titeln klickbar -->
+<a href="https://källans-url" target="_blank">BAS – Nyheter 2026</a>
+
+<!-- Efterföljande gånger – vanlig text eller kursiv -->
+<em>BAS – Nyheter 2026</em>
+```
+
+Länken ska öppnas i ny flik (`target="_blank"`).
+Regeln gäller per HTML-fil – varje fil räknas för sig.
+
 ---
 
 ## Git-hantering – påminnelse
