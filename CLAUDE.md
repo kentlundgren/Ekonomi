@@ -155,6 +155,7 @@ För att aktivera Pages: [github.com/kentlundgren/Ekonomi/settings/pages](https:
 |-----------|-------|
 | Skriva, granska eller redigera löpande text | [`skills/humanizer_ton/SKILL.md`](skills/humanizer_ton/SKILL.md) |
 | Skapa ny sida, sektion, nav eller CSS-tema | [`skills/projekt_struktur/SKILL.md`](skills/projekt_struktur/SKILL.md) |
+| Starta ett helt nytt projekt med samma struktur | [`skills/webb_struktur/SKILL.md`](skills/webb_struktur/SKILL.md) |
 
 ---
 
