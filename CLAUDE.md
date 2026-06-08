@@ -132,20 +132,43 @@ Kent är **lekmannarevisor** i ideella föreningar, bl.a. Kalmar Nation.
 
 ## Projektöversikt
 
+*Senast verifierad: 2026-06-08*
+
+### HTML-filer
+
+| Fil | Titel | Beskrivning |
+|-----|-------|-------------|
+| `index.html` | Ekonomi – Kent Lundgren | Rot-omdirigering → redovisning/BAS/index.html |
+| `redovisning/index.html` | Redovisning – Ekonomi | Sektionsindex för redovisning, länkar till BAS och revision |
+| `redovisning/BAS/index.html` | BAS – Ekonomi | BAS-sektionens startsida, tack till Peter Berg + länk till analys |
+| `redovisning/BAS/analys.html` | BAS 2026 – Analys | BAS 2026-analys, skriven i jag-form |
+| `redovisning/BAS/BAS2026.html` | Ekonomi – Redovisningsreflektioner | Alternativ ingångssida med tack till Peter Berg |
+| `redovisning/BAS/generell_revision.html` | BAS-ändringar och revision | Praktisk guide om BAS-ändringar för ideella föreningar |
+| `redovisning/revision/index.html` | Revision – Ekonomi | Lekmannarevision i ideella föreningar |
+| `ekonomistyrning/index.html` | Ekonomistyrning – Ekonomi | Under uppbyggnad |
+
+### Övriga filer
+
 | Fil | Beskrivning |
 |-----|-------------|
-| `index.html` | Rot-omdirigering → redovisning/BAS/index.html |
-| `redovisning/BAS/index.html` | Startsida – tack till Peter Berg + länk till analys |
-| `redovisning/BAS/analys.html` | BAS 2026-analys, skriven i jag-form |
 | `README.md` | Projektdokumentation inkl. nested repo-analys |
+| `humanizer.md` | Regler för mänskligt skrivande – alla texter ska följa dessa |
 | `.gitignore` | Ignorerar node_modules, dist, .env m.m. |
+| `skills/humanizer_ton/SKILL.md` | Skill för att granska och förbättra löpande text |
+| `skills/projekt_struktur/SKILL.md` | Skill för nya sidor, sektioner, nav och CSS-teman |
+| `skills/webb_struktur/SKILL.md` | Skill för att starta helt nya projekt med samma struktur |
 
 ### GitHub Pages (live-sidor)
 
 | Sida | URL |
 |------|-----|
 | Startsidan | https://kentlundgren.github.io/Ekonomi/ |
+| Redovisning | https://kentlundgren.github.io/Ekonomi/redovisning/ |
 | BAS-analysen | https://kentlundgren.github.io/Ekonomi/redovisning/BAS/analys.html |
+| BAS2026 | https://kentlundgren.github.io/Ekonomi/redovisning/BAS/BAS2026.html |
+| Generell revision | https://kentlundgren.github.io/Ekonomi/redovisning/BAS/generell_revision.html |
+| Revision | https://kentlundgren.github.io/Ekonomi/redovisning/revision/ |
+| Ekonomistyrning | https://kentlundgren.github.io/Ekonomi/ekonomistyrning/ |
 
 Sidorna uppdateras automatiskt inom ~1 minut efter varje push.
 För att aktivera Pages: [github.com/kentlundgren/Ekonomi/settings/pages](https://github.com/kentlundgren/Ekonomi/settings/pages)
