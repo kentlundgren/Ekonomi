@@ -1,6 +1,11 @@
 # Ekonomi
 
-Kent Lundgrens ekonomiprojekt – redovisning, BAS-kontoanalys och ekonomiska verktyg.
+Kent Lundgrens redovisningsreflektioner – analyser kring redovisning, BAS-kontoplan
+och revision av ideella föreningar.
+
+Kent arbetar 50 % som ekonom/controller (via Poolia) vid Kultur och Fritidsförvaltningen,
+Simrishamns kommun, och ägnar övriga vardagstimmar åt generativ AI och egna projekt.
+Det här är ett av dem.
 
 ---
 
@@ -8,173 +13,140 @@ Kent Lundgrens ekonomiprojekt – redovisning, BAS-kontoanalys och ekonomiska ve
 
 ```
 Ekonomi/
+├── index.html                        # Rot-TOC: startsida med länk till sektioner
+├── rattgit.html                      # Guide: nested repo och Cursor-git
+├── CLAUDE.md                         # Regler och kontext för Claude (AI-assistent)
+├── humanizer.md                      # Regler för mänsklig skrivstil
+├── README.md
+│
 ├── redovisning/
-│   └── BAS/
-│       └── analys.html   # BAS 2026 – Analys och reflektion
-├── .vscode/
-│   └── settings.json     # Cursor-inställning: visar rätt git-repo
-├── index.html            # Startsida med tack till Peter Berg
-├── rattgit.html          # Guide: nested repo och hur Cursor-git fixades
-├── CLAUDE.md             # Regler och kontext för Claude
-├── .gitignore
-└── README.md
+│   ├── index.html                    # Sektion-TOC: redovisning
+│   ├── BAS/
+│   │   ├── index.html                # Sub-TOC: BAS-avsnittets innehåll
+│   │   ├── BAS2026.html              # "Tack Peter Berg!" + källförteckning
+│   │   ├── analys.html               # BAS 2026 – Analys och reflektion
+│   │   └── generell_revision.html    # Hur BAS 2026 påverkar generell revision
+│   └── revision/
+│       └── index.html                # Lekmannarevision i ideella föreningar
+│
+├── ekonomistyrning/
+│   └── index.html                    # Platshållare – under uppbyggnad
+│
+├── skills/
+│   ├── humanizer_ton/
+│   │   └── SKILL.md                  # Procedur: skriv mänsklig text
+│   ├── projekt_struktur/
+│   │   └── SKILL.md                  # Ekonomi-projektets nav- och CSS-konventioner
+│   └── webb_struktur/
+│       └── SKILL.md                  # Generellt skill: hierarkisk webbplats (återanvändbart)
+│
+└── .vscode/
+    └── settings.json                 # Cursor: visar rätt git-repo
 ```
 
 ---
 
-## Filer
+## Live-sidor (GitHub Pages)
+
+| Sida | URL |
+|------|-----|
+| Startsida | https://kentlundgren.github.io/Ekonomi/ |
+| Redovisning (TOC) | https://kentlundgren.github.io/Ekonomi/redovisning/ |
+| BAS (TOC) | https://kentlundgren.github.io/Ekonomi/redovisning/BAS/ |
+| BAS2026 – Peter Berg | https://kentlundgren.github.io/Ekonomi/redovisning/BAS/BAS2026.html |
+| BAS 2026 – Analys | https://kentlundgren.github.io/Ekonomi/redovisning/BAS/analys.html |
+| BAS och revision | https://kentlundgren.github.io/Ekonomi/redovisning/BAS/generell_revision.html |
+| Revision | https://kentlundgren.github.io/Ekonomi/redovisning/revision/ |
+| ekonomistyrning | https://kentlundgren.github.io/Ekonomi/ekonomistyrning/ |
+| Git-guide | https://kentlundgren.github.io/Ekonomi/rattgit.html |
+
+Live-sidorna uppdateras automatiskt inom ~1 minut efter varje push till `main`.
+
+---
+
+## Navigering
+
+Webbplatsen har en hierarkisk navigering i tre nivåer:
+
+```
+{ E } Ekonomi  ←  rotsidan, dropdown-meny för sektioner
+    └── Redovisning ▾
+            ├── BAS 2026
+            └── Revision
+    └── ekonomistyrning
+```
+
+- **Rotsidan** (`index.html`): dropdown-nav som visar alla sektioner
+- **Sektions- och sub-TOC-sidor**: breadcrumb-navigering (t.ex. `{ E } Ekonomi / Redovisning / BAS`)
+- **Innehållssidor**: samma breadcrumb, navigerar tillbaka uppåt i hierarkin
+
+Tre CSS-teman finns dokumenterade i `skills/webb_struktur/SKILL.md` (nuvarande: Marin/Blå).
+
+---
+
+## Filer – kort beskrivning
 
 ### `index.html`
-Projektets startsida. Presenterar bakgrunden till analysarbetet, tackar Peter Berg
-för hans artikel och LinkedIn-inlägg om BAS-nyheter 2026, och länkar till analysen.
-Citerar källorna i Harvardstil. Öppnas direkt i webbläsaren.
+Projektets rotsida med dropdown-navigering. Listar sektionerna Redovisning och
+ekonomistyrning som klickbara kort.
 
 ### `rattgit.html`
-Guide som dokumenterar det nested repo-problem som uppstod 2026-06-08 och hur
-det löstes. Förklarar varför Cursor visade fel git-repo i Source Control, de
-två åtgärderna som gjordes, och vad man ska tänka på i framtiden för att
-undvika samma problem.
-→ Live: https://kentlundgren.github.io/Ekonomi/rattgit.html
+Dokumenterar det nested repo-problem som uppstod 2026-06-08 och hur det löstes.
+Förklarar varför Cursor visade fel git-repo och de två åtgärder som gjordes.
+
+### `redovisning/BAS/BAS2026.html`
+Utgångspunkten för BAS-avsnittet: tackar Peter Berg för hans artikel om BAS-nyheter
+2026 och presenterar reflektionerna. Innehåller fullständig källförteckning.
 
 ### `redovisning/BAS/analys.html`
-Analys och reflektion kring BAS-kontoplanen 2026 – utifrån Peter Bergs artikel.
-Besvarar fyra frågor: skillnaden privat BAS vs Kommun-BAS, påverkan för controller
-i kommunalt bolag, relevans för lekmannarevision av Kalmar Nation, och varför
-löner placeras i kontogrupp 5 (Kommun-BAS) respektive klass 7 (privat BAS).
-Skriven i jag-form. Öppnas direkt i webbläsaren.
+Djupgående analys i jag-form. Besvarar fyra frågor: skillnad privat BAS vs Kommun-BAS,
+vad BAS 2026 innebär för controllers i kommunala bolag (analys av andras situation),
+vad som är relevant för lekmannarevision av Kalmar Nation, samt varför löner placeras
+i kontogrupp 5 (Kommun-BAS) respektive klass 7 (privat BAS).
+
+### `redovisning/BAS/generell_revision.html`
+Guide om hur BAS 2026-ändringarna påverkar en generell revision av ideella föreningar.
+Checklista och konkreta granskningspunkter för lekmannarevisorer.
+
+### `redovisning/revision/index.html`
+Om lekmannarevision i ideella föreningar. Länk till generell revisionsguide samt
+diskret information om att Kent tar revisionsuppdrag på arvodesbasis.
+
+### `skills/`
+Tre AI-skills (procedurdokument för Claude):
+- `humanizer_ton` – regler för mänsklig, analytisk skrivstil
+- `projekt_struktur` – detta projekts nav, CSS och konventioner
+- `webb_struktur` – generellt återanvändbart skill för hierarkiska webbplatser
 
 ---
 
-## GitHub
+## ⚠️ Nested Git-repo
 
-Repot finns på: [https://github.com/kentlundgren/Ekonomi](https://github.com/kentlundgren/Ekonomi)
-
----
-
-## 🌐 Live-sidor (GitHub Pages)
-
-Repot är kopplat till **GitHub Pages** vilket gör att HTML-filerna är tillgängliga
-som publika webbsidor direkt via URL – utan att behöva öppna dem lokalt.
-
-### Aktivera GitHub Pages (första gången)
-
-1. Gå till [https://github.com/kentlundgren/Ekonomi/settings/pages](https://github.com/kentlundgren/Ekonomi/settings/pages)
-2. Under **Source** – välj **Deploy from a branch**
-3. Branch: **main** &nbsp;|&nbsp; Folder: **/ (root)**
-4. Klicka **Save**
-5. Vänta 1–2 minuter – GitHub bygger sidan
-
-### Live-adresser
-
-| Fil | Live-URL |
-|-----|----------|
-| `index.html` (startsidan) | https://kentlundgren.github.io/Ekonomi/ |
-| `redovisning/BAS/analys.html` | https://kentlundgren.github.io/Ekonomi/redovisning/BAS/analys.html |
-
-> **Obs:** Behövs det en `index.html` i BAS-mappen?  
-> Nej – `analys.html` nås direkt via sin URL ovan. En index.html i BAS-mappen
-> behövs bara om du vill ha en "innehållsförteckning" dit när man besöker
-> `/redovisning/BAS/` utan att ange filnamn. Det är valfritt.
-
-### Uppdatera live-sidorna
-
-Live-sidorna uppdateras **automatiskt** varje gång du pushar till `main`.
-Det tar normalt under en minut.
-
----
-
-## ⚠️ Viktig information: Nested Git-repo
-
-### Vad är problemet?
-
-Mappen `Ekonomi` har ett **eget git-repo** (med sin `.git`-mapp inuti).
-Samtidigt ligger `Ekonomi` **inuti en annan mapp** som *också* är ett git-repo:
+Mappen `Ekonomi` har ett eget git-repo inuti en föräldramapp som också är ett repo:
 
 ```
-C:\Users\kentl\OneDrive\AI\Claude\          ← Föräldra-repo (remote: Ovrigt)
+C:\Users\kentl\OneDrive\AI\Claude\     ← Föräldra-repo (remote: Ovrigt)
     ├── ArbetenSokta/
     ├── ClaudeCowork/
-    ├── Ekonomi/                             ← DETTA repo (remote: Ekonomi)
-    │   ├── .git/                            ← eget git-repo
-    │   └── redovisning/...
+    ├── Ekonomi/                        ← DETTA repo (remote: Ekonomi)
+    │   └── .git/
     └── Ovrigt/
 ```
 
-Det kallas **nested git-repo** (inbäddat git-repo) och är tekniskt fullt tillåtet,
-men det kräver att du är medveten om *vilket* av de två repona du jobbar med
-vid varje givet tillfälle.
-
----
-
-### Hur fungerar detta i praktiken?
-
-#### När du jobbar i Cursor (med Ekonomi-mappen öppnad)
-
-När du öppnar just `Ekonomi`-mappen i Cursor (`File → Open Folder → Ekonomi`) pekar
-Cursor och git-kommandon på det **inre repot** (dvs. `Ekonomi/.git`).
-
-- `git status`, `git add`, `git commit`, `git push` → arbetar mot **Ekonomi-repot**
-  och GitHub-adressen `kentlundgren/Ekonomi`
-- Allt fungerar normalt så länge du öppnar just `Ekonomi`-mappen som workspace
-
-**Risk:** Om du öppnar föräldramappen `AI\Claude` i Cursor i stället ser du plötsligt
-det yttre repot (`Ovrigt`). Då är `Ekonomi/` bara en untracked undermapp.
-Git-kommandon därifrån gäller Ovrigt-repot – inte Ekonomi-repot.
-
----
-
-#### När du öppnar `AI\Claude` (föräldramappen) i Cursor
-
-Föräldra-repot ser `Ekonomi/`-mappen som ett **nested repo** och listar den
-med varning i `git status`:
-
-```
-modified:   Ekonomi (untracked content)
-```
-
-Det är normalt och betyder inget farligt. Men tänk på:
-- Kör du `git add .` i föräldramappen påverkas **inte** filerna inuti `Ekonomi/`
-  (git hoppar över nested repos om de inte är konfigurerade som submodules)
-- Du behöver i så fall gå in i `Ekonomi/`-mappen och köra git-kommandon separat
-
----
-
-#### När du arbetar med Ekonomi-projektet i Claude Cowork
-
-I Claude Cowork (webbgränssnittet) finns **inget git-sammanhang** alls.
-Claude redigerar filer direkt på disk utan att veta om git-historik.
-
-Det innebär:
-- Ändringar som Claude Cowork gör sparas direkt i filerna (bra)
-- Men dessa ändringar **committas inte automatiskt** – du måste själv gå in i
-  Cursor (eller terminalen) efteråt och committa dem till `Ekonomi`-repot
-- Om du glömmer detta hamnar ändringarna utanför git-historiken
-  tills nästa manuella commit
-
-**Rekommenderat arbetsflöde med Claude Cowork:**
-1. Låt Claude Cowork göra ändringar i filerna
-2. Öppna Cursor med `Ekonomi`-mappen
-3. Kör `git status` – se vad som förändrats
-4. Commit och push till GitHub
-
----
-
-### Sammanfattning av risker och åtgärder
+**Regel:** Öppna alltid `Ekonomi`-mappen direkt i Cursor – aldrig föräldramappen.
+Verifiera remote med `git remote -v` om du är osäker.
 
 | Situation | Risk | Åtgärd |
 |-----------|------|---------|
-| Öppnar `AI\Claude` i Cursor | Arbetar mot fel repo | Öppna alltid `Ekonomi`-mappen separat |
-| Glömmer committa efter Claude Cowork | Ändringar saknas i git-historik | Committa manuellt efteråt i Cursor |
-| Kör `git push` utan att tänka | Kan pusha till fel remote | Kör `git remote -v` för att verifiera |
-| Föräldra-repot visar `Ekonomi` som modified | Förvirring | Det är normalt – ignorera det i föräldramappen |
+| Öppnar `AI\Claude` i Cursor | Arbetar mot fel repo | Öppna `Ekonomi`-mappen separat |
+| Glömmer committa efter redigering | Ändringar saknas i git-historik | Committa manuellt i Cursor |
+| Föräldra-repot visar `Ekonomi` som modified | Förvirring | Normalt – ignorera det där |
 
 ---
 
 ## Git-hantering
 
-**Kent commitar alltid själv.**
-
-Claude påminner när en commit bör göras och föreslår färdigt commit-meddelande:
+**Kent commitar alltid själv** – via Cursors Source Control-panel (GUI) eller terminal.
 
 ```powershell
 cd "C:\Users\kentl\OneDrive\AI\Claude\Ekonomi"
