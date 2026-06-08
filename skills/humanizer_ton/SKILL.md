@@ -248,3 +248,9 @@ Kontrollera mot Kents skrivröst:
 
 Se [`humanizer.md`](../../humanizer.md) för 11 fullständiga mönster med
 före/efter-exempel.
+
+## Teoretisk bakgrund
+
+Se [`humanizer_bakgrund.md`](humanizer_bakgrund.md) för en akademisk analys av
+varför AI-text låter som AI – om epistemic kalibrering, RLHF och forskning
+från ACL 2024 och arxiv 2026 – samt kopplingen till detta skill.
