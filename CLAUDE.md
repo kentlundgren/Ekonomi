@@ -122,7 +122,8 @@ Kent är **lekmannarevisor** i ideella föreningar, bl.a. Kalmar Nation.
 
 | Fil | Beskrivning |
 |-----|-------------|
-| `index.html` | Startsida – tack till Peter Berg + länk till analys |
+| `index.html` | Rot-omdirigering → redovisning/BAS/index.html |
+| `redovisning/BAS/index.html` | Startsida – tack till Peter Berg + länk till analys |
 | `redovisning/BAS/analys.html` | BAS 2026-analys, skriven i jag-form |
 | `README.md` | Projektdokumentation inkl. nested repo-analys |
 | `.gitignore` | Ignorerar node_modules, dist, .env m.m. |
@@ -151,7 +152,7 @@ För att aktivera Pages: [github.com/kentlundgren/Ekonomi/settings/pages](https:
 ### Skriv mänskligt – följ humanizer.md och humanizer_skill.md
 
 All löpande text ska följa reglerna i [`humanizer.md`](humanizer.md).
-När text skrivs eller granskas: följ proceduren i [`humanizer_skill.md`](humanizer_skill.md).
+När text skrivs eller granskas: följ proceduren i [`skills/humanizer_ton/SKILL.md`](skills/humanizer_ton/SKILL.md).
 Kortversion av de viktigaste:
 
 - Inga tankestrecket (–) som satsavgränsare – använd punkt eller komma
