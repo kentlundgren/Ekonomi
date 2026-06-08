@@ -155,6 +155,8 @@ Kortversion av de viktigaste:
 
 - Inga tankestrecket (–) som satsavgränsare – använd punkt eller komma
 - Inga uppblåsta ord: *understryker*, *belyser*, *säkerställa*, *möjliggöra*
+- Inga förstärkningsord om andras arbete: *utmärkt*, *exemplarisk*, *generös*, *lättillgänglig*
+  → Beskriv vad personen faktiskt gjorde, inte hur bra det var
 - Inga generiska avslutningar ("framtiden ser ljus ut")
 - Variera meningslängd – blanda korta och långa
 - Var specifik: datum, kontonummer, namn – inte "nyligen" eller "en aktör"

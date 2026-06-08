@@ -168,6 +168,30 @@ AI döljer gärna vem som gör vad.
 
 ---
 
+### 11. Förstärkningsord och beröm riktade mot andra
+
+AI-text berömmer gärna andras arbete med adjektiv som inte kan falsifieras.
+Resultatet låter som smicker, inte analys.
+
+**Ord att stryka när de beskriver andras arbete:**
+*utmärkt*, *exemplarisk*, *gedigen*, *generös*, *lättillgänglig*,
+*imponerande*, *välskriven*, *insiktsfull*, *värdefull*
+
+**Principen:** Beskriv vad personen *faktiskt gjorde*, inte hur bra det var.
+Läsaren avgör om det är bra.
+
+**Före:**
+> Bergs genomgång är exemplariskt pedagogisk.
+> Tack för att du delar din sakkunskap så generöst och lättillgängligt!
+
+**Efter:**
+> Berg tar 272 ändringar och grupperar dem i sju prioriterade områden.
+> Tack, Peter, för att du delar det här.
+
+Kortare, äkta, och faktabaserat.
+
+---
+
 ## Tre snabba pass att köra på färdig text
 
 **Pass 1 – Rytmpasset**
