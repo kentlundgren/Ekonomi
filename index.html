@@ -2,13 +2,121 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=redovisning/BAS/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ekonomi – Kent Lundgren</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.05em;
+      line-height: 1.75;
+      color: #222;
+      background: #fafaf8;
+      margin: 0;
+      padding: 0;
+    }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      background: #1a3a5c;
+      color: #fff;
+      padding: 10px 20px;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .site-nav .nav-brand {
+      font-family: "Courier New", monospace;
+      font-weight: bold;
+      font-size: 1.05em;
+      color: #fff;
+      text-decoration: none;
+      margin-right: 12px;
+    }
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h1 { font-size: 1.6em; color: #1a3a5c; margin-bottom: 6px; }
+    .meta { color: #888; font-size: 0.88em; margin-bottom: 32px; }
+    .section-card {
+      display: block;
+      border: 1px solid #d0dce8;
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin: 16px 0;
+      text-decoration: none;
+      color: inherit;
+      background: #fff;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .section-card:hover { border-color: #1a6eb5; background: #f0f6ff; }
+    .section-card h2 {
+      font-size: 1.1em;
+      color: #1a3a5c;
+      margin: 0 0 6px;
+    }
+    .section-card p { margin: 0; font-size: 0.95em; color: #444; }
+    .section-card .url-hint {
+      font-family: "Courier New", monospace;
+      font-size: 0.78em;
+      color: #999;
+      display: block;
+      margin-top: 8px;
+    }
+    .placeholder {
+      border: 1px dashed #ccc;
+      border-radius: 6px;
+      padding: 18px 24px;
+      margin: 16px 0;
+      color: #aaa;
+      font-size: 0.92em;
+    }
+    .github-corner {
+      position: fixed;
+      bottom: 14px;
+      left: 14px;
+      font-family: "Courier New", monospace;
+      font-size: 0.78em;
+      color: #aaa;
+      text-decoration: none;
+      opacity: 0.55;
+      transition: opacity 0.2s;
+    }
+    .github-corner:hover { opacity: 1; color: #1a3a5c; }
+  </style>
 </head>
 <body>
+
+<nav class="site-nav">
+  <a class="nav-brand" href="index.html">{ E } Ekonomi</a>
+  <span style="color:#7a9bbf; font-size:0.9em;">Kent Lundgren</span>
+</nav>
+
+<div class="container">
+  <h1>Ekonomi</h1>
+  <p class="meta">Kent Lundgrens redovisningsreflektioner – under uppbyggnad</p>
+
   <p>
-    Omdirigerar till
-    <a href="redovisning/BAS/index.html">redovisning/BAS/index.html</a> …
+    Projektet samlar analyser och reflektioner om redovisning, kontoplan
+    och revision. Fler avsnitt tillkommer.
   </p>
+
+  <a class="section-card" href="redovisning/BAS/index.html">
+    <h2>BAS-kontoplanen 2026</h2>
+    <p>
+      Analys av BAS 2026-nyheterna utifrån Peter Bergs genomgång,
+      med fokus på vad som är relevant för kommunal förvaltning
+      och revision av ideella föreningar.
+    </p>
+    <span class="url-hint">redovisning/BAS/</span>
+  </a>
+
+  <div class="placeholder">
+    Fler avsnitt planeras …
+  </div>
+
+</div>
+
+<a class="github-corner" href="https://github.com/kentlundgren/Ekonomi" target="_blank">{ } GitHub</a>
 </body>
 </html>
