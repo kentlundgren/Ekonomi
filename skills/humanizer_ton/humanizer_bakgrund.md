@@ -76,7 +76,72 @@ Den kanske mest systematiska praktiska sammanställningen av AI-skrivmönster fi
 
 ---
 
-## 6. Kopplingen till de praktiska filerna
+## 6. Två kompletterande open source-källor: blader och aihxp
+
+De två mest genomarbetade praktiska verktygen för att humanisera AI-text på
+GitHub är [(blader, 2026)](https://github.com/blader/humanizer/blob/main/SKILL.md)
+och [(aihxp, 2026)](https://github.com/aihxp/humanizer). Båda är `SKILL.md`-filer –
+instruktioner till AI-assistenter som Cursor och Claude om hur text ska redigeras.
+Båda bygger på samma grundinsikt: problemet med AI-text är inte enskilda ord,
+utan *uniformitet*. Som aihxp formulerar det: "The reason AI prose reads as AI
+is not its vocabulary. It is its uniformity: even sentence lengths, even rhythm,
+even hedging, the same shapes resolved the same way."
+
+De kompletterar varandra väl, men på olika sätt.
+
+### blader – katalogen
+
+bladers SKILL.md är framför allt en *lista*. Den inventerar 32 konkreta mönster
+med före- och efter-exempel, indelade i fyra familjer: innehåll, språk, stil och
+kommunikation. Materialet bygger direkt på Wikipedias artikel "Signs of AI writing"
+– observationer från tusentals verkliga AI-texter som identifierades på Wikipedia
+och dokumenterades av WikiProject AI Cleanup. Det är en empirisk källa: "det här
+såg vi, gång på gång."
+
+Praktiska exempel på mönster vi hämtat från blader till [`humanizer.md`](../../humanizer.md):
+
+- **Aforismformeln** (bladers mönster 32): "X är Y:s Z", "X är inte ett verktyg utan en spegel" – fraser som låter djupsinnade men egentligen bär noll informationsinnehåll. I `humanizer.md` mönster 13.
+- **Synonymrotation** (bladers mönster 11): AI undviker ordupprepning och byter ut samma begrepp mot synonymer varje gång, vilket skapar ryckig rörelse utan förflyttning. I `humanizer.md` mönster 14.
+- **Tankestreckets problematik** (bladers mönster 14): En av de mest tillförlitliga AI-signalerna, särskilt i kombination med andra mönster. I `humanizer.md` mönster 5 och i `SKILL.md` steg 2.
+
+### aihxp – metodologin
+
+aihxps SKILL.md (v 1.1.1) är mer *processorienterad*. Den beskriver ett arbetsflöde
+i steg: identifiera skrivarens röst, ta bort AI-tecknen, granska om man redigerade
+bort för mycket. Det finns också ett begrepp som bladers katalog saknar helt:
+*stance mode*.
+
+**Stance mode** är det viktigaste tillägget. aihxp påpekar att de-sloppning – att
+ta bort AI-mönster – bara är *halva jobbet*. En text som befriats från alla
+AI-signaler men fortfarande saknar ståndpunkter, åsikter och äkta tvivel låter
+fortfarande inte mänsklig. Den låter bara neutral. aihxp beskriver det så:
+
+> "Sterile, voiceless writing is just as obvious as slop. Good writing has a
+> human behind it."
+
+Stance mode innebär att man aktivt *lägger till* skrivarens röst: en bedömning,
+ett erkänt tvivel, en lätt underdrift, ett "det här är den svaga punkten i
+argumentet." Men – och det är en hård gräns – aldrig ett *nytt faktapåstående*.
+Stance är en reaktion på vad som redan finns i texten. Att lägga till ett faktum
+som inte fanns där innan är förfalskning, även om det låter mänskligt.
+
+Praktiska spår från aihxp i [`SKILL.md`](SKILL.md):
+
+- **Steg 6 – åsiktspasset**: "Vad tycker Kent egentligen? Skriv det." Det är stance mode i procedurform – inte bara rensa bort AI-fraser, utan aktivt ta ställning.
+- **Del 0 – Kents skrivröst**: Hela det röstbaserade referensavsnittet bygger på aihxps "voice-first"-filosofi: att humanisering ska matcha en *specifik* persons röst, inte en generisk mänsklig ton.
+- **Anti-signatur-varningen** finns implicit i SKILL.md:s specificeringspass: att ersätta vaga AI-fraser med *konkreta detaljer från källan* – aldrig att uppfinna detaljer för att texten ska "låta mer mänsklig".
+
+### Skillnaden i ett stycke
+
+blader ger dig kartan över vad AI-text gör. aihxp ger dig processen för vad du
+ska göra åt det. bladers styrka är bredden – 32 mönster dokumenterade empiriskt.
+aihxps styrka är djupet i ett enskilt problem: att humanisering inte räcker om
+man bara tar bort, man måste också *tillföra* röst. Tillsammans täcker de både
+diagnos och behandling.
+
+---
+
+## 7. Kopplingen till de praktiska filerna
 
 ### humanizer.md – den tillämpade katalogen
 
@@ -105,7 +170,7 @@ Skillet bygger dessutom på en analys av Kents egna blogginlägg (pre-2024) för
 
 ---
 
-## 7. Avslutande reflektion
+## 8. Avslutande reflektion
 
 Det intressanta med den forskning som vuxit fram under 2024–2026 är att den inte primärt handlar om att lura AI-detektorer. Den handlar om *trovärdighet*. En text som inte tar ställning, inte visar genuint tvivel och inte innehåller specifika detaljer är inte bara igenkännlig som AI-genererad – den är också svagare som text. Den övertalar ingen, den berör ingen, och den förmedlar egentligen inget utöver sin egen struktur.
 
