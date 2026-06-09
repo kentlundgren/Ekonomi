@@ -260,6 +260,32 @@ en framåtblickande poäng snarare än en sammanfattning.
 
 ---
 
+## Aktuell yrkesdiskurs – inlägg värda att följa och kommentera
+
+Att engagera sig i andras relevanta inlägg är en del av LinkedIn-strategin.
+Nedan samlas inlägg som berör samma frågor som projektet – bra att referera
+till eller bygga vidare på i egna artiklar.
+
+**Åkerlindh, K. (2026-06-08).** LinkedIn-inlägg om skillnaden mellan att
+förklara mönster och att ha upplevt dem.
+https://www.linkedin.com/posts/katrinakerlindh_leadership-ai-transformation-share-7469709404926304256-vuuJ/
+
+> "AI can explain patterns. But it hasn't experienced them."
+
+Relevant för projektet: Katrin formulerar på practitioners-svenska samma
+insikt som Kovač m.fl. (2026) beskriver akademiskt – att AI saknar det
+erfarenhetslager som genererar äkta omdömen. Det är samma gap som
+åsiktspasset och röstprofilen försöker täppa till: AI strukturerar,
+människan bedömer vad som faktiskt spelar roll.
+
+Kent kommenterade inlägget 9 juni 2026 med frågan om erfarna yrkespersoner
+riskerar att sluta lita på sitt eget omdöme när AI-svaret ser rent och
+övertygande ut. Frågan fick en reaktion.
+
+*(Lägg till fler relevanta inlägg här allteftersom de dyker upp.)*
+
+---
+
 ## Relaterade filer i projektet
 
 - [`humanizer.md`](../../humanizer.md) – 14 mönster att undvika
