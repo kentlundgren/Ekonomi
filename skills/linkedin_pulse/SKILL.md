@@ -58,11 +58,15 @@ Aktivera när Kent vill skriva en **LinkedIn Pulse-artikel** – inte ett kortar
 
 ### Vad som inte fungerar i Pulse
 
-- Formell källförteckning i slutet → ersätt med inline-länkar i texten
 - Stycken längre än 4–5 meningar
 - Generiska avslutningar ("spännande tider väntar", "framtiden ser ljus ut")
-- Mer än 5 hashtags
+- Mer än 6 hashtags
 - Akademisk jargong utan förklaring direkt i texten
+
+**OBS – källförteckning:** Kent använder Harvard-källförteckning i slutet av
+sina Pulse-artiklar. Det avviker från typiska LinkedIn-råd om inline-länkar,
+men signalerar seriositet för hans publik (controllers, ekonomer). Behåll
+Harvardformatet – det är en del av Kents röst på LinkedIn.
 
 ---
 
@@ -71,6 +75,15 @@ Aktivera när Kent vill skriva en **LinkedIn Pulse-artikel** – inte ett kortar
 LinkedIn-publiken är professionell men scrollar fort. Kents röst ska vara
 densamma som i bloggen – personlig, analytisk, specifik – men med kortare
 meningar och tydligare struktur.
+
+### Titelregel – kort slår långt
+
+Kents mest lästa artikel heter "Karaktär" (ett ord, 1 300+ visningar).
+Hans näst publicerade har en lång frågetitel. Lärdomen:
+
+- **1–3 ord** skapar ett nyfikenhetsgap – läsaren måste klicka för att förstå
+- **Lång beskrivande titel** berättar för mycket, minskar klickmotivationen
+- Ge alltid ett alternativ med kort titel (1–3 ord) i rubrikförslagen
 
 ### Hook-formler som fungerar för Kent
 
@@ -200,7 +213,21 @@ en framåtblickande poäng snarare än en sammanfattning.
 
 **Kents egna publicerade Pulse-artiklar:**
 
-1. Lundgren, K. (2026-06-09). *Vad händer med din yrkesroll när din text låter som alla andras?*
+1. Lundgren, K. (2026-06-01). *Karaktär.*
+   https://www.linkedin.com/pulse/karakt%C3%A4r-kent-lundgren-5onde/
+   **Resultat: 1 300+ visningar** – Kents mest lästa Pulse-artikel.
+
+   Lärdomar från denna artikel:
+
+   - **Ettords-titel skapar nyfikenhetsgap.** "Karaktär" avslöjar ingenting – läsaren måste klicka för att förstå. En lång beskrivande titel berättar för mycket. Regel: testa titlar på 1–3 ord när ämnet tillåter det.
+   - **Haka på ett viralt/trendande ämne.** Artikeln refererade till Huang-intervjun (Nvidia, maj 2026) som cirkulerade brett i just den veckan. Timing + känd avsändare = räckvidd. Fråga alltid: finns det ett aktuellt ämne eller person att koppla texten till?
+   - **Öppna med en direkt fråga till yrkeskåren.** "Är karaktär den nya hårdvalutan för oss ekomer/controllers?" identifierar läsaren omedelbart. Hen känner sig sedd.
+   - **Konkreta siffror tidigt.** "32 miljarder kronor (SKR, 2026)" i andra stycket signalerar att detta är förankrat i verkligheten, inte spekulation.
+   - **Avsluta med en explicit kommentarsfråga.** "Vad tror du? Kommer vår karaktär betyda mer än våra Excel-kunskaper i framtiden?" – inte bara en öppen tanke, utan en direkt inbjudan. Det driver kommentarer.
+   - **Harvard-källförteckning i slutet fungerar.** Trots att det är ovanligt på LinkedIn signalerar det seriositet för Kents publik. Behåll det.
+   - **Korslänka till egen blogg** i källförteckningen – driver trafik mellan plattformarna.
+
+2. Lundgren, K. (2026-06-09). *Vad händer med din yrkesroll när din text låter som alla andras?*
    https://www.linkedin.com/pulse/vad-h%C3%A4nder-med-din-yrkesroll-n%C3%A4r-text-l%C3%A5ter-som-alla-andras-lundgren-fx0ie/
 
    Vad som fungerade bra i denna artikel:
