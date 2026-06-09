@@ -5,6 +5,20 @@
 
 ---
 
+## 📌 Regel – Föreslå alltid tre upplägg innan längre texter skrivs
+
+När Kent ber om en längre text (blogginlägg, artikel, rapport, HTML-sida med löptext)
+ska Claude **alltid** börja med att föreslå **tre olika upplägg** – rubrik + tre till fem
+stolpar per upplägg – och fråga vilket Kent föredrar.
+
+Gör detta **innan** något utkast skrivs. Undantag: om Kent uttryckligen säger
+"kör direkt" eller liknande.
+
+Anledning: det är billigare att byta riktning på stolpar än att skriva om
+en färdig text som tog fel vinkel.
+
+---
+
 ## 📌 Viktig regel – Commit och push gör Kent själv
 
 **Kent commitar och pushar normalt själv** – via Cursors GUI eller terminalen.
