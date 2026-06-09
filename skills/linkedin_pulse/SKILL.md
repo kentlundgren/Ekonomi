@@ -140,7 +140,37 @@ hashtags. Max 1 500 ord.
 Rytmpasset, specificeringspasset och åsiktspasset (se humanizer_ton/SKILL.md).
 LinkedIn-text är extra känslig för uniform meningslängd – variera aktivt.
 
-### Steg 4 – Kontrollera LinkedIn-specifikt
+### Steg 4 – Ingress till publiceringsflödet
+Fråga alltid om tre förslag på **ingress** innan artikeln publiceras.
+Ingressen är det korta stycke LinkedIn visar i flödet under rubriken
+"Berätta för ditt nätverk vad artikeln handlar om" – det som avgör om
+folk klickar.
+
+Ingressen ska:
+- Vara några meningar, max ~300 tecken
+- Fungera fristående utan att avslöja hela artikeln
+- Ha samma ton som artikelns hook
+
+Ge alltid tre alternativ med olika känsla:
+- Ett **provokativt/korthuggit** (börjar med ett starkt påstående)
+- Ett **personligt/berättande** (öppnar med ett konkret ögonblick)
+- Ett **frågebaserat/yrkesriktat** (riktar sig direkt till yrkeskåren)
+
+**Exempel på godkänd ingress (Kents första Pulse-artikel, juni 2026):**
+
+> AI skriver bättre än de flesta av oss. Det är inte problemet. Problemet
+> är att din text förlorar dig – och att det snart gäller hela din yrkeskår.
+>
+> Vad händer när alla controllers, revisorer och läkare börjar skriva med
+> samma AI-modell? Rösten försvinner ur texten – och med den en del av vad
+> yrkesrollen faktiskt är värd. Mina tankar om vad det innebär, och ett
+> praktiskt svar.
+
+Notera: kombinationen av ett korthuggit påstående (rad 1–2) och en
+yrkesriktad fråga (rad 3–4) fungerade bra. Använd som mall för framtida
+ingress-förslag.
+
+### Steg 5 – Kontrollera LinkedIn-specifikt
 
 - ✅ Hook fungerar som fristående mening (syns i förhandsgranskning)
 - ✅ Inga stycken längre än 3–4 meningar
