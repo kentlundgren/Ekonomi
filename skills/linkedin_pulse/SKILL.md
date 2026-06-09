@@ -199,7 +199,15 @@ en framåtblickande poäng snarare än en sammanfattning.
 [Lägg in länk + en mening om vad som är bra]
 
 **Kents egna publicerade Pulse-artiklar:**
-- [Lägg till länk när första Pulse-artikeln är publicerad]
+
+1. Lundgren, K. (2026-06-09). *Vad händer med din yrkesroll när din text låter som alla andras?*
+   https://www.linkedin.com/pulse/vad-h%C3%A4nder-med-din-yrkesroll-n%C3%A4r-text-l%C3%A5ter-som-alla-andras-lundgren-fx0ie/
+
+   Vad som fungerade bra i denna artikel:
+   - Hook i två rader: påstående + tystnad. "AI skriver bättre än de flesta av oss. Det är inte problemet." Läsaren stannar kvar för att förstå vad problemet faktiskt är.
+   - Kent lade till eget konkret exempel som inte fanns i AI-utkastet: "bränsle- och underhållskostnaderna för våra badanläggningar har ökat med 50 % under de tre sista månaderna" – det är specificeringspasset i praktiken.
+   - Avslut med öppen fråga ("vem på arbetsplatsen ska ta ansvar?") genererade kommentarspotential.
+   - Ingress: kombination av korthuggit påstående + yrkesriktad fråga (se Steg 4).
 
 ---
 
