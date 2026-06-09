@@ -36,6 +36,8 @@ Ekonomi/
 │   ├── humanizer_ton/
 │   │   ├── SKILL.md                  # Procedur: sju steg för mänsklig text
 │   │   └── humanizer_bakgrund.md     # Teori: varför AI-text låter som AI
+│   ├── linkedin_pulse/
+│   │   └── SKILL.md                  # Skill: LinkedIn Pulse-artiklar i Kents röst
 │   ├── projekt_struktur/
 │   │   └── SKILL.md                  # Ekonomi-projektets nav- och CSS-konventioner
 │   └── webb_struktur/
@@ -120,9 +122,10 @@ Innehåller även tre snabbpass att köra på färdig text. Se även
 `skills/humanizer_ton/humanizer_bakgrund.md` för den teoretiska bakgrunden.
 
 ### `skills/`
-Fyra AI-skills (procedurdokument för Claude):
+Fem AI-skills (procedurdokument för Claude):
 - `humanizer_ton/SKILL.md` – sju procedursteg för mänsklig, analytisk skrivstil
 - `humanizer_ton/humanizer_bakgrund.md` – akademisk analys (se nedan)
+- `linkedin_pulse/SKILL.md` – format, röst och procedur för LinkedIn Pulse-artiklar
 - `projekt_struktur/SKILL.md` – detta projekts nav, CSS och konventioner
 - `webb_struktur/SKILL.md` – generellt återanvändbart skill för hierarkiska webbplatser
 
@@ -138,6 +141,11 @@ AI-assistent. Det arbetet är dokumenterat i tre lager:
 | [`skills/humanizer_ton/humanizer_bakgrund.md`](skills/humanizer_ton/humanizer_bakgrund.md) | Teori | Akademisk analys: varför AI-text låter som AI (RLHF, epistemisk kalibrering, perplexity, burstiness). Refererar forskning från ACL 2024 och arxiv 2026. |
 | [`skills/humanizer_ton/SKILL.md`](skills/humanizer_ton/SKILL.md) | Procedur | Sju steg att köra i ordning: från att identifiera berömsord till ett röstpass mot Kents egna bloggar. |
 | [`humanizer.md`](humanizer.md) | Katalog | 14 konkreta mönster med svenska före/efter-exempel. Baserat på [blader/humanizer](https://github.com/blader/humanizer) och [aihxp/humanizer](https://github.com/aihxp/humanizer) på GitHub. |
+| [\skills/linkedin_pulse/SKILL.md\](skills/linkedin_pulse/SKILL.md) | LinkedIn | Format, röst och procedur för LinkedIn Pulse-artiklar. Checklista, custom instructions-förklaring och platshållare för exempelartiklar. |
+
+Arbetet med humanisering dokumenteras också i ett blogginlägg:
+[Att skriva med sin egen röst när AI skriver åt dig](https://controllerutangranser.wordpress.com/2026/06/09/skriva-med-sin-egen-rost/)
+(controllerutangranser.wordpress.com, publicerat 9 juni 2026).
 
 Grundinsikten, hämtad ur forskningen: AI-text avslöjas inte primärt av
 enskilda ord utan av *uniformitet* – jämna meningslängder, förutsägbara

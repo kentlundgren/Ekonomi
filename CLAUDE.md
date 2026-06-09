@@ -5,6 +5,21 @@
 
 ---
 
+## 📌 Regel – Uppdatera README.md när en ny HTML-fil skapas
+
+När en ny HTML-fil läggs till i projektet ska `README.md` uppdateras med:
+
+1. **Projektstrukturen** (trädet under `## Projektstruktur`) – lägg till filen
+   på rätt plats i hierarkin med en kort kommentar
+2. **Tabellen under `## Live-sidor`** – lägg till filens GitHub Pages-URL
+3. **Avsnittet `## Filer – kort beskrivning`** – lägg till ett stycke med
+   en mening om vad sidan innehåller
+
+Gör detta **direkt** efter att HTML-filen skapats, i samma arbetspass.
+Påminn Kent om att committa även README.md.
+
+---
+
 ## 📌 Regel – Föreslå alltid tre upplägg innan längre texter skrivs
 
 När Kent ber om en längre text (blogginlägg, artikel, rapport, HTML-sida med löptext)
