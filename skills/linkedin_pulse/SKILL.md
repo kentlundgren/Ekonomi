@@ -137,6 +137,14 @@ lönar sig på fritiden när man arbetar ensam. Frågan är om det är möjligt 
 jobbet, där hela arbetsplatsen delar samma modell och ingen har tid att ge
 AI:n all bakgrundsinformation.
 
+**Referens – Kent har skrivit om de tre lagren på LinkedIn:**
+Lundgren, K. (2026-05-21). *Vem är du – Vem är jag?* LinkedIn Pulse.
+https://www.linkedin.com/pulse/vem-%C3%A4r-du-jag-kent-lundgren-zulqf/
+Den artikeln beskriver Memory, Custom Instructions och projektfiler som tre
+lager av AI:ns "verklighetsförståelse" – det är samma sak som röstprofilen
+fast från ett annat håll (AI:ns minne, inte skrivstilar). Kan länkas till
+eller citeras när röstprofil-begreppet förklaras för LinkedIn-publiken.
+
 ---
 
 ## Procedur – skriv Pulse-artikeln i ordning
@@ -227,7 +235,21 @@ en framåtblickande poäng snarare än en sammanfattning.
    - **Harvard-källförteckning i slutet fungerar.** Trots att det är ovanligt på LinkedIn signalerar det seriositet för Kents publik. Behåll det.
    - **Korslänka till egen blogg** i källförteckningen – driver trafik mellan plattformarna.
 
-2. Lundgren, K. (2026-06-09). *Vad händer med din yrkesroll när din text låter som alla andras?*
+2. Lundgren, K. (2026-05-21). *Vem är du – Vem är jag?*
+   https://www.linkedin.com/pulse/vem-%C3%A4r-du-jag-kent-lundgren-zulqf/
+   **Resultat: 230 visningar.**
+
+   Innehåll: de tre lagren av AI-minne (Memory, Custom Instructions, projektfiler).
+   Direkt kopplat till röstprofil-begreppet i Del 2.
+
+   Varför färre visningar än "Karaktär" – lärdomar:
+   - **Titel** "Vem är du – Vem är jag?" är filosofisk men inte yrkesspecifik. Publiken vet inte att det handlar om AI och deras jobb förrän de klickat.
+   - **Inget trendande ankare.** "Karaktär" hakade på Huang-intervjun som cirkulerade den veckan. Den här artikeln saknar ett sådant externt krockkudde.
+   - **Sju hashtags** – en för många. Kan signalera spammigt.
+   - **Ingen Harvard-källförteckning** – avsaknad av det seriositetsmarkörer som "Karaktär" hade.
+   - **Emojis som strukturelement** (🧠📋📁) fungerar för vissa målgrupper men kan sänka trovärdigheten hos Kents kärnpublik (controllers, ekonomer i offentlig sektor).
+
+3. Lundgren, K. (2026-06-09). *Vad händer med din yrkesroll när din text låter som alla andras?*
    https://www.linkedin.com/pulse/vad-h%C3%A4nder-med-din-yrkesroll-n%C3%A4r-text-l%C3%A5ter-som-alla-andras-lundgren-fx0ie/
 
    Vad som fungerade bra i denna artikel:
