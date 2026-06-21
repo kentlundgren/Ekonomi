@@ -72,7 +72,7 @@ Ja. Det finns verktyg som mäter dessa egenskaper direkt på en given text. Det 
 
 Testet är enkelt: *tillför hedgen information, eller är den utfyllnad?* [(San José State University Writing Center, 2026)](https://www.sjsu.edu/writingcenter/docs/handouts/Hedging-Softening-Distance.pdf) konstaterar i sitt handout om hedging att akademiskt skrivande kräver kalibrerad osäkerhet – men att absoluter ("alltid", "aldrig", "alla") och tomma försiktighetsfraser är lika problematiska, om än på motsatta sätt.
 
-Den kanske mest systematiska praktiska sammanställningen av AI-skrivmönster finns i [(blader, 2026)](https://github.com/blader/humanizer/blob/main/SKILL.md) *Humanizer: Remove AI Writing Patterns* (v 2.8.0), ett open source-skill baserat på Wikipedias artikel "Signs of AI writing". Dokumentet katalogiserar 32 specifika mönster uppdelade i fyra kategorier: innehållsmönster (t.ex. uppblåst significans-retorik och vaga tillskrivningar), språkliga mönster (t.ex. AI-vokabulär och undvikande av "är/har"), stilmönster (t.ex. tankestrecksöveranvändning och mekanisk fetstil) och kommunikationsmönster (t.ex. utfyllnadsfraser och sykofantisk ton). Det centrala påpekandet är hämtat direkt från Wikipedia: "LLMs use statistical algorithms to guess what should come next. The result tends toward the most statistically likely result that applies to the widest variety of cases." Det är i korthet förklaringen till varför AI-text är förutsägbar – och varför förutsägbarhet låter fel.
+Den kanske mest systematiska praktiska sammanställningen av AI-skrivmönster finns i [(blader, 2026)](https://github.com/blader/humanizer/blob/main/SKILL.md) *Humanizer: Remove AI Writing Patterns* (v 2.8.0), ett open source-skill baserat på Wikipedias artikel ["Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing "Wikipedias artikel om igenkännbara mönster i AI-genererad text, dokumenterade av WikiProject AI Cleanup. Täcker innehålls-, språk-, stil- och kommunikationsmönster. Senast ändrad: 21 juni 2026 – aktivt underhållen med ca 3–4 redigeringar per dag i juni 2026."). Dokumentet katalogiserar 32 specifika mönster uppdelade i fyra kategorier: innehållsmönster (t.ex. uppblåst significans-retorik och vaga tillskrivningar), språkliga mönster (t.ex. AI-vokabulär och undvikande av "är/har"), stilmönster (t.ex. tankestrecksöveranvändning och mekanisk fetstil) och kommunikationsmönster (t.ex. utfyllnadsfraser och sykofantisk ton). Det centrala påpekandet är hämtat direkt från Wikipedia: "LLMs use statistical algorithms to guess what should come next. The result tends toward the most statistically likely result that applies to the widest variety of cases." Det är i korthet förklaringen till varför AI-text är förutsägbar – och varför förutsägbarhet låter fel.
 
 ---
 
@@ -93,7 +93,7 @@ De kompletterar varandra väl, men på olika sätt.
 
 bladers SKILL.md är framför allt en *lista*. Den inventerar 32 konkreta mönster
 med före- och efter-exempel, indelade i fyra familjer: innehåll, språk, stil och
-kommunikation. Materialet bygger direkt på Wikipedias artikel "Signs of AI writing"
+kommunikation. Materialet bygger direkt på Wikipedias artikel ["Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing "Wikipedias artikel om igenkännbara mönster i AI-genererad text, dokumenterade av WikiProject AI Cleanup. Täcker innehålls-, språk-, stil- och kommunikationsmönster. Senast ändrad: 21 juni 2026 – aktivt underhållen med ca 3–4 redigeringar per dag i juni 2026.")
 – observationer från tusentals verkliga AI-texter som identifierades på Wikipedia
 och dokumenterades av WikiProject AI Cleanup. Det är en empirisk källa: "det här
 såg vi, gång på gång."
@@ -182,7 +182,7 @@ Det är i den meningen SKILL.md är tänkt att användas: inte som ett verktyg f
 
 aihxp (2026). *humanizer – Pure-prompt skill that de-slops AI-sounding prose*. GitHub. Hämtad 2026-06-08 från https://github.com/aihxp/humanizer
 
-blader (2026). *Humanizer: Remove AI Writing Patterns* (v 2.8.0). GitHub. Baserat på Wikipedia: Signs of AI writing. Hämtad 2026-06-08 från https://github.com/blader/humanizer/blob/main/SKILL.md
+blader (2026). *Humanizer: Remove AI Writing Patterns* (v 2.8.0). GitHub. Baserat på Wikipedia: [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing "Wikipedias artikel om igenkännbara mönster i AI-genererad text, dokumenterade av WikiProject AI Cleanup. Täcker innehålls-, språk-, stil- och kommunikationsmönster. Senast ändrad: 21 juni 2026 – aktivt underhållen med ca 3–4 redigeringar per dag i juni 2026.") (senast ändrad 21 juni 2026, ca 50 revisioner de senaste två veckorna). Hämtad 2026-06-08 från https://github.com/blader/humanizer/blob/main/SKILL.md
 
 eyesift.com (2026). *How to Humanize AI Text: 7 Proven Methods That Work*. Hämtad 2026-06-08 från https://www.eyesift.com/blog/humanize-ai-text/
 
