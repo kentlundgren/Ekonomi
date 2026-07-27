@@ -160,7 +160,9 @@ IMF-datan, lagd i Verktyget-fliken ovanför definitionsverktyget. Källor och me
 (scroll genom hela grafen, verifierat att linjer, etiketter och toppmarkeringar renderas
 korrekt).
 
-**Inte gjort ännu:** ingen commit/push av denna uppdatering – väntar på Kents besked.
+**Publicering:** Kent committade och pushade själv via Cursors Source Control-panel
+(commit `7cd36a9`), inte Claude. Det är den normala arbetsformen i det här projektet
+(se CLAUDE.md) och skedde alltså utan att Kent bad Claude göra det.
 
 ## Öppna frågor / kommande vägval
 
