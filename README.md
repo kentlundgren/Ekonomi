@@ -68,6 +68,7 @@ Ekonomi/
 | Revision | https://kentlundgren.github.io/Ekonomi/redovisning/revision/ |
 | ekonomistyrning | https://kentlundgren.github.io/Ekonomi/ekonomistyrning/ |
 | Git-guide | https://kentlundgren.github.io/Ekonomi/rattgit.html |
+| Statsskuld: Sverige/USA | https://kentlundgren.github.io/Ekonomi/statsskuld/sverige_amerika/ |
 
 Live-sidorna uppdateras automatiskt inom ~1 minut efter varje push till `main`.
 
@@ -126,8 +127,7 @@ Uppföljare till 2025 års Gemini-presentation om Sveriges och USA:s statsskuld.
 definitionsverktyg som visar hur skuldsiffran ändras beroende på vilket av tre
 skuldbegrepp (central-/federal statsskuld, skuld hållen av allmänheten, konsoliderad
 offentlig sektor) som används, plus en flik med ett interaktivt beslutsträd som
-redovisar hur sidan själv togs fram. Inte publicerad på GitHub Pages än – ligger
-lokalt i väntan på Kents genomläsning.
+redovisar hur sidan själv togs fram.
 
 ### `humanizer.md`
 Praktisk katalog med 14 konkreta mönster att undvika för att text ska låta

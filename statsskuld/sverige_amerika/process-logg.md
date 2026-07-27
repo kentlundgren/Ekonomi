@@ -123,6 +123,18 @@ och testade sidan i webbläsaren (flikar, linsväljare, träd) innan den rapport
 motsvarighet i tillgängligt källmaterial. Verktyget visar detta öppet som en tom ruta med
 förklaring, istället för att en siffra räknas fram utan tillräckligt säkert underlag.
 
+**Vägval 6: Publicering**
+
+Kent bad explicit om commit och push ("nu skulle jag ju vilja se detta på GitHub").
+
+**Beslut:** Claude körde `git add`, `git commit` och `git push` mot `main`
+(commit `1c946cc`), och lade till raden för sidan i README.md:s Live-sidor-tabell,
+eftersom den nu faktiskt blir publik via GitHub Pages.
+
+**Motivering:** Ett explicit, aktuellt godkännande i chatten, i linje med
+projektets stående regel om att Claude bara committar/pushar när Kent uttryckligen
+ber om det.
+
 ## Öppna frågor / kommande vägval
 
 - [ ] Hitta en bättre källa för lins 2:s svenska sida (AP-fondernas innehav av
