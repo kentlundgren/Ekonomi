@@ -164,6 +164,21 @@ korrekt).
 (commit `7cd36a9`), inte Claude. Det är den normala arbetsformen i det här projektet
 (se CLAUDE.md) och skedde alltså utan att Kent bad Claude göra det.
 
+**Vägval 9: Var i sidan ska tidsseriegrafen ligga?**
+
+Kent påpekade att grafen låg som en egen sektion ovanför lins-väljaren, vilket gjorde det
+otydligt att den bygger på just Lins 3:s definition (den syntes ovanför alla tre lins-
+knapparna, inte inuti någon av dem).
+
+**Beslut:** Flyttade hela grafsektionen (rubrik, graf, källnot, korrigeringsruta) in i
+`lens-panel#lens-3`, direkt efter Lins 3:s statiska tabell. Grafen är nu strukturellt
+omöjlig att blanda ihop med Lins 1 eller 2, eftersom den bara finns i markupen för Lins 3:s
+panel och därför aldrig visas när Lins 1 eller 2 är aktiva.
+
+**Även rättat samtidigt:** Lins 1:s USA-rad saknade en %BNP-siffra. Det var ett eget fel,
+inte en verklig lucka i statistiken. FRED (Federal Reserve Bank of St. Louis) publicerar
+den som serien GFDEGDQ188S. Fyllt i: ca 122,6 % av BNP, första kvartalet 2026.
+
 ## Öppna frågor / kommande vägval
 
 - [ ] Hitta en bättre källa för lins 2:s svenska sida (AP-fondernas innehav av
