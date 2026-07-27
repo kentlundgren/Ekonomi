@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Statsskuld: Sverige och USA – två sätt att räkna</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #222;
+      background: #f5f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 48px 56px;
+    }
+
+    h1 {
+      font-size: 1.9em;
+      color: #1a3a5c;
+      border-bottom: 3px solid #1a6eb5;
+      padding-bottom: 10px;
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-size: 1.25em;
+      color: #1a3a5c;
+      margin-top: 44px;
+      margin-bottom: 10px;
+      border-left: 4px solid #1a6eb5;
+      padding-left: 12px;
+    }
+
+    h3 {
+      font-size: 1.05em;
+      color: #2c5282;
+      margin-top: 26px;
+      margin-bottom: 6px;
+    }
+
+    p { margin: 0 0 14px 0; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0 26px 0;
+      font-size: 0.95em;
+    }
+    th {
+      background: #1a3a5c;
+      color: #fff;
+      padding: 10px 14px;
+      text-align: left;
+    }
+    td {
+      padding: 9px 14px;
+      border-bottom: 1px solid #dde4ec;
+      vertical-align: top;
+    }
+    tr:nth-child(even) td { background: #f0f4f9; }
+
+    .callout {
+      background: #e8f0fb;
+      border-left: 5px solid #1a6eb5;
+      border-radius: 4px;
+      padding: 16px 20px;
+      margin: 22px 0;
+    }
+    .callout.gul {
+      background: #fff8e1;
+      border-left-color: #f59e0b;
+    }
+    .callout.gron {
+      background: #e6f4ea;
+      border-left-color: #2e7d32;
+    }
+    .callout p:last-child { margin-bottom: 0; }
+
+    .meta { font-size: 0.85em; color: #666; margin-bottom: 30px; }
+
+    hr { border: none; border-top: 1px solid #dde4ec; margin: 40px 0; }
+
+    /* Navigationsrad */
+    .site-nav {
+      background: #111d2e;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      height: 44px;
+      font-size: 0.83em;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-nav .nav-brand {
+      font-family: "Courier New", monospace;
+      font-weight: bold;
+      color: #7eb8f7;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      margin-right: 24px;
+      white-space: nowrap;
+    }
+    .site-nav .nav-brand:hover { color: #fff; }
+    .site-nav .nav-author { color: #566e88; font-size: 0.9em; white-space: nowrap; margin-left: auto; padding-left: 16px; }
+    .nav-sep { color: #7a9bbf; margin: 0 5px; font-family: "Courier New", monospace; font-size: 0.95em; }
+    .nav-crumb { color: #9ab4cc; text-decoration: none; font-family: "Courier New", monospace; font-size: 0.95em; white-space: nowrap; }
+    .nav-crumb:hover { color: #fff; }
+
+    /* Diskret GitHub-länk */
+    .github-corner {
+      position: fixed;
+      bottom: 14px;
+      left: 14px;
+      font-family: "Courier New", monospace;
+      font-size: 0.78em;
+      color: #aaa;
+      text-decoration: none;
+      opacity: 0.55;
+      transition: opacity 0.2s, color 0.2s;
+      z-index: 999;
+    }
+    .github-corner:hover { opacity: 1; color: #1a3a5c; }
+
+    /* Sidflikar */
+    .tabs {
+      display: flex;
+      gap: 6px;
+      margin: 24px 0 0 0;
+      border-bottom: 2px solid #dde4ec;
+    }
+    .tab-btn {
+      font-family: inherit;
+      font-size: 0.95em;
+      font-weight: 600;
+      color: #566e88;
+      background: none;
+      border: none;
+      padding: 10px 18px;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+    }
+    .tab-btn:hover { color: #1a3a5c; }
+    .tab-btn.active { color: #1a3a5c; border-bottom-color: #1a6eb5; }
+    .tab-panel { display: none; padding-top: 26px; }
+    .tab-panel.active { display: block; }
+
+    /* Linsväljare (definitionsverktyget) */
+    .lens-switch {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 18px 0 22px 0;
+    }
+    .lens-btn {
+      font-family: inherit;
+      font-size: 0.88em;
+      color: #1a3a5c;
+      background: #f0f4f9;
+      border: 2px solid #c5d5e8;
+      border-radius: 6px;
+      padding: 10px 16px;
+      cursor: pointer;
+      text-align: left;
+      flex: 1;
+      min-width: 220px;
+    }
+    .lens-btn:hover { border-color: #1a6eb5; }
+    .lens-btn.active { background: #1a6eb5; color: #fff; border-color: #1a6eb5; }
+    .lens-panel { display: none; }
+    .lens-panel.active { display: block; }
+
+    .missing {
+      color: #a15c00;
+      font-style: italic;
+    }
+
+    /* Beslutsträd */
+    .tree details {
+      background: #f9fafc;
+      border: 1px solid #dde4ec;
+      border-radius: 6px;
+      padding: 10px 16px;
+      margin: 10px 0;
+    }
+    .tree details[open] { background: #fff; }
+    .tree summary {
+      font-weight: 600;
+      color: #1a3a5c;
+      cursor: pointer;
+    }
+    .tree .tree-children { margin-left: 18px; margin-top: 10px; }
+    .valt {
+      display: inline-block;
+      background: #d4edda;
+      color: #1a4a20;
+      font-size: 0.78em;
+      font-weight: bold;
+      padding: 1px 8px;
+      border-radius: 10px;
+      margin-left: 6px;
+    }
+    .ej-valt {
+      display: inline-block;
+      background: #f0f0f0;
+      color: #777;
+      font-size: 0.78em;
+      padding: 1px 8px;
+      border-radius: 10px;
+      margin-left: 6px;
+    }
+
+    .sources {
+      background: #f5f6f8;
+      border-radius: 6px;
+      padding: 18px 24px;
+      margin-top: 44px;
+      font-size: 0.9em;
+    }
+    .sources h2 { border: none; padding: 0; margin-top: 0; font-size: 1em; color: #444; }
+    .sources ol { margin: 8px 0 0 18px; padding: 0; }
+    .sources li { margin-bottom: 6px; }
+    .sources a { color: #1a6eb5; }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="nav-brand" href="../../index.html">{ E } Ekonomi</a>
+  <span class="nav-sep">/</span>
+  <span class="nav-crumb">Statsskuld: Sverige/USA</span>
+  <span class="nav-author">Kent Lundgren</span>
+</nav>
+
+<div class="container">
+
+  <h1>Sveriges och USA:s statsskuld: två sätt att räkna</h1>
+  <p class="meta">
+    Upprättad: 2026-07-28 &nbsp;|&nbsp;
+    Uppföljare till
+    <a href="https://controllerutangranser.wordpress.com/2025/06/11/sverige-och-usas-statsskuld/" target="_blank">Lundgren (2025a)</a>,
+    <em>Sverige och USA:s statsskuld</em>, Controller utan gränser
+  </p>
+
+  <p>
+    För ett år sedan byggde jag en presentation som jämförde Sveriges och USA:s statsskuld
+    med hjälp av Gemini. Den gången handlade det mesta om metoden, inte om siffrorna.
+    Den här sidan är ett försök att göra samma jämförelse en gång till, men mer noggrant:
+    med verifierade källor, och med en öppen redovisning av hur sidan togs fram.
+  </p>
+
+  <div class="callout gul">
+    <p>
+      <strong>Den viktigaste upptäckten under arbetet:</strong> Sverige och USA definierar
+      inte "statsskuld" på samma sätt. Beroende på vilket mått man använder kan
+      samma lands skuld se helt olika ut. Det är själva poängen med verktyget nedan.
+    </p>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="verktyg">Verktyget</button>
+    <button class="tab-btn" data-tab="process">Så togs detta fram</button>
+  </div>
+
+  <!-- ============ FLIK 1: VERKTYGET ============ -->
+  <div class="tab-panel active" id="tab-verktyg">
+
+    <h2>Definitionsverktyget – välj vilket skuldbegrepp som visas</h2>
+    <p>
+      Tre offentliga myndigheter mäter "statsskuld" på tre olika sätt. Klicka på en lins
+      för att se hur Sverige och USA jämförs enligt just den definitionen.
+    </p>
+
+    <div class="lens-switch">
+      <button class="lens-btn active" data-lens="1">Lins 1<br><small>Central-/federal statsskuld</small></button>
+      <button class="lens-btn" data-lens="2">Lins 2<br><small>Skuld hållen av allmänheten</small></button>
+      <button class="lens-btn" data-lens="3">Lins 3<br><small>Konsoliderad offentlig sektor</small></button>
+    </div>
+
+    <div class="lens-panel active" id="lens-1">
+      <h3>Lins 1 – Central-/federal statsskuld (brutto, inkl. interna innehav)</h3>
+      <p>
+        Bara den skuld som Riksgälden respektive amerikanska Treasury lånar upp åt.
+        Kommuner, regioner och delstater ingår inte. Detta är den siffra som oftast
+        citeras i nyheter, men den räknar bara med en del av den offentliga sektorn i
+        båda länderna.
+      </p>
+      <table>
+        <thead><tr><th>Land</th><th>Skuld</th><th>Källa</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Sverige</td>
+            <td>1 244 miljarder kr, ca 19 % av BNP (utgången av 2025)</td>
+            <td><a href="https://www.riksgalden.se/press-och-publicerat/pressmeddelanden-och-nyheter/nyheter/2026/okad-statsskuld-men-lagre-kostnad-2025/" target="_blank">Riksgälden (2026a)</a></td>
+          </tr>
+          <tr>
+            <td>USA</td>
+            <td>Passerade 39 biljoner dollar i mars 2026 (ingen regelmässig %BNP-siffra publiceras för just detta mått)</td>
+            <td><a href="https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/" target="_blank">U.S. Department of the Treasury (2026a)</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="lens-panel" id="lens-2">
+      <h3>Lins 2 – Skuld hållen av allmänheten (netto, exkl. interna innehav)</h3>
+      <p>
+        Räknar bort skuld staten i praktiken är skyldig sig själv, t.ex. innehav i
+        pensions- och socialförsäkringsfonder. USA publicerar detta som en egen
+        rubriksiffra. Sverige gör inte det.
+      </p>
+      <table>
+        <thead><tr><th>Land</th><th>Skuld</th><th>Källa</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Sverige</td>
+            <td class="missing">Uppgift saknas i officiell statistik – skulle behöva räknas fram genom att dra bort AP-fondernas innehav av statsobligationer från Riksgäldens statsskuld, men underlaget jag hittat är inte tillräckligt aktuellt för att göra det på ett sätt jag står bakom.</td>
+            <td>–</td>
+          </tr>
+          <tr>
+            <td>USA</td>
+            <td>Ca 101 % av BNP (innevarande budgetår)</td>
+            <td><a href="https://www.cbo.gov/publication/62105" target="_blank">Congressional Budget Office (2026)</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Den tomma rutan för Sverige är inte ett misstag i verktyget. Den visar att länder
+        gör olika avgränsningar synliga för allmänheten, inte bara olika beräkningar.
+      </p>
+    </div>
+
+    <div class="lens-panel" id="lens-3">
+      <h3>Lins 3 – Konsoliderad offentlig sektor (Maastricht/general government)</h3>
+      <p>
+        All offentlig skuld: stat, kommun/region och socialförsäkring, konsoliderad enligt
+        samma internationella metodologi (EU:s konvergenskriterier respektive IMF/OECD:s
+        statistikstandard). Det är den enda linsen som mäts likadant för båda länderna,
+        och därför den siffra som faktiskt går att jämföra rakt av.
+      </p>
+      <table>
+        <thead><tr><th>Land</th><th>Skuld</th><th>Källa</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Sverige</td>
+            <td>Ca 35 % av BNP (Maastrichtskulden, senaste tillgängliga data)</td>
+            <td><a href="https://www.scb.se/hitta-statistik/statistik-efter-amne/nationalrakenskaper/nationalrakenskaper/offentliga-forvaltningens-sparande-och-bruttoskuld-enligt-eu-s-konvergenskriterier/" target="_blank">SCB (2026)</a></td>
+          </tr>
+          <tr>
+            <td>USA</td>
+            <td>Ca 124 % av BNP (prognos 2026)</td>
+            <td><a href="https://www.imf.org/external/datamapper/GG_DEBT_GDP@GDD/SWE" target="_blank">International Monetary Fund (2026)</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Skillnaden är stor även med samma måttstock: USA:s konsoliderade offentliga skuld
+        är ungefär tre och en halv gånger Sveriges, som andel av BNP.
+      </p>
+    </div>
+
+    <div class="callout">
+      <p>
+        Siffrorna ovan är ögonblicksbilder från sommaren 2026, inte en levande datakoppling.
+        Klicka på källorna för att se aktuella tal – de uppdateras löpande hos respektive
+        myndighet.
+      </p>
+    </div>
+  </div>
+
+  <!-- ============ FLIK 2: PROCESSEN ============ -->
+  <div class="tab-panel" id="tab-process">
+
+    <h2>Så togs den här sidan fram</h2>
+    <p>
+      Jag byggde det här tillsammans med Claude, i flera steg under en kväll. Varje steg
+      innebar ett val mellan flera alternativ. Trädet nedan visar de val som faktiskt
+      gjordes, och vad som fanns att välja mellan istället. Det är poängen med den här
+      fliken: att vibe-kodning inte är automatik, det är en lång rad beslut.
+    </p>
+
+    <div class="tree">
+      <details open>
+        <summary>Vilken vinkel skulle sidan och texten ha?</summary>
+        <div class="tree-children">
+          <p><strong>Alternativ som fanns:</strong></p>
+          <ul>
+            <li>Paket A – "Skulden och räntan": klassisk tidsseriejämförelse av skuld/BNP och räntekostnad över tid. <span class="ej-valt">Valdes inte</span></li>
+            <li>Paket B – "Två sätt att räkna skuld": ett verktyg som visar hur olika definitioner ger olika svar. <span class="valt">Valt</span></li>
+          </ul>
+          <p>
+            <strong>Motivering:</strong> Paket B ligger närmare min yrkesroll som ekonom/controller,
+            där frågan sällan är "vad är rätt siffra" utan "vilken redovisningsprincip ligger
+            bakom siffran". Kräver mer noggrannhet än paket A eftersom definitionsskillnaderna
+            måste vara vattentäta.
+          </p>
+
+          <details>
+            <summary>Hur skulle den här processfliken presenteras?</summary>
+            <div class="tree-children">
+              <p><strong>Alternativ som fanns:</strong></p>
+              <ul>
+                <li>Löpande textlogg <span class="ej-valt">Valdes inte som enda variant</span></li>
+                <li>Interaktivt beslutsträd <span class="valt">Valt</span></li>
+                <li>Båda, i separata flikar <span class="ej-valt">Valdes inte</span></li>
+              </ul>
+              <p>
+                <strong>Motivering:</strong> Ett beslutsträd visar förgreningarna visuellt istället
+                för att bara lista dem, vilket förstärker poängen att vibe-kodning är en serie
+                aktiva val, inte ett enda kommando.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Vilka skulddefinitioner skulle definitionsverktyget innehålla?</summary>
+            <div class="tree-children">
+              <p><strong>Alternativ som övervägdes:</strong></p>
+              <ul>
+                <li>Bara det internationellt jämförbara måttet (IMF/OECD) <span class="ej-valt">Valdes inte ensamt</span></li>
+                <li>Bara ländernas egna rubriksiffror (Riksgälden/Treasury) <span class="ej-valt">Valdes inte ensamt</span></li>
+                <li>Alla tre nivåer sida vid sida, med den jämförbara som förval <span class="valt">Valt</span></li>
+              </ul>
+              <p>
+                <strong>Motivering:</strong> Att bara visa en nivå döljer själva poängen: att
+                "statsskuld" inte är ett enda tal. Tre nivåer, med den mest jämförbara som
+                startvy, visar både bredden och ger ett rättvist förstahandsintryck.
+              </p>
+            </div>
+          </details>
+        </div>
+      </details>
+
+      <details>
+        <summary>Vilket upplägg skulle bloggtexten ha?</summary>
+        <div class="tree-children">
+          <p><strong>Alternativ som fanns:</strong></p>
+          <ul>
+            <li>Yrkesroll-ingång – "Det beror på hur man räknar", utgår från Kents controller-vardag <span class="ej-valt">Valdes inte</span></li>
+            <li>Nyhetskrok – "Sveriges statsskuld är både 20 och 35 procent av BNP – samtidigt" <span class="ej-valt">Valdes inte</span></li>
+            <li>Process/meta-ingång – "Vad ett beslutsträd om statsskuld lär oss om vibe-kodning" <span class="valt">Valt</span></li>
+          </ul>
+          <p>
+            <strong>Motivering:</strong> Kopplar direkt till förra årets artikel om AI-metodik,
+            och använder paket A/B-valet som konkret exempel på vad vibe-kodning faktiskt
+            innebär.
+          </p>
+        </div>
+      </details>
+    </div>
+
+    <p style="margin-top: 22px;">
+      En fullständig, kronologisk logg över research och beslut finns i
+      <a href="process-logg.md" target="_blank">process-logg.md</a> i samma mapp som denna sida.
+    </p>
+  </div>
+
+  <hr />
+
+  <div class="sources">
+    <h2>Källor (Harvardstil)</h2>
+    <ol>
+      <li>
+        Lundgren, K. (2025a) <em>Sverige och USA:s statsskuld</em>. Controller utan gränser, 11 juni.
+        Tillgänglig: <a href="https://controllerutangranser.wordpress.com/2025/06/11/sverige-och-usas-statsskuld/" target="_blank">controllerutangranser.wordpress.com</a> [Hämtad: 2026-07-28].
+      </li>
+      <li>
+        Riksgälden (2026a) <em>Ökad statsskuld men lägre kostnad 2025</em>. Tillgänglig:
+        <a href="https://www.riksgalden.se/press-och-publicerat/pressmeddelanden-och-nyheter/nyheter/2026/okad-statsskuld-men-lagre-kostnad-2025/" target="_blank">riksgalden.se</a> [Hämtad: 2026-07-28].
+      </li>
+      <li>
+        Riksgälden (2026b) <em>Statistik om Sveriges statsskuld</em>. Tillgänglig:
+        <a href="https://www.riksgalden.se/statistik/statistik-om-sveriges-statsskuld/" target="_blank">riksgalden.se</a> [Hämtad: 2026-07-28].
+      </li>
+      <li>
+        SCB (2026) <em>Offentliga förvaltningens sparande och bruttoskuld enligt EU:s konvergenskriterier</em>.
+        Tillgänglig: <a href="https://www.scb.se/hitta-statistik/statistik-efter-amne/nationalrakenskaper/nationalrakenskaper/offentliga-forvaltningens-sparande-och-bruttoskuld-enligt-eu-s-konvergenskriterier/" target="_blank">scb.se</a> [Hämtad: 2026-07-28].
+      </li>
+      <li>
+        U.S. Department of the Treasury, Fiscal Data (2026a) <em>Historical Debt Outstanding</em>.
+        Tillgänglig: <a href="https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/" target="_blank">fiscaldata.treasury.gov</a> [Hämtad: 2026-07-28].
+      </li>
+      <li>
+        Congressional Budget Office (2026) <em>The Budget and Economic Outlook: 2026 to 2036</em>.
+        Tillgänglig: <a href="https://www.cbo.gov/publication/62105" target="_blank">cbo.gov</a> [Hämtad: 2026-07-28].
+      </li>
+      <li>
+        Federal Reserve Bank of St. Louis (u.å.) <em>Federal Debt Held by the Public as Percent of GDP
+        (FYGFGDQ188S)</em>, FRED. Tillgänglig: <a href="https://fred.stlouisfed.org/series/FYGFGDQ188S" target="_blank">fred.stlouisfed.org</a> [Hämtad: 2026-07-28].
+      </li>
+      <li>
+        International Monetary Fund (2026) <em>Global Debt Database – General Government Debt</em>.
+        Tillgänglig: <a href="https://www.imf.org/external/datamapper/GG_DEBT_GDP@GDD/SWE" target="_blank">imf.org</a> [Hämtad: 2026-07-28].
+      </li>
+      <li>
+        OECD (u.å.) <em>General Government Debt</em>. Tillgänglig:
+        <a href="https://www.oecd.org/en/data/indicators/general-government-debt.html" target="_blank">oecd.org</a> [Hämtad: 2026-07-28].
+      </li>
+    </ol>
+  </div>
+
+</div>
+
+<a class="github-corner" href="https://github.com/kentlundgren/Ekonomi" target="_blank">{ } GitHub</a>
+
+<script>
+  document.querySelectorAll(".tab-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.querySelectorAll(".tab-btn").forEach(function (b) { b.classList.remove("active"); });
+      document.querySelectorAll(".tab-panel").forEach(function (p) { p.classList.remove("active"); });
+      btn.classList.add("active");
+      document.getElementById("tab-" + btn.dataset.tab).classList.add("active");
+    });
+  });
+
+  document.querySelectorAll(".lens-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.querySelectorAll(".lens-btn").forEach(function (b) { b.classList.remove("active"); });
+      document.querySelectorAll(".lens-panel").forEach(function (p) { p.classList.remove("active"); });
+      btn.classList.add("active");
+      document.getElementById("lens-" + btn.dataset.lens).classList.add("active");
+    });
+  });
+</script>
+
+</body>
+</html>

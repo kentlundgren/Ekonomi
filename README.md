@@ -32,6 +32,12 @@ Ekonomi/
 ├── ekonomistyrning/
 │   └── index.html                    # Platshållare – under uppbyggnad
 │
+├── statsskuld/
+│   └── sverige_amerika/
+│       ├── index.html                # Definitionsverktyg: Sveriges/USA:s statsskuld (ej publicerad än)
+│       ├── process-logg.md           # Kronologisk logg över research- och designval
+│       └── blogginlagg-utkast.md     # Utkast till uppföljande blogginlägg (ej publicerat)
+│
 ├── skills/
 │   ├── humanizer_ton/
 │   │   ├── SKILL.md                  # Procedur: sju steg för mänsklig text
@@ -114,6 +120,14 @@ Checklista och konkreta granskningspunkter för lekmannarevisorer.
 ### `redovisning/revision/index.html`
 Om lekmannarevision i ideella föreningar. Länk till generell revisionsguide samt
 diskret information om att Kent tar revisionsuppdrag på arvodesbasis.
+
+### `statsskuld/sverige_amerika/index.html`
+Uppföljare till 2025 års Gemini-presentation om Sveriges och USA:s statsskuld. Ett
+definitionsverktyg som visar hur skuldsiffran ändras beroende på vilket av tre
+skuldbegrepp (central-/federal statsskuld, skuld hållen av allmänheten, konsoliderad
+offentlig sektor) som används, plus en flik med ett interaktivt beslutsträd som
+redovisar hur sidan själv togs fram. Inte publicerad på GitHub Pages än – ligger
+lokalt i väntan på Kents genomläsning.
 
 ### `humanizer.md`
 Praktisk katalog med 14 konkreta mönster att undvika för att text ska låta
