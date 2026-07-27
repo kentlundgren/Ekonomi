@@ -276,6 +276,87 @@
   <!-- ============ FLIK 1: VERKTYGET ============ -->
   <div class="tab-panel active" id="tab-verktyg">
 
+    <h2>Skulden över tid, 1970–2024</h2>
+    <p>
+      Det här är den historiska bilden som saknades från förra årets presentation, nu byggd
+      på en enda konsekvent källa istället för uppskattade tal. Kurvan använder samma
+      definition som Lins 3 nedan (konsoliderad offentlig sektor, brutto), eftersom det är
+      det enda måttet som mäts på samma sätt för båda länderna över hela perioden.
+    </p>
+
+    <svg viewBox="0 0 900 420" width="100%" style="max-width: 820px; display: block; margin: 0 auto;">
+      <!-- Horisontella hjälplinjer -->
+      <g stroke="#dde4ec" stroke-width="1">
+        <line x1="60" y1="380" x2="860" y2="380" />
+        <line x1="60" y1="329" x2="860" y2="329" />
+        <line x1="60" y1="277" x2="860" y2="277" />
+        <line x1="60" y1="226" x2="860" y2="226" />
+        <line x1="60" y1="174" x2="860" y2="174" />
+        <line x1="60" y1="123" x2="860" y2="123" />
+        <line x1="60" y1="71" x2="860" y2="71" />
+        <line x1="60" y1="20" x2="860" y2="20" />
+      </g>
+      <g fill="#8a97a6" font-size="12" font-family="Segoe UI, Arial, sans-serif" text-anchor="end">
+        <text x="52" y="384">0 %</text>
+        <text x="52" y="333">20 %</text>
+        <text x="52" y="281">40 %</text>
+        <text x="52" y="230">60 %</text>
+        <text x="52" y="178">80 %</text>
+        <text x="52" y="127">100 %</text>
+        <text x="52" y="75">120 %</text>
+        <text x="52" y="24">140 %</text>
+      </g>
+      <!-- Y-axel -->
+      <line x1="60" y1="20" x2="60" y2="380" stroke="#8a97a6" stroke-width="1" />
+
+      <!-- X-axel etiketter (vart 10:e år) -->
+      <g fill="#8a97a6" font-size="12" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+        <text x="60" y="400">1970</text>
+        <text x="208" y="400">1980</text>
+        <text x="356" y="400">1990</text>
+        <text x="504" y="400">2000</text>
+        <text x="653" y="400">2010</text>
+        <text x="801" y="400">2020</text>
+        <text x="860" y="400">2024</text>
+      </g>
+
+      <!-- Datalinjer -->
+      <polyline points="60.0,309.4 74.8,308.4 89.6,308.8 104.4,310.5 119.3,309.6 134.1,311.6 148.9,316.2 163.7,310.7 178.5,300.0 193.3,288.3 208.1,277.6 223.0,259.3 237.8,237.0 252.6,228.6 267.4,225.7 282.2,226.6 297.0,227.9 311.9,244.6 326.7,258.6 341.5,269.7 356.3,279.8 371.1,259.5 385.9,228.4 400.7,210.0 415.6,203.7 430.4,203.4 445.2,202.7 460.0,205.9 474.8,211.8 489.6,225.0 504.4,250.3 519.3,246.3 534.1,251.8 548.9,252.9 563.7,254.9 578.5,254.3 593.3,267.3 608.1,279.2 623.0,282.4 637.8,274.1 652.6,280.8 667.4,283.1 682.2,282.3 697.0,275.1 711.9,262.5 726.7,265.7 741.5,270.0 756.3,273.1 771.1,277.6 785.9,288.2 800.7,276.8 815.6,285.7 830.4,293.5 845.2,299.1 860.0,296.1"
+        fill="none" stroke="#1a6eb5" stroke-width="2.5" />
+      <polyline points="60.0,261.1 74.8,260.1 89.6,264.1 104.4,271.3 119.3,274.2 134.1,265.8 148.9,265.3 163.7,268.7 178.5,271.8 193.3,275.4 208.1,273.9 223.0,276.1 237.8,264.3 252.6,256.8 267.4,252.5 282.2,240.6 297.0,231.7 311.9,227.1 326.7,224.8 341.5,224.5 356.3,220.2 371.1,208.9 385.9,203.1 400.7,198.0 415.6,201.1 430.4,202.3 445.2,204.5 460.0,210.7 474.8,219.0 489.6,228.2 504.4,243.3 519.3,242.9 534.1,236.7 548.9,228.8 563.7,209.6 578.5,211.3 593.3,214.5 608.1,213.5 623.0,190.8 637.8,156.8 652.6,134.8 667.4,123.7 682.2,114.5 697.0,111.2 711.9,111.5 726.7,110.4 741.5,105.4 756.3,108.1 771.1,104.8 785.9,101.8 800.7,40.5 815.6,59.3 830.4,74.5 845.2,74.0 860.0,69.4"
+        fill="none" stroke="#c0392b" stroke-width="2.5" />
+
+      <!-- Toppmarkeringar -->
+      <circle cx="445.2" cy="202.7" r="4" fill="#1a6eb5" />
+      <text x="445.2" y="192" font-size="11.5" fill="#1a3a5c" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Sverige, 1996: 68,9 %</text>
+      <circle cx="800.7" cy="40.5" r="4" fill="#c0392b" />
+      <text x="800.7" y="30" font-size="11.5" fill="#8b2e22" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">USA, 2020: 132,0 %</text>
+
+      <!-- Direktetiketter vid kurvans slut -->
+      <text x="800" y="292" font-size="12.5" font-weight="bold" fill="#1a6eb5" font-family="Segoe UI, Arial, sans-serif">Sverige</text>
+      <text x="800" y="60" font-size="12.5" font-weight="bold" fill="#c0392b" font-family="Segoe UI, Arial, sans-serif">USA</text>
+    </svg>
+
+    <p style="font-size: 0.88em; color: #666;">
+      Källa: <a href="https://www.imf.org/external/datamapper/datasets/GDD" target="_blank">International Monetary Fund, Global Debt Database (2026)</a>,
+      indikator "General Government Gross Debt, % of GDP". Metodik:
+      <a href="https://www.imf.org/en/publications/wp/issues/2018/05/14/global-debt-database-methodology-and-sources-45838" target="_blank">Mbaye, Moreno Badia och Chae (2018)</a>.
+      Hämtad via IMF DataMapper API 2026-07-28.
+    </p>
+
+    <div class="callout gul">
+      <p>
+        <strong>Vad som ändrades jämfört med 2025 års version:</strong> förra årets kurva,
+        byggd med Gemini, överskattade Sveriges topp på 1980-/90-talet (visade ca 76–78 %
+        mot det verifierade 68,9 % 1996) och lade USA:s stora hopp fel i tid (2017–2018
+        istället för det faktiska hoppet 2019–2020, som beror på coronapandemins
+        underskott). Den här versionen bygger på en enda källa för hela perioden, inte en
+        AI-uppskattning.
+      </p>
+    </div>
+
+    <hr />
+
     <h2>Definitionsverktyget – välj vilket skuldbegrepp som visas</h2>
     <p>
       Tre offentliga myndigheter mäter "statsskuld" på tre olika sätt. Klicka på en lins
@@ -502,6 +583,11 @@
       <li>
         International Monetary Fund (2026) <em>Global Debt Database – General Government Debt</em>.
         Tillgänglig: <a href="https://www.imf.org/external/datamapper/GG_DEBT_GDP@GDD/SWE" target="_blank">imf.org</a> [Hämtad: 2026-07-28].
+      </li>
+      <li>
+        Mbaye, S., Moreno Badia, M. och Chae, K. (2018) <em>Global Debt Database: Methodology
+        and Sources</em>. IMF Working Paper WP/18/111. Tillgänglig:
+        <a href="https://www.imf.org/en/publications/wp/issues/2018/05/14/global-debt-database-methodology-and-sources-45838" target="_blank">imf.org</a> [Hämtad: 2026-07-28].
       </li>
       <li>
         OECD (u.å.) <em>General Government Debt</em>. Tillgänglig:

@@ -135,6 +135,33 @@ eftersom den nu faktiskt blir publik via GitHub Pages.
 projektets stående regel om att Claude bara committar/pushar när Kent uttryckligen
 ber om det.
 
+**Vägval 7: Historisk tidsseriegraf (1970–2024)**
+
+Efter publicering av bloggtexten efterfrågade Kent den historiska graf som fanns i 2025 års
+Gemini-presentation, men saknades i det nya verktyget. Kent bad Claude ta fram, verifiera och
+förtydliga en uppdaterad version, och lägga in den i `index.html`.
+
+**Alternativ som övervägdes för datakälla:**
+- IMF WEO-indikatorn GGXWDG_NGDP – täcker bara Sverige från 1993 och USA från 2001.
+  <span>Valdes inte som huvudkälla</span> (för kort historik för en 1970–2024-graf).
+- IMF Global Debt Database (GG_DEBT_GDP), hämtad via DataMapper-API. Täcker Sverige och USA
+  1970–2024 med samma metodologi. <span>Valt.</span>
+
+**Vad research faktiskt hittade:** den ursprungliga Gemini-grafen från 2025 innehöll två
+konkreta sakfel jämfört med den verifierade IMF-serien: Sveriges topp på 1980-/90-talet var
+överskattad (grafen visade ca 76–78 %, verifierat värde är 68,9 % år 1996), och USA:s stora
+hopp i skuldkvoten låg fel i tid (grafen visade hoppet 2017–2018, det faktiska hoppet skedde
+2019–2020 och beror på coronapandemins underskott).
+
+**Beslut:** Byggde en handkodad SVG-linjegraf (ingen extern chart-bibliotek, i linje med
+projektets princip om fristående HTML-filer) med exakta koordinater beräknade från
+IMF-datan, lagd i Verktyget-fliken ovanför definitionsverktyget. Källor och metodikreferens
+(Mbaye, Moreno Badia och Chae, 2018) tillagda i källförteckningen. Testat i webbläsaren
+(scroll genom hela grafen, verifierat att linjer, etiketter och toppmarkeringar renderas
+korrekt).
+
+**Inte gjort ännu:** ingen commit/push av denna uppdatering – väntar på Kents besked.
+
 ## Öppna frågor / kommande vägval
 
 - [ ] Hitta en bättre källa för lins 2:s svenska sida (AP-fondernas innehav av
