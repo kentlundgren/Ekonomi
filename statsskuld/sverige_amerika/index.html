@@ -282,7 +282,7 @@
       för att se hur Sverige och USA jämförs enligt just den definitionen.
     </p>
 
-    <div class="lens-switch">
+    <div class="lens-switch" id="lens-switch">
       <button class="lens-btn active" data-lens="1">Lins 1<br><small>Central-/federal statsskuld</small></button>
       <button class="lens-btn" data-lens="2">Lins 2<br><small>Skuld hållen av allmänheten</small></button>
       <button class="lens-btn" data-lens="3">Lins 3<br><small>Konsoliderad offentlig sektor</small></button>
@@ -610,23 +610,50 @@
 <a class="github-corner" href="https://github.com/kentlundgren/Ekonomi" target="_blank">{ } GitHub</a>
 
 <script>
+  function activateTab(name) {
+    document.querySelectorAll(".tab-btn").forEach(function (b) { b.classList.remove("active"); });
+    document.querySelectorAll(".tab-panel").forEach(function (p) { p.classList.remove("active"); });
+    document.querySelector('.tab-btn[data-tab="' + name + '"]').classList.add("active");
+    document.getElementById("tab-" + name).classList.add("active");
+  }
+
+  function activateLens(n) {
+    document.querySelectorAll(".lens-btn").forEach(function (b) { b.classList.remove("active"); });
+    document.querySelectorAll(".lens-panel").forEach(function (p) { p.classList.remove("active"); });
+    document.querySelector('.lens-btn[data-lens="' + n + '"]').classList.add("active");
+    document.getElementById("lens-" + n).classList.add("active");
+  }
+
   document.querySelectorAll(".tab-btn").forEach(function (btn) {
     btn.addEventListener("click", function () {
-      document.querySelectorAll(".tab-btn").forEach(function (b) { b.classList.remove("active"); });
-      document.querySelectorAll(".tab-panel").forEach(function (p) { p.classList.remove("active"); });
-      btn.classList.add("active");
-      document.getElementById("tab-" + btn.dataset.tab).classList.add("active");
+      activateTab(btn.dataset.tab);
+      history.replaceState(null, "", "#" + btn.dataset.tab);
     });
   });
 
   document.querySelectorAll(".lens-btn").forEach(function (btn) {
     btn.addEventListener("click", function () {
-      document.querySelectorAll(".lens-btn").forEach(function (b) { b.classList.remove("active"); });
-      document.querySelectorAll(".lens-panel").forEach(function (p) { p.classList.remove("active"); });
-      btn.classList.add("active");
-      document.getElementById("lens-" + btn.dataset.lens).classList.add("active");
+      activateLens(btn.dataset.lens);
+      history.replaceState(null, "", "#lins" + btn.dataset.lens);
     });
   });
+
+  // Direktlänkar: #lins1, #lins2, #lins3 öppnar Verktyget-fliken och rätt lins.
+  // #process öppnar "Så togs detta fram"-fliken.
+  function applyHash() {
+    var hash = location.hash.replace("#", "");
+    var lensMatch = hash.match(/^lins([123])$/);
+    if (lensMatch) {
+      activateTab("verktyg");
+      activateLens(lensMatch[1]);
+      document.getElementById("lens-switch").scrollIntoView({ block: "start" });
+    } else if (hash === "process") {
+      activateTab("process");
+    }
+  }
+
+  window.addEventListener("hashchange", applyHash);
+  applyHash();
 </script>
 
 </body>

@@ -203,6 +203,32 @@ verifierade genom att läsa källkoden och jämföra den rad för rad med det re
 mönstret i `redovisning/index.html`, inte genom en skärmdump. Kent bör göra en snabb egen
 koll i webbläsaren.
 
+**Vägval 11: Direktlänkar till enskilda linser**
+
+Kent bad om möjlighet att länka direkt till en specifik lins, t.ex.
+`.../sverige_amerika/#lins3`.
+
+**Beslut:** Lade till hash-baserad routing i `index.html`. `#lins1`, `#lins2`, `#lins3`
+öppnar Verktyget-fliken och aktiverar rätt lins samt skrollar dit. `#process` öppnar
+"Så togs detta fram". Klick på en lins- eller flik-knapp uppdaterar nu även URL:ens hash
+(`history.replaceState`), så adressen alltid speglar vad besökaren ser.
+
+**Verifiering:** Testat via JavaScript-konsolen i webbläsarverktyget, alla fyra hash-värden
+(`lins1`, `lins2`, `lins3`, `process`) aktiverar korrekt flik/lins. Kunde inte verifiera
+genom att faktiskt navigera till en URL med `#`-fragment i förhandsgranskningen, eftersom
+verktygets lokala filvisning tappar bort URL-fragment vid navigering (bekräftat: `location.hash`
+var tom trots `#lins3` i adressen som skickades till navigate-kommandot). Detta är en
+begränsning i granskningsverktyget, inte i koden, fragment bevaras normalt av webbläsare vid
+vanlig sidladdning. Kent bör göra ett snabbt test på den publicerade GitHub Pages-sidan.
+
+**Samtidigt:** Kent bad om kontroll av den publicerade bloggtexten. Två problem hittade
+(inga rättade av Claude, kräver ändring i WordPress som Claude inte har åtkomst till):
+1. Meningen "Nedan visas konsoliderade offentliga sektorns skuld..." följs av en bild som
+   laddats upp men infogats som en vanlig klickbar länk, inte som en visad bild.
+2. Första omnämnandet av "(Lundgren, 2025a)" i löptexten saknar länk (fanns i utkastet,
+   verkar ha tappats vid inklistring i WordPress). Bryter mot projektets egen regel om
+   klickbarhet vid första omnämnande.
+
 ## Öppna frågor / kommande vägval
 
 - [ ] Hitta en bättre källa för lins 2:s svenska sida (AP-fondernas innehav av
