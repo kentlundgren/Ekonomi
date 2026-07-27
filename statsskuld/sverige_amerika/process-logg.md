@@ -179,6 +179,30 @@ panel och därför aldrig visas när Lins 1 eller 2 är aktiva.
 inte en verklig lucka i statistiken. FRED (Federal Reserve Bank of St. Louis) publicerar
 den som serien GFDEGDQ188S. Fyllt i: ca 122,6 % av BNP, första kvartalet 2026.
 
+**Vägval 10: Synlighet i sitens huvudnavigering**
+
+Kent påpekade att statsskuldsarbetet inte syntes i Ekonomi-projektets toppnavigering
+("uppe till vänster"), bara på sin egen sida. Det var en lucka, inte ett medvetet val,
+CLAUDE.md:s stående regel säger att nya HTML-filer ska länkas in i navet på alla
+befintliga sidor, vilket missades när `index.html` skapades.
+
+**Åtgärdat, enligt `skills/projekt_struktur/SKILL.md`:**
+- Ny fil `statsskuld/index.html` – sektion-TOC med samma mall som `redovisning/index.html`,
+  ett section-card som länkar vidare till Sverige/USA-sidan.
+- `Ekonomi/index.html` (rot-nav) – ny dropdown-grupp "Statsskuld" (samma mönster som
+  "Redovisning") plus ett section-card i sidans body.
+- `statsskuld/sverige_amerika/index.html` – breadcrumb utökad från en fristående text-crumb
+  till en klickbar kedja `{ E } Ekonomi / Statsskuld`, enligt innehållssidemallen.
+- `README.md` – strukturträd, Live-sidor-tabell och filbeskrivningar uppdaterade.
+
+**Verifiering:** Kunde bara visuellt bekräfta ändringen i webbläsaren för
+`sverige_amerika/index.html` (breadcrumb syns korrekt). Förhandsgranskningsverktyget kunde
+inte rendera filer utanför den ursprungliga projektmappen (`Ekonomi/index.html` och
+`statsskuld/index.html` visade tomma/inaktuella sidor i verktyget), så de två filerna är
+verifierade genom att läsa källkoden och jämföra den rad för rad med det redan fungerande
+mönstret i `redovisning/index.html`, inte genom en skärmdump. Kent bör göra en snabb egen
+koll i webbläsaren.
+
 ## Öppna frågor / kommande vägval
 
 - [ ] Hitta en bättre källa för lins 2:s svenska sida (AP-fondernas innehav av

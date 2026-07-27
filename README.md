@@ -33,10 +33,11 @@ Ekonomi/
 │   └── index.html                    # Platshållare – under uppbyggnad
 │
 ├── statsskuld/
+│   ├── index.html                    # Sektion-TOC: statsskuldsjämförelser mellan länder
 │   └── sverige_amerika/
-│       ├── index.html                # Definitionsverktyg: Sveriges/USA:s statsskuld (ej publicerad än)
+│       ├── index.html                # Definitionsverktyg: Sveriges/USA:s statsskuld
 │       ├── process-logg.md           # Kronologisk logg över research- och designval
-│       └── blogginlagg-utkast.md     # Utkast till uppföljande blogginlägg (ej publicerat)
+│       └── blogginlagg-utkast.md     # Publicerat blogginlägg (utkastversion, se WordPress-länk)
 │
 ├── skills/
 │   ├── humanizer_ton/
@@ -68,6 +69,7 @@ Ekonomi/
 | Revision | https://kentlundgren.github.io/Ekonomi/redovisning/revision/ |
 | ekonomistyrning | https://kentlundgren.github.io/Ekonomi/ekonomistyrning/ |
 | Git-guide | https://kentlundgren.github.io/Ekonomi/rattgit.html |
+| Statsskuld (TOC) | https://kentlundgren.github.io/Ekonomi/statsskuld/ |
 | Statsskuld: Sverige/USA | https://kentlundgren.github.io/Ekonomi/statsskuld/sverige_amerika/ |
 
 Live-sidorna uppdateras automatiskt inom ~1 minut efter varje push till `main`.
@@ -121,6 +123,10 @@ Checklista och konkreta granskningspunkter för lekmannarevisorer.
 ### `redovisning/revision/index.html`
 Om lekmannarevision i ideella föreningar. Länk till generell revisionsguide samt
 diskret information om att Kent tar revisionsuppdrag på arvodesbasis.
+
+### `statsskuld/index.html`
+Sektion-TOC för statsskuldsjämförelser mellan länder. Just nu ett kort som länkar
+till Sverige/USA-jämförelsen. Tänkt att växa om fler länderjämförelser tillkommer.
 
 ### `statsskuld/sverige_amerika/index.html`
 Uppföljare till 2025 års Gemini-presentation om Sveriges och USA:s statsskuld. Ett
