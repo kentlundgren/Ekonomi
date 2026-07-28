@@ -98,61 +98,61 @@ Tre CSS-teman finns dokumenterade i `skills/webb_struktur/SKILL.md` (nuvarande: 
 
 ## Filer – kort beskrivning
 
-### `index.html`
+### [`index.html`](https://kentlundgren.github.io/Ekonomi/)
 Projektets rotsida med dropdown-navigering. Listar sektionerna Redovisning och
 ekonomistyrning som klickbara kort.
 
-### `rattgit.html`
+### [`rattgit.html`](https://kentlundgren.github.io/Ekonomi/rattgit.html)
 Dokumenterar det nested repo-problem som uppstod 2026-06-08 och hur det löstes.
 Förklarar varför Cursor visade fel git-repo och de två åtgärder som gjordes.
 
-### `redovisning/BAS/BAS2026.html`
+### [`redovisning/BAS/BAS2026.html`](https://kentlundgren.github.io/Ekonomi/redovisning/BAS/BAS2026.html)
 Utgångspunkten för BAS-avsnittet: tackar Peter Berg för hans artikel om BAS-nyheter
 2026 och presenterar reflektionerna. Innehåller fullständig källförteckning.
 
-### `redovisning/BAS/analys.html`
+### [`redovisning/BAS/analys.html`](https://kentlundgren.github.io/Ekonomi/redovisning/BAS/analys.html)
 Djupgående analys i jag-form. Besvarar fyra frågor: skillnad privat BAS vs Kommun-BAS,
 vad BAS 2026 innebär för controllers i kommunala bolag (analys av andras situation),
 vad som är relevant för lekmannarevision av Kalmar Nation, samt varför löner placeras
 i kontogrupp 5 (Kommun-BAS) respektive klass 7 (privat BAS).
 
-### `redovisning/BAS/generell_revision.html`
+### [`redovisning/BAS/generell_revision.html`](https://kentlundgren.github.io/Ekonomi/redovisning/BAS/generell_revision.html)
 Guide om hur BAS 2026-ändringarna påverkar en generell revision av ideella föreningar.
 Checklista och konkreta granskningspunkter för lekmannarevisorer.
 
-### `redovisning/revision/index.html`
+### [`redovisning/revision/index.html`](https://kentlundgren.github.io/Ekonomi/redovisning/revision/)
 Om lekmannarevision i ideella föreningar. Länk till generell revisionsguide samt
 diskret information om att Kent tar revisionsuppdrag på arvodesbasis.
 
-### `statsskuld/index.html`
+### [`statsskuld/index.html`](https://kentlundgren.github.io/Ekonomi/statsskuld/)
 Sektion-TOC för statsskuldsjämförelser mellan länder. Just nu ett kort som länkar
 till Sverige/USA-jämförelsen. Tänkt att växa om fler länderjämförelser tillkommer.
 
-### `statsskuld/sverige_amerika/index.html`
+### [`statsskuld/sverige_amerika/index.html`](https://kentlundgren.github.io/Ekonomi/statsskuld/sverige_amerika/)
 Uppföljare till 2025 års Gemini-presentation om Sveriges och USA:s statsskuld. Ett
 definitionsverktyg som visar hur skuldsiffran ändras beroende på vilket av tre
 skuldbegrepp (central-/federal statsskuld, skuld hållen av allmänheten, konsoliderad
 offentlig sektor) som används, plus en flik med ett interaktivt beslutsträd som
 redovisar hur sidan själv togs fram.
 
-### `statsskuld/sverige_amerika/blogginlagg-utkast.md`
+### [`statsskuld/sverige_amerika/blogginlagg-utkast.md`](statsskuld/sverige_amerika/blogginlagg-utkast.md)
 Utkastversionen av bloggtexten om verktyget. Publicerad på Controller utan gränser:
 [Vad ett beslutsträd om statsskuld lär oss om vibe-kodning](https://controllerutangranser.wordpress.com/2026/07/28/vad-ett-beslutstrad-om-statsskuld-lar-oss-om-vibe-kodning/)
 (28 juli 2026).
 
-### `humanizer.md`
+### [`humanizer.md`](humanizer.md)
 Praktisk katalog med 14 konkreta mönster att undvika för att text ska låta
 mänsklig, inte AI-genererad. Svenska exempel hämtade ur redovisningskontext.
 Innehåller även tre snabbpass att köra på färdig text. Se även
-`skills/humanizer_ton/humanizer_bakgrund.md` för den teoretiska bakgrunden.
+[`skills/humanizer_ton/humanizer_bakgrund.md`](skills/humanizer_ton/humanizer_bakgrund.md) för den teoretiska bakgrunden.
 
-### `skills/`
+### [`skills/`](skills/)
 Fem AI-skills (procedurdokument för Claude):
-- `humanizer_ton/SKILL.md` – sju procedursteg för mänsklig, analytisk skrivstil
-- `humanizer_ton/humanizer_bakgrund.md` – akademisk analys (se nedan)
-- `linkedin_pulse/SKILL.md` – format, röst och procedur för LinkedIn Pulse-artiklar
-- `projekt_struktur/SKILL.md` – detta projekts nav, CSS och konventioner
-- `webb_struktur/SKILL.md` – generellt återanvändbart skill för hierarkiska webbplatser
+- [`humanizer_ton/SKILL.md`](skills/humanizer_ton/SKILL.md) – sju procedursteg för mänsklig, analytisk skrivstil
+- [`humanizer_ton/humanizer_bakgrund.md`](skills/humanizer_ton/humanizer_bakgrund.md) – akademisk analys (se nedan)
+- [`linkedin_pulse/SKILL.md`](skills/linkedin_pulse/SKILL.md) – format, röst och procedur för LinkedIn Pulse-artiklar
+- [`projekt_struktur/SKILL.md`](skills/projekt_struktur/SKILL.md) – detta projekts nav, CSS och konventioner
+- [`webb_struktur/SKILL.md`](skills/webb_struktur/SKILL.md) – generellt återanvändbart skill för hierarkiska webbplatser
 
 ---
 

@@ -1,21 +1,32 @@
 # CLAUDE.md – Ekonomi-projektet
 
 **Mapp:** `C:\Users\kentl\OneDrive\AI\Claude\Ekonomi`
-**Senast uppdaterad:** 2026-06-08
+**Senast uppdaterad:** 2026-07-28
 
 ---
 
-## 📌 Regel – Uppdatera README.md när en ny HTML-fil skapas
+## 📌 Regel – Uppdatera README.md när en ny fil skapas
 
-När en ny HTML-fil läggs till i projektet ska `README.md` uppdateras med:
+När en ny fil läggs till i projektet (HTML, men även `.md`, `SKILL.md` osv.) ska
+`README.md` uppdateras med:
 
 1. **Projektstrukturen** (trädet under `## Projektstruktur`) – lägg till filen
    på rätt plats i hierarkin med en kort kommentar
-2. **Tabellen under `## Live-sidor`** – lägg till filens GitHub Pages-URL
-3. **Avsnittet `## Filer – kort beskrivning`** – lägg till ett stycke med
-   en mening om vad sidan innehåller
+2. **Tabellen under `## Live-sidor`** – om filen är en HTML-sida, lägg till dess
+   GitHub Pages-URL
+3. **Avsnittet `## Filer – kort beskrivning`** – lägg till en egen rubrik med
+   ett stycke om vad filen innehåller. **Rubriken ska alltid vara en klickbar
+   markdown-länk**, inte bara kodformaterad text:
+   - HTML-filer → länka till den publicerade GitHub Pages-URL:en (samma som i
+     Live-sidor-tabellen), t.ex. `### [\`index.html\`](https://kentlundgren.github.io/Ekonomi/...)`.
+     Om sidan ännu inte är publicerad, länka ändå (den blir giltig vid nästa push)
+     snarare än att lämna rubriken olänkad.
+   - Alla andra filtyper (`.md`, `SKILL.md`, `.json` osv.) → länka till filens
+     relativa sökväg i repot, t.ex. `### [\`humanizer.md\`](humanizer.md)`.
+   - Detta gäller även punktlistor över filer inom ett avsnitt (t.ex. under
+     `skills/`) – varje filnamn ska vara en länk på samma sätt.
 
-Gör detta **direkt** efter att HTML-filen skapats, i samma arbetspass.
+Gör detta **direkt** efter att filen skapats, i samma arbetspass.
 Påminn Kent om att committa även README.md.
 
 ---
