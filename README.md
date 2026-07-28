@@ -37,7 +37,7 @@ Ekonomi/
 │   └── sverige_amerika/
 │       ├── index.html                # Definitionsverktyg: Sveriges/USA:s statsskuld
 │       ├── process-logg.md           # Kronologisk logg över research- och designval
-│       └── blogginlagg-utkast.md     # Publicerat blogginlägg (utkastversion, se WordPress-länk)
+│       └── blogginlagg-utkast.md     # Utkast till publicerat blogginlägg, se beskrivning nedan
 │
 ├── skills/
 │   ├── humanizer_ton/
@@ -134,6 +134,11 @@ definitionsverktyg som visar hur skuldsiffran ändras beroende på vilket av tre
 skuldbegrepp (central-/federal statsskuld, skuld hållen av allmänheten, konsoliderad
 offentlig sektor) som används, plus en flik med ett interaktivt beslutsträd som
 redovisar hur sidan själv togs fram.
+
+### `statsskuld/sverige_amerika/blogginlagg-utkast.md`
+Utkastversionen av bloggtexten om verktyget. Publicerad på Controller utan gränser:
+[Vad ett beslutsträd om statsskuld lär oss om vibe-kodning](https://controllerutangranser.wordpress.com/2026/07/28/vad-ett-beslutstrad-om-statsskuld-lar-oss-om-vibe-kodning/)
+(28 juli 2026).
 
 ### `humanizer.md`
 Praktisk katalog med 14 konkreta mönster att undvika för att text ska låta

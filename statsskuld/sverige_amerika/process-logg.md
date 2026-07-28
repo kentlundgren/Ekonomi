@@ -229,6 +229,15 @@ vanlig sidladdning. Kent bör göra ett snabbt test på den publicerade GitHub P
    verkar ha tappats vid inklistring i WordPress). Bryter mot projektets egen regel om
    klickbarhet vid första omnämnande.
 
+**Sidonot: bloggposten om skills-förvirringen**
+
+Tidigare i den här sessionen refererade Kent till
+[Tappade bort mig i Claudes ekosystem](https://klel.wordpress.com/2026/07/27/tappade-bort-mig-i-claudes-ekosystem/)
+(klel.wordpress.com, 2026-07-27) som bakgrund till frågan om var olika skills faktiskt
+ligger (projektlokalt, `~/.claude/skills`, eller kontoknutet). Den texten är nu klar/
+publicerad. Den handlar inte om statsskuldsprojektet i sak, men om samma bredare tema:
+att förstå var och hur AI-verktygen faktiskt fungerar innan man bygger vidare på dem.
+
 ## Öppna frågor / kommande vägval
 
 - [ ] Hitta en bättre källa för lins 2:s svenska sida (AP-fondernas innehav av
