@@ -9,6 +9,16 @@ Det här är ett av dem.
 
 ---
 
+## 🗂️ Lokalt repo
+
+`C:\Users\kentl\OneDrive\AI\Claude\Ekonomi`
+
+⚠️ Ligger nästlat inuti föräldramappen `...\AI\Claude\`, som också är ett eget
+git-repo (remote: `Ovrigt`) — se avsnittet [Nested Git-repo](#-nested-git-repo)
+längre ner för vad det innebär i praktiken.
+
+---
+
 ## Projektstruktur
 
 ```
