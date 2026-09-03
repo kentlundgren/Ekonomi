@@ -4,7 +4,7 @@
 **Arbetsmapp:** `Ekonomi/ekonomikommunikation/260903/`
 **Skapad:** 2026-09-03
 **Senast ändrad:** 2026-09-03
-**Status:** Planering klar. [`SPEC.md`](SPEC.md) låst. Redo för bygge. HTML-sidan först, blogginlägget (upplägg C) efter.
+**Status:** HTML-sidan byggd och verifierad (tre leveranser, se `process-logg.md`). Nästa: blogginlägget (upplägg C).
 **Ägare:** Kent Lundgren
 
 ---
@@ -410,14 +410,15 @@ se avsnitt 11.
 4. ~~Sista öppna frågorna i avsnitt 11 stängs.~~ Klart, en fråga (3.9) avgjord
    i SPEC: två explicita resultaträkningar per typfall.
 5. ~~`SPEC.md` skapas.~~ Klart 2026-09-03.
-6. Bygg sidan i `ekonomikommunikation/260903/` som `index.html` + CSS + JS,
-   med GitHub-hörna och teknik-modal (avsnitt 6.1). Aktivera skill
-   `kent-bygg-sidor`. Process-logg förs parallellt.
-7. README i den här mappen uppdateras med länk till live-sidan.
-8. Utkast till blogginlägg (upplägg C), som utgår från den färdiga sidan,
+6. ~~Bygg sidan i `ekonomikommunikation/260903/` som `index.html` + CSS + JS.~~
+   Klart 2026-09-03, tre leveranser. Se `process-logg.md`.
+7. ~~README-uppdateringar (mappens README, `Ekonomi/README.md`, länk från
+   `Ekonomi/index.html`).~~ Klart 2026-09-03.
+8. Kent committar och pushar. Verifierar live-sidan.
+9. Utkast till blogginlägg (upplägg C), som utgår från den färdiga sidan,
    granskat mot humanizer-reglerna. Aktivera skill `kent-skrivstil`.
-9. Kent läser, justerar, publicerar på Controller utan gränser.
-10. Ev. kort LinkedIn-inlägg som länkar till bloggtexten.
+10. Kent läser, justerar, publicerar på Controller utan gränser.
+11. Ev. kort LinkedIn-inlägg som länkar till bloggtexten.
 
 Process-loggen för HTML-sidan (beslut och alternativ under bygget) förs enligt
 minnet om vibe-coding-transparens, i en egen `process-logg.md` i den här mappen.
@@ -483,6 +484,8 @@ att pricka av bygget mot.
 | 2026-09-03 (bygge) | Typfall D: Bidragsgivare 5:s 500 tkr år X+1 borttagen. D går nu minus (−500, gult) redan X+1, så forskningsledaren inte kan hävda att året går runt. D:s Σ sett från X: −16 040. Ett år senare: −12 360. |
 | 2026-09-03 (bygge) | Leverans 1: index.html + styles.css + app.js. Kärnan: typfall, tidsväxling, färglogik, tröskel, GitHub-hörna + teknik-modal. |
 | 2026-09-03 (bygge) | Leverans 2: "ett år senare"-kort med tal och staplar, banner, samt D-ver2 (redigerbart, påminnelse vid ny intäkt, återställ, egna intäktsrader). |
+| 2026-09-03 (bygge) | Leverans 3: mobilfix (horisontell scroll i navet, inte tabellen), länk och section-card i `Ekonomi/index.html`, uppdaterad `Ekonomi/README.md` och mappens README. |
+| 2026-09-03 (bygge) | Nav-crumben pekar mot Ekonomi-startsidan (ingen egen index på `ekonomikommunikation/`-nivån). Sidan ligger i den daterade mappen `260903/`. |
 | 2026-09-03 | Färgskala: tre steg, grönt / gult (mindre avvikelse) / rött (kraftig avvikelse). Ingen separat grå nivå. |
 | 2026-09-03 | Den tomma intäktsytan (avsnitt 3.10) är sidans viktigaste kommunikativa yta. Hover, särskilt i Fall D sett från X+1, väcker frågan om nya bidrag är på väg och leder läsaren till samtalet med gruppen. |
 | 2026-09-03 | Tröskeln gul/röd är inställbar, förval 15 % av årets kostnad. |

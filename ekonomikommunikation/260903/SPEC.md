@@ -223,20 +223,23 @@ staplade år för år med förändringen per cell. Inte låst, se PRD avsnitt 11
 
 ## 9. Acceptanskriterier
 
-- [ ] Sidan öppnas fristående utan byggsteg, i `index.html` + `styles.css` + `app.js`.
-- [ ] A, B, C, D visar rätt RESULTAT-rad och Σ enligt avsnitt 3.2, för båda tidsögonblicken.
-- [ ] Ett år senare-talet visar −1 260 (A), −6 760 (B), −9 860 (C), −12 360 (D).
-- [ ] Cellfärg följer tröskeln. Med 15 % är B:s X+3 gul och X+4 röd.
-- [ ] Tröskeln går att ändra på sidan och färgerna uppdateras direkt.
-- [ ] Typfallsknapparna är färgade, C växlar gul/röd.
-- [ ] Bidragsgivarrader visas som default, går att fälla ihop.
-- [ ] Tomma intäktsceller är skrafferade. Hover eller tryck visar frågan. Frågerutan står alltid framme för D.
-- [ ] Tidsväljaren är visuellt åtskild från typfallsknapparna.
-- [ ] D-ver2 går att redigera, påminnelsen visas vid ny intäkt, allt räknas om, återställ fungerar.
-- [ ] Site-nav, GitHub-hörna och teknik-modal finns och ser ut som resten av projektet.
-- [ ] Fungerar på mobil, tryck ersätter hover.
-- [ ] Länk finns på `Ekonomi/index.html`, och `Ekonomi/README.md` samt mappens `README.md` är uppdaterade.
-- [ ] `process-logg.md` är förd under bygget.
+Bockade = verifierade lokalt i webbläsare 2026-09-03. Kent verifierar även
+live efter push.
+
+- [x] Sidan öppnas fristående utan byggsteg, i `index.html` + `styles.css` + `app.js`.
+- [x] A, B, C, D visar rätt RESULTAT-rad och Σ enligt avsnitt 3.2, för båda tidsögonblicken.
+- [x] Ett år senare-talet visar −1 260 (A), −6 760 (B), −9 860 (C), −12 360 (D).
+- [x] Cellfärg följer tröskeln. Med 15 % är B:s X+3 gul och X+4 röd.
+- [x] Tröskeln går att ändra på sidan och färgerna uppdateras direkt.
+- [x] Typfallsknapparna är färgade, C växlar gul/röd.
+- [x] Bidragsgivarrader visas som default, går att fälla ihop.
+- [x] Tomma intäktsceller är skrafferade. Hover eller tryck visar frågan. Frågerutan står alltid framme för D.
+- [x] Tidsväljaren är visuellt åtskild från typfallsknapparna.
+- [x] D-ver2 går att redigera, påminnelsen visas vid ny intäkt, allt räknas om, återställ fungerar.
+- [x] Site-nav, GitHub-hörna och teknik-modal finns och ser ut som resten av projektet.
+- [x] Fungerar på mobil, tryck ersätter hover. (Horisontell scroll i navet rättad.)
+- [x] Länk finns på `Ekonomi/index.html`, och `Ekonomi/README.md` samt mappens `README.md` är uppdaterade.
+- [x] `process-logg.md` är förd under bygget.
 
 ---
 

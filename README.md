@@ -39,6 +39,17 @@ Ekonomi/
 │   └── revision/
 │       └── index.html                # Lekmannarevision i ideella föreningar
 │
+├── ekonomikommunikation/
+│   └── 260903/
+│       ├── index.html                # Interaktiv sida: forskargruppens ekonomi fyra år fram
+│       ├── styles.css                # CSS för sidan
+│       ├── app.js                    # Datamodell, beräkning, interaktion
+│       ├── PRD.md                    # Planering: ståndpunkt, modell, beslutslogg
+│       ├── SPEC.md                   # Låst bygg-spec: datamodell, färgregler, acceptanslista
+│       ├── process-logg.md           # Kronologisk logg över beslut under bygget
+│       ├── README.md                 # Mappöversikt, lokalt repo, live-sida
+│       └── ekonomikommunikation.xlsx # Kents exempelresultaträkningar
+│
 ├── ekonomistyrning/
 │   └── index.html                    # Platshållare – under uppbyggnad
 │
@@ -81,6 +92,7 @@ Ekonomi/
 | Git-guide | https://kentlundgren.github.io/Ekonomi/rattgit.html |
 | Statsskuld (TOC) | https://kentlundgren.github.io/Ekonomi/statsskuld/ |
 | Statsskuld: Sverige/USA | https://kentlundgren.github.io/Ekonomi/statsskuld/sverige_amerika/ |
+| Ekonomikommunikation: Anställa i tre år? | https://kentlundgren.github.io/Ekonomi/ekonomikommunikation/260903/ |
 
 Live-sidorna uppdateras automatiskt inom ~1 minut efter varje push till `main`.
 
@@ -149,6 +161,31 @@ redovisar hur sidan själv togs fram.
 Utkastversionen av bloggtexten om verktyget. Publicerad på Controller utan gränser:
 [Vad ett beslutsträd om statsskuld lär oss om vibe-kodning](https://controllerutangranser.wordpress.com/2026/07/28/vad-ett-beslutstrad-om-statsskuld-lar-oss-om-vibe-kodning/)
 (28 juli 2026).
+
+### [`ekonomikommunikation/260903/index.html`](https://kentlundgren.github.io/Ekonomi/ekonomikommunikation/260903/)
+Interaktiv sida om hur ekonomi kan kommuniceras när en verksamhet lever på flera
+tidsbegränsade bidrag. Visar en forskargrupps resultaträkning fyra år fram i fyra
+typfall (A–D) plus ett redigerbart läge, sedd från år X och år X+1. Grön, gul och
+röd markering på RESULTAT-raden, ett mått på hur mycket sämre bilden blir ett år
+senare, och en fråga som väcks av de tomma intäktscellerna. Byggd i tre filer
+(`index.html`, `styles.css`, `app.js`), ingen data lämnar webbläsaren.
+
+### [`ekonomikommunikation/260903/PRD.md`](ekonomikommunikation/260903/PRD.md)
+Planeringen bakom sidan: Kents ståndpunkt om ekonomikommunikation, flerårsmodellen,
+de fyra typfallen, och en daterad beslutslogg. Blogginlägget (upplägg C, "Kan vi
+anställa henne i tre år?") skrivs efter sidan och utgår från den.
+
+### [`ekonomikommunikation/260903/SPEC.md`](ekonomikommunikation/260903/SPEC.md)
+Låst bygg-spec: de åtta resultaträkningarna med exakta tal, färg- och
+varningsreglerna, komponentlistan, D-ver2, och en acceptanslista att pricka av
+bygget mot.
+
+### [`ekonomikommunikation/260903/process-logg.md`](ekonomikommunikation/260903/process-logg.md)
+Kronologisk logg över besluten under själva bygget, i tre leveranser. Kompletterar
+beslutsloggen i PRD:n, som täcker planeringsfasen.
+
+### [`ekonomikommunikation/260903/README.md`](ekonomikommunikation/260903/README.md)
+Mappöversikt med lokal sökväg, live-sida och status.
 
 ### [`humanizer.md`](humanizer.md)
 Praktisk katalog med 14 konkreta mönster att undvika för att text ska låta

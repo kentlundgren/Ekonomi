@@ -67,8 +67,32 @@ inte kan hävda att året går runt. D:s Σ sett från X blir −16 040, och
 banner-trappan, D-ver2 (redigera cell → påminnelse + omräkning, egen rad,
 återställ). Inga konsolfel.
 
-**Kvar till leverans 3:** mobilgenomgång, länk från `Ekonomi/index.html`,
-uppdatera `Ekonomi/README.md`.
+## 2026-09-03 – Leverans 3: mobil och sajtkoppling
 
-**Öppet:** de två RESULTAT-raderna staplade (PRD avsnitt 11), EU:s hoppår i
-Fall C (behållet tills vidare).
+**Mobil:** hittade och rättade en horisontell sidoscroll på smal skärm.
+Orsaken var den fasta navigeringsraden, inte tabellen (tabellen scrollar redan
+i sin egen behållare). Fix: på skärmar under 620 px döljs "Kent Lundgren" i
+navet, navets marginaler krymper, "ett år senare"-kortets två delar går till
+full bredd, och H1 blir mindre. Verifierat: `scrollWidth === clientWidth` vid
+375 px. Teknik-modalen fäller till en kolumn och scrollar internt.
+
+**Sajtkoppling:**
+
+- `Ekonomi/index.html`: ny nav-grupp "Ekonomikommunikation" med dropdown, och
+  ett section-card mellan Statsskuld och ekonomistyrning. Länk och kort
+  testade, round-trip fungerar.
+- `Ekonomi/README.md`: sidan tillagd i projektstrukturen, Live-sidor-tabellen
+  och avsnittet Filer med klickbara rubriker (PRD, SPEC, process-logg, README).
+- `260903/README.md`: Live-sida-sektionen har nu en klickbar länk och en
+  innehållstabell över alla filer.
+
+**Bugg hittad och rättad under verifieringen:** D-ver2-knapparna ("+ lägg
+till egen intäkt", "Återställ") syntes även i vanliga typfall. Orsak: `.dver2-
+verktyg` hade `display: flex` i CSS, vilket vinner över attributet `hidden`.
+Fix: `.dver2-verktyg[hidden] { display: none; }`.
+
+**Status:** sidan klar och verifierad. Nästa steg är blogginlägget, som är
+en egen leverans (PRD avsnitt 7).
+
+**Öppet, ej blockerande:** de två RESULTAT-raderna staplade (PRD avsnitt 11),
+EU:s hoppår i Fall C (behållet tills vidare).

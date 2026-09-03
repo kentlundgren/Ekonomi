@@ -26,29 +26,31 @@ avsnittet "Nested Git-repo".
 
 ## 🌐 Live-sida
 
-Ingen egen live-sida än. När en `index.html` skapas i den här mappen
-publiceras den på:
+**[Kan vi anställa henne i tre år?](https://kentlundgren.github.io/Ekonomi/ekonomikommunikation/260903/)**
+– `https://kentlundgren.github.io/Ekonomi/ekonomikommunikation/260903/`
 
-`https://kentlundgren.github.io/Ekonomi/ekonomikommunikation/260903/`
-
-Då ska den här README:n uppdateras med en klickbar länk dit.
+Interaktiv sida om ekonomikommunikation. Nås även från
+[Ekonomi-startsidan](https://kentlundgren.github.io/Ekonomi/) via menyn.
+Live inom ~1 minut efter push till `main`.
 
 ## Innehåll
 
 | Fil | Beskrivning |
 |-----|-------------|
-| [`PRD.md`](PRD.md) | Product Requirements Document, itereras i dialog |
+| [`index.html`](index.html) | Den interaktiva sidan |
+| [`styles.css`](styles.css) | CSS för sidan |
+| [`app.js`](app.js) | Datamodell, beräkning, interaktion |
+| [`PRD.md`](PRD.md) | Product Requirements Document, itererad i dialog |
 | [`SPEC.md`](SPEC.md) | Låst bygg-spec: datamodell, färgregler, komponenter, acceptanslista |
+| [`process-logg.md`](process-logg.md) | Beslut under bygget, tre leveranser |
 | [`README.md`](README.md) | Den här filen |
 | `ekonomikommunikation.xlsx` | Kents exempelresultaträkningar (typfall A–D, två tidsögonblick) |
-| `index.html` + CSS + JS | Kommer. Den interaktiva sidan, byggs i den här mappen (SPEC avsnitt 2). |
 
 ## Status
 
-Under planering. Scope är satt: en ståndpunkt om ekonomikommunikation. Den
-interaktiva HTML-sidan byggs först och blir tänkredskapet, blogginlägget
-(upplägg C, "Kan vi anställa henne i tre år?") skrivs sedan och utgår från
-sidan.
+**Sidan är byggd** (`index.html` + `styles.css` + `app.js`) och verifierad
+lokalt i webbläsare mot acceptanslistan i [`SPEC.md`](SPEC.md) avsnitt 9.
+Länkad från Ekonomi-startsidan och upptagen i `Ekonomi/README.md`.
 
 Sidan visar en forskargrupps resultaträkning fyra år fram, i fyra typfall
 (A–D) plus ett redigerbart läge D-ver2, sedd från år X och år X+1. En portfölj
@@ -56,9 +58,8 @@ tidsbegränsade bidrag löper ut medan lönekostnaderna ligger platt. Varningen
 på negativ RESULTAT-rad trappas upp från A till D, och de tomma
 intäktscellerna längre fram väcker frågan om nya bidrag är på väg.
 
-Planeringen är klar. [`SPEC.md`](SPEC.md) är skriven och låst. Nästa steg är
-att bygga sidan (`index.html` + CSS + JS) mot acceptanslistan i SPEC avsnitt 9.
-Bakgrund och beslut finns i [`PRD.md`](PRD.md) avsnitt 3 och 12.
+Nästa steg: blogginlägget (upplägg C, "Kan vi anställa henne i tre år?") som
+utgår från sidan. Se [`PRD.md`](PRD.md) avsnitt 7.
 
 ## Datummappen
 
