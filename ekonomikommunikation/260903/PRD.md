@@ -169,17 +169,18 @@ Bannertexterna anges i [`SPEC.md`](SPEC.md) avsnitt 4.2.
 
 | Fall | RESULTAT X+1 → X+4 (exempel, tkr) | Röda år | Varning |
 |------|----------------------------------|---------|---------|
-| **A** | 0, 0, 0, 0 | inga | Grön kvittens. |
+| **A** | −100, 17, 34, −49 | inga | Grön. Små årsvariationer, alla under 2 %-toleransen. |
 | **B** | 0, 0, −500, −3 500 | X+4 (X+3 gult) | Mild. Gul cell X+3, röd X+4. |
 | **C** | 0, 0, −3 000, −4 600 | X+3, X+4 | Tydlig. Två röda celler. |
 | **D** | −500, −4 600, −4 600, −7 600 | X+2, X+3, X+4 (X+1 gult) | Kraftig. Redan X+1 avviker. Tre röda celler, framträdande banner. |
 
 **Färgskala (beslut 2026-09-03), tre steg:**
 
-- **Grönt:** intäkter matchar kostnader, resultatet är noll eller positivt.
-- **Gult:** en mindre avvikelse. Året går inte riktigt ihop, men glappet är
-  litet mot årets kostnad.
-- **Rött:** en kraftig avvikelse. Året går klart inte ihop.
+- **Grönt:** resultatet är noll eller positivt, eller ett underskott som är
+  mindre än 2 % av årets kostnad (balanstoleransen, tillagd 2026-09-03 för att
+  grupp AA:s små årsvariationer ska läsas som "i fas").
+- **Gult:** en mindre avvikelse, mellan 2 % och tröskeln.
+- **Rött:** en kraftig avvikelse, över tröskeln.
 
 Ingen separat grå "inom marginal"-nivå. Banner-varningen trappas upp med
 antalet **röda** år, inte de gula. Därför är B ett fall med ett rött år (X+4),
@@ -235,13 +236,15 @@ X rullar ur bild, och ett nytt år X+5 kommer in, oftast med underskott.
 
 | Fall | Σ RESULTAT sett från X | Σ RESULTAT sett från X+1 | Ett år senare (exempel, tkr) |
 |------|-----------------------|--------------------------|------------------------------|
-| A | +1 260 | 0 | −1 260 |
+| A | −38 | −230 | −192 ("i praktiken oförändrat") |
 | B | −2 740 | −9 500 | −6 760 |
 | C | −6 340 | −16 200 | −9 860 |
 | D | −16 040 | −28 400 | −12 360 |
 
-(D:s tal ändrat 2026-09-03 sedan Bidragsgivare 5:s 500 tkr år X+1 tagits bort,
-se beslutsloggen. D går nu minus redan X+1.)
+D:s tal ändrat 2026-09-03 (Bidragsgivare 5:s 500 tkr år X+1 borttagen). A:s
+tal ändrat 2026-09-03 (ny AA-tabell: löner +3 %/år, små årsvariationer). AA
+ligger nu nära balans varje år, och bilden är i stort sett oförändrad ett år
+senare.
 
 Alla fyra blir sämre på det här måttet, även A, fast A inte visar underskott
 något enskilt år. Bufferten är borta. Det är själva poängen: att stå still ett
@@ -511,3 +514,5 @@ att pricka av bygget mot.
 | 2026-09-03 (bygge) | Leverans 4: typfallen döptes om till grupp AA/BB/CC/DD (+ DD-ver2) på sidan. Inledande texten skrevs om: fyra grupper med olika framförhållning och olika lätt att få intäkter, ingen text som skriver ut "forskargrupp"/"forskning". |
 | 2026-09-03 (bygge) | Hover-frågan gjord gruppspecifik och visas på två ställen: liten ruta vid cellen (fast position) plus rutan under tabellen som byts och blinkar till. För grupp DD är reflektionen utbyggd och står framme även utan hover, med fokus på DD:s historik och strukturella möjligheter att säkra avtal i förtid. |
 | 2026-09-03 (bygge) | Inledningen omskriven av Kent, med hans formuleringar bevarade. Budskapet: grupperna har olika förmåga att i god tid säkra medel, och en grupp kan gå från lätt till svårt eller tvärtom, av tur eller läge, inte bara av skötsamhet. Claude rättade tre entydiga språkfel. |
+| 2026-09-03 (bygge) | Grupp AA fick ny taldata (Kents Excel): egen kostnadsstruktur med löner +3 %/år och OH = 22 % av lönerna, samt Bidragsgivare 5–7 med små variationer. AA ligger nu nära balans varje år, RESULTAT ±100-tals kr. Även "sett från X+1" byggd i samma anda. Σ sett från X −38, ett år senare −192. |
+| 2026-09-03 (bygge) | Balanstolerans tillagd: underskott under 2 % av årets kostnad färgas grönt och räknas inte i banner. "Ett år senare"-tal under 300 tkr visas neutralt som "i praktiken oförändrat", och Σ-staplarna skalas mot minst 2 000 tkr. Så att AA:s småvariationer inte läser som varningar. |

@@ -133,6 +133,35 @@ som pauser, hans citattecken, "precis, precis", meningsfragmenten i första
 stycket. Rubriken "Fyra grupper" och en kort orienteringsrad ("Välj grupp och
 tidpunkt") behölls efter ingressen.
 
+## 2026-09-03 – Leverans 5: grupp AA putsad
+
+Kent skickade en ny AA-tabell (Excel) och bad om att grupp AA ännu tydligare
+ska ligga i fas varje år, med bara små variationer, och att lönerna räknas upp
+~3 % per år.
+
+**Gjort:**
+
+- AA fick egna kostnads-arrayer (`KOST_AA_X`, `KOST_AA_X1`). Löner: −5 000,
+  −5 150, −5 300, −5 450, (−5 600). OH = 22 % av lönerna. BB, CC, DD är orörda.
+- AA:s intäkter: Bidragsgivare 5 varierar (500 / 400 / 700 / 900 / 1000),
+  Bidragsgivare 6 = 700, Bidragsgivare 7 = 1 800, allt bara år X.
+- "Sett från X+1" byggd i samma anda: samma resultat X+1…X+4 som "sett från X",
+  plus ett nytt X+5. Bidragsgivare 5 fortsätter uppåt.
+- RESULTAT AA sett från X: 60 / −100 / 17 / 34 / −49. Σ = −38.
+- **Balanstolerans** tillagd i `niva()`: `kvot < 2 %` → grön. AA:s små negativa
+  år blir gröna, banner grön ("Går ihop alla år i fönstret").
+- **"Ett år senare"-kortet** justerat: tal under 300 tkr visas neutralt med
+  "i praktiken oförändrat", ingen pil. Σ-staplarna skalas mot minst 2 000 tkr
+  så ett litet tal ger en liten stapel.
+
+**Kents fråga "är detta lätt?":** ja. Taldata är fyra arrayer i `app.js`.
+Sidan räknar om allt annat. Den enda kod-touchen var AA:s egna kostnads-arrayer
+plus toleransen och kort-justeringen.
+
+**Verifierat i webbläsare:** AA:s tal båda vyerna mot Excel, gröna celler,
+grön banner, "−192 tkr i praktiken oförändrat", att BB/CC/DD är oförändrade.
+Inga konsolfel.
+
 **Status:** sidan klar. Nästa steg är blogginlägget (PRD avsnitt 7).
 
 **Öppet, ej blockerande:** de två RESULTAT-raderna staplade (PRD avsnitt 11),

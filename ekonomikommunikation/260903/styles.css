@@ -185,6 +185,7 @@ p { margin: 0 0 14px; }
 .eas-tal .eas-nr { font-size: 1.7rem; font-weight: 700; line-height: 1.2; color: var(--rod-ink); }
 .eas-tal .eas-nr.plus { color: var(--marin); }
 .eas-tal .eas-sub { font-size: 0.78rem; color: var(--ink-muted); }
+.eas-nara { display: inline-block; margin-left: 4px; padding: 1px 6px; border-radius: 4px; background: var(--gron-bg); color: var(--gron-ink); font-size: 0.72rem; }
 .eas-bars { flex: 1; min-width: 230px; }
 .eas-bar-row { display: flex; align-items: center; gap: 8px; margin: 5px 0; font-size: 0.8rem; color: var(--ink-muted); }
 .eas-bar-lbl { width: 110px; white-space: nowrap; }

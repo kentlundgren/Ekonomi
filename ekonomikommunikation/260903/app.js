@@ -24,6 +24,19 @@
     ["OH", [-1540, -1100, -1100, -1100, -1100]],
     ["Avskrivningar", r5(-500)]
   ];
+  // Grupp AA: löner räknas upp ~3 % per år, OH är 22 % av lönerna.
+  var KOST_AA_X = [
+    ["Löner", [-7000, -5000, -5150, -5300, -5450]],
+    ["Diverse", r5(-1000)],
+    ["OH", [-1540, -1100, -1133, -1166, -1199]],
+    ["Avskrivningar", r5(-500)]
+  ];
+  var KOST_AA_X1 = [
+    ["Löner", [-5000, -5150, -5300, -5450, -5600]],
+    ["Diverse", r5(-1000)],
+    ["OH", [-1100, -1133, -1166, -1199, -1232]],
+    ["Avskrivningar", r5(-500)]
+  ];
   var KOST_X1 = [
     ["Löner", [-5000, -5000, -5000, -5000, -7000]],
     ["Diverse", [-1000, -1000, -1000, -1000, -560]],
@@ -35,13 +48,13 @@
     A: {
       fromX: {
         kol: ["X", "X+1", "X+2", "X+3", "X+4"],
-        intakter: [r5(1000), r5(2000), r5(1100), r5(3000), r5(500), [700, 0, 0, 0, 0], [3000, 0, 0, 0, 0]],
-        kostnader: KOST_X
+        intakter: [r5(1000), r5(2000), r5(1100), r5(3000), [500, 400, 700, 900, 1000], [700, 0, 0, 0, 0], [1800, 0, 0, 0, 0]],
+        kostnader: KOST_AA_X
       },
       fromX1: {
         kol: ["X+1", "X+2", "X+3", "X+4", "X+5"],
-        intakter: [r5(1000), r5(2000), r5(1100), r5(3000), r5(500), [0, 0, 0, 0, 2000], r5(0)],
-        kostnader: KOST_X1
+        intakter: [r5(1000), r5(2000), r5(1100), r5(3000), [400, 700, 900, 1000, 1100], r5(0), r5(0)],
+        kostnader: KOST_AA_X1
       }
     },
     B: {
@@ -165,9 +178,12 @@
     return { ti: ti, tk: tk, res: res };
   }
 
+  var TOL = 0.02; // avvikelser under 2 % av årets kostnad räknas som i balans
+
   function niva(resVal, kostVal) {
     if (resVal >= -0.5) return "gron";
     var kvot = -resVal / Math.abs(kostVal);
+    if (kvot < TOL) return "gron";
     return kvot < state.troskel ? "gul" : "rod";
   }
 
@@ -192,7 +208,7 @@
       var sD = sigma(DATA.D[state.tid]);
       var sN = sigma(aktuellSnap());
       var d = sN - sD;
-      var mx = Math.max(Math.abs(sD), Math.abs(sN), 1);
+      var mx = Math.max(Math.abs(sD), Math.abs(sN), 2000);
       el.innerHTML =
         '<div class="eas-tal">'
         + '<div class="eas-label">Din version jämfört med Fall D</div>'
@@ -209,12 +225,16 @@
     var sx = sigma(DATA[state.fall].fromX);
     var sx1 = sigma(DATA[state.fall].fromX1);
     var delta = sx1 - sx;
-    var maxAbs = Math.max(Math.abs(sx), Math.abs(sx1), 1);
+    var maxAbs = Math.max(Math.abs(sx), Math.abs(sx1), 2000);
+    var namara = Math.abs(delta) < 300;
+    var pil = namara ? "" : delta < 0 ? "↓ " : "↑ ";
+    var teckental = (delta > 0 ? "+" : "") + fmt(delta);
+    var nara = namara ? ' <span class="eas-nara">i praktiken oförändrat</span>' : "";
     el.innerHTML =
       '<div class="eas-tal">'
       + '<div class="eas-label">Ett år senare, hela fönstret</div>'
-      + '<div class="eas-nr' + (delta >= 0 ? " plus" : "") + '">' + (delta < 0 ? "↓ " : "") + fmt(delta) + " tkr</div>"
-      + '<div class="eas-sub">Σ resultat: ' + fmt(sx) + " → " + fmt(sx1) + "</div>"
+      + '<div class="eas-nr' + (delta >= 0 || namara ? " plus" : "") + '">' + pil + teckental + " tkr</div>"
+      + '<div class="eas-sub">Σ resultat: ' + fmt(sx) + " → " + fmt(sx1) + nara + "</div>"
       + "</div>"
       + '<div class="eas-bars">'
       + bar(sx, "sett från år X", state.tid === "fromX", maxAbs)
