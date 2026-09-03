@@ -142,11 +142,16 @@ utfällt.
 och en JS-fil. Live-URL blir
 `https://kentlundgren.github.io/Ekonomi/ekonomikommunikation/260903/`.
 
-Detta avviker från Ekonomi-projektets vanliga mönster (en fristående
-HTML-fil per sida, placerad i en sektionsmapp och inlagd i sajtens
-navigering). 260903 är en daterad arbetsmapp, inte en sektion. Sidan blir
-alltså en egen sida på sin URL. Om den senare ska nås från Ekonomi-sajtens
-meny är det ett separat steg, se avsnitt 11.
+Filplaceringen (daterad arbetsmapp, egna CSS- och JS-filer) avviker från
+Ekonomi-projektets vanliga mönster med en fristående HTML-fil per
+sektionsmapp. Det är medvetet.
+
+Sidan ska ändå följa projektets konventioner i övrigt: den gemensamma
+site-nav-raden längst upp, GitHub-hörnan nere till vänster och teknik-modalen
+nere till höger. Och den ska gå att nå från Ekonomi-sajten (beslut
+2026-09-03): en länk läggs in på startsidan `index.html`, och sidan tas upp i
+`Ekonomi/README.md` (projektstruktur, Live-sidor, filbeskrivning). Exakt var i
+menyn avgörs vid bygget.
 
 ### 3.8 Fyra typfall och hur varningen trappas upp
 
@@ -276,6 +281,12 @@ den här gången också, så att intäkterna matchar kostnaderna?**
 Sidan ska alltså inte bara varna. Den ska få läsaren att fråga sig hur illa
 det egentligen är, och tvinga fram samtalet med gruppen.
 
+**På mobil (beslut 2026-09-03):** ingen pekare finns, så hover ersätts med
+tryck. De tomma intäktscellerna är tryckbara och uppdaterar frågerutan under
+tabellen. Frågerutan visas dessutom alltid för Fall D. C-knappens växling
+mellan gult och rött är en animation som inte kräver någon interaktion och
+fungerar likadant på mobil.
+
 ### 3.11 Typfall D-ver2: läsaren fyller på
 
 Ett femte läge, "D-ver2", utgår från Typfall D men är redigerbart. Läsaren
@@ -288,12 +299,10 @@ ser hur mycket ny finansiering som krävs för att komma tillbaka till grönt.
 
 **Friktion mot önsketänkande:** varje gång läsaren lägger in en ny intäkt
 kommer en notis upp, ungefär: *är du säker på att den här intäkten, det här
-bidraget, kommer just det året?* Poängen är att sidan inte ska bli ett verktyg
-för att räkna hem osannolika antaganden. Den ska tvinga fram samma prövning
-som ett hederligt budgetsamtal gör.
-
-Öppet: om notisen ska kräva ett aktivt val (ja, sannolikt / nej, ta bort) eller
-bara vara en påminnelse. Se avsnitt 11.
+bidraget, kommer just det året?* Notisen är bara en påminnelse (beslut
+2026-09-03). Den blockerar inte och kräver inget aktivt val. Poängen är att
+sidan inte ska bli ett verktyg för att räkna hem osannolika antaganden, utan
+tvinga fram samma prövning som ett hederligt budgetsamtal gör.
 
 ---
 
@@ -397,8 +406,9 @@ se avsnitt 11.
 2. ~~Kent berättar mer om modellen och vad HTML-sidan ska visa.~~ Klart, se
    avsnitt 3.6–3.11.
 3. ~~Skiss till sidan (inline, engångsskiss).~~ Klart, itererad flera varv.
-4. Sista öppna frågorna i avsnitt 11 stängs.
-5. `SPEC.md` skapas med de avprickningsbara leveranserna.
+4. ~~Sista öppna frågorna i avsnitt 11 stängs.~~ Klart, en fråga (3.9) avgjord
+   i SPEC: två explicita resultaträkningar per typfall.
+5. ~~`SPEC.md` skapas.~~ Klart 2026-09-03.
 6. Bygg sidan i `ekonomikommunikation/260903/` som `index.html` + CSS + JS,
    med GitHub-hörna och teknik-modal (avsnitt 6.1). Aktivera skill
    `kent-bygg-sidor`. Process-logg förs parallellt.
@@ -416,32 +426,35 @@ minnet om vibe-coding-transparens, i en egen `process-logg.md` i den här mappen
 ## 10. SPEC.md-checkpoint
 
 Enligt Kents meta-regel 6 ska varje PRD ha en checkpoint mot en `SPEC.md`.
-`SPEC.md` skapas när HTML-sidans innehåll är bestämt och arbetsplanen i
-avsnitt 9 är bekräftad. Den listar de avprickningsbara leveranserna
-(HTML-sida live, README uppdaterad, blogginlägg publicerat, LinkedIn-inlägg).
 
-Tills dess: **ingen SPEC.md än.** PRD:n är i planeringsfas.
+[`SPEC.md`](SPEC.md) skapades 2026-09-03. Den låser datamodellen (de åtta
+resultaträkningarna), färg- och varningsreglerna, komponentlistan, D-ver2,
+projektkonventionerna och sajtkopplingen, och avslutas med en acceptanslista
+att pricka av bygget mot.
 
 ---
 
 ## 11. Öppna frågor
 
-Om HTML-sidan:
+**Kvar innan bygg:**
 
 - **Modellval för de två tidsögonblicken:** två explicita resultaträkningar
-  per typfall, eller en bidragsportfölj som sidan räknar fram från? (Avsnitt 3.9)
-- **D-ver2-notisen:** aktivt val (ja, sannolikt / nej) eller bara en
-  påminnelse när läsaren lägger in en intäkt? (Avsnitt 3.11)
-- **Mobil:** hur ska hover-frågan på den tomma intäktsytan (avsnitt 3.10) och
-  C-knappens gult/rött-växling fungera på pekskärm?
-- **Sajtens meny:** ska sidan nås från Ekonomi-sajtens navigering, eller stå
-  ensam på sin URL? (Filplacering är beslutad, se avsnitt 3.7.)
+  per typfall, eller en underliggande bidragsportfölj som sidan räknar fram
+  från? (Avsnitt 3.9) Avgörs när `SPEC.md` skrivs.
 
-Besvarade 2026-09-03: tröskeln gul/röd är inställbar med 15 % som förval;
-läsaren växlar mellan A/B/C/D som färgade knappar; egna siffror hanteras via
-det redigerbara läget D-ver2; sidans filer ligger i `260903/`.
+**Besvarade 2026-09-03:**
 
-Om blogginlägget (avgörs närmare publicering):
+- Tröskeln gul/röd är inställbar, förval 15 % av årets kostnad.
+- Läsaren växlar mellan A/B/C/D som färgade knappar (grön, gul, gul/röd, röd).
+- Egna siffror hanteras via det redigerbara läget D-ver2.
+- D-ver2-notisen är bara en påminnelse, inget aktivt val.
+- Mobil: hover ersätts med tryck, frågerutan visas alltid för D, C-knappens
+  växling är en animation.
+- Sidan ska nås från Ekonomi-sajten: länk på startsidan och rader i
+  `Ekonomi/README.md`.
+- Sidans filer ligger i `ekonomikommunikation/260903/`.
+
+**Om blogginlägget (avgörs närmare publicering):**
 
 - **Persongalleri:** namngiven scen, generiska roller, eller Kents jag-form?
 - **Serie:** publiceras C ensam först, med A och B som möjliga uppföljare?
@@ -468,3 +481,9 @@ Om blogginlägget (avgörs närmare publicering):
 | 2026-09-03 | Typfallsknapparna färgas: A grön, B gul, C växlar gult/rött, D röd. |
 | 2026-09-03 | Nytt läge D-ver2: redigerbart, läsaren lägger in egna intäkter och sänker kostnader. Varje ny intäkt utlöser en notis som frågar om intäkten verkligen kommer det året. |
 | 2026-09-03 | Filplacering: sidan byggs i `ekonomikommunikation/260903/` som index.html + CSS + JS. Avviker från projektets en-fil-per-sektion-mönster, medvetet. |
+| 2026-09-03 | D-ver2-notisen är bara en påminnelse, blockerar inte. |
+| 2026-09-03 | Mobil: hover ersätts med tryck, frågerutan alltid synlig för D. |
+| 2026-09-03 | Sidan nås från Ekonomi-sajten: länk på startsidan, rader i Ekonomi/README.md. Sidan bär site-nav, GitHub-hörna och teknik-modal som resten av projektet. |
+| 2026-09-03 | Alla öppna frågor om sidan stängda utom modellvalet i 3.9, som avgörs när SPEC.md skrivs. |
+| 2026-09-03 | Modellvalet (3.9) avgjort: två explicita resultaträkningar per typfall och tidsögonblick, inte framräkning ur en portfölj. |
+| 2026-09-03 | SPEC.md skapad. Datamodell, färgregler, komponenter, D-ver2, sajtkoppling och acceptanslista låsta. Redo för bygge. |

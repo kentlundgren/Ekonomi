@@ -38,9 +38,10 @@ Då ska den här README:n uppdateras med en klickbar länk dit.
 | Fil | Beskrivning |
 |-----|-------------|
 | [`PRD.md`](PRD.md) | Product Requirements Document, itereras i dialog |
+| [`SPEC.md`](SPEC.md) | Låst bygg-spec: datamodell, färgregler, komponenter, acceptanslista |
 | [`README.md`](README.md) | Den här filen |
 | `ekonomikommunikation.xlsx` | Kents exempelresultaträkningar (typfall A–D, två tidsögonblick) |
-| `index.html` + CSS + JS | Kommer. Den interaktiva sidan, byggs i den här mappen (PRD avsnitt 3.7). |
+| `index.html` + CSS + JS | Kommer. Den interaktiva sidan, byggs i den här mappen (SPEC avsnitt 2). |
 
 ## Status
 
@@ -55,9 +56,9 @@ tidsbegränsade bidrag löper ut medan lönekostnaderna ligger platt. Varningen
 på negativ RESULTAT-rad trappas upp från A till D, och de tomma
 intäktscellerna längre fram väcker frågan om nya bidrag är på väg.
 
-Skisserna är framtagna och itererade. Nästa steg: stäng sista öppna frågorna
-(PRD avsnitt 11), skapa `SPEC.md`, bygg sidan. Detaljerna finns i
-[`PRD.md`](PRD.md) avsnitt 3 och 12.
+Planeringen är klar. [`SPEC.md`](SPEC.md) är skriven och låst. Nästa steg är
+att bygga sidan (`index.html` + CSS + JS) mot acceptanslistan i SPEC avsnitt 9.
+Bakgrund och beslut finns i [`PRD.md`](PRD.md) avsnitt 3 och 12.
 
 ## Datummappen
 
