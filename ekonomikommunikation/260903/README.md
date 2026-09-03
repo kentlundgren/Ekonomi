@@ -5,6 +5,34 @@ Arbetsmapp skapad 2026-09-03.
 Här ligger planeringen för hur Kent Lundgren kan kommunicera sin syn på hur
 ekonomi kan kommuniceras. Startpunkten är [`PRD.md`](PRD.md) i den här mappen.
 
+---
+
+## 🗂️ Lokalt repo
+
+Repo-rot lokalt:
+
+`C:\Users\kentl\OneDrive\AI\Claude\Ekonomi`
+
+Den här arbetsmappen lokalt:
+
+`C:\Users\kentl\OneDrive\AI\Claude\Ekonomi\ekonomikommunikation\260903`
+
+På GitHub: <https://github.com/kentlundgren/Ekonomi/tree/main/ekonomikommunikation/260903>
+
+⚠️ `Ekonomi` ligger nästlat inuti föräldramappen `...\AI\Claude\`, som också
+är ett eget git-repo (remote: `Ovrigt`). Öppna alltid `Ekonomi`-mappen direkt
+i Cursor, aldrig föräldramappen. Se [`Ekonomi/README.md`](../../README.md),
+avsnittet "Nested Git-repo".
+
+## 🌐 Live-sida
+
+Ingen egen live-sida än. När en `index.html` skapas i den här mappen
+publiceras den på:
+
+`https://kentlundgren.github.io/Ekonomi/ekonomikommunikation/260903/`
+
+Då ska den här README:n uppdateras med en klickbar länk dit.
+
 ## Innehåll
 
 | Fil | Beskrivning |
