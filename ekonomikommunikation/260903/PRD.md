@@ -132,9 +132,10 @@ till X+4. Raderna:
 - TOT kostnader.
 - RESULTAT.
 
-Bidragsgivarraderna är hopfällbara. TOT-raderna och RESULTAT syns direkt, så
-att första intrycket är rent. Vill man se vilken finansiär som faller bort
-vilket år fäller man ut detaljen.
+Alla bidragsgivarrader visas som default (beslut 2026-09-03). Poängen är att
+läsaren direkt ska se de tomma cellerna längre fram, alltså att bidrag saknas
+för de kommande åren. En knapp kan fälla ihop raderna, men utgångsläget är
+utfällt.
 
 ### 3.8 Fyra typfall och hur varningen trappas upp
 
@@ -142,20 +143,24 @@ Samma resultaträkning i fyra lägen. Innevarande år X är oproblematiskt i all
 fyra. Skillnaden ligger i hur tidigt och hur djupt RESULTAT vänder negativt
 under X+1 till X+4.
 
-| Fall | RESULTAT X+1 → X+4 (exempel, tkr) | Problemår | Varning |
-|------|----------------------------------|-----------|---------|
-| **A** | 0, 0, 0, 0 | inga | Ingen. Grön kvittens. |
-| **B** | 0, 0, −500, −3 500 | X+4 (X+3 inom marginal) | Mild. RESULTAT-cellen för X+4 färgas, kort banner "lite oroande". |
-| **C** | 0, 0, −3 000, −4 600 | X+3, X+4 | Tydlig. Båda cellerna färgas, banner "oroande". |
-| **D** | −4 600, −4 600, −7 600 (X+2 → X+4) | X+2, X+3, X+4 | Kraftig. Tre celler färgas, framträdande banner "agera nu". |
+| Fall | RESULTAT X+1 → X+4 (exempel, tkr) | Röda år | Varning |
+|------|----------------------------------|---------|---------|
+| **A** | 0, 0, 0, 0 | inga | Grön kvittens. |
+| **B** | 0, 0, −500, −3 500 | X+4 (X+3 gult) | Mild. Gul cell X+3, röd X+4, banner "lite oroande". |
+| **C** | 0, 0, −3 000, −4 600 | X+3, X+4 | Tydlig. Två röda celler, banner "oroande". |
+| **D** | −4 600, −4 600, −7 600 (X+2 → X+4) | X+2, X+3, X+4 | Kraftig. Tre röda celler, framträdande banner "agera nu". |
 
-**Varningens form (beslut 2026-09-03):** färg på den negativa RESULTAT-cellen,
-graderad efter hur illa (mild, tydlig, kraftig), plus en sammanfattande banner
-för hela fallet. Tabellen i övrigt förblir neutral.
+**Färgskala (beslut 2026-09-03), tre steg:**
 
-**Marginal:** en avvikelse som är liten mot årets kostnad räknas som i nivå och
-utlöser ingen varning. Därför är B ett fall med ett problemår, inte två.
-Tröskeln (t.ex. en andel av årets kostnad) är en öppen fråga, se avsnitt 11.
+- **Grönt:** intäkter matchar kostnader, resultatet är noll eller positivt.
+- **Gult:** en mindre avvikelse. Året går inte riktigt ihop, men glappet är
+  litet mot årets kostnad.
+- **Rött:** en kraftig avvikelse. Året går klart inte ihop.
+
+Ingen separat grå "inom marginal"-nivå. Tröskeln mellan gult och rött är en
+öppen fråga, se avsnitt 11. Banner-varningen trappas upp med antalet **röda**
+år, inte de gula. Därför är B ett fall med ett rött år (X+4), medan X+3 bara
+får en gul markering.
 
 Poängen: varningen växer med hur nära i tid problemet ligger och hur många år
 som inte går ihop. Ett underskott om fyra år är en signal att bevaka. Ett
@@ -163,11 +168,15 @@ underskott redan om två år är ett beslutsläge nu.
 
 ### 3.9 Två tidsögonblick per typfall (dynamiken)
 
-Varje typfall ska gå att se från två utkikspunkter:
+Varje typfall ska gå att se från två utkikspunkter. De två kontrollerna ska
+vara tydligt avskilda från typfallsknapparna (A/B/C/D) och benämnda så att
+innebörden framgår:
 
-- **Sett från år X:** resultaträkningen för X och X+1 till X+4.
-- **Sett från år X+1:** samma grupp ett år senare. Fönstret har flyttats fram,
-  kolumnerna är nu X+1 till X+5. Ett nytt år, X+5, kommer in i bilden.
+- **Sett från år X, "så här ser det ut i år":** resultaträkningen för X och
+  X+1 till X+4.
+- **Sett från år X+1, "så här ser det ut nästa år":** samma grupp ett år
+  senare. Fönstret har flyttats fram, kolumnerna är X+1 till X+5. Ett nytt år,
+  X+5, kommer in i bilden.
 
 Mellan de två ögonblicken hinner saker ändras. Ett nytt bidrag kan ha landat
 för ett år långt fram. Lönekostnaden kan ha tagit ett steg upp. Ett nytt år,
@@ -216,6 +225,36 @@ Plus växlingen mellan de två ögonblicken, där talet räknas fram när man by
 (enklast, och gör tydligt att informationen ändras), eller en underliggande
 bidragsportfölj där sidan räknar fram vad som är känt vid respektive utkiksår.
 Se avsnitt 11.
+
+### 3.10 Den tomma ytan: frågan sidan ska väcka
+
+De tomma cellerna längre fram i intäktsdelen är sidans viktigaste
+kommunikativa yta, särskilt i Fall D och särskilt sett från X+1, när bilden
+ser riktigt risig ut.
+
+När läsaren för pekaren över den tomma ytan bland intäkterna ska en fråga
+komma fram, ungefär: *kommer det troligen in nya bidrag eller intäkter under
+de här åren?* Det är precis vad ekonomen frågar sig när hen ser Fall D.
+
+Tomrummet kan betyda flera olika saker, och sidan ska leda läsaren till att
+ställa frågan i stället för att dra en förhastad slutsats:
+
+- Forskningsledaren har avtal eller bidrag på gång som ännu inte är klara,
+  signerade, inlagda i systemet eller kommunicerade.
+- Ekonomen eller forskningsledaren har missat att lägga in kända intäktskällor.
+- Verksamheten håller medvetet på att avvecklas, eller flyttar till ett annat
+  lärosäte.
+- Interna medel ska bära medarbetarna framåt.
+- Gruppen brukar inte visa bidrag som ligger längre fram, men brukar ändå
+  landa dem i tid när åren närmar sig. Historiskt har intäkterna matchat
+  kostnaderna, gång på gång.
+
+Poängen är inte att avgöra vilket. Poängen är att frågan måste ställas tydligt
+till forskargruppen: **hur ser det ut just nu, kommer ni att få ihop budgeten
+den här gången också, så att intäkterna matchar kostnaderna?**
+
+Sidan ska alltså inte bara varna. Den ska få läsaren att fråga sig hur illa
+det egentligen är, och tvinga fram samtalet med gruppen.
 
 ---
 
@@ -349,11 +388,12 @@ Om HTML-sidan:
 
 - **Modellval för de två tidsögonblicken:** två explicita resultaträkningar
   per typfall, eller en bidragsportfölj som sidan räknar fram från? (Avsnitt 3.9)
-- **Marginaltröskeln:** hur stor får en avvikelse vara för att räknas som i
-  nivå? Fast andel av årets kostnad, eller inställbar på sidan?
+- **Gul/röd-tröskeln:** vid vilken andel av årets kostnad går en gul markering
+  över till röd? Fast värde, eller inställbar på sidan?
 - Ska läsaren kunna växla mellan A/B/C/D, eller ses alla fyra samtidigt?
 - Ska läsaren kunna mata in egna siffror, eller är exemplet fast?
-- Färgtrappan: gul → orange → röd, eller en nyans som blir mörkare?
+- Hur ska hover-frågan på den tomma intäktsytan (avsnitt 3.10) se ut på
+  mobil, där det inte finns någon pekare?
 - Var i Ekonomi-projektets struktur hör sidan hemma? Egen sektion, eller
   under ekonomistyrning?
 
@@ -374,7 +414,9 @@ Om blogginlägget (avgörs närmare publicering):
 | 2026-09-03 | AI-vinkeln hålls implicit: GitHub-hörna + teknik-modal på sidan, ingen AI-argumentation i texten. Teknik-modalen nämner att bra prompter, kontext och harness krävs. |
 | 2026-09-03 | Sidan bärs av fyra typfall (A–D) för en forskare NN, med visuell varning som trappas upp: A ingen, B mild, C tydlig, D kraftig. |
 | 2026-09-03 | Mekanismen: portfölj av tidsbegränsade bidrag som löper ut medan lönekostnaderna ligger platt. Kent skickade fyra exempelresultaträkningar (X, X+1…X+4). |
-| 2026-09-03 | Format: full resultaträkning, bidragsgivarrader hopfällbara, TOT och RESULTAT syns direkt. |
-| 2026-09-03 | Varning: färg på negativ RESULTAT-cell (graderad) plus sammanfattande banner. B:s X+3 på −500 räknas som inom marginalen, alltså ett problemår i B. |
-| 2026-09-03 | Dynamik tillagd: varje typfall ses från två tidsögonblick (år X och år X+1). Fall A balanserar varje enskilt år från båda. |
+| 2026-09-03 | Format: full resultaträkning. Alla bidragsgivarrader visas som default, så att de tomma cellerna längre fram syns direkt. Knapp för att fälla ihop. |
+| 2026-09-03 | Varning: färg på negativ RESULTAT-cell plus sammanfattande banner som trappas upp med antalet röda år. |
+| 2026-09-03 | Dynamik tillagd: varje typfall ses från två tidsögonblick (år X och år X+1). Fall A balanserar varje enskilt år från båda. Tidsknapparna avskilda från A/B/C/D och benämnda "i år" / "nästa år". |
 | 2026-09-03 | Försämringsmått: Σ RESULTAT i fönstret, sett från X+1 minus sett från X. Alla fyra fallen blir sämre (A −1 260, B −6 760, C −9 860, D −12 860 tkr i exemplet). Visas som ett tal per fall + de två RESULTAT-raderna + en stapel. |
+| 2026-09-03 | Färgskala: tre steg, grönt / gult (mindre avvikelse) / rött (kraftig avvikelse). Ingen separat grå nivå. |
+| 2026-09-03 | Den tomma intäktsytan (avsnitt 3.10) är sidans viktigaste kommunikativa yta. Hover, särskilt i Fall D sett från X+1, väcker frågan om nya bidrag är på väg och leder läsaren till samtalet med gruppen. |
