@@ -122,6 +122,17 @@ strukturellt sämre möjligheter att säkra avtal i förväg?
 hover på AA (vila → gul + puls + liten ruta → tillbaka), tooltip-position,
 D-ver2 oförändrad, ingen horisontell scroll, inga konsolfel.
 
+**Inledningen skrevs om av Kent (samma dag).** Han lämnade en egen text med
+tre stycken och bad om att den skulle in med hans formuleringar bevarade.
+Budskapet flyttades: från "ekonomen ska rapportera framåt" till "grupperna
+har olika förmåga att i god tid säkra medel, och en grupp kan gå från lätt
+till svårt eller tvärtom, av tur eller läge, inte bara av skötsamhet". Jag
+rättade bara tre entydiga språkfel: dubblerat "för för", "få i pengar" →
+"få in pengar", och ett saknat "det" i sista meningen. Kvar: hans kommatecken
+som pauser, hans citattecken, "precis, precis", meningsfragmenten i första
+stycket. Rubriken "Fyra grupper" och en kort orienteringsrad ("Välj grupp och
+tidpunkt") behölls efter ingressen.
+
 **Status:** sidan klar. Nästa steg är blogginlägget (PRD avsnitt 7).
 
 **Öppet, ej blockerande:** de två RESULTAT-raderna staplade (PRD avsnitt 11),
