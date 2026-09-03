@@ -37,8 +37,10 @@ Då ska den här README:n uppdateras med en klickbar länk dit.
 
 | Fil | Beskrivning |
 |-----|-------------|
-| [`PRD.md`](PRD.md) | Product Requirements Document – skelett, fylls på i dialog |
+| [`PRD.md`](PRD.md) | Product Requirements Document, itereras i dialog |
 | [`README.md`](README.md) | Den här filen |
+| `ekonomikommunikation.xlsx` | Kents exempelresultaträkningar (typfall A–D, två tidsögonblick) |
+| `index.html` + CSS + JS | Kommer. Den interaktiva sidan, byggs i den här mappen (PRD avsnitt 3.7). |
 
 ## Status
 
@@ -48,10 +50,14 @@ interaktiva HTML-sidan byggs först och blir tänkredskapet, blogginlägget
 sidan.
 
 Sidan visar en forskargrupps resultaträkning fyra år fram, i fyra typfall
-(A–D), där en portfölj tidsbegränsade bidrag löper ut medan lönekostnaderna
-ligger platt. Varningen på negativ RESULTAT-rad trappas upp från A till D.
-Detaljerna finns i [`PRD.md`](PRD.md) avsnitt 3 och 12. Kvarvarande öppna
-frågor i avsnitt 11.
+(A–D) plus ett redigerbart läge D-ver2, sedd från år X och år X+1. En portfölj
+tidsbegränsade bidrag löper ut medan lönekostnaderna ligger platt. Varningen
+på negativ RESULTAT-rad trappas upp från A till D, och de tomma
+intäktscellerna längre fram väcker frågan om nya bidrag är på väg.
+
+Skisserna är framtagna och itererade. Nästa steg: stäng sista öppna frågorna
+(PRD avsnitt 11), skapa `SPEC.md`, bygg sidan. Detaljerna finns i
+[`PRD.md`](PRD.md) avsnitt 3 och 12.
 
 ## Datummappen
 

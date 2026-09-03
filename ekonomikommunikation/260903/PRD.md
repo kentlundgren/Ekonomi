@@ -137,6 +137,17 @@ läsaren direkt ska se de tomma cellerna längre fram, alltså att bidrag saknas
 för de kommande åren. En knapp kan fälla ihop raderna, men utgångsläget är
 utfällt.
 
+**Filer och placering (beslut 2026-09-03):** sidan ligger i den här mappen,
+`ekonomikommunikation/260903/`, som separata filer: `index.html`, en CSS-fil
+och en JS-fil. Live-URL blir
+`https://kentlundgren.github.io/Ekonomi/ekonomikommunikation/260903/`.
+
+Detta avviker från Ekonomi-projektets vanliga mönster (en fristående
+HTML-fil per sida, placerad i en sektionsmapp och inlagd i sajtens
+navigering). 260903 är en daterad arbetsmapp, inte en sektion. Sidan blir
+alltså en egen sida på sin URL. Om den senare ska nås från Ekonomi-sajtens
+meny är det ett separat steg, se avsnitt 11.
+
 ### 3.8 Fyra typfall och hur varningen trappas upp
 
 Samma resultaträkning i fyra lägen. Innevarande år X är oproblematiskt i alla
@@ -157,10 +168,19 @@ under X+1 till X+4.
   litet mot årets kostnad.
 - **Rött:** en kraftig avvikelse. Året går klart inte ihop.
 
-Ingen separat grå "inom marginal"-nivå. Tröskeln mellan gult och rött är en
-öppen fråga, se avsnitt 11. Banner-varningen trappas upp med antalet **röda**
-år, inte de gula. Därför är B ett fall med ett rött år (X+4), medan X+3 bara
-får en gul markering.
+Ingen separat grå "inom marginal"-nivå. Banner-varningen trappas upp med
+antalet **röda** år, inte de gula. Därför är B ett fall med ett rött år (X+4),
+medan X+3 bara får en gul markering.
+
+**Tröskeln gul/röd (beslut 2026-09-03):** inställbar på sidan, med 15 % av
+årets kostnad som förval. En avvikelse under tröskeln är gul, över den är röd.
+
+**Typfallsknapparna är färgade** efter hur läget ser ut framåt:
+
+- **A** grön knapp.
+- **B** gul knapp.
+- **C** knapp som växlar mellan gult och rött, eftersom C ligger på gränsen.
+- **D** röd knapp.
 
 Poängen: varningen växer med hur nära i tid problemet ligger och hur många år
 som inte går ihop. Ett underskott om fyra år är en signal att bevaka. Ett
@@ -255,6 +275,25 @@ den här gången också, så att intäkterna matchar kostnaderna?**
 
 Sidan ska alltså inte bara varna. Den ska få läsaren att fråga sig hur illa
 det egentligen är, och tvinga fram samtalet med gruppen.
+
+### 3.11 Typfall D-ver2: läsaren fyller på
+
+Ett femte läge, "D-ver2", utgår från Typfall D men är redigerbart. Läsaren
+kan lägga in egna intäkter (nya bidrag, projektinkomster) och sänka kostnader.
+RESULTAT, färger och banner räknas om direkt.
+
+Syftet: visa att D kanske inte är så illa om finansieringen faktiskt fylls på.
+Läsaren gör själv den övning ekonomen bör göra tillsammans med gruppen, och
+ser hur mycket ny finansiering som krävs för att komma tillbaka till grönt.
+
+**Friktion mot önsketänkande:** varje gång läsaren lägger in en ny intäkt
+kommer en notis upp, ungefär: *är du säker på att den här intäkten, det här
+bidraget, kommer just det året?* Poängen är att sidan inte ska bli ett verktyg
+för att räkna hem osannolika antaganden. Den ska tvinga fram samma prövning
+som ett hederligt budgetsamtal gör.
+
+Öppet: om notisen ska kräva ett aktivt val (ja, sannolikt / nej, ta bort) eller
+bara vara en påminnelse. Se avsnitt 11.
 
 ---
 
@@ -355,16 +394,19 @@ se avsnitt 11.
 ## 9. Arbetsplan / milstolpar
 
 1. ~~Kent väljer upplägg för blogginlägget (avsnitt 7).~~ Klart: Upplägg C.
-2. Kent berättar mer om modellen och vad HTML-sidan ska visa (pågår).
-3. Skiss till HTML-sidan: rutnätet, intäktsmixen, säkerhetsgrad som färg,
-   plus GitHub-hörna och teknik-modal (avsnitt 6.1).
-4. Bygg HTML-sidan i Ekonomi-projektets struktur (nav, teman, jag-form).
-   Aktivera skill `kent-bygg-sidor`.
-5. README i den här mappen uppdateras med länk till live-sidan.
-6. Utkast till blogginlägg (upplägg C), som utgår från den färdiga sidan,
+2. ~~Kent berättar mer om modellen och vad HTML-sidan ska visa.~~ Klart, se
+   avsnitt 3.6–3.11.
+3. ~~Skiss till sidan (inline, engångsskiss).~~ Klart, itererad flera varv.
+4. Sista öppna frågorna i avsnitt 11 stängs.
+5. `SPEC.md` skapas med de avprickningsbara leveranserna.
+6. Bygg sidan i `ekonomikommunikation/260903/` som `index.html` + CSS + JS,
+   med GitHub-hörna och teknik-modal (avsnitt 6.1). Aktivera skill
+   `kent-bygg-sidor`. Process-logg förs parallellt.
+7. README i den här mappen uppdateras med länk till live-sidan.
+8. Utkast till blogginlägg (upplägg C), som utgår från den färdiga sidan,
    granskat mot humanizer-reglerna. Aktivera skill `kent-skrivstil`.
-7. Kent läser, justerar, publicerar på Controller utan gränser.
-8. Ev. kort LinkedIn-inlägg som länkar till bloggtexten.
+9. Kent läser, justerar, publicerar på Controller utan gränser.
+10. Ev. kort LinkedIn-inlägg som länkar till bloggtexten.
 
 Process-loggen för HTML-sidan (beslut och alternativ under bygget) förs enligt
 minnet om vibe-coding-transparens, i en egen `process-logg.md` i den här mappen.
@@ -388,14 +430,16 @@ Om HTML-sidan:
 
 - **Modellval för de två tidsögonblicken:** två explicita resultaträkningar
   per typfall, eller en bidragsportfölj som sidan räknar fram från? (Avsnitt 3.9)
-- **Gul/röd-tröskeln:** vid vilken andel av årets kostnad går en gul markering
-  över till röd? Fast värde, eller inställbar på sidan?
-- Ska läsaren kunna växla mellan A/B/C/D, eller ses alla fyra samtidigt?
-- Ska läsaren kunna mata in egna siffror, eller är exemplet fast?
-- Hur ska hover-frågan på den tomma intäktsytan (avsnitt 3.10) se ut på
-  mobil, där det inte finns någon pekare?
-- Var i Ekonomi-projektets struktur hör sidan hemma? Egen sektion, eller
-  under ekonomistyrning?
+- **D-ver2-notisen:** aktivt val (ja, sannolikt / nej) eller bara en
+  påminnelse när läsaren lägger in en intäkt? (Avsnitt 3.11)
+- **Mobil:** hur ska hover-frågan på den tomma intäktsytan (avsnitt 3.10) och
+  C-knappens gult/rött-växling fungera på pekskärm?
+- **Sajtens meny:** ska sidan nås från Ekonomi-sajtens navigering, eller stå
+  ensam på sin URL? (Filplacering är beslutad, se avsnitt 3.7.)
+
+Besvarade 2026-09-03: tröskeln gul/röd är inställbar med 15 % som förval;
+läsaren växlar mellan A/B/C/D som färgade knappar; egna siffror hanteras via
+det redigerbara läget D-ver2; sidans filer ligger i `260903/`.
 
 Om blogginlägget (avgörs närmare publicering):
 
@@ -420,3 +464,7 @@ Om blogginlägget (avgörs närmare publicering):
 | 2026-09-03 | Försämringsmått: Σ RESULTAT i fönstret, sett från X+1 minus sett från X. Alla fyra fallen blir sämre (A −1 260, B −6 760, C −9 860, D −12 860 tkr i exemplet). Visas som ett tal per fall + de två RESULTAT-raderna + en stapel. |
 | 2026-09-03 | Färgskala: tre steg, grönt / gult (mindre avvikelse) / rött (kraftig avvikelse). Ingen separat grå nivå. |
 | 2026-09-03 | Den tomma intäktsytan (avsnitt 3.10) är sidans viktigaste kommunikativa yta. Hover, särskilt i Fall D sett från X+1, väcker frågan om nya bidrag är på väg och leder läsaren till samtalet med gruppen. |
+| 2026-09-03 | Tröskeln gul/röd är inställbar, förval 15 % av årets kostnad. |
+| 2026-09-03 | Typfallsknapparna färgas: A grön, B gul, C växlar gult/rött, D röd. |
+| 2026-09-03 | Nytt läge D-ver2: redigerbart, läsaren lägger in egna intäkter och sänker kostnader. Varje ny intäkt utlöser en notis som frågar om intäkten verkligen kommer det året. |
+| 2026-09-03 | Filplacering: sidan byggs i `ekonomikommunikation/260903/` som index.html + CSS + JS. Avviker från projektets en-fil-per-sektion-mönster, medvetet. |
