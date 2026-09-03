@@ -19,6 +19,10 @@
   --gul-kant: #f59e0b;
   --gul-ink: #9a5b00;
 
+  --oran-bg: #fbe9e0;
+  --oran-kant: #d2691e;
+  --oran-ink: #8a3d1a;
+
   --rod-bg: #fdeceb;
   --rod-kant: #c0392b;
   --rod-ink: #8b2e22;
@@ -210,6 +214,7 @@ p { margin: 0 0 14px; }
 .banner::before { font-weight: 700; }
 .banner.gron { background: var(--gron-bg); color: var(--gron-ink); border-left: 4px solid var(--gron-kant); }
 .banner.gul  { background: var(--gul-bg);  color: var(--gul-ink);  border-left: 4px solid var(--gul-kant); }
+.banner.oran { background: var(--oran-bg); color: var(--oran-ink); border-left: 4px solid var(--oran-kant); }
 .banner.rod  { background: var(--rod-bg);  color: var(--rod-ink);  border-left: 4px solid var(--rod-kant); }
 .notrad { font-size: 0.95rem; color: var(--ink-muted); margin: 0 0 14px; }
 
@@ -334,15 +339,14 @@ table.rr .extra-bort {
   color: var(--ink-muted);
   border-left: 4px solid #c5d5e8;
 }
-.fragruta.het {
-  background: var(--gul-bg);
-  color: var(--gul-ink);
-  border-left-color: var(--gul-kant);
-}
+.fragruta.g-gron { background: var(--gron-bg); color: var(--gron-ink); border-left-color: var(--gron-kant); }
+.fragruta.g-gul  { background: var(--gul-bg);  color: var(--gul-ink);  border-left-color: var(--gul-kant); }
+.fragruta.g-oran { background: var(--oran-bg); color: var(--oran-ink); border-left-color: var(--oran-kant); }
+.fragruta.g-rod  { background: var(--rod-bg);  color: var(--rod-ink);  border-left-color: var(--rod-kant); }
 .fragruta.puls { animation: fragPuls 0.6s ease-out; }
 @keyframes fragPuls {
-  0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.45); }
-  100% { box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(26, 58, 92, 0.30); }
+  100% { box-shadow: 0 0 0 10px rgba(26, 58, 92, 0); }
 }
 @media (prefers-reduced-motion: reduce) { .fragruta.puls { animation: none; } }
 

@@ -163,21 +163,28 @@ Tröskeln gul/röd är inställbar på sidan. Förval **15 %**. Rimligt interval
 neutral färg, med texten "i praktiken oförändrat". Σ-staplarna skalas mot minst
 2 000 tkr, så ett litet tal ger en liten stapel.
 
-### 4.2 Banner (räknas på fönstret)
+### 4.2 Banner och frågeruta
 
-| Läge | Banner |
-|------|--------|
-| 0 röda, 0 gula år | grön: "Går ihop alla år i fönstret." |
-| 0 röda, ≥1 gult år | gul: "Mindre avvikelser. Håll uppsikt." |
-| 1 rött år | röd: "Ett år i fönstret går klart inte ihop." |
-| 2 röda år | röd: "Två år går inte ihop. Ta upp finansieringen nu." |
-| ≥3 röda år | röd, kraftig: "Tre år eller fler går inte ihop. Åtgärd krävs nu." |
+**Texten i bannern** räknas på fönstret:
+
+| Läge | Text |
+|------|------|
+| 0 röda, 0 gula år | "Går ihop alla år i fönstret." |
+| 0 röda, ≥1 gult år | "Mindre avvikelser. Inget år faller kraftigt, men håll uppsikt." |
+| 1 rött år | "Ett år i fönstret går klart inte ihop." |
+| 2 röda år | "Två år går inte ihop. Ta upp finansieringen nu." |
+| ≥3 röda år | "Tre år eller fler går inte ihop. Åtgärd krävs nu." |
+
+**Färgen** på bannern och på frågerutan under tabellen följer gruppen, inte
+den beräknade texten (beslut 2026-09-03): AA grön, BB gul, CC orange, DD röd
+(DD-ver2 röd). Så att hela upplägget är färgkodat per grupp, från grönt till
+rött. De enskilda RESULTAT-cellerna färgas fortfarande år för år enligt 4.1.
 
 ### 4.3 Gruppknappar
 
 Grupperna heter **AA, BB, CC, DD** på sidan (planeringens A–D). AA grön,
-BB gul, DD röd. CC växlar mellan gul och röd via CSS-animation.
-DD-ver2-knappen är streckad tills vald.
+BB gul, DD röd. CC-knappen växlar mellan gul och röd via CSS-animation
+(CC:s ruta och banner är orange). DD-ver2-knappen är streckad tills vald.
 
 ---
 

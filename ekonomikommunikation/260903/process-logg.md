@@ -217,7 +217,33 @@ fick in dem. Inga datavärden ändrades.
 **Verifierat i webbläsare:** ingress och analys renderar, rubriken i site-
 temat, inga konsolfel, ingen horisontell scroll.
 
+## 2026-09-03 – Leverans 8: färgkodat per grupp
+
+Kent ville att frågerutan under tabellen och bannern skulle ha gruppens färg,
+inte den beräknade allvarlighetsgraden. AA ska signalera grönt, DD rött.
+
+**Gjort:**
+
+- `GFARG`-map: A → grön, B → gul, C → orange, D → röd (DD-ver2 röd). Ny
+  orange-palett (`--oran-*`) tillagd.
+- Frågerutan (`#fragruta`) får nu alltid gruppens färg och visar den
+  gruppspecifika reflektionen direkt, för alla grupper (tidigare bara DD).
+  Viloläget `VILA` och `.het` togs bort.
+- Bannern får gruppens färg. Texten beskriver fortfarande hur många år som
+  inte går ihop.
+- De enskilda RESULTAT-cellerna är oförändrade, färgas år för år.
+- Ny rad i ingressen: hela upplägget är färgkodat, från grönt till rött, för
+  att göra läget lätt att läsa av.
+
+BB:s banner går alltså från röd (1 rött år) till gul (BB:s gruppfärg), CC:s
+till orange. Puls-animationen på frågerutan gjordes färgneutral (marinblå i
+stället för gul) så den funkar mot alla fyra bakgrunderna.
+
+**Verifierat i webbläsare:** alla fyra grupperna + DD-ver2, knapp/banner/ruta
+i rätt färg, ingen horisontell scroll, inga konsolfel.
+
 **Status:** sidan klar. Nästa steg är blogginlägget (PRD avsnitt 7).
 
 **Öppet, ej blockerande:** de två RESULTAT-raderna staplade (PRD avsnitt 11),
-CC:s eventuella återhämtning sett från X+1 (Kent avvaktar).
+CC:s eventuella återhämtning sett från X+1 (Kent avvaktar), CC-knappens
+gul/röd-animation mot rutans/bannerns orange (liten inkonsekvens, medveten).

@@ -272,14 +272,13 @@ informationen faktiskt ändras mellan åren. Se [`SPEC.md`](SPEC.md) avsnitt 3.
 De tomma cellerna längre fram i intäktsdelen är sidans viktigaste
 kommunikativa yta, särskilt för grupp DD och särskilt sett från X+1.
 
-När läsaren för pekaren över, eller trycker på, en tom cell ska en fråga komma
-fram, ungefär: *kommer det troligen in nya bidrag eller intäkter under de här
-åren?* Frågan är **gruppspecifik** (beslut 2026-09-03) och visas på två ställen
-samtidigt: en liten ruta vid cellen, och en större ruta under tabellen som
-byts ut och blinkar till.
+Frågan är **gruppspecifik** (beslut 2026-09-03). Den större rutan under
+tabellen står framme för alla grupper och har gruppens färg (grön för AA,
+gul för BB, orange för CC, röd för DD). När läsaren för pekaren över, eller
+trycker på, en tom cell blinkar rutan till och en liten ruta med en kortare
+fråga visas vid cellen.
 
-För grupp DD är reflektionen mer utbyggd, och den är den enda som står framme
-även utan hover. Den leder läsaren till att fråga:
+För grupp DD är reflektionen mer utbyggd. Den leder läsaren till att fråga:
 
 - Har DD strukturellt sämre möjligheter att i förtid säkra avtal om framtida
   medel, eller är det bara så det ser ut just nu?
@@ -520,3 +519,4 @@ att pricka av bygget mot.
 | 2026-09-03 (bygge) | Löneuppräkningen 3 %/år (och OH = 22 % av lönerna) utökad från AA till alla fyra grupperna. Platt lön år efter år såg konstlat ut. BB, CC, DD:s RESULTAT och "ett år senare"-tal omräknade. Ordningen AA « BB < CC < DD håller. Nya "ett år senare": BB −5 492, CC −8 592, DD −11 092. |
 | 2026-09-03 (bygge) | Avslutande analys tillagd (Kents text, faktagranskad). Slutsats: alla grupperna får sämre samlat resultat ett år senare, men AA försumbart. BB/CC/DD har mindre bidragsmedel att räkna med framåt. Att AA är opåverkad visar att det inte är en generell nedgång, utan att BB/CC/DD:s finansieringsmiljö blivit hårdare. Claudes invändning ("strukturellt, inte konjunkturellt") landade i att "sämre tider" scopas till just de tre grupperna. |
 | 2026-09-03 (bygge) | Ingress-stycke tillagt om den rullande fönsterjämförelsen (X→X+4 mot X+1→X+5), med analogin rullande tolv månader. Kent kallar det en rullande fyraårsprognos (hans arbetsnamn LFÅPP togs inte in i sidtexten). |
+| 2026-09-03 (bygge) | Färgkodning per grupp: frågerutan under tabellen och bannern får gruppens färg (AA grön, BB gul, CC orange, DD röd), inte den beräknade allvarlighetsgraden. Bannerns text beskriver fortfarande hur många år som inte går ihop. RESULTAT-cellerna färgas oförändrat år för år. Ny rad i ingressen om att hela upplägget är färgkodat. |

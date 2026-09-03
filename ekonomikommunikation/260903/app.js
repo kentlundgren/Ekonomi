@@ -91,9 +91,8 @@
     Dver2: "Grupp DD, men du fyller på. Lägg in intäkter du tror kommer, eller sänk kostnader, och se hur mycket som krävs för att nå grönt. Var lika sträng som ett hederligt budgetsamtal."
   };
 
-  var VILA =
-    "Peka på, eller tryck på, en tom cell i intäktsdelen för frågor att reflektera kring om den " +
-    "här gruppens finansiering framåt.";
+  // Färg på frågerutan under tabellen, per grupp (grön → röd som knappar och celler)
+  var GFARG = { A: "gron", B: "gul", C: "oran", D: "rod", Dver2: "rod" };
 
   var HOVER = {
     A: "Grupp AA har täckning alla år. Ett tomrum här betyder troligen bara att nästa " +
@@ -238,13 +237,14 @@
       if (n === "rod") rod++;
     }
     var el = document.getElementById("banner");
-    var farg, text;
-    if (rod === 0 && gul === 0) { farg = "gron"; text = "Går ihop alla år i fönstret."; }
-    else if (rod === 0) { farg = "gul"; text = "Mindre avvikelser. Inget år faller kraftigt, men håll uppsikt."; }
-    else if (rod === 1) { farg = "rod"; text = "Ett år i fönstret går klart inte ihop."; }
-    else if (rod === 2) { farg = "rod"; text = "Två år går inte ihop. Ta upp finansieringen nu."; }
-    else { farg = "rod"; text = "Tre år eller fler går inte ihop. Åtgärd krävs nu."; }
-    el.className = "banner " + farg;
+    var text;
+    if (rod === 0 && gul === 0) { text = "Går ihop alla år i fönstret."; }
+    else if (rod === 0) { text = "Mindre avvikelser. Inget år faller kraftigt, men håll uppsikt."; }
+    else if (rod === 1) { text = "Ett år i fönstret går klart inte ihop."; }
+    else if (rod === 2) { text = "Två år går inte ihop. Ta upp finansieringen nu."; }
+    else { text = "Tre år eller fler går inte ihop. Åtgärd krävs nu."; }
+    // Bannerns färg följer gruppen (grönt → rött), texten beskriver hur illa läget är.
+    el.className = "banner " + GFARG[state.fall];
     el.textContent = text;
   }
 
@@ -320,14 +320,8 @@
     document.getElementById("notrad").textContent = NOT[state.fall];
 
     var frag = document.getElementById("fragruta");
-    frag.classList.remove("puls");
-    if (state.fall === "D" || state.fall === "Dver2") {
-      frag.textContent = HOVER[state.fall];
-      frag.classList.add("het");
-    } else {
-      frag.textContent = VILA;
-      frag.classList.remove("het");
-    }
+    frag.className = "fragruta g-" + GFARG[state.fall];
+    frag.textContent = HOVER[state.fall];
     document.getElementById("celltip").hidden = true;
 
     setPaminnelse("");
@@ -378,8 +372,6 @@
 
   function visaFraga(cell) {
     var frag = document.getElementById("fragruta");
-    frag.textContent = HOVER[state.fall];
-    frag.classList.add("het");
     frag.classList.remove("puls");
     void frag.offsetWidth;
     frag.classList.add("puls");
@@ -389,11 +381,8 @@
   }
 
   function aterFraga() {
-    var frag = document.getElementById("fragruta");
     document.getElementById("celltip").hidden = true;
-    frag.classList.remove("puls");
-    if (state.fall === "D" || state.fall === "Dver2") { frag.textContent = HOVER[state.fall]; }
-    else { frag.textContent = VILA; frag.classList.remove("het"); }
+    document.getElementById("fragruta").classList.remove("puls");
   }
 
   function bindTabell() {
