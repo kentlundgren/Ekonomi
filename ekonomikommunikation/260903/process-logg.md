@@ -162,6 +162,31 @@ plus toleransen och kort-justeringen.
 grön banner, "−192 tkr i praktiken oförändrat", att BB/CC/DD är oförändrade.
 Inga konsolfel.
 
+## 2026-09-03 – Leverans 6: löneuppräkning för alla grupper
+
+Kent: platt lön år efter år ser konstlat ut. Vill ha samma 3 %-uppräkning för
+BB, CC och DD som för AA.
+
+**Gjort:** de gruppspecifika kostnads-arrayerna slogs ihop. `KOST_X` och
+`KOST_X1` har nu AA:s struktur (löner +3 %/år, OH = 22 % av lönerna), och alla
+fyra grupperna pekar på dem. Den gamla platta strukturen och den udda
+X+5-spiken i "sett från X+1" är borta.
+
+**Nya siffror** (intäkter oförändrade, bara kostnaderna växer):
+
+| Grupp | Σ sett från X | Ett år senare | Röda år /X | Röda år /X+1 |
+|-------|---------------|---------------|------------|--------------|
+| AA | −38 | −192 (oförändrat) | 0 | 0 |
+| BB | −3 838 | −5 492 | 1 | 2 |
+| CC | −7 438 | −8 592 | 2 | 3 |
+| DD | −17 138 | −11 092 | 3 | 4 |
+
+Ordningen AA « BB < CC < DD håller. De negativa åren blev något djupare
+eftersom lönerna nu växer medan bidragen fortfarande tar slut abrupt.
+
+**Verifierat i webbläsare:** alla fyra grupperna, båda vyerna, TOT-rader,
+RESULTAT, färger, banner, "ett år senare"-talen. Inga konsolfel.
+
 **Status:** sidan klar. Nästa steg är blogginlägget (PRD avsnitt 7).
 
 **Öppet, ej blockerande:** de två RESULTAT-raderna staplade (PRD avsnitt 11),

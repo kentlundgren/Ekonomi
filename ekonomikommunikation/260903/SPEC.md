@@ -44,31 +44,12 @@ Varje resultaträkning har fem årskolumner och raderna: sju bidragsgivare,
 TOT intäkter, Löner, Diverse, OH, Avskrivningar, TOT kostnader, RESULTAT.
 Alla belopp i tkr. Tomma celler = inget bidrag det året.
 
-### 3.1 Kostnader
+### 3.1 Kostnader (samma struktur för alla fyra grupper)
 
-**Grupp BB, CC, DD – sett från X, kolumner X, X+1, X+2, X+3, X+4:**
+Lönerna räknas upp ~3 % per år, OH är 22 % av lönerna (beslut 2026-09-03,
+utökat till alla grupper från AA). Diverse och Avskrivningar ligger platt.
 
-| Rad | X | X+1 | X+2 | X+3 | X+4 |
-|-----|---|-----|-----|-----|-----|
-| Löner | −7 000 | −5 000 | −5 000 | −5 000 | −5 000 |
-| Diverse | −1 000 | −1 000 | −1 000 | −1 000 | −1 000 |
-| OH | −1 540 | −1 100 | −1 100 | −1 100 | −1 100 |
-| Avskrivningar | −500 | −500 | −500 | −500 | −500 |
-| **TOT kostnader** | −10 040 | −7 600 | −7 600 | −7 600 | −7 600 |
-
-**Grupp BB, CC, DD – sett från X+1, kolumner X+1, X+2, X+3, X+4, X+5:**
-
-| Rad | X+1 | X+2 | X+3 | X+4 | X+5 |
-|-----|-----|-----|-----|-----|-----|
-| Löner | −5 000 | −5 000 | −5 000 | −5 000 | −7 000 |
-| Diverse | −1 000 | −1 000 | −1 000 | −1 000 | −560 |
-| OH | −1 100 | −1 100 | −1 100 | −1 100 | −1 540 |
-| Avskrivningar | −500 | −500 | −500 | −500 | −500 |
-| **TOT kostnader** | −7 600 | −7 600 | −7 600 | −7 600 | −9 600 |
-
-**Grupp AA har egen kostnadsstruktur** (beslut 2026-09-03): lönerna räknas
-upp ~3 % per år och OH är 22 % av lönerna, så AA ligger nära balans varje år
-med bara små variationer.
+**Sett från X, kolumner X, X+1, X+2, X+3, X+4:**
 
 | Rad | X | X+1 | X+2 | X+3 | X+4 |
 |-----|---|-----|-----|-----|-----|
@@ -78,6 +59,8 @@ med bara små variationer.
 | Avskrivningar | −500 | −500 | −500 | −500 | −500 |
 | **TOT kostnader** | −10 040 | −7 600 | −7 783 | −7 966 | −8 149 |
 
+**Sett från X+1, kolumner X+1, X+2, X+3, X+4, X+5:**
+
 | Rad | X+1 | X+2 | X+3 | X+4 | X+5 |
 |-----|-----|-----|-----|-----|-----|
 | Löner | −5 000 | −5 150 | −5 300 | −5 450 | −5 600 |
@@ -86,60 +69,66 @@ med bara små variationer.
 | Avskrivningar | −500 | −500 | −500 | −500 | −500 |
 | **TOT kostnader** | −7 600 | −7 783 | −7 966 | −8 149 | −8 332 |
 
+År X har en engångshög lönekostnad (−7 000) i "sett från X"-vyn.
+
 ### 3.2 Intäkter per typfall
 
 Tom cell = bidraget löper inte det året.
+
+Intäktsraderna nedan är oförändrade sedan tidigare. RESULTAT och Σ är
+omräknade 2026-09-03 med den nya, gemensamma kostnadsstrukturen (löner +3 %/år).
 
 **Grupp AA, sett från X** (X…X+4): VR 1000×5 · EU 2000×5 · Bidr. 3 1100×5 ·
 Bidr. 4 3000×5 · Bidr. 5 500 / 400 / 700 / 900 / 1000 · Bidr. 6 700/–/–/–/– ·
 Bidr. 7 1800/–/–/–/–.
 TOT intäkter 10 100 / 7 500 / 7 800 / 8 000 / 8 100.
 RESULTAT **60 / −100 / 17 / 34 / −49**. Σ = −38.
-(Kostnader enligt AA:s egen struktur ovan. Alla negativa år ligger under
-2 %-toleransen, se 4.1, så RESULTAT-cellerna är gröna och banner grön.)
+(Alla negativa år ligger under 2 %-toleransen, se 4.1, så cellerna är gröna
+och banner grön.)
 
 **Grupp AA, sett från X+1** (X+1…X+5): VR 1000×5 · EU 2000×5 · Bidr. 3 1100×5 ·
 Bidr. 4 3000×5 · Bidr. 5 400 / 700 / 900 / 1000 / 1100 · Bidr. 6 – · Bidr. 7 –.
 TOT intäkter 7 500 / 7 800 / 8 000 / 8 100 / 8 200.
 RESULTAT **−100 / 17 / 34 / −49 / −132**. Σ = −230. Ett år senare: **−192**
-(under 300, visas som "i praktiken oförändrat"). X+1…X+4 är identiska med
-sett från X, bara X+5 är nytt. AA:s bild är alltså i stort sett oförändrad
-ett år senare.
+(under 300, visas som "i praktiken oförändrat"). X+1…X+4 identiska med sett
+från X, bara X+5 är nytt. AA:s bild är i stort sett oförändrad ett år senare.
 
-**Fall B, sett från X**: VR 1000×5 · EU 2000×5 · Bidr. 3 1100×5 ·
-Bidr. 4 3000/3000/3000/3000/– · Bidr. 5 500/500/500/–/– · Bidr. 6 700/–/–/–/– ·
-Bidr. 7 3000/–/–/–/–.
+**Grupp BB, sett från X**: Bidr. 4 3000/3000/3000/3000/– · Bidr. 5 500/500/500/–/– ·
+Bidr. 6 700/–/–/–/– · Bidr. 7 3000/–/–/–/–.
 TOT intäkter 11 300 / 7 600 / 7 600 / 7 100 / 4 100.
-RESULTAT **1 260 / 0 / 0 / −500 / −3 500**. Σ = −2 740.
+RESULTAT **1 260 / 0 / −183 / −866 / −4 049**. Σ = −3 838.
+(X+2 och X+3 gula, X+4 röd. 1 rött år.)
 
-**Fall B, sett från X+1**: VR 1000×5 · EU 2000×5 · Bidr. 3 1100×5 ·
-Bidr. 4 3000/3000/3000/–/– · Bidr. 5 500/500/–/–/–.
+**Grupp BB, sett från X+1**: Bidr. 4 3000/3000/3000/–/– · Bidr. 5 500/500/–/–/–.
 TOT intäkter 7 600 / 7 600 / 7 100 / 4 100 / 4 100.
-RESULTAT **0 / 0 / −500 / −3 500 / −5 500**. Σ = −9 500. Ett år senare: **−6 760**.
+RESULTAT **0 / −183 / −866 / −4 049 / −4 232**. Σ = −9 330. Ett år senare: **−5 492**.
+(X+2, X+3 gula, X+4 och X+5 röda. 2 röda år.)
 
-**Fall C, sett från X**: VR 1000×5 · EU 2000×5 ·
-Bidr. 3 1100/1100/1100/1100/– · Bidr. 4 3000/3000/3000/–/– ·
+**Grupp CC, sett från X**: Bidr. 3 1100/1100/1100/1100/– · Bidr. 4 3000/3000/3000/–/– ·
 Bidr. 5 500/500/500/500/– · Bidr. 6 700/–/–/–/– · Bidr. 7 3000/–/–/–/–.
 TOT intäkter 11 300 / 7 600 / 7 600 / 4 600 / 3 000.
-RESULTAT **1 260 / 0 / 0 / −3 000 / −4 600**. Σ = −6 340.
+RESULTAT **1 260 / 0 / −183 / −3 366 / −5 149**. Σ = −7 438.
+(X+2 gul, X+3 och X+4 röda. 2 röda år.)
 
-**Fall C, sett från X+1**: VR 1000×5 · EU 2000/2000/2000/–/2000 ·
-Bidr. 3 1100/1100/1100/–/– · Bidr. 4 3000/3000/–/–/– · Bidr. 5 500/500/500/–/–.
+**Grupp CC, sett från X+1**: EU 2000/2000/2000/–/2000 · Bidr. 3 1100/1100/1100/–/– ·
+Bidr. 4 3000/3000/–/–/– · Bidr. 5 500/500/500/–/–.
 TOT intäkter 7 600 / 7 600 / 4 600 / 1 000 / 3 000.
-RESULTAT **0 / 0 / −3 000 / −6 600 / −6 600**. Σ = −16 200. Ett år senare: **−9 860**.
+RESULTAT **0 / −183 / −3 366 / −7 149 / −5 332**. Σ = −16 030. Ett år senare: **−8 592**.
+(X+2 gul, X+3 till X+5 röda. 3 röda år.)
 (EU har ett hoppår: tomt X+4, åter X+5. Behålls eller jämnas ut, se PRD avsnitt 11.)
 
-**Fall D, sett från X**: VR 1000/1000/1000/1000/– · EU 2000/2000/2000/2000/– ·
+**Grupp DD, sett från X**: VR 1000/1000/1000/1000/– · EU 2000/2000/2000/2000/– ·
 Bidr. 3 1100/1100/–/–/– · Bidr. 4 3000/3000/–/–/– · Bidr. 5 500/–/–/–/– ·
 Bidr. 6 700/–/–/–/– · Bidr. 7 3000/–/–/–/–.
 TOT intäkter 11 300 / 7 100 / 3 000 / 3 000 / 0.
-RESULTAT **1 260 / −500 / −4 600 / −4 600 / −7 600**. Σ = −16 040.
-(Bidr. 5:s X+1 borttagen 2026-09-03 så D går minus redan X+1. Se PRD beslutsloggen.)
+RESULTAT **1 260 / −500 / −4 783 / −4 966 / −8 149**. Σ = −17 138.
+(X+1 gul, X+2 till X+4 röda. DD går minus redan X+1.)
 
-**Fall D, sett från X+1**: VR 1000/1000/1000/–/– · EU 2000/2000/–/–/– ·
+**Grupp DD, sett från X+1**: VR 1000/1000/1000/–/– · EU 2000/2000/–/–/– ·
 Bidr. 3 1100/–/–/–/– · Bidr. 4 3000/–/–/–/– · Bidr. 5 500/–/–/–/–.
 TOT intäkter 7 600 / 3 000 / 1 000 / 0 / 0.
-RESULTAT **0 / −4 600 / −6 600 / −7 600 / −9 600**. Σ = −28 400. Ett år senare: **−12 360**.
+RESULTAT **0 / −4 783 / −6 966 / −8 149 / −8 332**. Σ = −28 230. Ett år senare: **−11 092**.
+(X+2 till X+5 röda. 4 röda år.)
 
 ### 3.3 Härledda värden
 
@@ -271,9 +260,9 @@ live efter push.
 
 - [x] Sidan öppnas fristående utan byggsteg, i `index.html` + `styles.css` + `app.js`.
 - [x] Grupp AA, BB, CC, DD visar rätt RESULTAT-rad och Σ enligt avsnitt 3.2, för båda tidsögonblicken.
-- [x] Ett år senare-talet: AA "−192 tkr, i praktiken oförändrat", BB −6 760, CC −9 860, DD −12 360.
-- [x] Cellfärg följer 2 %-toleransen och tröskeln. AA:s små negativa år är gröna. Med 15 % är BB:s X+3 gul och X+4 röd.
-- [x] Banner för AA är grön ("Går ihop alla år i fönstret") i båda vyerna.
+- [x] Ett år senare-talet: AA "−192 tkr, i praktiken oförändrat", BB −5 492, CC −8 592, DD −11 092.
+- [x] Cellfärg följer 2 %-toleransen och tröskeln. AA:s små negativa år är gröna. Med 15 % är BB:s X+2/X+3 gula och X+4 röd.
+- [x] Banner för AA är grön ("Går ihop alla år i fönstret") i båda vyerna. Ordningen AA « BB < CC < DD håller.
 - [x] Tröskeln går att ändra på sidan och färgerna uppdateras direkt.
 - [x] Gruppknapparna är färgade (AA grön, BB gul, DD röd), CC växlar gul/röd.
 - [x] Bidragsgivarrader visas som default, går att fälla ihop.

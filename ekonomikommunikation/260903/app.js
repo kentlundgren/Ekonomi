@@ -18,29 +18,17 @@
   function r5(v) { return [v, v, v, v, v]; }
   function kopiera(m) { return m.map(function (rad) { return rad.slice(); }); }
 
+  // Alla grupper: lönerna räknas upp ~3 % per år, OH är 22 % av lönerna.
   var KOST_X = [
-    ["Löner", [-7000, -5000, -5000, -5000, -5000]],
-    ["Diverse", r5(-1000)],
-    ["OH", [-1540, -1100, -1100, -1100, -1100]],
-    ["Avskrivningar", r5(-500)]
-  ];
-  // Grupp AA: löner räknas upp ~3 % per år, OH är 22 % av lönerna.
-  var KOST_AA_X = [
     ["Löner", [-7000, -5000, -5150, -5300, -5450]],
     ["Diverse", r5(-1000)],
     ["OH", [-1540, -1100, -1133, -1166, -1199]],
     ["Avskrivningar", r5(-500)]
   ];
-  var KOST_AA_X1 = [
+  var KOST_X1 = [
     ["Löner", [-5000, -5150, -5300, -5450, -5600]],
     ["Diverse", r5(-1000)],
     ["OH", [-1100, -1133, -1166, -1199, -1232]],
-    ["Avskrivningar", r5(-500)]
-  ];
-  var KOST_X1 = [
-    ["Löner", [-5000, -5000, -5000, -5000, -7000]],
-    ["Diverse", [-1000, -1000, -1000, -1000, -560]],
-    ["OH", [-1100, -1100, -1100, -1100, -1540]],
     ["Avskrivningar", r5(-500)]
   ];
 
@@ -49,12 +37,12 @@
       fromX: {
         kol: ["X", "X+1", "X+2", "X+3", "X+4"],
         intakter: [r5(1000), r5(2000), r5(1100), r5(3000), [500, 400, 700, 900, 1000], [700, 0, 0, 0, 0], [1800, 0, 0, 0, 0]],
-        kostnader: KOST_AA_X
+        kostnader: KOST_X
       },
       fromX1: {
         kol: ["X+1", "X+2", "X+3", "X+4", "X+5"],
         intakter: [r5(1000), r5(2000), r5(1100), r5(3000), [400, 700, 900, 1000, 1100], r5(0), r5(0)],
-        kostnader: KOST_AA_X1
+        kostnader: KOST_X1
       }
     },
     B: {
