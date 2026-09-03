@@ -45,7 +45,13 @@ Då ska den här README:n uppdateras med en klickbar länk dit.
 Under planering. Scope är satt: en ståndpunkt om ekonomikommunikation. Den
 interaktiva HTML-sidan byggs först och blir tänkredskapet, blogginlägget
 (upplägg C, "Kan vi anställa henne i tre år?") skrivs sedan och utgår från
-sidan. Nästa steg: Kent berättar mer om vad sidan ska visa. Se [`PRD.md`](PRD.md).
+sidan.
+
+Sidan visar en forskargrupps resultaträkning fyra år fram, i fyra typfall
+(A–D), där en portfölj tidsbegränsade bidrag löper ut medan lönekostnaderna
+ligger platt. Varningen på negativ RESULTAT-rad trappas upp från A till D.
+Detaljerna finns i [`PRD.md`](PRD.md) avsnitt 3 och 12. Kvarvarande öppna
+frågor i avsnitt 11.
 
 ## Datummappen
 

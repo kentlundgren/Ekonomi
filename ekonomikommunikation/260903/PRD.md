@@ -106,6 +106,87 @@ källa redovisas för sig, med sin egen tidshorisont och säkerhetsgrad:
   kan projektet starta, håller ramen).
 - Presentera så att en icke-ekonom kan följa med och fatta beslut på det.
 
+### 3.6 Mekanismen: en portfölj bidrag som löper ut
+
+Exemplet på sidan är en forskargrupp kring en forskare, NN. Gruppen lever på
+flera tidsbegränsade bidrag samtidigt (VR, EU och några till). Varje bidrag
+täcker en bestämd period och tar sedan slut.
+
+Kostnaderna, till största delen löner, ligger nästan platt. Personerna är kvar
+även när ett enskilt bidrag upphör. Ju längre fram man tittar, desto färre
+bidrag är fortfarande aktiva. Intäktstrappan faller, kostnaderna gör det inte,
+och resultatet vänder neråt.
+
+Innevarande år ser bra ut, ofta med överskott, delvis på grund av engångsbidrag
+som bara finns det året. Risken syns först när rapporten sträcker sig fyra år
+fram och ställer de utlöpande bidragen mot de fortsatta kostnaderna.
+
+### 3.7 Formatet: en resultaträkning fyra år fram
+
+Sidan visar en resultaträkning i tkr med kolumnerna innevarande år X och X+1
+till X+4. Raderna:
+
+- Bidragsgivare, en rad per finansiär, med belopp per år så länge bidraget löper.
+- TOT intäkter.
+- Löner, Diverse, OH (påslag), Avskrivningar.
+- TOT kostnader.
+- RESULTAT.
+
+Bidragsgivarraderna är hopfällbara. TOT-raderna och RESULTAT syns direkt, så
+att första intrycket är rent. Vill man se vilken finansiär som faller bort
+vilket år fäller man ut detaljen.
+
+### 3.8 Fyra typfall och hur varningen trappas upp
+
+Samma resultaträkning i fyra lägen. Innevarande år X är oproblematiskt i alla
+fyra. Skillnaden ligger i hur tidigt och hur djupt RESULTAT vänder negativt
+under X+1 till X+4.
+
+| Fall | RESULTAT X+1 → X+4 (exempel, tkr) | Problemår | Varning |
+|------|----------------------------------|-----------|---------|
+| **A** | 0, 0, 0, 0 | inga | Ingen. Grön kvittens. |
+| **B** | 0, 0, −500, −3 500 | X+4 (X+3 inom marginal) | Mild. RESULTAT-cellen för X+4 färgas, kort banner "lite oroande". |
+| **C** | 0, 0, −3 000, −4 600 | X+3, X+4 | Tydlig. Båda cellerna färgas, banner "oroande". |
+| **D** | −4 600, −4 600, −7 600 (X+2 → X+4) | X+2, X+3, X+4 | Kraftig. Tre celler färgas, framträdande banner "agera nu". |
+
+**Varningens form (beslut 2026-09-03):** färg på den negativa RESULTAT-cellen,
+graderad efter hur illa (mild, tydlig, kraftig), plus en sammanfattande banner
+för hela fallet. Tabellen i övrigt förblir neutral.
+
+**Marginal:** en avvikelse som är liten mot årets kostnad räknas som i nivå och
+utlöser ingen varning. Därför är B ett fall med ett problemår, inte två.
+Tröskeln (t.ex. en andel av årets kostnad) är en öppen fråga, se avsnitt 11.
+
+Poängen: varningen växer med hur nära i tid problemet ligger och hur många år
+som inte går ihop. Ett underskott om fyra år är en signal att bevaka. Ett
+underskott redan om två år är ett beslutsläge nu.
+
+### 3.9 Två tidsögonblick per typfall (dynamiken)
+
+Varje typfall ska gå att se från två utkikspunkter:
+
+- **Sett från år X:** resultaträkningen för X och X+1 till X+4.
+- **Sett från år X+1:** samma grupp ett år senare. Fönstret har flyttats fram,
+  kolumnerna är nu X+1 till X+5. Ett nytt år, X+5, kommer in i bilden.
+
+Mellan de två ögonblicken hinner saker ändras. Ett nytt bidrag kan ha landat
+för ett år långt fram. Lönekostnaden kan ha tagit ett steg upp. Framför allt:
+det som såg lugnt ut ett år tidigare gör det inte längre, för glappet har
+rullat ett steg närmare.
+
+Ett tydligt fall: **Fall A sett från X** går ihop alla år. **Fall A sett från
+X+1** visar underskott X+3 till X+5. Gruppen har inte gjort något fel. Den har
+bara stått still medan horisonten flyttade sig. Det är hela argumentet för att
+titta framåt vid varje nedslag, inte en gång om året.
+
+Sidan låter läsaren växla mellan de två ögonblicken för varje typfall och se
+hur RESULTAT-raden och varningen förändras.
+
+**Modellval (öppet):** antingen två explicita resultaträkningar per typfall
+(enklast, och gör tydligt att informationen ändras), eller en underliggande
+bidragsportfölj där sidan räknar fram vad som är känt vid respektive utkiksår.
+Se avsnitt 11.
+
 ---
 
 ## 4. Mål
@@ -234,14 +315,15 @@ Tills dess: **ingen SPEC.md än.** PRD:n är i planeringsfas.
 
 ## 11. Öppna frågor
 
-Om HTML-sidan (avgörs efter att Kent berättat mer):
+Om HTML-sidan:
 
-- Vad ska sidan låta läsaren göra? Läsa en färdig bild, eller mata in egna
-  siffror och se flerårshorisonten räknas om?
-- Påhittad exempeldata, eller ett neutralt räkneexempel?
-- Fyra år framåt fast, eller horisonten som inställning på sidan?
-- Ska intäktsmixen (offentligt/bidrag/projekt/eget) vara en egen vy, eller
-  vävas in i rutnätet?
+- **Modellval för de två tidsögonblicken:** två explicita resultaträkningar
+  per typfall, eller en bidragsportfölj som sidan räknar fram från? (Avsnitt 3.9)
+- **Marginaltröskeln:** hur stor får en avvikelse vara för att räknas som i
+  nivå? Fast andel av årets kostnad, eller inställbar på sidan?
+- Ska läsaren kunna växla mellan A/B/C/D, eller ses alla fyra samtidigt?
+- Ska läsaren kunna mata in egna siffror, eller är exemplet fast?
+- Färgtrappan: gul → orange → röd, eller en nyans som blir mörkare?
 - Var i Ekonomi-projektets struktur hör sidan hemma? Egen sektion, eller
   under ekonomistyrning?
 
@@ -260,3 +342,8 @@ Om blogginlägget (avgörs närmare publicering):
 | 2026-09-03 | Upplägg C valt för blogginlägget. Konkret orsak: chefer blir förvånade över hur lite finansiering som är säkrad framåt. |
 | 2026-09-03 | Ordningen omvänd: HTML-sidan byggs först, blogginlägget utgår från den. |
 | 2026-09-03 | AI-vinkeln hålls implicit: GitHub-hörna + teknik-modal på sidan, ingen AI-argumentation i texten. Teknik-modalen nämner att bra prompter, kontext och harness krävs. |
+| 2026-09-03 | Sidan bärs av fyra typfall (A–D) för en forskare NN, med visuell varning som trappas upp: A ingen, B mild, C tydlig, D kraftig. |
+| 2026-09-03 | Mekanismen: portfölj av tidsbegränsade bidrag som löper ut medan lönekostnaderna ligger platt. Kent skickade fyra exempelresultaträkningar (X, X+1…X+4). |
+| 2026-09-03 | Format: full resultaträkning, bidragsgivarrader hopfällbara, TOT och RESULTAT syns direkt. |
+| 2026-09-03 | Varning: färg på negativ RESULTAT-cell (graderad) plus sammanfattande banner. B:s X+3 på −500 räknas som inom marginalen, alltså ett problemår i B. |
+| 2026-09-03 | Dynamik tillagd: varje typfall ses från två tidsögonblick (år X och år X+1). Fall A ett år senare ser ut som Fall B gjorde. Att stå still flyttar glappet närmare. |
