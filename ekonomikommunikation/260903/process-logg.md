@@ -187,7 +187,37 @@ eftersom lönerna nu växer medan bidragen fortfarande tar slut abrupt.
 **Verifierat i webbläsare:** alla fyra grupperna, båda vyerna, TOT-rader,
 RESULTAT, färger, banner, "ett år senare"-talen. Inga konsolfel.
 
+## 2026-09-03 – Leverans 7: avslutande analys + ingress
+
+Kent ville lägga till en analys av vad de fyra grupperna visar tillsammans,
+och bad om faktagranskning.
+
+**Faktagranskning:** talen (192 / 5 492 / 8 592 / 11 092 tkr sämre) stämmer.
+"Alla grupperna får sämre resultat" stämmer, men AA:s förändring är försumbar
+(0,5 % av fönstret). Claudes invändning: försämringen är strukturell (förlorat
+överskottsår X, nytt underskottsår X+5, bidrag som inte förnyats, växande
+löner), inte konjunkturell. Kent höll fast vid sin tolkning, men scopad: det
+är "sämre tider" för just BB/CC/DD, inte för all forskning, och att AA klarar
+sig visar just det. Texten skrevs så att AA-kontrasten stärker Kents poäng i
+stället för att motsäga den.
+
+Kent övervägde att låta grupp CC återhämta sig sett från X+1 (landa nya
+bidrag) för att visa att utfallet inte är givet, men valde att inte ändra CC.
+DD:s 500 tkr år X+1 i "sett från X+1" står kvar, omtolkat som att DD faktiskt
+fick in dem. Inga datavärden ändrades.
+
+**Byggt:**
+
+- Nytt `<h2>En avslutande analys</h2>` sist i containern, under tabellen. Fem
+  stycken, Kents text.
+- Ett ingress-stycke om den rullande fönsterjämförelsen (X→X+4 mot X+1→X+5),
+  med analogin till rullande tolv månader. Kents arbetsnamn "rullande
+  fyraårsprognos" (LFÅPP) nämns i dialogen men togs inte in i sidtexten.
+
+**Verifierat i webbläsare:** ingress och analys renderar, rubriken i site-
+temat, inga konsolfel, ingen horisontell scroll.
+
 **Status:** sidan klar. Nästa steg är blogginlägget (PRD avsnitt 7).
 
 **Öppet, ej blockerande:** de två RESULTAT-raderna staplade (PRD avsnitt 11),
-EU:s hoppår i grupp CC (behållet tills vidare).
+CC:s eventuella återhämtning sett från X+1 (Kent avvaktar).

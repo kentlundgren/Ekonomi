@@ -184,8 +184,10 @@ DD-ver2-knappen är streckad tills vald.
 ## 5. Layout och komponenter
 
 1. **Site-nav** högst upp, samma som övriga Ekonomi-sidor. Aktuell sida markerad.
-2. Kort ingress i jag-form: fyra grupper med olika framförhållning och olika
-   lätt att få intäkter, utan att skriva ut "forskargrupp"/"forskning".
+2. Ingress i jag-form (Kents text): fyra grupper med olika framförhållning och
+   olika lätt att få intäkter, utan att skriva ut "forskargrupp"/"forskning".
+   Sista ingress-stycket förklarar den rullande fönsterjämförelsen (X till X+4
+   mot X+1 till X+5), med analogin till rullande tolv månader.
 3. **Gruppväljare:** knappar Grupp AA, BB, CC, DD (färgade enligt 4.3) plus
    **Grupp DD-ver2**.
 4. **Tidsväljare:** egen avskild grupp, "I år (sett från X)" och
@@ -205,6 +207,12 @@ DD-ver2-knappen är streckad tills vald.
 10. **Tröskelkontroll** (gul/röd), ett reglage med procentvärde, förval 15 %.
 11. **GitHub-hörna** (enkel länk) nere till vänster, **teknik-modal** nere
     till höger.
+
+12. **Avslutande analys** (`<h2>En avslutande analys</h2>`) sist i containern,
+    under resultaträkningstabellen. Kents text (godkänd 2026-09-03): alla fyra
+    grupperna får sämre samlat resultat ett år senare, AA försumbart, BB/CC/DD
+    genuint. Slutsatsen är att det inte är en generell nedgång (AA opåverkad),
+    utan att BB/CC/DD:s finansieringsmiljö har blivit hårdare.
 
 Kan tillkomma: de två RESULTAT-raderna (sett från X och sett från X+1)
 staplade år för år med förändringen per cell. Inte låst, se PRD avsnitt 11.
