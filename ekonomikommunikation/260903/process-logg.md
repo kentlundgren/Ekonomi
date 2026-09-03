@@ -242,6 +242,21 @@ stället för gul) så den funkar mot alla fyra bakgrunderna.
 **Verifierat i webbläsare:** alla fyra grupperna + DD-ver2, knapp/banner/ruta
 i rätt färg, ingen horisontell scroll, inga konsolfel.
 
+## 2026-09-03 – Leverans 9: samma utgångsläge år X
+
+Kent tyckte det var konstigt att BB/CC/DD hade ett större överskott år X
+(+1 260) än AA (+60). Bidragsgivare 7 år X sänktes från 3 000 till 1 800 för
+BB/CC/DD, som AA sedan tidigare. Nu har alla fyra RESULTAT +60 år X och
+TOT intäkter 10 100.
+
+Bara "sett från X"-datan berördes (år X ligger inte i X+1-fönstret). Nya
+"ett år senare"-tal: BB −4 292, CC −7 392, DD −9 892. Analystexten och
+ingressen uppdaterade ("De fyra grupperna har samma utgångsläge år X, ett
+litet överskott på 60 tkr").
+
+**Verifierat i webbläsare:** alla fyra TOT intäkter år X = 10 100, RESULTAT
++60, nya kort-tal. Inga konsolfel.
+
 **Status:** sidan klar. Nästa steg är blogginlägget (PRD avsnitt 7).
 
 **Öppet, ej blockerande:** de två RESULTAT-raderna staplade (PRD avsnitt 11),

@@ -93,41 +93,44 @@ RESULTAT **−100 / 17 / 34 / −49 / −132**. Σ = −230. Ett år senare: **�
 (under 300, visas som "i praktiken oförändrat"). X+1…X+4 identiska med sett
 från X, bara X+5 är nytt. AA:s bild är i stort sett oförändrad ett år senare.
 
+Bidragsgivare 7 år X = 1 800 för alla fyra grupperna (ändrat 2026-09-03 så att
+alla har samma utgångsläge år X: RESULTAT +60, TOT intäkter 10 100).
+
 **Grupp BB, sett från X**: Bidr. 4 3000/3000/3000/3000/– · Bidr. 5 500/500/500/–/– ·
-Bidr. 6 700/–/–/–/– · Bidr. 7 3000/–/–/–/–.
-TOT intäkter 11 300 / 7 600 / 7 600 / 7 100 / 4 100.
-RESULTAT **1 260 / 0 / −183 / −866 / −4 049**. Σ = −3 838.
+Bidr. 6 700/–/–/–/– · Bidr. 7 1800/–/–/–/–.
+TOT intäkter 10 100 / 7 600 / 7 600 / 7 100 / 4 100.
+RESULTAT **60 / 0 / −183 / −866 / −4 049**. Σ = −5 038.
 (X+2 och X+3 gula, X+4 röd. 1 rött år.)
 
 **Grupp BB, sett från X+1**: Bidr. 4 3000/3000/3000/–/– · Bidr. 5 500/500/–/–/–.
 TOT intäkter 7 600 / 7 600 / 7 100 / 4 100 / 4 100.
-RESULTAT **0 / −183 / −866 / −4 049 / −4 232**. Σ = −9 330. Ett år senare: **−5 492**.
+RESULTAT **0 / −183 / −866 / −4 049 / −4 232**. Σ = −9 330. Ett år senare: **−4 292**.
 (X+2, X+3 gula, X+4 och X+5 röda. 2 röda år.)
 
 **Grupp CC, sett från X**: Bidr. 3 1100/1100/1100/1100/– · Bidr. 4 3000/3000/3000/–/– ·
-Bidr. 5 500/500/500/500/– · Bidr. 6 700/–/–/–/– · Bidr. 7 3000/–/–/–/–.
-TOT intäkter 11 300 / 7 600 / 7 600 / 4 600 / 3 000.
-RESULTAT **1 260 / 0 / −183 / −3 366 / −5 149**. Σ = −7 438.
+Bidr. 5 500/500/500/500/– · Bidr. 6 700/–/–/–/– · Bidr. 7 1800/–/–/–/–.
+TOT intäkter 10 100 / 7 600 / 7 600 / 4 600 / 3 000.
+RESULTAT **60 / 0 / −183 / −3 366 / −5 149**. Σ = −8 638.
 (X+2 gul, X+3 och X+4 röda. 2 röda år.)
 
 **Grupp CC, sett från X+1**: EU 2000/2000/2000/–/2000 · Bidr. 3 1100/1100/1100/–/– ·
 Bidr. 4 3000/3000/–/–/– · Bidr. 5 500/500/500/–/–.
 TOT intäkter 7 600 / 7 600 / 4 600 / 1 000 / 3 000.
-RESULTAT **0 / −183 / −3 366 / −7 149 / −5 332**. Σ = −16 030. Ett år senare: **−8 592**.
+RESULTAT **0 / −183 / −3 366 / −7 149 / −5 332**. Σ = −16 030. Ett år senare: **−7 392**.
 (X+2 gul, X+3 till X+5 röda. 3 röda år.)
 (EU har ett hoppår: tomt X+4, åter X+5. Behålls eller jämnas ut, se PRD avsnitt 11.)
 
 **Grupp DD, sett från X**: VR 1000/1000/1000/1000/– · EU 2000/2000/2000/2000/– ·
 Bidr. 3 1100/1100/–/–/– · Bidr. 4 3000/3000/–/–/– · Bidr. 5 500/–/–/–/– ·
-Bidr. 6 700/–/–/–/– · Bidr. 7 3000/–/–/–/–.
-TOT intäkter 11 300 / 7 100 / 3 000 / 3 000 / 0.
-RESULTAT **1 260 / −500 / −4 783 / −4 966 / −8 149**. Σ = −17 138.
+Bidr. 6 700/–/–/–/– · Bidr. 7 1800/–/–/–/–.
+TOT intäkter 10 100 / 7 100 / 3 000 / 3 000 / 0.
+RESULTAT **60 / −500 / −4 783 / −4 966 / −8 149**. Σ = −18 338.
 (X+1 gul, X+2 till X+4 röda. DD går minus redan X+1.)
 
 **Grupp DD, sett från X+1**: VR 1000/1000/1000/–/– · EU 2000/2000/–/–/– ·
 Bidr. 3 1100/–/–/–/– · Bidr. 4 3000/–/–/–/– · Bidr. 5 500/–/–/–/–.
 TOT intäkter 7 600 / 3 000 / 1 000 / 0 / 0.
-RESULTAT **0 / −4 783 / −6 966 / −8 149 / −8 332**. Σ = −28 230. Ett år senare: **−11 092**.
+RESULTAT **0 / −4 783 / −6 966 / −8 149 / −8 332**. Σ = −28 230. Ett år senare: **−9 892**.
 (X+2 till X+5 röda. 4 röda år.)
 
 ### 3.3 Härledda värden
@@ -275,7 +278,8 @@ live efter push.
 
 - [x] Sidan öppnas fristående utan byggsteg, i `index.html` + `styles.css` + `app.js`.
 - [x] Grupp AA, BB, CC, DD visar rätt RESULTAT-rad och Σ enligt avsnitt 3.2, för båda tidsögonblicken.
-- [x] Ett år senare-talet: AA "−192 tkr, i praktiken oförändrat", BB −5 492, CC −8 592, DD −11 092.
+- [x] Alla fyra grupperna har RESULTAT +60 år X (samma utgångsläge).
+- [x] Ett år senare-talet: AA "−192 tkr, i praktiken oförändrat", BB −4 292, CC −7 392, DD −9 892.
 - [x] Cellfärg följer 2 %-toleransen och tröskeln. AA:s små negativa år är gröna. Med 15 % är BB:s X+2/X+3 gula och X+4 röd.
 - [x] Banner för AA är grön ("Går ihop alla år i fönstret") i båda vyerna. Ordningen AA « BB < CC < DD håller.
 - [x] Tröskeln går att ändra på sidan och färgerna uppdateras direkt.

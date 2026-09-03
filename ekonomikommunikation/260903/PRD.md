@@ -239,13 +239,14 @@ X rullar ur bild, och ett nytt år X+5 kommer in, oftast med underskott.
 | Fall | Σ RESULTAT sett från X | Σ RESULTAT sett från X+1 | Ett år senare (exempel, tkr) |
 |------|-----------------------|--------------------------|------------------------------|
 | A | −38 | −230 | −192 ("i praktiken oförändrat") |
-| B | −3 838 | −9 330 | −5 492 |
-| C | −7 438 | −16 030 | −8 592 |
-| D | −17 138 | −28 230 | −11 092 |
+| B | −5 038 | −9 330 | −4 292 |
+| C | −8 638 | −16 030 | −7 392 |
+| D | −18 338 | −28 230 | −9 892 |
 
-Alla tal omräknade 2026-09-03 sedan lönerna räknas upp 3 %/år för alla fyra
-grupperna (tidigare bara AA). Ordningen AA « BB < CC < DD håller, både på Σ
-och på när det första röda året inträffar. AA ligger nära balans varje år.
+Alla tal omräknade 2026-09-03: lönerna räknas upp 3 %/år för alla fyra
+grupperna, och Bidragsgivare 7 år X är 1 800 (inte 3 000) för BB/CC/DD så att
+alla har samma utgångsläge år X (RESULTAT +60). Ordningen AA « BB < CC < DD
+håller. AA ligger nära balans varje år.
 
 Alla fyra blir sämre på det här måttet, även A, fast A inte visar underskott
 något enskilt år. Bufferten är borta. Det är själva poängen: att stå still ett
@@ -520,3 +521,4 @@ att pricka av bygget mot.
 | 2026-09-03 (bygge) | Avslutande analys tillagd (Kents text, faktagranskad). Slutsats: alla grupperna får sämre samlat resultat ett år senare, men AA försumbart. BB/CC/DD har mindre bidragsmedel att räkna med framåt. Att AA är opåverkad visar att det inte är en generell nedgång, utan att BB/CC/DD:s finansieringsmiljö blivit hårdare. Claudes invändning ("strukturellt, inte konjunkturellt") landade i att "sämre tider" scopas till just de tre grupperna. |
 | 2026-09-03 (bygge) | Ingress-stycke tillagt om den rullande fönsterjämförelsen (X→X+4 mot X+1→X+5), med analogin rullande tolv månader. Kent kallar det en rullande fyraårsprognos (hans arbetsnamn LFÅPP togs inte in i sidtexten). |
 | 2026-09-03 (bygge) | Färgkodning per grupp: frågerutan under tabellen och bannern får gruppens färg (AA grön, BB gul, CC orange, DD röd), inte den beräknade allvarlighetsgraden. Bannerns text beskriver fortfarande hur många år som inte går ihop. RESULTAT-cellerna färgas oförändrat år för år. Ny rad i ingressen om att hela upplägget är färgkodat. |
+| 2026-09-03 (bygge) | Bidragsgivare 7 år X sänkt från 3 000 till 1 800 för BB/CC/DD (som AA sedan tidigare). Alla fyra grupperna har nu samma utgångsläge år X: RESULTAT +60. "Ett år senare"-talen omräknade: BB −4 292, CC −7 392, DD −9 892. |
