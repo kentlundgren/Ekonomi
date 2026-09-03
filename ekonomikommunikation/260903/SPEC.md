@@ -101,6 +101,7 @@ RESULTAT **1 260 / 0 / 0 / −3 000 / −4 600**. Σ = −6 340.
 Bidr. 3 1100/1100/1100/–/– · Bidr. 4 3000/3000/–/–/– · Bidr. 5 500/500/500/–/–.
 TOT intäkter 7 600 / 7 600 / 4 600 / 1 000 / 3 000.
 RESULTAT **0 / 0 / −3 000 / −6 600 / −6 600**. Σ = −16 200. Ett år senare: **−9 860**.
+(EU har ett hoppår: tomt X+4, åter X+5. Behålls eller jämnas ut, se PRD avsnitt 11.)
 
 **Fall D, sett från X**: VR 1000/1000/1000/1000/– · EU 2000/2000/2000/2000/– ·
 Bidr. 3 1100/1100/–/–/– · Bidr. 4 3000/3000/–/–/– · Bidr. 5 500/500/–/–/– ·
@@ -169,6 +170,11 @@ A grön, B gul, D röd. C växlar mellan gul och röd via CSS-animation.
    visas frågan om nya bidrag (text i PRD 3.10). Visas alltid för Fall D.
 10. **Tröskelkontroll** (gul/röd), t.ex. ett reglage med procentvärde.
 11. **GitHub-hörna** nere till vänster, **teknik-modal** nere till höger.
+    Om hörnan är en enkel länk eller en liten modal avgörs vid bygget
+    (PRD avsnitt 11).
+
+Kan tillkomma: de två RESULTAT-raderna (sett från X och sett från X+1)
+staplade år för år med förändringen per cell. Inte låst, se PRD avsnitt 11.
 
 ### 5.1 D-ver2
 

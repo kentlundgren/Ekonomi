@@ -4,7 +4,7 @@
 **Arbetsmapp:** `Ekonomi/ekonomikommunikation/260903/`
 **Skapad:** 2026-09-03
 **Senast ändrad:** 2026-09-03
-**Status:** Under planering – HTML-sidan byggs först, blogginlägget (upplägg C) utgår från den
+**Status:** Planering klar. [`SPEC.md`](SPEC.md) låst. Redo för bygge. HTML-sidan först, blogginlägget (upplägg C) efter.
 **Ägare:** Kent Lundgren
 
 ---
@@ -19,7 +19,7 @@ Fritidsprojekt. Inte ett uppdrag från Simrishamns kommun eller Poolia.
 
 ---
 
-## 1b. Varför det här behöver sägas
+## 1.1 Varför det här behöver sägas
 
 Kent har mött chefer och ansvariga som blivit förvånade över hur lite
 finansiering som faktiskt är säkrad framåt. Förvåningen kommer sent, ofta när
@@ -42,10 +42,10 @@ som varit. Samtalet med de ansvariga bör svara på tre frågor i följd:
 2. Hur ser nästa år ut? Budget eller en tidig prognos.
 3. Hur ser åren efter ut? Ram, riktning och förutsättningar, i grövre drag.
 
-Horisonten är alltså flera år, inte ett. Står vi i 2026 vill de ansvariga
-kunna se 2026 och en bild av 2027, 2028 och 2029. Detaljerna långt fram går
-inte att veta. Förutsättningarna måste man ändå ha grepp om, för att åtaganden
-som sträcker sig förbi årsskiftet ska gå att fatta beslut om.
+Horisonten är alltså flera år, inte ett. Står vi i år X vill de ansvariga
+kunna se X och en bild av de fyra åren efter. Detaljerna långt fram går inte
+att veta. Förutsättningarna måste man ändå ha grepp om, för att åtaganden som
+sträcker sig förbi årsskiftet ska gå att fatta beslut om.
 
 Tyngdpunkten ligger på **kommunikationshantverket**: hur ekonomen visar den
 här bilden begripligt och ärligt för personer som inte är ekonomer, särskilt
@@ -59,26 +59,21 @@ sin egen tidshorisont.
 
 ### 3.1 Den rullande flerårshorisonten
 
-Tänk ett rutnät. Raderna är årets tre nedslag (kalla dem T1, T2, T3/bokslut).
-Kolumnerna är innevarande år plus tre år framåt.
+Grundtanken: vid varje rapporttillfälle tittar man på innevarande år plus
+fyra år framåt, och fönstret flyttas fram ett steg för varje år som går.
+Bilden byggs om vid varje nedslag, den låses inte en gång per år.
 
-```
-             2026        2027        2028        2029
-           (år 0)      (år 1)      (år 2)      (år 3)
-T1     utfall+prognos  budget      ram         ram
-T2     utfall+prognos  budget/prg  ram         ram
-T3     bokslut         budget      tidig prg   ram
-```
-
-Fönstret flyttas fram ett steg varje år. Vid T1 2027 tittar man på
-2027–2030. Bilden byggs om vid varje nedslag, den låses inte en gång per år.
+I verkligheten sker nedslagen tre gånger om året (T1, T2, bokslut), se
+avsnitt 2. HTML-sidan förenklar och visar utkikspunkten per år i stället för
+per tertial: "sett från år X" och "sett från år X+1" (avsnitt 3.9). Poängen är
+densamma, att blicken framåt ska finnas med vid varje tillfälle.
 
 ### 3.2 Precisionen avtar med avståndet
 
-- **År 0:** kronor, mot budget, med förklarade avvikelser.
-- **År 1:** budgetnivå eller tidig prognos, huvudposter.
-- **År 2–3:** intervall och förutsättningar. Frågan är inte "hur mycket"
-  utan "har vi rimlig visshet om att finansieringen finns".
+- **År X:** kronor, mot budget, med förklarade avvikelser.
+- **År X+1:** budgetnivå eller tidig prognos, huvudposter.
+- **År X+2 till X+4:** intervall och förutsättningar. Frågan är inte "hur
+  mycket" utan "har vi rimlig visshet om att finansieringen finns".
 
 ### 3.3 Varför flera år
 
@@ -159,12 +154,14 @@ Samma resultaträkning i fyra lägen. Innevarande år X är oproblematiskt i all
 fyra. Skillnaden ligger i hur tidigt och hur djupt RESULTAT vänder negativt
 under X+1 till X+4.
 
+Bannertexterna anges i [`SPEC.md`](SPEC.md) avsnitt 4.2.
+
 | Fall | RESULTAT X+1 → X+4 (exempel, tkr) | Röda år | Varning |
 |------|----------------------------------|---------|---------|
 | **A** | 0, 0, 0, 0 | inga | Grön kvittens. |
-| **B** | 0, 0, −500, −3 500 | X+4 (X+3 gult) | Mild. Gul cell X+3, röd X+4, banner "lite oroande". |
-| **C** | 0, 0, −3 000, −4 600 | X+3, X+4 | Tydlig. Två röda celler, banner "oroande". |
-| **D** | −4 600, −4 600, −7 600 (X+2 → X+4) | X+2, X+3, X+4 | Kraftig. Tre röda celler, framträdande banner "agera nu". |
+| **B** | 0, 0, −500, −3 500 | X+4 (X+3 gult) | Mild. Gul cell X+3, röd X+4. |
+| **C** | 0, 0, −3 000, −4 600 | X+3, X+4 | Tydlig. Två röda celler. |
+| **D** | 0, −4 600, −4 600, −7 600 | X+2, X+3, X+4 | Kraftig. Tre röda celler, framträdande banner. |
 
 **Färgskala (beslut 2026-09-03), tre steg:**
 
@@ -204,8 +201,7 @@ innebörden framgår:
   X+5, kommer in i bilden.
 
 Mellan de två ögonblicken hinner saker ändras. Ett nytt bidrag kan ha landat
-för ett år långt fram. Lönekostnaden kan ha tagit ett steg upp. Ett nytt år,
-X+5, kommer in i bilden.
+för ett år långt fram. Lönekostnaden kan ha tagit ett steg upp.
 
 **Fall A** går ihop från båda utkikspunkterna. Sett från X är X+1 till X+4
 nollresultat. Sett från X+1 är även X+5 i balans, för ett nytt bidrag (givare
@@ -237,19 +233,21 @@ Alla fyra blir sämre på det här måttet, även A, fast A inte visar underskot
 något enskilt år. Bufferten är borta. Det är själva poängen: att stå still ett
 år kostar, i varje läge.
 
-**Så visas det (förslag, tre lager):**
+**Så visas det:**
 
 1. Ett "ett år senare"-tal per typfall, en siffra med nedåtpil (t.ex.
    `−6 760 tkr`), som växer från A till D.
-2. De två RESULTAT-raderna på varandra, år för år, med förändringen per cell.
-3. En liten stapel: Σ RESULTAT från X mot från X+1.
+2. Två staplar: Σ RESULTAT sett från X mot sett från X+1, visuellt åtskilda.
+3. Växlingen mellan de två ögonblicken, där tabellen, talet och banner räknas
+   om när man byter.
 
-Plus växlingen mellan de två ögonblicken, där talet räknas fram när man byter.
+Ett fjärde lager, de två RESULTAT-raderna staplade år för år med förändringen
+per cell, är en möjlighet men inte låst. Se avsnitt 11.
 
-**Modellval (öppet):** antingen två explicita resultaträkningar per typfall
-(enklast, och gör tydligt att informationen ändras), eller en underliggande
-bidragsportfölj där sidan räknar fram vad som är känt vid respektive utkiksår.
-Se avsnitt 11.
+**Modellval (beslut 2026-09-03):** två explicita resultaträkningar per typfall
+och tidsögonblick. Ingen framräkning ur en underliggande portfölj. Det matchar
+Kents exempelflikar, är enklare att bygga och granska, och gör tydligt att
+informationen faktiskt ändras mellan åren. Se [`SPEC.md`](SPEC.md) avsnitt 3.
 
 ### 3.10 Den tomma ytan: frågan sidan ska väcka
 
@@ -377,7 +375,7 @@ se avsnitt 11.
 ### Upplägg A – "Ekonomen som också pratar om nästa år" (sparat)
 1. Vanan: rapportera utfall mot budget för det som varit.
 2. Vad som saknas: blicken framåt vid varje nedslag, inte bara i budgetarbetet.
-3. Den rullande horisonten som princip, med rutnätet som bild.
+3. Den rullande horisonten som princip, med flerårsbilden som illustration.
 4. Intäktsmixen och varför olika pengar har olika tidshorisont.
 5. Vad de ansvariga faktiskt behöver för att kunna besluta.
 
@@ -436,14 +434,18 @@ att pricka av bygget mot.
 
 ## 11. Öppna frågor
 
-**Kvar innan bygg:**
+**Kvar, avgörs vid bygget:**
 
-- **Modellval för de två tidsögonblicken:** två explicita resultaträkningar
-  per typfall, eller en underliggande bidragsportfölj som sidan räknar fram
-  från? (Avsnitt 3.9) Avgörs när `SPEC.md` skrivs.
+- Ska de två RESULTAT-raderna (sett från X och sett från X+1) också visas
+  staplade år för år, utöver talet och staplarna? (Avsnitt 3.9)
+- GitHub-hörnan nere till vänster: en enkel länk (som övriga Ekonomi-sidor)
+  eller en liten modal? (Avsnitt 6.1)
+- Fall C sett från X+1 har EU med ett hoppår (X+4 tomt, X+5 åter). Behålla som
+  ett realistiskt exempel på bidrag som förnyas med glapp, eller jämna ut?
 
 **Besvarade 2026-09-03:**
 
+- Modellval: två explicita resultaträkningar per typfall och tidsögonblick.
 - Tröskeln gul/röd är inställbar, förval 15 % av årets kostnad.
 - Läsaren växlar mellan A/B/C/D som färgade knappar (grön, gul, gul/röd, röd).
 - Egna siffror hanteras via det redigerbara läget D-ver2.
