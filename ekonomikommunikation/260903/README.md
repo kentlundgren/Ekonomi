@@ -42,10 +42,10 @@ Då ska den här README:n uppdateras med en klickbar länk dit.
 
 ## Status
 
-Under planering. Scope är satt: en ståndpunkt om ekonomikommunikation, först
-som blogginlägg på Controller utan gränser, sedan som interaktiv HTML-sida i
-Ekonomi-projektet. Nästa steg är att välja upplägg för blogginlägget
-(se avsnitt 7 i [`PRD.md`](PRD.md)).
+Under planering. Scope är satt: en ståndpunkt om ekonomikommunikation. Den
+interaktiva HTML-sidan byggs först och blir tänkredskapet, blogginlägget
+(upplägg C, "Kan vi anställa henne i tre år?") skrivs sedan och utgår från
+sidan. Nästa steg: Kent berättar mer om vad sidan ska visa. Se [`PRD.md`](PRD.md).
 
 ## Datummappen
 
