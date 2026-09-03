@@ -170,17 +170,47 @@ Varje typfall ska gå att se från två utkikspunkter:
   kolumnerna är nu X+1 till X+5. Ett nytt år, X+5, kommer in i bilden.
 
 Mellan de två ögonblicken hinner saker ändras. Ett nytt bidrag kan ha landat
-för ett år långt fram. Lönekostnaden kan ha tagit ett steg upp. Framför allt:
-det som såg lugnt ut ett år tidigare gör det inte längre, för glappet har
-rullat ett steg närmare.
+för ett år långt fram. Lönekostnaden kan ha tagit ett steg upp. Ett nytt år,
+X+5, kommer in i bilden.
 
-Ett tydligt fall: **Fall A sett från X** går ihop alla år. **Fall A sett från
-X+1** visar underskott X+3 till X+5. Gruppen har inte gjort något fel. Den har
-bara stått still medan horisonten flyttade sig. Det är hela argumentet för att
-titta framåt vid varje nedslag, inte en gång om året.
+**Fall A** går ihop från båda utkikspunkterna. Sett från X är X+1 till X+4
+nollresultat. Sett från X+1 är även X+5 i balans, för ett nytt bidrag (givare
+6) landar för det året och både intäkter och kostnader stiger till samma nivå.
+A är gruppen som håller portföljen påfylld. Nya bidrag kommer in i takt med att
+gamla löper ut.
+
+**B, C och D** ser värre ut sett från X+1 än sett från X. Portföljen fylls
+inte på. Glappet har rullat ett steg närmare, det nya året X+5 saknar
+täckning, och utrymmet att hinna agera har krympt med ett år.
 
 Sidan låter läsaren växla mellan de två ögonblicken för varje typfall och se
 hur RESULTAT-raden och varningen förändras.
+
+#### Måttet: hur mycket sämre ett år senare
+
+Försämringen mäts som **summan av alla årens RESULTAT i fönstret**, jämfört
+mellan de två utkikspunkterna. Två saker slår igenom samtidigt: överskottsåret
+X rullar ur bild, och ett nytt år X+5 kommer in, oftast med underskott.
+
+| Fall | Σ RESULTAT sett från X | Σ RESULTAT sett från X+1 | Ett år senare (exempel, tkr) |
+|------|-----------------------|--------------------------|------------------------------|
+| A | +1 260 | 0 | −1 260 |
+| B | −2 740 | −9 500 | −6 760 |
+| C | −6 340 | −16 200 | −9 860 |
+| D | −15 540 | −28 400 | −12 860 |
+
+Alla fyra blir sämre på det här måttet, även A, fast A inte visar underskott
+något enskilt år. Bufferten är borta. Det är själva poängen: att stå still ett
+år kostar, i varje läge.
+
+**Så visas det (förslag, tre lager):**
+
+1. Ett "ett år senare"-tal per typfall, en siffra med nedåtpil (t.ex.
+   `−6 760 tkr`), som växer från A till D.
+2. De två RESULTAT-raderna på varandra, år för år, med förändringen per cell.
+3. En liten stapel: Σ RESULTAT från X mot från X+1.
+
+Plus växlingen mellan de två ögonblicken, där talet räknas fram när man byter.
 
 **Modellval (öppet):** antingen två explicita resultaträkningar per typfall
 (enklast, och gör tydligt att informationen ändras), eller en underliggande
@@ -346,4 +376,5 @@ Om blogginlägget (avgörs närmare publicering):
 | 2026-09-03 | Mekanismen: portfölj av tidsbegränsade bidrag som löper ut medan lönekostnaderna ligger platt. Kent skickade fyra exempelresultaträkningar (X, X+1…X+4). |
 | 2026-09-03 | Format: full resultaträkning, bidragsgivarrader hopfällbara, TOT och RESULTAT syns direkt. |
 | 2026-09-03 | Varning: färg på negativ RESULTAT-cell (graderad) plus sammanfattande banner. B:s X+3 på −500 räknas som inom marginalen, alltså ett problemår i B. |
-| 2026-09-03 | Dynamik tillagd: varje typfall ses från två tidsögonblick (år X och år X+1). Fall A ett år senare ser ut som Fall B gjorde. Att stå still flyttar glappet närmare. |
+| 2026-09-03 | Dynamik tillagd: varje typfall ses från två tidsögonblick (år X och år X+1). Fall A balanserar varje enskilt år från båda. |
+| 2026-09-03 | Försämringsmått: Σ RESULTAT i fönstret, sett från X+1 minus sett från X. Alla fyra fallen blir sämre (A −1 260, B −6 760, C −9 860, D −12 860 tkr i exemplet). Visas som ett tal per fall + de två RESULTAT-raderna + en stapel. |
