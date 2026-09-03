@@ -91,8 +91,38 @@ till egen intäkt", "Återställ") syntes även i vanliga typfall. Orsak: `.dver
 verktyg` hade `display: flex` i CSS, vilket vinner över attributet `hidden`.
 Fix: `.dver2-verktyg[hidden] { display: none; }`.
 
-**Status:** sidan klar och verifierad. Nästa steg är blogginlägget, som är
-en egen leverans (PRD avsnitt 7).
+**Status leverans 3:** sidan klar och verifierad.
+
+## 2026-09-03 – Leverans 4: grupper AA–DD och gruppspecifik hover
+
+På Kents begäran.
+
+**Namnbyte:** typfall A–D blev grupp AA, BB, CC, DD på sidan (plus grupp
+DD-ver2). Knapparna, rubriken ("Fyra grupper") och den inledande texten
+skrevs om. Interna nycklar i `app.js` (`state.fall` = "A".."Dver2") lämnades
+orörda, bara etiketterna ändrades.
+
+**Inledande texten:** skrevs om så att den inte skriver ut "forskargrupp"
+eller "forskning". Nu: fyra grupper som skiljer sig i hur långt fram de har
+säkrad finansiering och hur lätt de har att få in intäkter. Bidragsgivarnamnen
+(VR, EU) står kvar i tabellen. Sidans `<title>` och section-card på
+`Ekonomi/index.html` uppdaterade på samma sätt.
+
+**Hover-frågan:** gjord gruppspecifik. Två maps i `app.js`: `HOVER` (längre
+text, rutan under tabellen) och `TIP` (kort text, den lilla rutan vid cellen).
+`VILA` är viloläget för AA/BB/CC. Rutan under tabellen bytte från röd till
+gul, och blinkar till (`fragPuls`) när den byts. Den lilla rutan (`.celltip`)
+är `position: fixed`, mörk, göms vid klick utanför, scroll eller resize.
+
+**Grupp DD** har en utbyggd reflektion som står framme även utan hover, med
+fokus på DD:s historik: har de alltid landat medel i tid förr, eller har de
+strukturellt sämre möjligheter att säkra avtal i förväg?
+
+**Verifierat i webbläsare:** namnen på knappar och i text, DD:s vilotext,
+hover på AA (vila → gul + puls + liten ruta → tillbaka), tooltip-position,
+D-ver2 oförändrad, ingen horisontell scroll, inga konsolfel.
+
+**Status:** sidan klar. Nästa steg är blogginlägget (PRD avsnitt 7).
 
 **Öppet, ej blockerande:** de två RESULTAT-raderna staplade (PRD avsnitt 11),
-EU:s hoppår i Fall C (behållet tills vidare).
+EU:s hoppår i grupp CC (behållet tills vidare).

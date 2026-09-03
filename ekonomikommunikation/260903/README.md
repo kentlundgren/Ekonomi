@@ -52,11 +52,12 @@ Live inom ~1 minut efter push till `main`.
 lokalt i webbläsare mot acceptanslistan i [`SPEC.md`](SPEC.md) avsnitt 9.
 Länkad från Ekonomi-startsidan och upptagen i `Ekonomi/README.md`.
 
-Sidan visar en forskargrupps resultaträkning fyra år fram, i fyra typfall
-(A–D) plus ett redigerbart läge D-ver2, sedd från år X och år X+1. En portfölj
+Sidan visar fyra gruppers resultaträkning fyra år fram (grupp AA, BB, CC, DD)
+plus ett redigerbart läge DD-ver2, sedd från år X och år X+1. En portfölj
 tidsbegränsade bidrag löper ut medan lönekostnaderna ligger platt. Varningen
-på negativ RESULTAT-rad trappas upp från A till D, och de tomma
-intäktscellerna längre fram väcker frågan om nya bidrag är på väg.
+på negativ RESULTAT-rad trappas upp från AA till DD, och de tomma
+intäktscellerna längre fram väcker en gruppspecifik fråga, mest utbyggd för
+DD: hur illa är det egentligen, och vad säger gruppens historik?
 
 Nästa steg: blogginlägget (upplägg C, "Kan vi anställa henne i tre år?") som
 utgår från sidan. Se [`PRD.md`](PRD.md) avsnitt 7.

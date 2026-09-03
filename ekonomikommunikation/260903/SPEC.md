@@ -1,4 +1,4 @@
-# SPEC – Interaktiv sida: forskargruppens ekonomi fyra år fram
+# SPEC – Interaktiv sida: fyra gruppers ekonomi fyra år fram
 
 **Projekt:** ekonomikommunikation
 **Arbetsmapp:** `Ekonomi/ekonomikommunikation/260903/`
@@ -10,11 +10,12 @@
 
 ## 1. Vad som ska byggas
 
-En fristående interaktiv sida som visar en forskargrupps resultaträkning fyra
-år framåt, i fyra typfall (A–D) plus ett redigerbart läge (D-ver2), sedd från
+En fristående interaktiv sida som visar fyra gruppers resultaträkning fyra år
+framåt (grupp AA, BB, CC, DD) plus ett redigerbart läge (DD-ver2), sedd från
 två tidsögonblick (år X och år X+1). Sidan ska få läsaren att se när
 finansieringen tar slut, hur mycket sämre bilden blir ett år senare, och
-ställa frågan om nya bidrag är på väg.
+reflektera kring hur illa det egentligen är för grupp DD. Prosan skriver inte
+ut "forskargrupp"/"forskning" (PRD avsnitt 3.6).
 
 Bygg med skill `kent-bygg-sidor`. Process-logg förs i `process-logg.md`.
 
@@ -147,39 +148,45 @@ Tröskeln är inställbar på sidan. Förval **15 %**. Rimligt intervall 5–40 
 | 2 röda år | röd: "Två år går inte ihop. Ta upp finansieringen nu." |
 | ≥3 röda år | röd, kraftig: "Tre år eller fler går inte ihop. Åtgärd krävs nu." |
 
-### 4.3 Typfallsknappar
+### 4.3 Gruppknappar
 
-A grön, B gul, D röd. C växlar mellan gul och röd via CSS-animation.
+Grupperna heter **AA, BB, CC, DD** på sidan (planeringens A–D). AA grön,
+BB gul, DD röd. CC växlar mellan gul och röd via CSS-animation.
+DD-ver2-knappen är streckad tills vald.
 
 ---
 
 ## 5. Layout och komponenter
 
 1. **Site-nav** högst upp, samma som övriga Ekonomi-sidor. Aktuell sida markerad.
-2. Kort ingress i jag-form som säger vad sidan visar och varför.
-3. **Typfallsväljare:** knappar A, B, C, D (färgade enligt 4.3) plus **D-ver2**.
+2. Kort ingress i jag-form: fyra grupper med olika framförhållning och olika
+   lätt att få intäkter, utan att skriva ut "forskargrupp"/"forskning".
+3. **Gruppväljare:** knappar Grupp AA, BB, CC, DD (färgade enligt 4.3) plus
+   **Grupp DD-ver2**.
 4. **Tidsväljare:** egen avskild grupp, "I år (sett från X)" och
    "Nästa år (sett från X+1)".
 5. **Ett år senare-kort:** talet (nedåtpil), plus Σ-staplar för i år och
    nästa år, visuellt åtskilda.
 6. **Banner** enligt 4.2.
-7. **Notrad** per typfall, kort text om vad läget innebär.
+7. **Notrad** per grupp, kort text om vad läget innebär.
 8. **Resultaträkningstabell.** Bidragsgivarrader visas som default, knapp för
    att fälla ihop. Negativa RESULTAT-celler färgas enligt 4.1. Tomma
    intäktsceller är skrafferade.
-9. **Frågeruta** under tabellen. Vid hover eller tryck på en tom intäktscell
-   visas frågan om nya bidrag (text i PRD 3.10). Visas alltid för Fall D.
-10. **Tröskelkontroll** (gul/röd), t.ex. ett reglage med procentvärde.
-11. **GitHub-hörna** nere till vänster, **teknik-modal** nere till höger.
-    Om hörnan är en enkel länk eller en liten modal avgörs vid bygget
-    (PRD avsnitt 11).
+9. **Fråga vid tom cell.** Vid hover, fokus eller tryck på en tom intäktscell
+   visas den **gruppspecifika** reflektionen (PRD 3.10) på två ställen: en
+   liten fast-positionerad ruta vid cellen, och en större ruta under tabellen
+   som byts och blinkar till. För DD står den utbyggda reflektionen framme
+   även utan hover.
+10. **Tröskelkontroll** (gul/röd), ett reglage med procentvärde, förval 15 %.
+11. **GitHub-hörna** (enkel länk) nere till vänster, **teknik-modal** nere
+    till höger.
 
 Kan tillkomma: de två RESULTAT-raderna (sett från X och sett från X+1)
 staplade år för år med förändringen per cell. Inte låst, se PRD avsnitt 11.
 
-### 5.1 D-ver2
+### 5.1 Grupp DD-ver2
 
-- Utgår från Fall D för valt tidsögonblick.
+- Utgår från grupp DD för valt tidsögonblick.
 - Läsaren kan redigera bidragsgivarcellernas belopp, lägga till egna
   intäktsrader, och sänka kostnadsrader. Indatafält har gul bakgrund.
 - Vid varje ny eller höjd intäkt visas en icke-blockerande påminnelse:
@@ -227,17 +234,17 @@ Bockade = verifierade lokalt i webbläsare 2026-09-03. Kent verifierar även
 live efter push.
 
 - [x] Sidan öppnas fristående utan byggsteg, i `index.html` + `styles.css` + `app.js`.
-- [x] A, B, C, D visar rätt RESULTAT-rad och Σ enligt avsnitt 3.2, för båda tidsögonblicken.
-- [x] Ett år senare-talet visar −1 260 (A), −6 760 (B), −9 860 (C), −12 360 (D).
-- [x] Cellfärg följer tröskeln. Med 15 % är B:s X+3 gul och X+4 röd.
+- [x] Grupp AA, BB, CC, DD visar rätt RESULTAT-rad och Σ enligt avsnitt 3.2, för båda tidsögonblicken.
+- [x] Ett år senare-talet visar −1 260 (AA), −6 760 (BB), −9 860 (CC), −12 360 (DD).
+- [x] Cellfärg följer tröskeln. Med 15 % är BB:s X+3 gul och X+4 röd.
 - [x] Tröskeln går att ändra på sidan och färgerna uppdateras direkt.
-- [x] Typfallsknapparna är färgade, C växlar gul/röd.
+- [x] Gruppknapparna är färgade (AA grön, BB gul, DD röd), CC växlar gul/röd.
 - [x] Bidragsgivarrader visas som default, går att fälla ihop.
-- [x] Tomma intäktsceller är skrafferade. Hover eller tryck visar frågan. Frågerutan står alltid framme för D.
-- [x] Tidsväljaren är visuellt åtskild från typfallsknapparna.
-- [x] D-ver2 går att redigera, påminnelsen visas vid ny intäkt, allt räknas om, återställ fungerar.
+- [x] Tomma intäktsceller är skrafferade. Hover, fokus eller tryck visar den gruppspecifika frågan i två rutor (vid cellen + under tabellen). DD:s utbyggda reflektion står framme även utan hover.
+- [x] Tidsväljaren är visuellt åtskild från gruppknapparna.
+- [x] DD-ver2 går att redigera, påminnelsen visas vid ny intäkt, allt räknas om, återställ fungerar.
 - [x] Site-nav, GitHub-hörna och teknik-modal finns och ser ut som resten av projektet.
-- [x] Fungerar på mobil, tryck ersätter hover. (Horisontell scroll i navet rättad.)
+- [x] Fungerar på mobil, tryck ersätter hover. (Horisontell scroll i navet rättad, tooltip göms vid scroll/klick utanför.)
 - [x] Länk finns på `Ekonomi/index.html`, och `Ekonomi/README.md` samt mappens `README.md` är uppdaterade.
 - [x] `process-logg.md` är förd under bygget.
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kan vi anställa henne i tre år? – forskargruppens ekonomi fyra år fram</title>
+  <title>Kan vi anställa henne i tre år? – fyra grupper, fyra år fram</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -21,32 +21,38 @@
   <p class="meta">Ekonomikommunikation &nbsp;|&nbsp; upprättad 2026-09-03 &nbsp;|&nbsp; påhittat räkneexempel</p>
 
   <p>
-    Jag har suttit i samtalet flera gånger. En chef eller forskningsledare vill
-    förlänga en tjänst eller anställa någon ny, och frågar rakt ut om pengarna
-    räcker flera år framåt. Det vanliga svaret är en budget för i år, kanske
-    nästa. Sedan blir hen förvånad över hur lite som egentligen är säkrat
-    därefter.
+    Jag har suttit i samtalet flera gånger. En chef eller ledare vill förlänga
+    en tjänst eller anställa någon ny, och frågar rakt ut om pengarna räcker
+    flera år framåt. Det vanliga svaret är en budget för i år, kanske nästa.
+    Sedan blir hen förvånad över hur lite som egentligen är säkrat därefter.
   </p>
   <p>
     Den här sidan visar varför förvåningen uppstår, och hur en rapportering som
-    sträcker sig fyra år fram kan motverka den. Exemplet är en forskargrupp
-    kring en forskare, NN, som lever på flera tidsbegränsade bidrag samtidigt.
+    sträcker sig fyra år fram kan motverka den. Här är fyra grupper, AA, BB, CC
+    och DD, som var och en lever på flera tidsbegränsade bidrag samtidigt.
     Bidragen löper ut ett efter ett. Lönerna gör det inte.
   </p>
-
-  <h2>Fyra typfall</h2>
   <p>
-    Samma resultaträkning i fyra lägen. Innevarande år ser bra ut i alla fyra.
-    Skillnaden ligger i hur tidigt och hur djupt resultatet vänder negativt
-    under åren efter.
+    Grupperna skiljer sig åt i två avseenden: hur långt fram de har säkrad
+    finansiering, och hur lätt de har att få in nya intäkter till sin
+    verksamhet. AA har täckning alla år framåt. DD ser tuffast ut. Frågan sidan
+    vill väcka är hur illa det egentligen är för DD, och vad man behöver veta
+    för att avgöra det.
   </p>
 
-  <div class="fall-rad" id="fallRad" role="group" aria-label="Välj typfall">
-    <button type="button" class="fall-btn vald" data-fall="A">Typfall A<small>budgeten går ihop</small></button>
-    <button type="button" class="fall-btn" data-fall="B">Typfall B<small>nästan i nivå</small></button>
-    <button type="button" class="fall-btn" data-fall="C">Typfall C<small>på gränsen</small></button>
-    <button type="button" class="fall-btn" data-fall="D">Typfall D<small>tuffast framåt</small></button>
-    <button type="button" class="fall-btn fall-btn-red" data-fall="Dver2">D-ver2<small>fyll på själv</small></button>
+  <h2>Fyra grupper</h2>
+  <p>
+    Samma resultaträkning för fyra grupper. Innevarande år ser hyggligt ut i
+    alla fyra. Skillnaden ligger i hur tidigt resultatet vänder negativt under
+    åren efter, och i hur säker den framtida finansieringen är.
+  </p>
+
+  <div class="fall-rad" id="fallRad" role="group" aria-label="Välj grupp">
+    <button type="button" class="fall-btn vald" data-fall="A">Grupp AA<small>täckning alla år</small></button>
+    <button type="button" class="fall-btn" data-fall="B">Grupp BB<small>nästan i nivå</small></button>
+    <button type="button" class="fall-btn" data-fall="C">Grupp CC<small>glapp två år fram</small></button>
+    <button type="button" class="fall-btn" data-fall="D">Grupp DD<small>tuffast framåt</small></button>
+    <button type="button" class="fall-btn fall-btn-red" data-fall="Dver2">Grupp DD-ver2<small>fyll på själv</small></button>
   </div>
 
   <div class="tid-rad" id="tidRad" role="group" aria-label="Välj tidpunkt">
@@ -91,6 +97,8 @@
   </p>
 
 </div>
+
+<div class="celltip" id="celltip" hidden></div>
 
 <a class="corner corner-left" href="https://github.com/kentlundgren/Ekonomi/tree/main/ekonomikommunikation/260903" target="_blank" rel="noopener">{ } GitHub</a>
 <button type="button" class="corner corner-right" id="techBtn" aria-label="Tekniköversikt">&lt;/&gt; teknik</button>

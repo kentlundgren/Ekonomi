@@ -103,9 +103,16 @@ källa redovisas för sig, med sin egen tidshorisont och säkerhetsgrad:
 
 ### 3.6 Mekanismen: en portfölj bidrag som löper ut
 
-Exemplet på sidan är en forskargrupp kring en forskare, NN. Gruppen lever på
+Exemplet på sidan är fyra grupper, AA, BB, CC och DD. Var och en lever på
 flera tidsbegränsade bidrag samtidigt (VR, EU och några till). Varje bidrag
 täcker en bestämd period och tar sedan slut.
+
+**Skrivsätt (beslut 2026-09-03):** den publicerade sidan skriver inte ut
+"forskargrupp" eller "forskning". Bidragsgivarnamnen (VR, EU) står kvar i
+tabellen och läsaren kan ana sammanhanget, men prosan säger "grupp" och
+"verksamhet". Grupperna skiljer sig åt i hur långt fram de har säkrad
+finansiering och hur lätt de har att få in nya intäkter. DD är den grupp
+sidan vill få läsaren att reflektera kring: hur illa är det egentligen?
 
 Kostnaderna, till största delen löner, ligger nästan platt. Personerna är kvar
 även när ett enskilt bidrag upphör. Ju längre fram man tittar, desto färre
@@ -148,11 +155,15 @@ nere till höger. Och den ska gå att nå från Ekonomi-sajten (beslut
 `Ekonomi/README.md` (projektstruktur, Live-sidor, filbeskrivning). Exakt var i
 menyn avgörs vid bygget.
 
-### 3.8 Fyra typfall och hur varningen trappas upp
+### 3.8 Fyra grupper och hur varningen trappas upp
 
-Samma resultaträkning i fyra lägen. Innevarande år X är oproblematiskt i alla
-fyra. Skillnaden ligger i hur tidigt och hur djupt RESULTAT vänder negativt
-under X+1 till X+4.
+Samma resultaträkning för fyra grupper. Innevarande år X är oproblematiskt i
+alla fyra. Skillnaden ligger i hur tidigt och hur djupt RESULTAT vänder
+negativt under åren efter.
+
+I planeringen kallades de typfall A–D. På den byggda sidan heter de **grupp
+AA, BB, CC och DD** (beslut 2026-09-03). Nedan används A–D som kortform, men
+A = AA, B = BB, C = CC, D = DD, och D-ver2 = DD-ver2.
 
 Bannertexterna anges i [`SPEC.md`](SPEC.md) avsnitt 4.2.
 
@@ -255,38 +266,37 @@ informationen faktiskt ändras mellan åren. Se [`SPEC.md`](SPEC.md) avsnitt 3.
 ### 3.10 Den tomma ytan: frågan sidan ska väcka
 
 De tomma cellerna längre fram i intäktsdelen är sidans viktigaste
-kommunikativa yta, särskilt i Fall D och särskilt sett från X+1, när bilden
-ser riktigt risig ut.
+kommunikativa yta, särskilt för grupp DD och särskilt sett från X+1.
 
-När läsaren för pekaren över den tomma ytan bland intäkterna ska en fråga
-komma fram, ungefär: *kommer det troligen in nya bidrag eller intäkter under
-de här åren?* Det är precis vad ekonomen frågar sig när hen ser Fall D.
+När läsaren för pekaren över, eller trycker på, en tom cell ska en fråga komma
+fram, ungefär: *kommer det troligen in nya bidrag eller intäkter under de här
+åren?* Frågan är **gruppspecifik** (beslut 2026-09-03) och visas på två ställen
+samtidigt: en liten ruta vid cellen, och en större ruta under tabellen som
+byts ut och blinkar till.
 
-Tomrummet kan betyda flera olika saker, och sidan ska leda läsaren till att
-ställa frågan i stället för att dra en förhastad slutsats:
+För grupp DD är reflektionen mer utbyggd, och den är den enda som står framme
+även utan hover. Den leder läsaren till att fråga:
 
-- Forskningsledaren har avtal eller bidrag på gång som ännu inte är klara,
-  signerade, inlagda i systemet eller kommunicerade.
-- Ekonomen eller forskningsledaren har missat att lägga in kända intäktskällor.
-- Verksamheten håller medvetet på att avvecklas, eller flyttar till ett annat
-  lärosäte.
-- Interna medel ska bära medarbetarna framåt.
-- Gruppen brukar inte visa bidrag som ligger längre fram, men brukar ändå
-  landa dem i tid när åren närmar sig. Historiskt har intäkterna matchat
-  kostnaderna, gång på gång.
+- Har DD strukturellt sämre möjligheter att i förtid säkra avtal om framtida
+  medel, eller är det bara så det ser ut just nu?
+- Hur har det sett ut tidigare år? Har DD alltid landat medel när åren
+  närmat sig, eller kommer avtalen sent?
+- Finns avtal på gång som ännu inte är signerade, inlagda eller kommunicerade?
+- Ska interna medel bära medarbetarna, eller håller verksamheten på att fasas
+  ut?
 
 Poängen är inte att avgöra vilket. Poängen är att frågan måste ställas tydligt
-till forskargruppen: **hur ser det ut just nu, kommer ni att få ihop budgeten
-den här gången också, så att intäkterna matchar kostnaderna?**
+till gruppen: **hur ser det ut just nu, kommer ni att få ihop budgeten den här
+gången också, så att intäkterna matchar kostnaderna?**
 
 Sidan ska alltså inte bara varna. Den ska få läsaren att fråga sig hur illa
-det egentligen är, och tvinga fram samtalet med gruppen.
+det egentligen är för DD.
 
 **På mobil (beslut 2026-09-03):** ingen pekare finns, så hover ersätts med
-tryck. De tomma intäktscellerna är tryckbara och uppdaterar frågerutan under
-tabellen. Frågerutan visas dessutom alltid för Fall D. C-knappens växling
-mellan gult och rött är en animation som inte kräver någon interaktion och
-fungerar likadant på mobil.
+tryck. Den lilla rutan vid cellen är fast positionerad och göms vid nästa
+tryck utanför eller vid scroll. Rutan under tabellen fungerar likadant som på
+desktop. CC-knappens växling mellan gult och rött är en animation som inte
+kräver interaktion.
 
 ### 3.11 Typfall D-ver2: läsaren fyller på
 
@@ -498,3 +508,5 @@ att pricka av bygget mot.
 | 2026-09-03 | Alla öppna frågor om sidan stängda utom modellvalet i 3.9, som avgörs när SPEC.md skrivs. |
 | 2026-09-03 | Modellvalet (3.9) avgjort: två explicita resultaträkningar per typfall och tidsögonblick, inte framräkning ur en portfölj. |
 | 2026-09-03 | SPEC.md skapad. Datamodell, färgregler, komponenter, D-ver2, sajtkoppling och acceptanslista låsta. Redo för bygge. |
+| 2026-09-03 (bygge) | Leverans 4: typfallen döptes om till grupp AA/BB/CC/DD (+ DD-ver2) på sidan. Inledande texten skrevs om: fyra grupper med olika framförhållning och olika lätt att få intäkter, ingen text som skriver ut "forskargrupp"/"forskning". |
+| 2026-09-03 (bygge) | Hover-frågan gjord gruppspecifik och visas på två ställen: liten ruta vid cellen (fast position) plus rutan under tabellen som byts och blinkar till. För grupp DD är reflektionen utbyggd och står framme även utan hover, med fokus på DD:s historik och strukturella möjligheter att säkra avtal i förtid. |

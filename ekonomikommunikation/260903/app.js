@@ -83,23 +83,40 @@
   };
 
   var NOT = {
-    A: "Intäkterna täcker kostnaderna alla år framåt. Forskargruppen kan planera vidare utan förbehåll.",
-    B: "Sista året i fönstret går inte riktigt ihop, året före avviker något. Det nya året X+5 saknar täckning.",
-    C: "Två av åren framåt går inte ihop. Glappet ligger närmare i tid än i Fall B.",
-    D: "Tre av åren framåt går inte ihop, och redan X+1 avviker. Utrymmet att hinna ordna finansiering krymper med varje år.",
-    Dver2: "Fall D, men du fyller på. Lägg in intäkter du tror kommer, eller sänk kostnader, och se hur mycket som krävs för att nå grönt. Var lika sträng som ett hederligt budgetsamtal."
+    A: "Grupp AA:s intäkter täcker kostnaderna alla år framåt. Portföljen fylls på i tid.",
+    B: "Grupp BB ligger nära nivå. Sista året går inte riktigt ihop, året före avviker något. Det nya året X+5 saknar täckning.",
+    C: "Grupp CC har glapp redan två år fram. Närmare i tid än BB, och djupare.",
+    D: "Grupp DD går minus redan X+1 och tre år till. Utrymmet att hinna säkra ny finansiering krymper med varje år.",
+    Dver2: "Grupp DD, men du fyller på. Lägg in intäkter du tror kommer, eller sänk kostnader, och se hur mycket som krävs för att nå grönt. Var lika sträng som ett hederligt budgetsamtal."
   };
 
-  var FRAGA =
-    "Är det troligt att nya bidrag eller intäkter kommer in under de här åren? " +
-    "Har forskningsledaren avtal på gång som ännu inte är signerade eller inlagda i systemet? " +
-    "Håller gruppen på att avvecklas, eller flytta till ett annat lärosäte? Ska interna medel bära " +
-    "medarbetarna? Eller brukar gruppen alltid landa nya bidrag i tid? Frågan måste ställas rakt ut: " +
-    "får ni ihop budgeten den här gången också, så att intäkterna matchar kostnaderna?";
+  var VILA =
+    "Peka på, eller tryck på, en tom cell i intäktsdelen för frågor att reflektera kring om den " +
+    "här gruppens finansiering framåt.";
 
-  var FRAGA_DEFAULT =
-    "Håll pekaren över, eller tryck på, en tom cell i intäktsdelen. Då visas frågan ekonomen bör " +
-    "ställa till forskargruppen om de tomma åren.";
+  var HOVER = {
+    A: "Grupp AA har täckning alla år. Ett tomrum här betyder troligen bara att nästa " +
+       "ansökningsomgång inte hunnit bli beslut. AA brukar fylla på portföljen i tid.",
+    B: "Grupp BB ligger nära nivå. Är de bidrag som fattas för de sista åren sådana BB brukar få, " +
+       "eller vore det något nytt? Hur har deras framförhållning sett ut tidigare år?",
+    C: "Grupp CC har glapp redan två år fram. Har CC avtal på gång som ännu inte är signerade eller " +
+       "inlagda? Hur ofta har CC lyckats säkra medel i förväg, och hur ofta har det kommit sent?",
+    D: "Grupp DD ser tuffast ut. Men hur illa är det egentligen? Har DD strukturellt sämre " +
+       "möjligheter att i förtid säkra avtal om framtida medel? Eller är DD en grupp som alltid " +
+       "tidigare har landat medel när åren närmat sig? Vad säger deras historik? Frågan måste " +
+       "ställas rakt ut: kommer ni att få ihop det den här gången också?",
+    Dver2: "Du fyller på grupp DD:s intäkter själv. Lägg bara in belopp som är rimligt säkrade, och " +
+       "väg in DD:s historik: brukar de landa medlen i tid, eller kommer avtalen sent?"
+  };
+
+  var TIP = {
+    A: "AA fyller på portföljen i tid. Tomrummet är troligen bara ännu inte beslutat.",
+    B: "Är bidragen som fattas sådana BB brukar få? Hur har framförhållningen sett ut förr?",
+    C: "Har CC avtal på gång som inte är signerade? Hur ofta kommer medlen sent?",
+    D: "Hur illa är det för DD egentligen? Sämre möjlighet att säkra avtal i förtid, eller landar de " +
+       "alltid medel till slut? Vad säger historiken?",
+    Dver2: "Lägg bara in belopp som är rimligt säkrade. Väg in DD:s historik."
+  };
 
   var PAMINNELSE =
     "Är du säker på att den här intäkten kommer just det året? Lägg inte in bidrag som inte är " +
@@ -295,8 +312,15 @@
     document.getElementById("notrad").textContent = NOT[state.fall];
 
     var frag = document.getElementById("fragruta");
-    if (state.fall === "D") { frag.textContent = FRAGA; frag.classList.add("het"); }
-    else { frag.textContent = FRAGA_DEFAULT; frag.classList.remove("het"); }
+    frag.classList.remove("puls");
+    if (state.fall === "D" || state.fall === "Dver2") {
+      frag.textContent = HOVER[state.fall];
+      frag.classList.add("het");
+    } else {
+      frag.textContent = VILA;
+      frag.classList.remove("het");
+    }
+    document.getElementById("celltip").hidden = true;
 
     setPaminnelse("");
     bindTabell();
@@ -331,23 +355,49 @@
     el.hidden = false;
   }
 
+  function placeraTip(cell) {
+    var tip = document.getElementById("celltip");
+    tip.hidden = false;
+    tip.style.left = "0px";
+    tip.style.top = "0px";
+    var r = cell.getBoundingClientRect();
+    var tw = tip.offsetWidth, th = tip.offsetHeight;
+    var left = Math.max(8, Math.min(r.left, window.innerWidth - tw - 12));
+    var top = Math.min(r.bottom + 8, window.innerHeight - th - 8);
+    tip.style.left = left + "px";
+    tip.style.top = Math.max(8, top) + "px";
+  }
+
+  function visaFraga(cell) {
+    var frag = document.getElementById("fragruta");
+    frag.textContent = HOVER[state.fall];
+    frag.classList.add("het");
+    frag.classList.remove("puls");
+    void frag.offsetWidth;
+    frag.classList.add("puls");
+    var tip = document.getElementById("celltip");
+    tip.textContent = TIP[state.fall];
+    placeraTip(cell);
+  }
+
+  function aterFraga() {
+    var frag = document.getElementById("fragruta");
+    document.getElementById("celltip").hidden = true;
+    frag.classList.remove("puls");
+    if (state.fall === "D" || state.fall === "Dver2") { frag.textContent = HOVER[state.fall]; }
+    else { frag.textContent = VILA; frag.classList.remove("het"); }
+  }
+
   function bindTabell() {
     var t = document.getElementById("givToggle");
     if (t) t.addEventListener("click", function () { state.giv = !state.giv; rendera(); });
 
-    var frag = document.getElementById("fragruta");
-    var hetDefault = state.fall === "D";
     document.querySelectorAll('[data-tom="1"]').forEach(function (cell) {
-      function visa() { frag.textContent = FRAGA; frag.classList.add("het"); }
-      function ater() {
-        if (hetDefault) { frag.textContent = FRAGA; }
-        else { frag.textContent = FRAGA_DEFAULT; frag.classList.remove("het"); }
-      }
-      cell.addEventListener("mouseenter", visa);
-      cell.addEventListener("mouseleave", ater);
-      cell.addEventListener("focus", visa);
-      cell.addEventListener("blur", ater);
-      cell.addEventListener("click", visa);
+      cell.addEventListener("mouseenter", function () { visaFraga(cell); });
+      cell.addEventListener("mouseleave", aterFraga);
+      cell.addEventListener("focus", function () { visaFraga(cell); });
+      cell.addEventListener("blur", aterFraga);
+      cell.addEventListener("click", function (e) { e.stopPropagation(); visaFraga(cell); });
     });
 
     if (state.fall !== "Dver2") return;
@@ -439,7 +489,15 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") shut(); });
   }
 
+  function initTip() {
+    function dolj() { document.getElementById("celltip").hidden = true; }
+    document.addEventListener("click", dolj);
+    window.addEventListener("scroll", dolj, { passive: true });
+    window.addEventListener("resize", dolj);
+  }
+
   initKnappar();
   initModal();
+  initTip();
   rendera();
 })();

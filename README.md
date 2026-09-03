@@ -41,7 +41,7 @@ Ekonomi/
 │
 ├── ekonomikommunikation/
 │   └── 260903/
-│       ├── index.html                # Interaktiv sida: forskargruppens ekonomi fyra år fram
+│       ├── index.html                # Interaktiv sida: fyra gruppers ekonomi fyra år fram
 │       ├── styles.css                # CSS för sidan
 │       ├── app.js                    # Datamodell, beräkning, interaktion
 │       ├── PRD.md                    # Planering: ståndpunkt, modell, beslutslogg
@@ -164,11 +164,12 @@ Utkastversionen av bloggtexten om verktyget. Publicerad på Controller utan grä
 
 ### [`ekonomikommunikation/260903/index.html`](https://kentlundgren.github.io/Ekonomi/ekonomikommunikation/260903/)
 Interaktiv sida om hur ekonomi kan kommuniceras när en verksamhet lever på flera
-tidsbegränsade bidrag. Visar en forskargrupps resultaträkning fyra år fram i fyra
-typfall (A–D) plus ett redigerbart läge, sedd från år X och år X+1. Grön, gul och
-röd markering på RESULTAT-raden, ett mått på hur mycket sämre bilden blir ett år
-senare, och en fråga som väcks av de tomma intäktscellerna. Byggd i tre filer
-(`index.html`, `styles.css`, `app.js`), ingen data lämnar webbläsaren.
+tidsbegränsade bidrag. Visar fyra gruppers resultaträkning fyra år fram (grupp
+AA, BB, CC, DD) plus ett redigerbart läge, sedd från år X och år X+1. Grön, gul
+och röd markering på RESULTAT-raden, ett mått på hur mycket sämre bilden blir ett
+år senare, och en gruppspecifik fråga som väcks av de tomma intäktscellerna.
+Byggd i tre filer (`index.html`, `styles.css`, `app.js`), ingen data lämnar
+webbläsaren.
 
 ### [`ekonomikommunikation/260903/PRD.md`](ekonomikommunikation/260903/PRD.md)
 Planeringen bakom sidan: Kents ståndpunkt om ekonomikommunikation, flerårsmodellen,

@@ -334,9 +334,40 @@ table.rr .extra-bort {
   border-left: 4px solid #c5d5e8;
 }
 .fragruta.het {
-  background: var(--rod-bg);
-  color: var(--rod-ink);
-  border-left-color: var(--rod-kant);
+  background: var(--gul-bg);
+  color: var(--gul-ink);
+  border-left-color: var(--gul-kant);
+}
+.fragruta.puls { animation: fragPuls 0.6s ease-out; }
+@keyframes fragPuls {
+  0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.45); }
+  100% { box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); }
+}
+@media (prefers-reduced-motion: reduce) { .fragruta.puls { animation: none; } }
+
+/* ---------- Tooltip vid tom cell ---------- */
+.celltip {
+  position: fixed;
+  z-index: 1001;
+  max-width: 270px;
+  padding: 10px 13px;
+  background: #2c2c2a;
+  color: #f3efe6;
+  border-radius: 8px;
+  font-size: 0.83rem;
+  line-height: 1.5;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+}
+.celltip[hidden] { display: none; }
+.celltip::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 16px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #2c2c2a;
 }
 
 .tabell-not { font-size: 0.8rem; color: var(--ink-muted); margin-top: 8px; }
