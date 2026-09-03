@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kan vi anställa henne i tre år? – forskargruppens ekonomi fyra år fram</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="nav-brand" href="../../index.html">{ E } Ekonomi</a>
+  <span class="nav-sep">/</span>
+  <a class="nav-crumb" href="../../index.html">Ekonomikommunikation</a>
+  <span class="nav-author">Kent Lundgren</span>
+</nav>
+
+<div class="container">
+
+  <h1>Kan vi anställa henne i tre år?</h1>
+  <p class="meta">Ekonomikommunikation &nbsp;|&nbsp; upprättad 2026-09-03 &nbsp;|&nbsp; påhittat räkneexempel</p>
+
+  <p>
+    Jag har suttit i samtalet flera gånger. En chef eller forskningsledare vill
+    förlänga en tjänst eller anställa någon ny, och frågar rakt ut om pengarna
+    räcker flera år framåt. Det vanliga svaret är en budget för i år, kanske
+    nästa. Sedan blir hen förvånad över hur lite som egentligen är säkrat
+    därefter.
+  </p>
+  <p>
+    Den här sidan visar varför förvåningen uppstår, och hur en rapportering som
+    sträcker sig fyra år fram kan motverka den. Exemplet är en forskargrupp
+    kring en forskare, NN, som lever på flera tidsbegränsade bidrag samtidigt.
+    Bidragen löper ut ett efter ett. Lönerna gör det inte.
+  </p>
+
+  <h2>Fyra typfall</h2>
+  <p>
+    Samma resultaträkning i fyra lägen. Innevarande år ser bra ut i alla fyra.
+    Skillnaden ligger i hur tidigt och hur djupt resultatet vänder negativt
+    under åren efter.
+  </p>
+
+  <div class="fall-rad" id="fallRad" role="group" aria-label="Välj typfall">
+    <button type="button" class="fall-btn vald" data-fall="A">Typfall A<small>budgeten går ihop</small></button>
+    <button type="button" class="fall-btn" data-fall="B">Typfall B<small>nästan i nivå</small></button>
+    <button type="button" class="fall-btn" data-fall="C">Typfall C<small>på gränsen</small></button>
+    <button type="button" class="fall-btn" data-fall="D">Typfall D<small>tuffast framåt</small></button>
+    <button type="button" class="fall-btn fall-btn-red" data-fall="Dver2">D-ver2<small>fyll på själv</small></button>
+  </div>
+
+  <div class="tid-rad" id="tidRad" role="group" aria-label="Välj tidpunkt">
+    <span class="tid-label">Tidpunkt</span>
+    <button type="button" class="tid-btn vald" data-tid="fromX">I år<small>sett från år X</small></button>
+    <button type="button" class="tid-btn" data-tid="fromX1">Nästa år<small>sett från år X+1</small></button>
+  </div>
+
+  <div class="eas-kort" id="kortEas"></div>
+
+  <div class="banner" id="banner"></div>
+
+  <p class="notrad" id="notrad"></p>
+
+  <div class="troskel">
+    <label for="troskelReglage">Gräns gul&nbsp;/&nbsp;röd</label>
+    <input type="range" id="troskelReglage" min="5" max="40" step="1" value="15" />
+    <span class="troskel-val" id="troskelVal">15&nbsp;%</span>
+    <span>av årets kostnad</span>
+  </div>
+
+  <div class="rr-wrap">
+    <table class="rr" id="rrTabell">
+      <thead id="rrHead"></thead>
+      <tbody id="rrBody"></tbody>
+    </table>
+  </div>
+
+  <div class="dver2-verktyg" id="dver2Verktyg" hidden>
+    <button type="button" id="laggTillIntakt">+ lägg till egen intäkt</button>
+    <button type="button" id="aterstallD">Återställ till Fall D</button>
+  </div>
+
+  <p class="paminnelse" id="paminnelse" hidden></p>
+
+  <div class="fragruta" id="fragruta"></div>
+
+  <p class="tabell-not">
+    Alla belopp i tusental kronor. Saldo på RESULTAT-raden = intäkter minus
+    kostnader per år. Grön cell matchar, gul är en mindre avvikelse, röd går
+    klart inte ihop. Påhittat räkneexempel.
+  </p>
+
+</div>
+
+<a class="corner corner-left" href="https://github.com/kentlundgren/Ekonomi/tree/main/ekonomikommunikation/260903" target="_blank" rel="noopener">{ } GitHub</a>
+<button type="button" class="corner corner-right" id="techBtn" aria-label="Tekniköversikt">&lt;/&gt; teknik</button>
+
+<div class="modal-overlay" id="techOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="techRubrik">
+    <button type="button" class="modal-close" id="techClose" aria-label="Stäng">&times;</button>
+    <h2 id="techRubrik">Hur den här sidan är byggd</h2>
+    <p class="modal-intro">
+      Sidan är ett fritidsprojekt, byggt tillsammans med Claude. Här är de
+      tekniska valen och hur den togs fram.
+    </p>
+
+    <h3 class="tech-avsnitt">Tekniken</h3>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <h4>Ingen server, ingen data ut</h4>
+        <p>Allt räknas i webbläsaren. Ren HTML, CSS och JavaScript, inga externa bibliotek. Inget du skriver in lämnar din dator.</p>
+      </div>
+      <div class="tech-card">
+        <h4>Åtta fasta resultaträkningar</h4>
+        <p>Fyra typfall gånger två tidsögonblick. Taldata ligger i app.js och är kontrollräknad mot ett kalkylark.</p>
+      </div>
+      <div class="tech-card">
+        <h4>Färg av kvot, inte gissning</h4>
+        <p>Varje negativt årsresultat jämförs med samma års kostnad. Gränsen mellan gult och rött är ett reglage, förval 15 procent.</p>
+      </div>
+      <div class="tech-card">
+        <h4>Tre filer, inget byggsteg</h4>
+        <p>index.html, styles.css och app.js. Öppnas direkt i en webbläsare. Samma marinblå tema som resten av Ekonomi-sajten.</p>
+      </div>
+    </div>
+
+    <h3 class="tech-avsnitt">Metoden</h3>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <h4>PRD och SPEC före kod</h4>
+        <p>Planeringen ligger i PRD.md och SPEC.md i samma mapp, med en daterad beslutslogg. Koden skrevs först när specen var låst.</p>
+      </div>
+      <div class="tech-card">
+        <h4>Itererad skiss</h4>
+        <p>Flera varv inline-skisser i dialogen innan filerna skrevs. Typfallen, tidsdynamiken och färgtrappan växte fram steg för steg.</p>
+      </div>
+      <div class="tech-card">
+        <h4>Kents ord styrde</h4>
+        <p>"Jag vill bara få in dynamik i modellen, att man ska kunna se varje typfall under två tidsögonblick." Sidan är byggd runt den meningen.</p>
+      </div>
+      <div class="tech-card">
+        <h4>Bra AI kräver bra indata</h4>
+        <p>Resultatet hänger på bra prompter, bra kontext och en bra harness. Verktyget gör inte jobbet av sig självt.</p>
+      </div>
+    </div>
+
+    <h3 class="tech-avsnitt">Öppna avvikelser</h3>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <h4>EU:s hoppår i Fall C</h4>
+        <p>Sett från X+1 saknar EU-bidraget år X+4 men finns åter X+5. Behållet som exempel på bidrag som förnyas med glapp. Se PRD avsnitt 11.</p>
+      </div>
+      <div class="tech-card">
+        <h4>Staplade rader</h4>
+        <p>Att visa de två RESULTAT-raderna på varandra är en möjlighet som inte är låst. Se PRD avsnitt 11.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

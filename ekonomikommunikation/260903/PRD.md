@@ -161,7 +161,7 @@ Bannertexterna anges i [`SPEC.md`](SPEC.md) avsnitt 4.2.
 | **A** | 0, 0, 0, 0 | inga | Grön kvittens. |
 | **B** | 0, 0, −500, −3 500 | X+4 (X+3 gult) | Mild. Gul cell X+3, röd X+4. |
 | **C** | 0, 0, −3 000, −4 600 | X+3, X+4 | Tydlig. Två röda celler. |
-| **D** | 0, −4 600, −4 600, −7 600 | X+2, X+3, X+4 | Kraftig. Tre röda celler, framträdande banner. |
+| **D** | −500, −4 600, −4 600, −7 600 | X+2, X+3, X+4 (X+1 gult) | Kraftig. Redan X+1 avviker. Tre röda celler, framträdande banner. |
 
 **Färgskala (beslut 2026-09-03), tre steg:**
 
@@ -227,7 +227,10 @@ X rullar ur bild, och ett nytt år X+5 kommer in, oftast med underskott.
 | A | +1 260 | 0 | −1 260 |
 | B | −2 740 | −9 500 | −6 760 |
 | C | −6 340 | −16 200 | −9 860 |
-| D | −15 540 | −28 400 | −12 860 |
+| D | −16 040 | −28 400 | −12 360 |
+
+(D:s tal ändrat 2026-09-03 sedan Bidragsgivare 5:s 500 tkr år X+1 tagits bort,
+se beslutsloggen. D går nu minus redan X+1.)
 
 Alla fyra blir sämre på det här måttet, även A, fast A inte visar underskott
 något enskilt år. Bufferten är borta. Det är själva poängen: att stå still ett
@@ -476,7 +479,10 @@ att pricka av bygget mot.
 | 2026-09-03 | Format: full resultaträkning. Alla bidragsgivarrader visas som default, så att de tomma cellerna längre fram syns direkt. Knapp för att fälla ihop. |
 | 2026-09-03 | Varning: färg på negativ RESULTAT-cell plus sammanfattande banner som trappas upp med antalet röda år. |
 | 2026-09-03 | Dynamik tillagd: varje typfall ses från två tidsögonblick (år X och år X+1). Fall A balanserar varje enskilt år från båda. Tidsknapparna avskilda från A/B/C/D och benämnda "i år" / "nästa år". |
-| 2026-09-03 | Försämringsmått: Σ RESULTAT i fönstret, sett från X+1 minus sett från X. Alla fyra fallen blir sämre (A −1 260, B −6 760, C −9 860, D −12 860 tkr i exemplet). Visas som ett tal per fall + de två RESULTAT-raderna + en stapel. |
+| 2026-09-03 | Försämringsmått: Σ RESULTAT i fönstret, sett från X+1 minus sett från X. Alla fyra fallen blir sämre (A −1 260, B −6 760, C −9 860, D −12 360 tkr i exemplet). Visas som ett tal per fall + en stapel. |
+| 2026-09-03 (bygge) | Typfall D: Bidragsgivare 5:s 500 tkr år X+1 borttagen. D går nu minus (−500, gult) redan X+1, så forskningsledaren inte kan hävda att året går runt. D:s Σ sett från X: −16 040. Ett år senare: −12 360. |
+| 2026-09-03 (bygge) | Leverans 1: index.html + styles.css + app.js. Kärnan: typfall, tidsväxling, färglogik, tröskel, GitHub-hörna + teknik-modal. |
+| 2026-09-03 (bygge) | Leverans 2: "ett år senare"-kort med tal och staplar, banner, samt D-ver2 (redigerbart, påminnelse vid ny intäkt, återställ, egna intäktsrader). |
 | 2026-09-03 | Färgskala: tre steg, grönt / gult (mindre avvikelse) / rött (kraftig avvikelse). Ingen separat grå nivå. |
 | 2026-09-03 | Den tomma intäktsytan (avsnitt 3.10) är sidans viktigaste kommunikativa yta. Hover, särskilt i Fall D sett från X+1, väcker frågan om nya bidrag är på väg och leder läsaren till samtalet med gruppen. |
 | 2026-09-03 | Tröskeln gul/röd är inställbar, förval 15 % av årets kostnad. |

@@ -104,15 +104,16 @@ RESULTAT **0 / 0 / −3 000 / −6 600 / −6 600**. Σ = −16 200. Ett år sen
 (EU har ett hoppår: tomt X+4, åter X+5. Behålls eller jämnas ut, se PRD avsnitt 11.)
 
 **Fall D, sett från X**: VR 1000/1000/1000/1000/– · EU 2000/2000/2000/2000/– ·
-Bidr. 3 1100/1100/–/–/– · Bidr. 4 3000/3000/–/–/– · Bidr. 5 500/500/–/–/– ·
+Bidr. 3 1100/1100/–/–/– · Bidr. 4 3000/3000/–/–/– · Bidr. 5 500/–/–/–/– ·
 Bidr. 6 700/–/–/–/– · Bidr. 7 3000/–/–/–/–.
-TOT intäkter 11 300 / 7 600 / 3 000 / 3 000 / 0.
-RESULTAT **1 260 / 0 / −4 600 / −4 600 / −7 600**. Σ = −15 540.
+TOT intäkter 11 300 / 7 100 / 3 000 / 3 000 / 0.
+RESULTAT **1 260 / −500 / −4 600 / −4 600 / −7 600**. Σ = −16 040.
+(Bidr. 5:s X+1 borttagen 2026-09-03 så D går minus redan X+1. Se PRD beslutsloggen.)
 
 **Fall D, sett från X+1**: VR 1000/1000/1000/–/– · EU 2000/2000/–/–/– ·
 Bidr. 3 1100/–/–/–/– · Bidr. 4 3000/–/–/–/– · Bidr. 5 500/–/–/–/–.
 TOT intäkter 7 600 / 3 000 / 1 000 / 0 / 0.
-RESULTAT **0 / −4 600 / −6 600 / −7 600 / −9 600**. Σ = −28 400. Ett år senare: **−12 860**.
+RESULTAT **0 / −4 600 / −6 600 / −7 600 / −9 600**. Σ = −28 400. Ett år senare: **−12 360**.
 
 ### 3.3 Härledda värden
 
@@ -224,7 +225,7 @@ staplade år för år med förändringen per cell. Inte låst, se PRD avsnitt 11
 
 - [ ] Sidan öppnas fristående utan byggsteg, i `index.html` + `styles.css` + `app.js`.
 - [ ] A, B, C, D visar rätt RESULTAT-rad och Σ enligt avsnitt 3.2, för båda tidsögonblicken.
-- [ ] Ett år senare-talet visar −1 260 (A), −6 760 (B), −9 860 (C), −12 860 (D).
+- [ ] Ett år senare-talet visar −1 260 (A), −6 760 (B), −9 860 (C), −12 360 (D).
 - [ ] Cellfärg följer tröskeln. Med 15 % är B:s X+3 gul och X+4 röd.
 - [ ] Tröskeln går att ändra på sidan och färgerna uppdateras direkt.
 - [ ] Typfallsknapparna är färgade, C växlar gul/röd.
