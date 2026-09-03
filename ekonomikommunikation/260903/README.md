@@ -42,8 +42,10 @@ Då ska den här README:n uppdateras med en klickbar länk dit.
 
 ## Status
 
-Skelett. Själva planeringen görs tillsammans med Claude efter att Kent
-bekräftat att mappen ligger rätt.
+Under planering. Scope är satt: en ståndpunkt om ekonomikommunikation, först
+som blogginlägg på Controller utan gränser, sedan som interaktiv HTML-sida i
+Ekonomi-projektet. Nästa steg är att välja upplägg för blogginlägget
+(se avsnitt 7 i [`PRD.md`](PRD.md)).
 
 ## Datummappen
 
