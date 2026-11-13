@@ -51,7 +51,14 @@ Ekonomi/
 │       └── ekonomikommunikation.xlsx # Kents exempelresultaträkningar
 │
 ├── ekonomistyrning/
-│   └── index.html                    # Platshållare – under uppbyggnad
+│   ├── index.html                    # Platshållare – under uppbyggnad
+│   └── kunskap/                      # Kunskapsbas: avskrivningar, investeringar m.m.
+│       ├── README.md                 # Index och regler för filerna
+│       ├── avskrivning.md            # Avskrivning, nyttjandeperiod, fallet Kiruna
+│       ├── investering.md            # Anskaffningsvärde, ersättnings- och nyinvestering
+│       ├── balanskravet.md           # Balanskrav och god ekonomisk hushållning
+│       ├── kapitalkostnad.md         # Skelett: kapitalkostnad
+│       └── komponentavskrivning.md   # Skelett: komponentavskrivning, RKR R4
 │
 ├── statsskuld/
 │   ├── index.html                    # Sektion-TOC: statsskuldsjämförelser mellan länder
@@ -70,6 +77,12 @@ Ekonomi/
 │   │   └── SKILL.md                  # Ekonomi-projektets nav- och CSS-konventioner
 │   └── webb_struktur/
 │       └── SKILL.md                  # Generellt skill: hierarkisk webbplats (återanvändbart)
+│
+├── .claude/
+│   └── skills/
+│       └── kent-linkedin-feedback/
+│           ├── SKILL.md              # Skill: feedback på LinkedIn-inlägg (ekonomi, generativ AI)
+│           └── LOGG.md               # Logg över inlägg Kent reagerat på
 │
 └── .vscode/
     └── settings.json                 # Cursor: visar rätt git-repo
@@ -187,6 +200,24 @@ beslutsloggen i PRD:n, som täcker planeringsfasen.
 
 ### [`ekonomikommunikation/260903/README.md`](ekonomikommunikation/260903/README.md)
 Mappöversikt med lokal sökväg, live-sida och status.
+
+### [`ekonomistyrning/kunskap/README.md`](https://github.com/kentlundgren/Ekonomi/blob/main/ekonomistyrning/kunskap/README.md)
+Index över en kunskapsbas om avskrivningar, investeringar och närliggande begrepp i
+kommunal ekonomistyrning. Lagtext (kommunallagen och lagen om kommunal bokföring och
+redovisning) och direktivet till utredningen om avskrivningsreglerna är lästa i
+originaltext. Det som inte är läst redovisas per fil. Filerna:
+[`avskrivning.md`](https://github.com/kentlundgren/Ekonomi/blob/main/ekonomistyrning/kunskap/avskrivning.md),
+[`investering.md`](https://github.com/kentlundgren/Ekonomi/blob/main/ekonomistyrning/kunskap/investering.md),
+[`balanskravet.md`](https://github.com/kentlundgren/Ekonomi/blob/main/ekonomistyrning/kunskap/balanskravet.md),
+[`kapitalkostnad.md`](https://github.com/kentlundgren/Ekonomi/blob/main/ekonomistyrning/kunskap/kapitalkostnad.md) och
+[`komponentavskrivning.md`](https://github.com/kentlundgren/Ekonomi/blob/main/ekonomistyrning/kunskap/komponentavskrivning.md).
+
+### [`.claude/skills/kent-linkedin-feedback/SKILL.md`](https://github.com/kentlundgren/Ekonomi/blob/main/.claude/skills/kent-linkedin-feedback/SKILL.md)
+Skill för att ge kvalificerad feedback på LinkedIn-inlägg om ekonomi och generativ AI.
+Arbetsgång, kontrollfrågor och ett slutblock som alltid anger inlägget, vem som skrev det
+och vilket repo som är öppet. Inläggen loggas i
+[`LOGG.md`](https://github.com/kentlundgren/Ekonomi/blob/main/.claude/skills/kent-linkedin-feedback/LOGG.md).
+En pekare finns globalt i `~/.claude/skills/kent-linkedin-feedback/`.
 
 ### [`humanizer.md`](humanizer.md)
 Praktisk katalog med 14 konkreta mönster att undvika för att text ska låta
