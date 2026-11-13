@@ -1,7 +1,7 @@
 # Avskrivning i kommunal redovisning
 
-**Version:** 1.0 · 2026-11-13
-**Status:** grundläggande kunskapsfil. Lagtext och direktiv är lästa i originaltext. Rekommendationen RKR R4 är inte läst i sin helhet (se "Ännu inte verifierat").
+**Version:** 1.2 · 2026-11-13
+**Status:** grundläggande kunskapsfil. Lagtext, direktiv och rekommendationen RKR R4 (oktober 2026) är lästa i originaltext. Propositionen 2017/18:149 är inte läst och återges via RKR R4.
 
 ## Vad lagen säger
 
@@ -11,6 +11,34 @@
 - **Nedskrivning är något annat.** Har en tillgång vid årets utgång ett lägre värde än vad anskaffningsvärdet minus avskrivning ger, och värdenedgången kan antas vara bestående, ska den skrivas ned (LKBR 7 kap. 4 §).
 - **Upplysningskrav.** Kommunen ska lämna en upplysning om bedömd genomsnittlig nyttjandeperiod för varje post som tas upp som materiell anläggningstillgång (LKBR, paragraf 9 i avsnittet om upplysningar; kapitelnumret är inte kontrollerat).
 - **God redovisningssed gäller.** Bokföring och redovisning ska följa god redovisningssed (LKBR 1 kap. 4 §). Rådet för kommunal redovisning (RKR) ger ut rekommendationen RKR R4 Materiella anläggningstillgångar, med avsnitten "Avskrivning" och "Komponentavskrivning" (se [komponentavskrivning.md](komponentavskrivning.md)).
+
+## Omprövning av nyttjandeperioden (RKR R4, oktober 2026, s. 8–9)
+
+- **Plan vid anskaffningen.** Vid anskaffningstillfället ska en plan fastställas för hur en anläggningstillgång med begränsad nyttjandeperiod ska skrivas av.
+- **Metod.** Lagen föreskriver ingen särskild metod. Den metod kommunen väljer ska avspegla hur tillgångens värde och/eller servicepotential successivt förbrukas.
+- **Start.** Avskrivningen börjar när tillgången kan tas i bruk.
+- **Omprövning.** Restvärden och fastställda nyttjandeperioder ska systematiskt omprövas. Skäl kan vara minskad prestanda eller förändrat kapacitetsutnyttjande.
+- **Ändrad bedömning.** Avviker en ny bedömning av nyttjandeperioden väsentligt från de bedömningar som gjorts, ska avskrivningsbeloppen justeras för innevarande och kommande perioder. Justeringen gäller framåt. R4 anger ingen omräkning av redan bokförda år.
+- **Dokumentation.** Hur kommunen systematiskt arbetar med omprövningen utgör räkenskapsinformation enligt rekommendationen om bokföring och arkivering.
+- **Restvärde.** R4 anger att ett eventuellt restvärde inte ska utgöra underlag för avskrivning, och att restvärden ska omprövas. Hur de två hänger ihop är inte utrett här.
+- **Grunden.** Avskrivningskostnaderna ska spegla den faktiska resursförbrukningen (prop. 2017/18:149 s. 67, återgiven i R4). Avskrivning på andra grunder än resursförbrukning försvårar jämförelser, både mellan kommuner och över tid för samma kommun (R4, bakgrund, s. 15).
+
+### Ska omprövningen göras varje år, vid varje bokslut?
+
+- R4 säger "systematiskt". Orden "varje år" och "balansdag" förekommer inte i rekommendationen.
+- Det uttryckliga bokslutskravet i det jag läst gäller nedskrivning: har en tillgång vid räkenskapsårets utgång ett lägre värde än bokfört värde och värdenedgången kan antas vara bestående, ska den skrivas ned (LKBR 7 kap. 4 §). Rekommendationen om nedskrivning, RKR R6, är inte läst.
+- **Tolkning:** en årlig, dokumenterad rutin i samband med bokslutet är ett naturligt sätt att uppfylla "systematiskt". R4 kräver en systematisk och dokumenterad rutin, inte en detaljgenomgång av varje tillgång varje år. Hur kommuner gör i praktiken är inte undersökt.
+
+### Rekommendation eller lag?
+
+- Lagen kräver avskrivning över nyttjandeperioden (LKBR 7 kap. 3 §) och att redovisningen följer god redovisningssed (1 kap. 4 §). Rådet för kommunal redovisning (RKR) är det normgivande organet för god redovisningssed.
+- Avviker en kommun från en RKR-rekommendation ska skälen anges i en not (LKBR 4 kap. 3 § tredje stycket, enligt R4). Det är aldrig förenligt med god redovisningssed att avvika från uttryckliga lagregler (R4, med hänvisning till prop. 1996/97:52 s. 45).
+- Direktivet ber utredaren lämna författningsförslag (Finansdepartementet, 2026, s. 8). Det tyder på att en ändring kan gälla själva lagen, men utredningens spår är okänt.
+
+### Vad omprövningen betyder för Kiruna-exemplet
+
+- Är avskrivningstiden för lång och omprövningen visar det, justeras avskrivningen framåt. Resterande bokfört värde fördelas då på en kortare återstående tid, och den årliga kostnaden stiger. Det är en slutsats av R4:s regel, inte något Wolmesjö (2026) skriver.
+- Byts en komponent före slutet av sin avskrivningstid, kostnadsförs det kvarvarande värdet (se [komponentavskrivning.md](komponentavskrivning.md)).
 
 ## Vad en avskrivning är, ekonomiskt
 
@@ -37,11 +65,13 @@ Håller taket i verkligheten 30 år men skrivs av på 60 år, är hälften av v�
 - **Regeringens egen beskrivning av problemet.** Kommunernas anläggningstillgångar ökade kraftigt i värde under en mycket kort tid. Eftersom en kommun måste budgetera för ett överskott behöver de ökade avskrivningskostnaderna täckas av kommunens intäkter (Finansdepartementet, 2026, s. 8).
 - **Två olika problem.** Skellefteå och Boden (investera först, få skatteintäkter på sikt) är ett tidsproblem. Kiruna och Gällivare (ersätta det som rivs, inga nya skatteintäkter) är ett bestående finansieringsgap (Wolmesjö, 2026, s. 8).
 
-Se även [investering.md](investering.md) om ersättnings- och nyinvestering.
+Se även [investering.md](investering.md) om ersättnings- och nyinvestering. Kents kommentarer på inlägget och underlaget för dem finns i [fall/2026-11-13_kiruna_avskrivningar.md](fall/2026-11-13_kiruna_avskrivningar.md).
 
 ## Ännu inte verifierat
 
-- RKR R4:s text om avskrivning (metoder, vad som får påverka nyttjandeperioden). Bara innehållsförteckningen är läst.
+- Hur kommuner i praktiken omprövar nyttjandeperioder (varje år eller vid indikation). Ingen kommuns rutin är läst.
+- RKR R6 om nedskrivning, och R4:s avsnitt om anskaffningsvärde och tillkommande utgifter.
+- Hur R4:s två uttalanden om restvärde (inte underlag för avskrivning, men ska omprövas) hänger ihop.
 - Vad Kiruna kommun och Gällivare kommun själva föreslår i sina skrivelser till regeringen (diarienummer LI2023/03258, LI2024/00345 och LI2025/01728 nämns i direktivet).
 - Det exakta beloppet i Kirunas prognos. Tidningen visar siffror som är svårlästa i den bild som använts, och sidan 9 är inte läst.
 - Vilka alternativ utredningen tittar på. Det vet vi först efter delredovisningen.
@@ -52,7 +82,7 @@ Finansdepartementet (2026) *Dir. 2026:21 En förändrad kommunal revision*, komm
 
 Lag (2018:597) om kommunal bokföring och redovisning. https://data.riksdagen.se/dokument/sfs-2018-597.html *(7 kap. om värdering: anskaffningsvärde, avskrivning och nedskrivning.)*
 
-RKR (2026) *RKR R4 Materiella anläggningstillgångar*, Rådet för kommunal redovisning, FAR Online. https://www.faronline.se/dokument/radet-for-kommunal-redovisning/rkrr0004/ *(Rekommendationen om materiella anläggningstillgångar, med avsnitt om avskrivning och komponentavskrivning.)*
+RKR (2026) *RKR R4 Materiella anläggningstillgångar*, Rådet för kommunal redovisning, oktober 2026. https://www.rkr.se/wp-content/uploads/2026/10/RKR-R4-Materiella-anlaggningstillgangar.pdf *(Rekommendationen om materiella anläggningstillgångar: avskrivningsplan, omprövning av nyttjandeperiod och restvärde, komponentavskrivning. Gäller från räkenskapsåret 2026.)*
 
 Wolmesjö, L.-G. (2026) 'Avskrivningar löser inte Kirunas nota', *Kommunal Ekonomi*, nr 5, s. 8. https://e-tidning.kef.se/p/kommunal-ekonomi/2026-10-14/r/5/8-9/2427/2479474 *(Intervju med Kirunas ekonomichef och utredaren om avskrivningsreglerna. E-tidningen kräver inloggning.)*
 

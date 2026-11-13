@@ -58,7 +58,9 @@ Ekonomi/
 │       ├── investering.md            # Anskaffningsvärde, ersättnings- och nyinvestering
 │       ├── balanskravet.md           # Balanskrav och god ekonomisk hushållning
 │       ├── kapitalkostnad.md         # Skelett: kapitalkostnad
-│       └── komponentavskrivning.md   # Skelett: komponentavskrivning, RKR R4
+│       ├── komponentavskrivning.md   # Komponentavskrivning enligt RKR R4
+│       └── fall/
+│           └── 2026-11-13_kiruna_avskrivningar.md  # Fall: LinkedIn, KEF, Kiruna
 │
 ├── statsskuld/
 │   ├── index.html                    # Sektion-TOC: statsskuldsjämförelser mellan länder
@@ -211,6 +213,9 @@ originaltext. Det som inte är läst redovisas per fil. Filerna:
 [`balanskravet.md`](https://github.com/kentlundgren/Ekonomi/blob/main/ekonomistyrning/kunskap/balanskravet.md),
 [`kapitalkostnad.md`](https://github.com/kentlundgren/Ekonomi/blob/main/ekonomistyrning/kunskap/kapitalkostnad.md) och
 [`komponentavskrivning.md`](https://github.com/kentlundgren/Ekonomi/blob/main/ekonomistyrning/kunskap/komponentavskrivning.md).
+Fall från LinkedIn ligger i `fall/`, till exempel
+[`2026-11-13_kiruna_avskrivningar.md`](https://github.com/kentlundgren/Ekonomi/blob/main/ekonomistyrning/kunskap/fall/2026-11-13_kiruna_avskrivningar.md):
+inlägget, Kents tre kommentarer ordagrant, underlaget för varje påstående och beredda svar.
 
 ### [`.claude/skills/kent-linkedin-feedback/SKILL.md`](https://github.com/kentlundgren/Ekonomi/blob/main/.claude/skills/kent-linkedin-feedback/SKILL.md)
 Skill för att ge kvalificerad feedback på LinkedIn-inlägg om ekonomi och generativ AI.

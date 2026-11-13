@@ -12,7 +12,7 @@ metadata:
   type: process
 ---
 
-# Feedback på LinkedIn-inlägg: ekonomi och generativ AI (version 1.0, 2026-11-13)
+# Feedback på LinkedIn-inlägg: ekonomi och generativ AI (version 1.2, 2026-11-13)
 
 Versionsnumret står i rubriken och höjs vid varje ändring. Den här filen är den fullständiga versionen. En tunn pekare finns i `C:\Users\kentl\.claude\skills\kent-linkedin-feedback\SKILL.md`. Skillen synkas inte till Cowork eller kontot (claude.ai).
 
@@ -55,6 +55,7 @@ Det här är arbetsregler, inte fakta om LinkedIn:
 - Är det ett **tidsproblem** (intäkter senare) eller ett **bestående gap** (inga intäkter)? Se `ekonomistyrning/kunskap/balanskravet.md` och `investering.md`.
 - Nominellt eller reellt? Vilken period gäller siffrorna?
 - Vilken källa bär siffran, och är det lag, rekommendation, myndighetsuppgift eller tidningens egen beräkning?
+- Gäller påståendet **lagen** (LKBR, kommunallagen) eller en **rekommendation** (RKR)? Läs originaltexten på rkr.se: RKR publicerar sina rekommendationer öppet som PDF, och FAR Online visar bara innehållsförteckningen utan inloggning.
 
 ## Kontrollfrågor för inlägg om generativ AI
 
@@ -92,6 +93,17 @@ Regler för blocket:
 
 Efter varje inlägg läggs en rad i [LOGG.md](LOGG.md): datum, länk, vem som skrev det, ämne och vilka kunskapsfiler som berördes. Logglinjen säger vad som gjordes, inte vad som varit fel.
 
+## Fallfil när Kent har postat
+
+Visar Kent vad han har postat (skärmdump eller text): skapa eller uppdatera en fallfil i `C:\Users\kentl\OneDrive\AI\Claude\Ekonomi\ekonomistyrning\kunskap\fall\` med namnet `ÅÅÅÅ-MM-DD_ämne.md`. Mönstret är [2026-11-13_kiruna_avskrivningar.md](../../../ekonomistyrning/kunskap/fall/2026-11-13_kiruna_avskrivningar.md). Filen innehåller inlägget, Kents kommentarer **ordagrant**, faktaunderlag per påstående (med källa och sida), beredda svar, svar från andra och öppna frågor.
+
+- **Fakta och ståndpunkter hålls isär.** Verifierade fakta ligger i begreppsfilerna. Kents kommentarer och ståndpunkter ligger i fallfilen.
+- **Kents egna uppgifter om sig själv** (till exempel yrkesroll) loggas som hans egen beskrivning, märkta som inte kontrollerade, och används inte i utkast om han inte ber om det.
+- **Hur Kent omformulerar mina utkast** är värt att notera, men ett enstaka exempel är inget mönster. I det första fallet lade han till en personlig ställning sist i en kommentar.
+- Länka fallfilen från [LOGG.md](LOGG.md) och från de begreppsfiler den berör. Visar Kent senare svar från andra: lägg in dem i fallfilen.
+
 ## Uppdateringslogg
 
+- 2026-11-13 (v1.2): nytt avsnitt "Fallfil när Kent har postat" med innehåll, regler och mönsterfil.
+- 2026-11-13 (v1.1): ny kontrollfråga om lag kontra RKR-rekommendation och var originaltexten finns.
 - 2026-11-13 (v1.0): skapad. Arbetsgång, kontrollfrågor för ekonomi och generativ AI, och slutblock med inlägg, avsändare och repo.
